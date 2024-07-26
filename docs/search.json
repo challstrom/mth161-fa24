@@ -1,0 +1,848 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "mth161-fa24",
+    "section": "",
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "1 + 1\n\n[1] 2\n\n\nI just added this"
+  },
+  {
+    "objectID": "index.html#this-is-the-index-page",
+    "href": "index.html#this-is-the-index-page",
+    "title": "mth161-fa24",
+    "section": "This is the index page",
+    "text": "This is the index page"
+  },
+  {
+    "objectID": "about.html#about-this-site",
+    "href": "about.html#about-this-site",
+    "title": "About",
+    "section": "",
+    "text": "1 + 1\n\n[1] 2\n\n\nI just added this"
+  },
+  {
+    "objectID": "course-overview.html",
+    "href": "course-overview.html",
+    "title": "Course overview",
+    "section": "",
+    "text": "MTH 161, Elementary Statistics, provides students with an introduction to the methods and concepts involved in working with data and non-deterministic situations. In this class, you will:\n\nexposed to the conceptual structure of statistics and its underpinnings in discrete and continuous probability theory.\nexposed to the pervasive use of statistics in other disciplines.\nexposed to the uses and misuses of statistical inference (e.g. hypothesis tests) in technical journals and the popular press.\nintroduced to concepts in statistical inference, such as the importance of randomized design, how to collect good data, how to analyze the data, and how to carry out and properly interpret the results of hypothesis tests.\ndevelop skills in using computer software to do statistical analysis and inference.\n\nUpon completion of the course you can expect to be conversant in the rudiments of data analysis, probability, hypothesis testing, correlation and regression. At the end of the semester, a successful student will be able to say they can:\n\nPerform an exploratory analysis of univariate and bivariate data.\nSummarize data graphically using histograms, boxplots, scatter plots, etc.\nSummarize data numerically using measures of central tendency and variation.\nRecognize a properly defined probability distribution function.\nCalculate the probabilities of events in a sample space.\nArticulate the concept of a random variable.\nCalculate probabilities associated with basic types of random variables.\nArticulate the Central Limit Theorem.\nCompute and interpret confidence intervals.\nArticulate the underlying reasons for steps in hypothesis testing.\nSetup, conduct and interpret a hypothesis test.\nCalculate and interpret the least-squares regression line correlation coefficient from bivariate data.",
+    "crumbs": [
+      "Home",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "course-overview.html#class-meetings",
+    "href": "course-overview.html#class-meetings",
+    "title": "Course overview",
+    "section": "Class meetings",
+    "text": "Class meetings\n\n\n\n\n\n\n\n\n\nMeeting\nLocation\nTime\nInstructor / Lab leader\n\n\n\n\nLectures\nGross Hall 103\nMon & Wed 1:25 - 2:40 pm\nMine\n\n\nLab 1\nPerkins LINK 087 (Classroom 3)\nFri 8:30 - 9:45 am\nShuo\n\n\nLab 2\nPerkins LINK 087 (Classroom 3)\nFri 10:05 - 11:20 am\nSylvia\n\n\nLab 3\nPerkins LINK 087 (Classroom 3)\nFri 11:45 am - 1:00 pm\nJohn\n\n\nLab 4\nPerkins LINK 087 (Classroom 3)\nFri 1:25 - 2:40 pm\nChris",
+    "crumbs": [
+      "Home",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "course-overview.html#license",
+    "href": "course-overview.html#license",
+    "title": "Course overview",
+    "section": "License",
+    "text": "License\n\nThis online work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International. Visit here for more information about the license.",
+    "crumbs": [
+      "Home",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "syllabus.html",
+    "href": "syllabus.html",
+    "title": "Syllabus",
+    "section": "",
+    "text": "This course introduces students to the discipline of statistics as a science of understanding and analyzing data. Themes include data collection, exploratory analysis, inference, and modeling. Focus on principles underlying quantitative research in social sciences, humanities, and public policy. Research projects teach the process of scientific discovery and synthesis and critical evaluation of research and statistical arguments. Readings give perspective on why in 1950, S. Wilks said, “Statistical thinking will one day be as necessary a qualification for efficient citizenship as the ability to read and write.”\nIn this course, you will learn how to effectively make use of data in the face of uncertainty: how to collect data, how to analyze data, and how to use data to make inferences and conclusions about real world phenomena. Critiquing data-based claims and evaluating data-based decisions is at the core of this course. Throughout the course students acquire a conceptual understanding and mastery of statistical and quantitative reasoning tools in order to be able to make such critiques and evaluations.\nIn addition, students are presented with novel data sets and application examples on a daily basis, and they use these data to model outcomes and make inferences about unknown population characteristics. Students learn that the first step of any analysis is identifying the assumptions and conditions necessary to apply the statistical technique(s) required to answer the research question at hand. Students not only learn the mechanics of the quantitative analysis, but also how to interpret conclusions based on quantitative evidence in context of the data and the research questions as well as identifying limitations due to data collection and study design.\nFor the lab component of this course students prepare weekly lab reports presenting statistical analysis of real data. In addition, students complete two independent data analysis projects where they answer significant research questions via the analysis of real data using statistical inference and modeling tools.",
+    "crumbs": [
+      "Home",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#course-description",
+    "href": "syllabus.html#course-description",
+    "title": "Syllabus",
+    "section": "",
+    "text": "This course introduces students to the discipline of statistics as a science of understanding and analyzing data. Themes include data collection, exploratory analysis, inference, and modeling. Focus on principles underlying quantitative research in social sciences, humanities, and public policy. Research projects teach the process of scientific discovery and synthesis and critical evaluation of research and statistical arguments. Readings give perspective on why in 1950, S. Wilks said, “Statistical thinking will one day be as necessary a qualification for efficient citizenship as the ability to read and write.”\nIn this course, you will learn how to effectively make use of data in the face of uncertainty: how to collect data, how to analyze data, and how to use data to make inferences and conclusions about real world phenomena. Critiquing data-based claims and evaluating data-based decisions is at the core of this course. Throughout the course students acquire a conceptual understanding and mastery of statistical and quantitative reasoning tools in order to be able to make such critiques and evaluations.\nIn addition, students are presented with novel data sets and application examples on a daily basis, and they use these data to model outcomes and make inferences about unknown population characteristics. Students learn that the first step of any analysis is identifying the assumptions and conditions necessary to apply the statistical technique(s) required to answer the research question at hand. Students not only learn the mechanics of the quantitative analysis, but also how to interpret conclusions based on quantitative evidence in context of the data and the research questions as well as identifying limitations due to data collection and study design.\nFor the lab component of this course students prepare weekly lab reports presenting statistical analysis of real data. In addition, students complete two independent data analysis projects where they answer significant research questions via the analysis of real data using statistical inference and modeling tools.",
+    "crumbs": [
+      "Home",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#learning-objectives",
+    "href": "syllabus.html#learning-objectives",
+    "title": "Syllabus",
+    "section": "Learning objectives",
+    "text": "Learning objectives\nThe course learning objectives are as follows:\n\nRecognize the importance of data collection, identify limitations in data collection methods, and determine how they affect the scope of inference.\nUse statistical software to summarize data numerically and visually, and to perform data analysis.\nHave a conceptual understanding of the unified nature of statistical inference.\nApply estimation and testing methods to analyze single variables or the relationship between two variables in order to understand natural phenomena and make data-based decisions.\nModel numerical response variables using a single or multiple explanatory variables.\nInterpret results correctly, effectively, and in context without relying on statistical jargon.\nCritique data-based claims and evaluate data-based decisions.\nComplete research projects demonstrating mastery of statistical data analysis from exploratory analysis to inference to modeling.",
+    "crumbs": [
+      "Home",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#prerequisites",
+    "href": "syllabus.html#prerequisites",
+    "title": "Syllabus",
+    "section": "Prerequisites",
+    "text": "Prerequisites\nThis course has no pre-requisites.",
+    "crumbs": [
+      "Home",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#workload",
+    "href": "syllabus.html#workload",
+    "title": "Syllabus",
+    "section": "Workload",
+    "text": "Workload\nYou are expected to put in ~6 hours of work / week outside of class. Some of you will do well with less time than this, and some of you will need more.",
+    "crumbs": [
+      "Home",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#tips-for-success",
+    "href": "syllabus.html#tips-for-success",
+    "title": "Syllabus",
+    "section": "Tips for success",
+    "text": "Tips for success\n\nComplete the reading before a new unit begins, and then review again after the unit is over.\nBe an active participant during lectures and labs.\nAsk questions - during class or office hours, or by email. Ask me, your TAs, and your classmates.\nDo the problem sets - start early and make sure you attempt and understand all questions.\nStart your project early and and allow adequate time to complete it.\nGive yourself plenty of time time to prepare a good cheat sheet for exams. This requires going through the material and taking the time to review the concepts that you’re not comfortable with.\nDo not procrastinate - don’t let a unit go by with unanswered questions as it will just make the following unit’s material even more difficult to follow.",
+    "crumbs": [
+      "Home",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#textbooks",
+    "href": "syllabus.html#textbooks",
+    "title": "Syllabus",
+    "section": "Textbooks",
+    "text": "Textbooks\nReadings for the course will come from the following textbooks. They are freely available online and you do not need to purchase a physical copy of either book to succeed in this class.\n\n[ims]: Mine Çetinkaya-Rundel and Jo Hardin. Introduction to Modern Statistics. (in progress) 2nd edition. OpenIntro, 2023.\n[r4ds]: Hadley Wickham, Mine Çetinkaya-Rundel, and Garrett Grolemund. R for Data Science. 2nd edition. O’Reilly, 2022.",
+    "crumbs": [
+      "Home",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#course-community",
+    "href": "syllabus.html#course-community",
+    "title": "Syllabus",
+    "section": "Course community",
+    "text": "Course community\n\nDuke Community Standard\nAll students must adhere to the Duke Community Standard (DCS): Duke University is a community dedicated to scholarship, leadership, and service and to the principles of honesty, fairness, and accountability. Citizens of this community commit to reflect upon these principles in all academic and non-academic endeavors, and to protect and promote a culture of integrity.\nTo uphold the Duke Community Standard, students agree:\n\nI will not lie, cheat, or steal in my academic endeavors;\nI will conduct myself honorably in all my endeavors; and\nI will act if the Standard is compromised.\n\n\n\n\n\nInclusive community\nIt is my intent that students from all diverse backgrounds and perspectives be well-served by this course, that students’ learning needs be addressed both in and out of class, and that the diversity that the students bring to this class be viewed as a resource, strength, and benefit. It is my intent to present materials and activities that are respectful of diversity and in alignment with Duke’s Commitment to Diversity and Inclusion. Your suggestions are encouraged and appreciated. Please let me know ways to improve the effectiveness of the course for you personally, or for other students or student groups.\nFurthermore, I would like to create a learning environment for my students that supports a diversity of thoughts, perspectives and experiences, and honors your identities. To help accomplish this:\n\nIf you have a name that differs from those that appear in your official Duke records, please let me know! You’ll be able to note this in the Getting to know you survey.\nIf you feel like your performance in the class is being impacted by your experiences outside of class, please don’t hesitate to come and talk with me. If you prefer to speak with someone outside of the course, your academic dean is an excellent resource.\nI (like many people) am still in the process of learning about diverse perspectives and identities. If something was said in class (by anyone) that made you feel uncomfortable, please let me or a member of the teaching team know.\n\n\n\nPronouns\nPronouns are meaningful tools to communicate identities and experiences, and using pronouns supports a campus environment where all community members can thrive.\nPlease update your gender pronouns in Duke Hub. You can learn more at the Center for Sexual and Gender Diversity’s website.\n\n\nAccessibility\nIf there is any portion of the course that is not accessible to you due to challenges with technology or the course format, please let me know so we can make appropriate accommodations.\nThe Student Disability Access Office (SDAO) is available to ensure that students are able to engage with their courses and related assignments. Students should be in touch with the Student Disability Access Office to request or update accommodations under these circumstances.\n\n\nCommunication\nAll lecture notes, assignment instructions, an up-to-date schedule, and other course materials may be found on the course website: sta101-f23.github.io.\nI will regularly send course announcements via email and Canvas, make sure to check one or the other of these regularly. If an announcement is sent Monday through Thursday, I will assume that you have read the announcement by the next day. If an announcement is sent on a Friday or over the weekend, I will assume that you have read it by Monday.\n\n\nWhere to get help\n\nIf you have a question during lecture or lab, feel free to ask it! There are likely other students with the same question, so by asking you will create a learning opportunity for everyone.\nThe teaching team is here to help you be successful in the course. You are encouraged to attend office hours to ask questions about the course content and assignments. Many questions are most effectively answered as you discuss them with others, so office hours are a valuable resource. Please use them!\nOutside of class and office hours, any general questions about course content or assignments should be posted on the course Slack. There is a chance another student has already asked a similar question, so please check the other posts on Slack before adding a new question. If you know the answer to a question posted on Slack, I encourage you to respond!\n\nCheck out the Support page for more resources.\nI want to make sure that you learn everything you were hoping to learn from this class. If this requires flexibility, please don’t hesitate to ask.\n\nYou never owe me personal information about your health (mental or physical) but you’re always welcome to talk to me. If I can’t help, I likely know someone who can.\nI want you to learn lots of things from this class, but I primarily want you to stay healthy, balanced, and grounded during this crisis.",
+    "crumbs": [
+      "Home",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#lectures-and-lab",
+    "href": "syllabus.html#lectures-and-lab",
+    "title": "Syllabus",
+    "section": "Lectures and lab",
+    "text": "Lectures and lab\nThe goal of both the lectures and the labs is for them to be as interactive as possible. My role as instructor is to introduce you new tools and techniques, but it is up to you to take them and make use of them. A lot of what you do in this course will involve writing code, and coding is a skill that is best learned by doing. Therefore, as much as possible, you will be working on a variety of tasks and activities throughout each lecture and lab. Attendance will not be taken during class but you are expected to attend all lecture and lab sessions and meaningfully contribute to in-class exercises and discussion.\nIf you have a laptop or table, you may find it helpful to bring it to class so that you can take part in the in-class exercises. However, you will typically be working in groups, so as long as someone at your table has a laptop, that will be sufficient.",
+    "crumbs": [
+      "Home",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#assessments-and-grading",
+    "href": "syllabus.html#assessments-and-grading",
+    "title": "Syllabus",
+    "section": "Assessments and grading",
+    "text": "Assessments and grading\n\nAttendance and participation\nI expect you to be present at class meetings and to actively participate in discussions and activities. While your attendance and participation do not factor directly into your course grade, they do factor indirectly in that your learning is a direct result of engaging with the material. If you do need to miss class for any reason, you can check the class Moodle page to see what we covered. I will also post all slides.\n\n\nInteractive tutorials\nYou will be assigned a number of interactive tutorials each week from the textbook. You will be asked to submit these on a weekly basis and graded on a check/no check basis.\nMake sure to add your name and your Net ID before generating the hash. Submit these in Canvas.\nIf you’ve completed at least 80% of the tutorials, you’ll get all available points for this component.\n\n\nLabs\nIn labs, you will apply the concepts discussed in class to various data analysis scenarios. Labs will focus on both computation and conceptualization. Lab assignments will be completed using Quarto and submitted as PDF for feedback. While you may collaborate with others on lab assignments, you will need to submit your own final lab report.\n\n\nQuizzes\nWe will have occasional short in-class quizzes. The purpose of these is to check-in where you are in your understanding of various concepts throughout the semester.\n\n\nProjects\nThere will be a mid-semester prediction project and a final project. The prediction project will introduce you to conducting independent analyses and writing a formal report using a pre-specified data set. The final project allows you to explore a question and data set of your own. More details about the projects will be provided during the semester. Projects will be completed in teams.\nYou will be assigned to a different team for each of your two projects. You are encouraged to sit with your teammates in lecture and you will also work with them in the lab sessions. All team members are expected to contribute equally to the completion of each project and you will be asked to evaluate your team members after each assignment is due. Failure to adequately contribute to an assignment will result in a penalty to your mark relative to the team’s overall mark.\nSee Section 11 for dates and times of project deadlines. Project deadlines cannot be changed. If you can’t be in class for the final project presentation, you should drop this class.",
+    "crumbs": [
+      "Home",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#course-policies",
+    "href": "syllabus.html#course-policies",
+    "title": "Syllabus",
+    "section": "Course policies",
+    "text": "Course policies\n\nCollaboration\n-   While you are welcome to discuss lab assignments with classmate, your lab report should be completed individually.\n\n-   For the projects, collaboration within teams is expected. Communication between teams at a high level is also allowed however you may not share code or components of the project across teams.\n\nOnline resources: I am well aware that a huge volume of R code is available on the web to solve any number of problems. Unless I explicitly tell you not to use something, the course’s policy is that you may make use of any online resources (e.g., StackOverflow) but you must explicitly cite where you obtained any code you directly use (or use as inspiration). This is not a course in learning R, but rather interpreting the results of analysis.\nUse of generative artificial intelligence (AI): You should treat generative AI, such as ChatGPT, the same as other online resources. There are two guiding principles that govern how you shoulud use AI in this course:1 (1) Cognitive dimension: Working with AI should not reduce your ability to think clearly. We will practice using AI to facilitate—rather than hinder—learning. (2) Ethical dimension: Students using AI should be transparent about their use and make sure it aligns with academic integrity.\n\n✅ AI tools for code: You may make use of the technology for coding examples on assignments; if you do so, you must explicitly cite where you obtained the code. Any recycled code that is discovered and is not explicitly cited will be treated as plagiarism. You may use these guidelines for citing AI-generated content.\n❌ AI tools for narrative: Unless instructed otherwise, you may not use generative AI to write narrative on assignments. In general, you may use generative AI as a resource as you complete assignments but not to answer the exercises for you. You are ultimately responsible for the work you turn in; it should reflect your understanding of the course content.\n\n\nRegardless of course delivery format, it is the responsibility of all students to understand and follow all University of Portland policies, including academic integrity (e.g., completing one’s own work, following proper citation of sources, adhering to guidance around group work projects, and more).\n\n\nLate work & extensions\nDue dates for assignments are there to give you structure and to help you keep up with the course material. They also help me provide you with feedback in a timely manner. That said, I understand that things come up periodically that can make it difficult to complete an assignment by the deadline. Life happens!\nIf something comes up that prevents you from completing an assignment by the stated due date, just send me email and let me know when I can expect your work. You do not need to provide an explanation. In general, I will expect to receive your work within one week.\nThere are, however, two hard deadlines to be aware of: Oct. 11th (Friday before Fall break) and Dec. 6th (last day of classes). Except in unusual circumstances, I will not accept work after those dates.",
+    "crumbs": [
+      "Home",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#accommodations",
+    "href": "syllabus.html#accommodations",
+    "title": "Syllabus",
+    "section": "Accommodations",
+    "text": "Accommodations\n\nAcademic accommodations\nIf you are a student with a disability and need accommodations for this class, it is your responsibility to register with the Student Disability Access Office (SDAO) and provide them with documentation of your disability. SDAO will work with you to determine what accommodations are appropriate for your situation. Please note that accommodations are not retroactive and disability accommodations cannot be provided until a Faculty Accommodation Letter has been given to me. Please contact SDAO for more information: sdao@duke.edu or access.duke.edu.\n\n\nReligious accommodations\nStudents are permitted by university policy to be absent from class to observe a religious holiday. Accordingly, Trinity College of Arts & Sciences and the Pratt School of Engineering have established procedures to be followed by students for notifying their instructors of an absence necessitated by the observance of a religious holiday. Please submit requests for religious accommodations at the beginning of the semester so that we can work to make suitable arrangements well ahead of time. You can find the policy and relevant notification form here: https://trinity.duke.edu/undergraduate/academic-policies/religious-holidays.\nNote: If you’ve read this far in the syllabus, email me a picture of your pet if you have one or your favorite meme!",
+    "crumbs": [
+      "Home",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#sec-important-dates",
+    "href": "syllabus.html#sec-important-dates",
+    "title": "Syllabus",
+    "section": "Important dates",
+    "text": "Important dates\n\nTuesday, August 27: Classes begin\nFriday, August 30: Last day to add/drop\nFriday, October 13: First hard deadline, Project 1 due\nMonday, October 15: Fall Break begins\nFriday, November 17: Exam 2 - Take home due\nMonday, November 25: Last day to Withdraw\nThursday, November 28: Thanksgiving\nFriday, December 6: Last day of classes; 2nd hard deadline\nMonday, December 9: Section H: Project 2 presentations\nWednesday, December 11: Section I: Project 2 presentations",
+    "crumbs": [
+      "Home",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#footnotes",
+    "href": "syllabus.html#footnotes",
+    "title": "Syllabus",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nThese guiding principles are based on Course Policies related to ChatGPT and other AI Tools developed by Joel Gladd, Ph.D.↩︎",
+    "crumbs": [
+      "Home",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#announcements",
+    "href": "slides/01-meet-the-toolkit.html#announcements",
+    "title": "Meet the toolkit",
+    "section": "Announcements",
+    "text": "Announcements\n\nIf you have not yet completed the Getting to know you survey, please do so asap!\nIf you have not yet accepted the invite to join the course GitHub Organization (I’m looking at 41 of you as of this morning!), please do so asap!\nOffice hours + locations linked at https://sta199-s24.github.io/course-team.html, come say hi to me or any of the TAs!"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#course-homepage",
+    "href": "slides/01-meet-the-toolkit.html#course-homepage",
+    "title": "Meet the toolkit",
+    "section": "Course homepage",
+    "text": "Course homepage\nLet’s take a tour!"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#collaboration-policy",
+    "href": "slides/01-meet-the-toolkit.html#collaboration-policy",
+    "title": "Meet the toolkit",
+    "section": "Collaboration policy",
+    "text": "Collaboration policy\n\nOnly work that is clearly assigned as team work should be completed collaboratively.\nHomeworks must be completed individually. You may not directly share answers / code with others, however you are welcome to discuss the problems in general and ask for advice.\nExams must be completed individually. You may not discuss any aspect of the exam with peers. If you have questions, post as private questions on the course forum, only the teaching team will see and answer."
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#sharing-reusing-code-policy",
+    "href": "slides/01-meet-the-toolkit.html#sharing-reusing-code-policy",
+    "title": "Meet the toolkit",
+    "section": "Sharing / reusing code policy",
+    "text": "Sharing / reusing code policy\n\nWe are aware that a huge volume of code is available on the web, and many tasks may have solutions posted\nUnless explicitly stated otherwise, this course’s policy is that you may make use of any online resources (e.g. RStudio Community, StackOverflow, etc.) but you must explicitly cite where you obtained any code you directly use or use as inspiration in your solution(s).\nAny recycled code that is discovered and is not explicitly cited will be treated as plagiarism, regardless of source"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#use-of-generative-ai",
+    "href": "slides/01-meet-the-toolkit.html#use-of-generative-ai",
+    "title": "Meet the toolkit",
+    "section": "Use of generative AI",
+    "text": "Use of generative AI\n\nTreat generative AI, such as ChatGPT, the same as other online resources.\nGuiding principles:\n\n(1) Cognitive dimension: Working with AI should not reduce your ability to think clearly. We will practice using AI to facilitate—rather than hinder—learning.\n(2) Ethical dimension: Students using AI should be transparent about their use and make sure it aligns with academic integrity.\n\n✅ AI tools for code: You may make use of the technology for coding examples on assignments; if you do so, you must explicitly cite where you obtained the code. See the syllabus for guidelines for citing AI-generated content.\n❌ AI tools for narrative: Unless instructed otherwise, you may not use generative AI to write narrative on assignments. In general, you may use generative AI as a resource as you complete assignments but not to answer the exercises for you."
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#academic-integrity",
+    "href": "slides/01-meet-the-toolkit.html#academic-integrity",
+    "title": "Meet the toolkit",
+    "section": "Academic integrity",
+    "text": "Academic integrity\n\nTo uphold the Duke Community Standard:\n\nI will not lie, cheat, or steal in my academic endeavors;\nI will conduct myself honorably in all my endeavors; and\nI will act if the Standard is compromised."
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#most-importantly",
+    "href": "slides/01-meet-the-toolkit.html#most-importantly",
+    "title": "Meet the toolkit",
+    "section": "Most importantly!",
+    "text": "Most importantly!\nAsk if you’re not sure if something violates a policy!"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#five-tips-for-success",
+    "href": "slides/01-meet-the-toolkit.html#five-tips-for-success",
+    "title": "Meet the toolkit",
+    "section": "Five tips for success",
+    "text": "Five tips for success\n\nComplete all the preparation work before class.\nAsk questions.\nDo the readings.\nDo the lab.\nDon’t procrastinate – at least on a weekly basis!"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#course-toolkit-1",
+    "href": "slides/01-meet-the-toolkit.html#course-toolkit-1",
+    "title": "Meet the toolkit",
+    "section": "Course toolkit",
+    "text": "Course toolkit\n\n\nCourse operation\n\nMaterials: sta199-s24.github.io\nSubmission: Gradescope\nDiscussion: Ed Discussion\nGradebook: Canvas\n\n\nDoing data science\n\nComputing:\n\nR\nRStudio\ntidyverse\nQuarto\n\nVersion control and collaboration:\n\nGit\nGitHub"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#learning-goals",
+    "href": "slides/01-meet-the-toolkit.html#learning-goals",
+    "title": "Meet the toolkit",
+    "section": "Learning goals",
+    "text": "Learning goals\nBy the end of the course, you will be able to…\n\n\ngain insight from data\ngain insight from data, reproducibly\ngain insight from data, reproducibly, using modern programming tools and techniques\ngain insight from data, reproducibly and collaboratively, using modern programming tools and techniques\ngain insight from data, reproducibly (with literate programming and version control) and collaboratively, using modern programming tools and techniques"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#reproducibility-checklist",
+    "href": "slides/01-meet-the-toolkit.html#reproducibility-checklist",
+    "title": "Meet the toolkit",
+    "section": "Reproducibility checklist",
+    "text": "Reproducibility checklist\n\nWhat does it mean for a data analysis to be “reproducible”?\n\n. . .\nShort-term goals:\n\nAre the tables and figures reproducible from the code and data?\nDoes the code actually do what you think it does?\nIn addition to what was done, is it clear why it was done?\n\n. . .\nLong-term goals:\n\nCan the code be used for other data?\nCan you extend the code to do other things?"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#toolkit-for-reproducibility",
+    "href": "slides/01-meet-the-toolkit.html#toolkit-for-reproducibility",
+    "title": "Meet the toolkit",
+    "section": "Toolkit for reproducibility",
+    "text": "Toolkit for reproducibility\n\nScriptability \\(\\rightarrow\\) R\nLiterate programming (code, narrative, output in one place) \\(\\rightarrow\\) Quarto\nVersion control \\(\\rightarrow\\) Git / GitHub"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#r-and-rstudio-1",
+    "href": "slides/01-meet-the-toolkit.html#r-and-rstudio-1",
+    "title": "Meet the toolkit",
+    "section": "R and RStudio",
+    "text": "R and RStudio\n\n\n\n\n\n\n\n\nR is an open-source statistical programming language\nR is also an environment for statistical computing and graphics\nIt’s easily extensible with packages\n\n\n\n\nRStudio is a convenient interface for R called an IDE (integrated development environment), e.g. “I write R code in the RStudio IDE”\nRStudio is not a requirement for programming with R, but it’s very commonly used by R programmers and data scientists"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#r-vs.-rstudio",
+    "href": "slides/01-meet-the-toolkit.html#r-vs.-rstudio",
+    "title": "Meet the toolkit",
+    "section": "R vs. RStudio",
+    "text": "R vs. RStudio\n\n\n\n\n\n\n\nSource: Modern Dive."
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#r-packages",
+    "href": "slides/01-meet-the-toolkit.html#r-packages",
+    "title": "Meet the toolkit",
+    "section": "R packages",
+    "text": "R packages\n\n\nPackages: Fundamental units of reproducible R code, including reusable R functions, the documentation that describes how to use them, and sample data1\nAs of 15 January 2023, there are 20,252 R packages available on CRAN (the Comprehensive R Archive Network)2\nWe’re going to work with a small (but important) subset of these!\n\n\n\n\n1 Wickham and Bryan, R Packages.\n2 CRAN contributed packages."
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#tour-r-rstudio",
+    "href": "slides/01-meet-the-toolkit.html#tour-r-rstudio",
+    "title": "Meet the toolkit",
+    "section": "Tour: R + RStudio",
+    "text": "Tour: R + RStudio\n\n\n\nOption 1:\nSit back and enjoy the show!\n\n\n\nOption 2:\nClone the corresponding application exercise repo and follow along.\n{{&lt; fa laptop &gt;}} ae-01-meet-the-penguins\nGo to the course GitHub organization and clone ae-01-meet-the-penguins to your container."
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#tour-recap-r-rstudio",
+    "href": "slides/01-meet-the-toolkit.html#tour-recap-r-rstudio",
+    "title": "Meet the toolkit",
+    "section": "Tour recap: R + RStudio",
+    "text": "Tour recap: R + RStudio"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#a-short-list-for-now-of-r-essentials",
+    "href": "slides/01-meet-the-toolkit.html#a-short-list-for-now-of-r-essentials",
+    "title": "Meet the toolkit",
+    "section": "A short list (for now) of R essentials",
+    "text": "A short list (for now) of R essentials\n\nFunctions are (most often) verbs, followed by what they will be applied to in parentheses:\n\n\ndo_this(to_this)\ndo_that(to_this, to_that, with_those)\n\n. . .\n\nPackages are installed with the install.packages() function and loaded with the library function, once per session:\n\n\ninstall.packages(\"package_name\")\nlibrary(package_name)"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#r-essentials-continued",
+    "href": "slides/01-meet-the-toolkit.html#r-essentials-continued",
+    "title": "Meet the toolkit",
+    "section": "R essentials (continued)",
+    "text": "R essentials (continued)\n\nColumns (variables) in data frames are accessed with $:\n\n\ndataframe$var_name\n\n. . .\n\nObject documentation can be accessed with ?\n\n\n?mean"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#tidyverse",
+    "href": "slides/01-meet-the-toolkit.html#tidyverse",
+    "title": "Meet the toolkit",
+    "section": "tidyverse",
+    "text": "tidyverse\n\n\n\n\ntidyverse.org\n\nThe tidyverse is an opinionated collection of R packages designed for data science\nAll packages share an underlying philosophy and a common grammar"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#quarto-1",
+    "href": "slides/01-meet-the-toolkit.html#quarto-1",
+    "title": "Meet the toolkit",
+    "section": "Quarto",
+    "text": "Quarto\n\n\nFully reproducible reports – each time you render the analysis is ran from the beginning\nCode goes in chunks narrative goes outside of chunks\nA visual editor for a familiar / Google docs-like editing experience"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#tour-quarto",
+    "href": "slides/01-meet-the-toolkit.html#tour-quarto",
+    "title": "Meet the toolkit",
+    "section": "Tour: Quarto",
+    "text": "Tour: Quarto\n\n\n\nOption 1:\nSit back and enjoy the show!\n\n\n\nOption 2:\nClone the corresponding application exercise repo (if you haven’t yet done so) and follow along.\n{{&lt; fa laptop &gt;}} ae-01-meet-the-penguins\nGo to the course GitHub organization and clone ae-01-meet-the-penguins to your container."
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#tour-recap-quarto",
+    "href": "slides/01-meet-the-toolkit.html#tour-recap-quarto",
+    "title": "Meet the toolkit",
+    "section": "Tour recap: Quarto",
+    "text": "Tour recap: Quarto"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#environments",
+    "href": "slides/01-meet-the-toolkit.html#environments",
+    "title": "Meet the toolkit",
+    "section": "Environments",
+    "text": "Environments\n\n\n\n\n\n\nImportant\n\n\n\nThe environment of your Quarto document is separate from the Console!\n\n\nRemember this, and expect it to bite you a few times as you’re learning to work with Quarto!"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#environments-1",
+    "href": "slides/01-meet-the-toolkit.html#environments-1",
+    "title": "Meet the toolkit",
+    "section": "Environments",
+    "text": "Environments\n\n\nFirst, run the following in the console:\n\nx &lt;- 2\nx * 3\n\n\n\nAll looks good, eh?\n\n\nThen, add the following in an R chunk in your Quarto document\n\nx * 3\n\n\n\nWhat happens? Why the error?"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#how-will-we-use-quarto",
+    "href": "slides/01-meet-the-toolkit.html#how-will-we-use-quarto",
+    "title": "Meet the toolkit",
+    "section": "How will we use Quarto?",
+    "text": "How will we use Quarto?\n\nEvery application exercise, lab, project, etc. is an Quarto document\nYou’ll always have a template Quarto document to start with\nThe amount of scaffolding in the template will decrease over the semester"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#whats-with-all-the-hexes",
+    "href": "slides/01-meet-the-toolkit.html#whats-with-all-the-hexes",
+    "title": "Meet the toolkit",
+    "section": "What’s with all the hexes?",
+    "text": "What’s with all the hexes?"
+  },
+  {
+    "objectID": "slides/01/01-welcome.html#teaching-team",
+    "href": "slides/01/01-welcome.html#teaching-team",
+    "title": "Welcome to MTH 161",
+    "section": "Teaching team",
+    "text": "Teaching team\n\n\nInstructor\nProf. Chris Hallstrom\nBC 270\nhallstro@up.edu"
+  },
+  {
+    "objectID": "slides/01/01-welcome.html#timetable",
+    "href": "slides/01/01-welcome.html#timetable",
+    "title": "Welcome to MTH 161",
+    "section": "Timetable",
+    "text": "Timetable\n\nLectures at Gross Hall 103: Mon + Wed 1:25 - 2:40 pm\nLabs at Perkins LINK 087 (Classroom 3)\n\nLab 1: Fri 8:30 - 9:45 am\nLab 2: Fri 10:05 - 11:20 am\nLab 3: Fri 11:45 am - 1:00 pm\nLab 4: Fri 1:25 - 2:40 pm"
+  },
+  {
+    "objectID": "slides/01/01-welcome.html#learning-objectives",
+    "href": "slides/01/01-welcome.html#learning-objectives",
+    "title": "Welcome to MTH 161",
+    "section": "Learning objectives",
+    "text": "Learning objectives\n\nRecognize the importance of data collection, identify limitations in data collection methods, and determine how they affect the scope of inference.\nUse statistical software to summarize data numerically and visually, and to perform data analysis.\nHave a conceptual understanding of the unified nature of statistical inference.\nApply estimation and testing methods to analyze single variables or the relationship between two variables in order to understand natural phenomena and make data-based decisions.\nModel numerical response variables using a single or multiple explanatory variables.\nInterpret results correctly, effectively, and in context without relying on statistical jargon.\nCritique data-based claims and evaluate data-based decisions.\nComplete research projects demonstrating mastery of statistical data analysis from exploratory analysis to inference to modeling."
+  },
+  {
+    "objectID": "slides/01/01-welcome.html#lets-play-a-game",
+    "href": "slides/01/01-welcome.html#lets-play-a-game",
+    "title": "Welcome to MTH 161",
+    "section": "Let’s play a game!",
+    "text": "Let’s play a game!\n\n\nForm a small group (2-4 people) with people sitting around you\nFirst, introduce yourselves to each other – name (and proper pronunciation of name), year, major, where are you from, etc.\nPlay the game: https://nyti.ms/3suUJHG"
+  },
+  {
+    "objectID": "slides/01/01-welcome.html#course-website",
+    "href": "slides/01/01-welcome.html#course-website",
+    "title": "Welcome to MTH 161",
+    "section": "Course website",
+    "text": "Course website\n\nsta101-f23.github.io\n\n\naka “the one link to rule them all”"
+  },
+  {
+    "objectID": "slides/01/01-welcome.html#lectures",
+    "href": "slides/01/01-welcome.html#lectures",
+    "title": "Welcome to MTH 161",
+    "section": "Lectures",
+    "text": "Lectures\n\nIn person\nAttendance is required (as long as you’re healthy!)\nA little bit of everything:\n\nTraditional lecture\nLive coding + demos\nShort exercises + solution discussion\n\nRecordings will be posted after class – to be used for review + make-up if you can’t make it to class due to health reasons, they’re not an alternative to class attendance"
+  },
+  {
+    "objectID": "slides/01/01-welcome.html#labs",
+    "href": "slides/01/01-welcome.html#labs",
+    "title": "Welcome to MTH 161",
+    "section": "Labs",
+    "text": "Labs\n\nAttendance is required (as long as you’re healthy!)\nOpportunity to work on course assignments with TA support\nOpportunity to work with teammates on projects"
+  },
+  {
+    "objectID": "slides/01/01-welcome.html#announcements",
+    "href": "slides/01/01-welcome.html#announcements",
+    "title": "Welcome to MTH 161",
+    "section": "Announcements",
+    "text": "Announcements\n\nPosted on Canvas (Announcements) and sent via email, be sure to check both regularly\nI’ll assume that you’ve read an announcement by the next “business” day"
+  },
+  {
+    "objectID": "slides/01/01-welcome.html#diversity-and-inclusion",
+    "href": "slides/01/01-welcome.html#diversity-and-inclusion",
+    "title": "Welcome to MTH 161",
+    "section": "Diversity and inclusion",
+    "text": "Diversity and inclusion\nIt is my intent that students from all diverse backgrounds and perspectives be well-served by this course, that students’ learning needs be addressed both in and out of class, and that the diversity that the students bring to this class be viewed as a resource, strength and benefit.\n\nIf you have a name that differs from those that appear in your official Duke records, please let me know! Add your name pronunciation to your Canvas and Slack profiles.\nPlease let me know your preferred pronouns and add these to your Canvas and Slack profiles.\nIf you feel like your performance in the class is being impacted by your experiences outside of class, please don’t hesitate to come and talk with me. I want to be a resource for you. If you prefer to speak with someone outside of the course, your advisers and deans are excellent resources.\nI (like many people) am still in the process of learning about diverse perspectives and identities. If something was said in class (by anyone) that made you feel uncomfortable, please talk to me about it."
+  },
+  {
+    "objectID": "slides/01/01-welcome.html#accessibility",
+    "href": "slides/01/01-welcome.html#accessibility",
+    "title": "Welcome to MTH 161",
+    "section": "Accessibility",
+    "text": "Accessibility\n\nThe Student Disability Access Office (SDAO) is available to ensure that students are able to engage with their courses and related assignments.\nWe will have in class exams. If you need special accommodations, please book the testing center ASAP!\nI am committed to making all course materials accessible and I’m always learning how to do this better. If any course component is not accessible to you in any way, please don’t hesitate to let me know."
+  },
+  {
+    "objectID": "slides/01/01-welcome.html#attendance-participation-5",
+    "href": "slides/01/01-welcome.html#attendance-participation-5",
+    "title": "Welcome to MTH 161",
+    "section": "Attendance + participation (5%)",
+    "text": "Attendance + participation (5%)\n\nRequired throughout the semester in lecture and lab\nStudents who attend at least 80% of the lectures and participate regularly in lecture and/or other course venues (lab + Slack) will receive full credit for this portion of their grade\nParticipation in labs as well as on Slack will also count towards this component\n\n\n\n\n\n\n\nTip\n\n\nIf you attend at least 80% of the classes, you’ll get all available points for this component."
+  },
+  {
+    "objectID": "slides/01/01-welcome.html#interactive-tutorials-5",
+    "href": "slides/01/01-welcome.html#interactive-tutorials-5",
+    "title": "Welcome to MTH 161",
+    "section": "Interactive tutorials (5%)",
+    "text": "Interactive tutorials (5%)\n\nOnline, individual, can discuss with classmates\nCover reading that is due since the previous quiz and up to and including the deadline for the given quiz\nMake sure to fill out your name and Net ID prior to generating the hash to submit (more info on this coming soon)\nDue by 5 pm ET (on the indicated day on the course schedule\n\n\n\n\n\n\n\nTip\n\n\nIf you complete at least 80% of the tutorials, you’ll get all available points for this component."
+  },
+  {
+    "objectID": "slides/01/01-welcome.html#labs-25",
+    "href": "slides/01/01-welcome.html#labs-25",
+    "title": "Welcome to MTH 161",
+    "section": "Labs (25%)",
+    "text": "Labs (25%)\n\nSubmitted on Gradescope, individual, can discuss with classmates\nLab sessions allocated to working on assignments and getting feedback from TAs\nDue by 5 pm ET on the indicated day on the course schedule\nWeekly deadlines to keep you on track, hard deadlines by exams or end of class\n\n\n\n\n\n\n\nTip\n\n\nLowest lab score is dropped, whether it’s an actual low score or a 0 from not turning it in."
+  },
+  {
+    "objectID": "slides/01/01-welcome.html#exams",
+    "href": "slides/01/01-welcome.html#exams",
+    "title": "Welcome to MTH 161",
+    "section": "Exams",
+    "text": "Exams\n\nTwo exams, each 20%\nEach exam comprised of two parts:\n\nIn class: 75 minute in-class exam. Closed book, one sheet of notes (“cheat sheet”, no larger than 8 1/2 x 11, both sides, must be prepared by you) – 70% of the grade\nTake home: 48 hours to complete the take home portion. The take home portion will follow from the in class exam and focus on the analysis of a dataset introduced in the take home exam – 30% of the grade\n\n\n\n\n\n\n\n\nCaution\n\n\nExam dates cannot be changed and no make-up exams will be given. If you can’t take the exams on these dates, you should drop this class."
+  },
+  {
+    "objectID": "slides/01/01-welcome.html#projects",
+    "href": "slides/01/01-welcome.html#projects",
+    "title": "Welcome to MTH 161",
+    "section": "Projects",
+    "text": "Projects\n\nProject 1 (10%)\n\nSame data, regression\nWrite-up only\n\nProject 2 (15%)\n\nDataset of your choice, method of your choice\nNew team\nPresentation and write-up\nPresentations on the final exam date\n\nInterim deadlines, peer review on content, peer evaluation for team contribution\nSome lab sessions allocated to working on projects, doing peer review, getting feedback from TAs\n\n\n\n\n\n\n\nCaution\n\n\nFinal presentation date cannot be changed. If you can’t present on that date, you should drop this class."
+  },
+  {
+    "objectID": "slides/01/01-welcome.html#teams",
+    "href": "slides/01/01-welcome.html#teams",
+    "title": "Welcome to MTH 161",
+    "section": "Teams",
+    "text": "Teams\n\nTeamwork\n\nProjects (required), in class exercises (recommended)\nAssigned different teams for each project\nPeer evaluation during teamwork and after completion\n\nExpectations and roles\n\nEveryone is expected to contribute equal effort\nEveryone is expected to understand all code turned in\nIndividual contribution evaluated by peer evaluation, commits, etc."
+  },
+  {
+    "objectID": "slides/01/01-welcome.html#covid-policies",
+    "href": "slides/01/01-welcome.html#covid-policies",
+    "title": "Welcome to MTH 161",
+    "section": "COVID policies",
+    "text": "COVID policies\n\nWear a mask if the university requires\nStay home if you’re sick and follow guidance\nRead and follow university guidance"
+  },
+  {
+    "objectID": "slides/01/01-welcome.html#late-work-policy",
+    "href": "slides/01/01-welcome.html#late-work-policy",
+    "title": "Welcome to MTH 161",
+    "section": "Late work policy",
+    "text": "Late work policy\n\nInteractive tutorials: Late submissions past the hard deadlines not accepted\nLabs:\n\nLate, but within 24 hours of deadline: -20% of available points\nAny later: No credit, and we will not provide written feedback\nNote that lowest lab score will be dropped, even if that score is a 0\n\nProject write-ups:\n\nLate, but within 24 hours of deadline: -20% of available points\nAny later: No credit, and we will not provide written feedback\nTwo days late or later: No credit, and we will not provide written feedback\n\nProject presentation: Late submissions not accepted\nPeer evaluation:\n\nLate submissions not accepted\nMust turn in peer evaluation if you want your own score from others"
+  },
+  {
+    "objectID": "slides/01/01-welcome.html#collaboration-policy",
+    "href": "slides/01/01-welcome.html#collaboration-policy",
+    "title": "Welcome to MTH 161",
+    "section": "Collaboration policy",
+    "text": "Collaboration policy\n\nOnly work that is clearly assigned as team work should be completed collaboratively (projects)\nExams must be completed individually, you may not discuss answers with teammates, clarification questions should only be asked to myself and the TAs\nLabs must be completed individually. You may not directly share answers / code with others, however you are welcome to discuss the problems in general and ask for advice"
+  },
+  {
+    "objectID": "slides/01/01-welcome.html#sharing-reusing-code-policy",
+    "href": "slides/01/01-welcome.html#sharing-reusing-code-policy",
+    "title": "Welcome to MTH 161",
+    "section": "Sharing / reusing code policy",
+    "text": "Sharing / reusing code policy\n\nWe are aware that a huge volume of code is available on the web, and many tasks may have solutions posted\nUnless explicitly stated otherwise, this course’s policy is that you may make use of any online resources (e.g., StackOverflow) but you must explicitly cite where you obtained any code you directly use or use as inspiration in your solution(s)\nAny recycled code that is discovered and is not explicitly cited will be treated as plagiarism, regardless of source"
+  },
+  {
+    "objectID": "slides/01/01-welcome.html#generative-ai-policy",
+    "href": "slides/01/01-welcome.html#generative-ai-policy",
+    "title": "Welcome to MTH 161",
+    "section": "Generative AI policy",
+    "text": "Generative AI policy\nYou should treat generative AI, such as ChatGPT, the same as other online resources. There are two guiding principles that govern how you can use AI in this course:1\n(1) Cognitive dimension: Working with AI should not reduce your ability to think clearly. We will practice using AI to facilitate—rather than hinder—learning.\n(2) Ethical dimension: Students using AI should be transparent about their use and make sure it aligns with academic integrity.\n\n✅ AI tools for code: You may make use of the technology for coding examples on assignments; if you do so, you must explicitly cite where you obtained the code. Any recycled code that is discovered and is not explicitly cited will be treated as plagiarism.\n❌ AI tools for narrative: Unless instructed otherwise, you may not use generative AI to write narrative on assignments. In general, you may use generative AI as a resource as you complete assignments but not to answer the exercises for you. You are ultimately responsible for the work you turn in; it should reflect your understanding of the course content.\n\nThese guiding principles are based on Course Policies related to ChatGPT and other AI Tools developed by Joel Gladd, Ph.D."
+  },
+  {
+    "objectID": "slides/01/01-welcome.html#academic-integrity",
+    "href": "slides/01/01-welcome.html#academic-integrity",
+    "title": "Welcome to MTH 161",
+    "section": "Academic integrity",
+    "text": "Academic integrity\nTo uphold the Duke Community Standard:\n\nI will not lie, cheat, or steal in my academic endeavors;\nI will conduct myself honorably in all my endeavors; and\nI will act if the Standard is compromised.\n\n\n\nmost importantly:\nask if you’re not sure if something violates a policy!"
+  },
+  {
+    "objectID": "slides/01/01-welcome.html#office-hours",
+    "href": "slides/01/01-welcome.html#office-hours",
+    "title": "Welcome to MTH 161",
+    "section": "Office hours",
+    "text": "Office hours\n\nMine: Tuesdays 3:30 - 4:30 pm - Old Chem 213 + by appointment (on Zoom or in person depending on day/time)\nTAs: See the course team and course support pages on the course website. We have a total of 17 TA office hours per week!\n+ lots more resources listed on the syllabus!"
+  },
+  {
+    "objectID": "slides/01/01-welcome.html#wellness",
+    "href": "slides/01/01-welcome.html#wellness",
+    "title": "Welcome to MTH 161",
+    "section": "Wellness",
+    "text": "Wellness\nI want to make sure that you learn everything you were hoping to learn from this class. If this requires flexibility, please don’t hesitate to ask.\n\nYou never owe me personal information about your health (mental or physical) but you’re always welcome to talk to me. If I can’t help, I likely know someone who can.\nI want you to learn lots of things from this class, but I primarily want you to stay healthy, balanced, and grounded."
+  },
+  {
+    "objectID": "slides/01/01-welcome.html#rstudio",
+    "href": "slides/01/01-welcome.html#rstudio",
+    "title": "Welcome to MTH 161",
+    "section": "RStudio",
+    "text": "RStudio\n\nhttps://posit.cloud\n\n\nBrowser based RStudio instance(s) provided by Posit\nRequires internet connection to access\nProvides consistency in hardware and software environments\nLocal R installations are fine but we will not guarantee support"
+  },
+  {
+    "objectID": "slides/01/01-welcome.html#slack",
+    "href": "slides/01/01-welcome.html#slack",
+    "title": "Welcome to MTH 161",
+    "section": "Slack",
+    "text": "Slack\n\nOnline forum for asking and answering questions\nPrivate repo in the course organization\nYou will need to join the course organization for access\nAsk and answer questions related to course logistics, assignment, etc. here\nPersonal questions (e.g., extensions, illnesses, etc.) should be via email to me\nOnce you join, browse the channels to make sure you’re posting questions in the right channel, update your profile with your name, photo/avatar of you that matches your GitHub profile, and your pronouns\nUnfortunately Slack is not the best place to in-depth questions, but it’s a great place for real-time connection and collaboration"
+  },
+  {
+    "objectID": "slides/01/01-welcome.html#to-do-before-1",
+    "href": "slides/01/01-welcome.html#to-do-before-1",
+    "title": "Welcome to MTH 161",
+    "section": "To do before…",
+    "text": "To do before…\nwe move on\nSee course announcement (on Canvas or in your email) and click on the links to\n\nLog in to Posit Cloud – and update your profile\nLog in to Slack – and update your profile with your photo, pronouns, name pronunciation\n\nthe next class on Wednesday\n\nRead the syllabus\nComplete the Getting to know you survey on Canvas\nComplete the readings\n\nthe end of the week\n\nGet started on the lab assignment\nComplete the interactive tutorials"
+  },
+  {
+    "objectID": "slides/01/01-welcome.html#application-exercise-un-votes",
+    "href": "slides/01/01-welcome.html#application-exercise-un-votes",
+    "title": "Welcome to MTH 161",
+    "section": "Application exercise: UN Votes",
+    "text": "Application exercise: UN Votes\n\nGo to Posit Cloud and start the project called UN Votes. Render the document titled unvotes.qmd. Review the narrative and the data visualization you just created. Then, change “Turkey” to another country of your choice. Re-render the document. Show the plot you created to your neighbor and discuss (1) why you chose that country and (2) how this new visualization is different than the original (and what that says about country politics, if anything).\nTime permitting: How were these data collected?"
+  },
+  {
+    "objectID": "slides/01/01-welcome.html#instructor",
+    "href": "slides/01/01-welcome.html#instructor",
+    "title": "Welcome to MTH 161",
+    "section": "Instructor",
+    "text": "Instructor\n\n\nProf. Chris Hallstrom\nBC 270\nhallstro@up.edu"
+  },
+  {
+    "objectID": "slides/02/02-hello-data.html#from-canvas",
+    "href": "slides/02/02-hello-data.html#from-canvas",
+    "title": "Hello data",
+    "section": "From Canvas",
+    "text": "From Canvas\n\nCourse recordings have been set up. Link has also been added to the course website. Remember that the videos are for “make up”, not a replacement for class attendance.\nTA office hours are updated with minor changes on the course website and Zoom links for virtual office hours are also included.\nIf you haven’t yet done so, please:\n\ncomplete the Getting to know you survey\nread through the syllabus (and follow the prompts)"
+  },
+  {
+    "objectID": "slides/02/02-hello-data.html#concerns",
+    "href": "slides/02/02-hello-data.html#concerns",
+    "title": "Hello data",
+    "section": "Concerns",
+    "text": "Concerns\nd |&gt;\n  unnest_tokens(word, concerns) |&gt; \n  anti_join(stop_words) |&gt; \n  count(word, sort = TRUE)\n## Joining with `by = join_by(word)`\n## # A tibble: 227 × 2\n##    word            n\n##    &lt;chr&gt;       &lt;int&gt;\n##  1 coding         34\n##  2 class          12\n##  3 concerned      11\n##  4 nervous        10\n##  5 programming     9\n##  6 math            8\n##  7 understand      8\n##  8 bit             7\n##  9 experience      7\n## 10 learning        6\n## # ℹ 217 more rows"
+  },
+  {
+    "objectID": "slides/02/02-hello-data.html#stats-and-coding-before",
+    "href": "slides/02/02-hello-data.html#stats-and-coding-before",
+    "title": "Hello data",
+    "section": "Stats and coding before",
+    "text": "Stats and coding before\n75% so far no stats and no coding background/experience!"
+  },
+  {
+    "objectID": "slides/02/02-hello-data.html#application-exercise",
+    "href": "slides/02/02-hello-data.html#application-exercise",
+    "title": "Welcome (continued)",
+    "section": "Application exercise",
+    "text": "Application exercise\nGo to Posit Cloud and start the project titled ae-02-Flint."
+  },
+  {
+    "objectID": "slides/01/01-welcome.html#hello-data",
+    "href": "slides/01/01-welcome.html#hello-data",
+    "title": "Welcome to MTH 161",
+    "section": "Hello data",
+    "text": "Hello data\nApplication exercise: UN Votes\n\nGo to Posit Cloud and start the project called UN Votes. Render the document titled unvotes.qmd. Review the narrative and the data visualization you just created.\nTake turns changing “Turkey” to another country of your choice and re-render the document. With your group, discuss:\n\nwhy you chose that country\nhow this new visualization is different than the original (and what that says about country politics, if anything).\n\nTime permitting: How were these data collected?"
+  },
+  {
+    "objectID": "slides/02/02-hello-data.html#learning-objectives",
+    "href": "slides/02/02-hello-data.html#learning-objectives",
+    "title": "Welcome (continued)",
+    "section": "Learning objectives",
+    "text": "Learning objectives\n\nRecognize the importance of data collection, identify limitations in data collection methods, and determine how they affect the scope of inference.\nUse statistical software to summarize data numerically and visually, and to perform data analysis.\nHave a conceptual understanding of the unified nature of statistical inference.\nApply estimation and testing methods to analyze single variables or the relationship between two variables in order to understand natural phenomena and make data-based decisions.\nModel numerical response variables using a single or multiple explanatory variables.\nInterpret results correctly, effectively, and in context without relying on statistical jargon.\nCritique data-based claims and evaluate data-based decisions.\nComplete research projects demonstrating mastery of statistical data analysis from exploratory analysis to inference to modeling."
+  },
+  {
+    "objectID": "slides/02/02-hello-data.html#course-website",
+    "href": "slides/02/02-hello-data.html#course-website",
+    "title": "Welcome (continued)",
+    "section": "Course website",
+    "text": "Course website\n\nsta101-f23.github.io\n\n\naka “the one link to rule them all”"
+  },
+  {
+    "objectID": "slides/02/02-hello-data.html#lectures",
+    "href": "slides/02/02-hello-data.html#lectures",
+    "title": "Welcome (continued)",
+    "section": "Lectures",
+    "text": "Lectures\n\nIn person\nAttendance is required (as long as you’re healthy!)\nA little bit of everything:\n\nTraditional lecture\nLive coding + demos\nShort exercises + solution discussion\n\nRecordings will be posted after class – to be used for review + make-up if you can’t make it to class due to health reasons, they’re not an alternative to class attendance"
+  },
+  {
+    "objectID": "slides/02/02-hello-data.html#labs",
+    "href": "slides/02/02-hello-data.html#labs",
+    "title": "Welcome (continued)",
+    "section": "Labs",
+    "text": "Labs\n\nAttendance is required (as long as you’re healthy!)\nOpportunity to work on course assignments with TA support\nOpportunity to work with teammates on projects"
+  },
+  {
+    "objectID": "slides/02/02-hello-data.html#announcements-1",
+    "href": "slides/02/02-hello-data.html#announcements-1",
+    "title": "Welcome (continued)",
+    "section": "Announcements",
+    "text": "Announcements\n\nPosted on Canvas (Announcements) and sent via email, be sure to check both regularly\nI’ll assume that you’ve read an announcement by the next “business” day"
+  },
+  {
+    "objectID": "slides/02/02-hello-data.html#diversity-and-inclusion",
+    "href": "slides/02/02-hello-data.html#diversity-and-inclusion",
+    "title": "Welcome (continued)",
+    "section": "Diversity and inclusion",
+    "text": "Diversity and inclusion\nIt is my intent that students from all diverse backgrounds and perspectives be well-served by this course, that students’ learning needs be addressed both in and out of class, and that the diversity that the students bring to this class be viewed as a resource, strength and benefit.\n\nIf you have a name that differs from those that appear in your official Duke records, please let me know! Add your name pronunciation to your Canvas and Slack profiles.\nPlease let me know your preferred pronouns and add these to your Canvas and Slack profiles.\nIf you feel like your performance in the class is being impacted by your experiences outside of class, please don’t hesitate to come and talk with me. I want to be a resource for you. If you prefer to speak with someone outside of the course, your advisers and deans are excellent resources.\nI (like many people) am still in the process of learning about diverse perspectives and identities. If something was said in class (by anyone) that made you feel uncomfortable, please talk to me about it."
+  },
+  {
+    "objectID": "slides/02/02-hello-data.html#accessibility",
+    "href": "slides/02/02-hello-data.html#accessibility",
+    "title": "Welcome (continued)",
+    "section": "Accessibility",
+    "text": "Accessibility\n\nThe Student Disability Access Office (SDAO) is available to ensure that students are able to engage with their courses and related assignments.\nWe will have in class exams. If you need special accommodations, please book the testing center ASAP!\nI am committed to making all course materials accessible and I’m always learning how to do this better. If any course component is not accessible to you in any way, please don’t hesitate to let me know."
+  },
+  {
+    "objectID": "slides/02/02-hello-data.html#attendance-participation-5",
+    "href": "slides/02/02-hello-data.html#attendance-participation-5",
+    "title": "Welcome (continued)",
+    "section": "Attendance + participation (5%)",
+    "text": "Attendance + participation (5%)\n\nRequired throughout the semester in lecture and lab\nStudents who attend at least 80% of the lectures and participate regularly in lecture and/or other course venues (lab + Slack) will receive full credit for this portion of their grade\nParticipation in labs as well as on Slack will also count towards this component\n\n\n\n\n\n\n\nTip\n\n\n\nIf you attend at least 80% of the classes, you’ll get all available points for this component."
+  },
+  {
+    "objectID": "slides/02/02-hello-data.html#interactive-tutorials-5",
+    "href": "slides/02/02-hello-data.html#interactive-tutorials-5",
+    "title": "Welcome (continued)",
+    "section": "Interactive tutorials (5%)",
+    "text": "Interactive tutorials (5%)\n\nOnline, individual, can discuss with classmates\nCover reading that is due since the previous quiz and up to and including the deadline for the given quiz\nMake sure to fill out your name and Net ID prior to generating the hash to submit (more info on this coming soon)\nDue by 5 pm ET (on the indicated day on the course schedule\n\n\n\n\n\n\n\nTip\n\n\n\nIf you complete at least 80% of the tutorials, you’ll get all available points for this component."
+  },
+  {
+    "objectID": "slides/02/02-hello-data.html#labs-25",
+    "href": "slides/02/02-hello-data.html#labs-25",
+    "title": "Welcome (continued)",
+    "section": "Labs (25%)",
+    "text": "Labs (25%)\n\nSubmitted on Gradescope, individual, can discuss with classmates\nLab sessions allocated to working on assignments and getting feedback from TAs\nDue by 5 pm ET on the indicated day on the course schedule\nWeekly deadlines to keep you on track, hard deadlines by exams or end of class\n\n\n\n\n\n\n\nTip\n\n\n\nLowest lab score is dropped, whether it’s an actual low score or a 0 from not turning it in."
+  },
+  {
+    "objectID": "slides/02/02-hello-data.html#exams",
+    "href": "slides/02/02-hello-data.html#exams",
+    "title": "Welcome (continued)",
+    "section": "Exams",
+    "text": "Exams\n\nTwo exams, each 20%\nEach exam comprised of two parts:\n\nIn class: 75 minute in-class exam. Closed book, one sheet of notes (“cheat sheet”, no larger than 8 1/2 x 11, both sides, must be prepared by you) – 70% of the grade\nTake home: 48 hours to complete the take home portion. The take home portion will follow from the in class exam and focus on the analysis of a dataset introduced in the take home exam – 30% of the grade\n\n\n\n\n\n\n\n\nCaution\n\n\n\nExam dates cannot be changed and no make-up exams will be given. If you can’t take the exams on these dates, you should drop this class."
+  },
+  {
+    "objectID": "slides/02/02-hello-data.html#projects",
+    "href": "slides/02/02-hello-data.html#projects",
+    "title": "Welcome (continued)",
+    "section": "Projects",
+    "text": "Projects\n\nProject 1 (10%)\n\nSame data, regression\nWrite-up only\n\nProject 2 (15%)\n\nDataset of your choice, method of your choice\nNew team\nPresentation and write-up\nPresentations on the final exam date\n\nInterim deadlines, peer review on content, peer evaluation for team contribution\nSome lab sessions allocated to working on projects, doing peer review, getting feedback from TAs\n\n\n\n\n\n\n\nCaution\n\n\n\nFinal presentation date cannot be changed. If you can’t present on that date, you should drop this class."
+  },
+  {
+    "objectID": "slides/02/02-hello-data.html#teams",
+    "href": "slides/02/02-hello-data.html#teams",
+    "title": "Welcome (continued)",
+    "section": "Teams",
+    "text": "Teams\n\nTeamwork\n\nProjects (required), in class exercises (recommended)\nAssigned different teams for each project\nPeer evaluation during teamwork and after completion\n\nExpectations and roles\n\nEveryone is expected to contribute equal effort\nEveryone is expected to understand all code turned in\nIndividual contribution evaluated by peer evaluation, commits, etc."
+  },
+  {
+    "objectID": "slides/02/02-hello-data.html#covid-policies",
+    "href": "slides/02/02-hello-data.html#covid-policies",
+    "title": "Welcome (continued)",
+    "section": "COVID policies",
+    "text": "COVID policies\n\nWear a mask if the university requires\nStay home if you’re sick and follow guidance\nRead and follow university guidance"
+  },
+  {
+    "objectID": "slides/02/02-hello-data.html#late-work-policy",
+    "href": "slides/02/02-hello-data.html#late-work-policy",
+    "title": "Welcome (continued)",
+    "section": "Late work policy",
+    "text": "Late work policy\n\nInteractive tutorials: Late submissions past the hard deadlines not accepted\nLabs:\n\nLate, but within 24 hours of deadline: -20% of available points\nAny later: No credit, and we will not provide written feedback\nNote that lowest lab score will be dropped, even if that score is a 0\n\nProject write-ups:\n\nLate, but within 24 hours of deadline: -20% of available points\nAny later: No credit, and we will not provide written feedback\nTwo days late or later: No credit, and we will not provide written feedback\n\nProject presentation: Late submissions not accepted\nPeer evaluation:\n\nLate submissions not accepted\nMust turn in peer evaluation if you want your own score from others"
+  },
+  {
+    "objectID": "slides/02/02-hello-data.html#collaboration-policy",
+    "href": "slides/02/02-hello-data.html#collaboration-policy",
+    "title": "Welcome (continued)",
+    "section": "Collaboration policy",
+    "text": "Collaboration policy\n\nOnly work that is clearly assigned as team work should be completed collaboratively (projects)\nExams must be completed individually, you may not discuss answers with teammates, clarification questions should only be asked to myself and the TAs\nLabs must be completed individually. You may not directly share answers / code with others, however you are welcome to discuss the problems in general and ask for advice"
+  },
+  {
+    "objectID": "slides/02/02-hello-data.html#sharing-reusing-code-policy",
+    "href": "slides/02/02-hello-data.html#sharing-reusing-code-policy",
+    "title": "Welcome (continued)",
+    "section": "Sharing / reusing code policy",
+    "text": "Sharing / reusing code policy\n\nWe are aware that a huge volume of code is available on the web, and many tasks may have solutions posted\nUnless explicitly stated otherwise, this course’s policy is that you may make use of any online resources (e.g., StackOverflow) but you must explicitly cite where you obtained any code you directly use or use as inspiration in your solution(s)\nAny recycled code that is discovered and is not explicitly cited will be treated as plagiarism, regardless of source"
+  },
+  {
+    "objectID": "slides/02/02-hello-data.html#generative-ai-policy",
+    "href": "slides/02/02-hello-data.html#generative-ai-policy",
+    "title": "Welcome (continued)",
+    "section": "Generative AI policy",
+    "text": "Generative AI policy\nYou should treat generative AI, such as ChatGPT, the same as other online resources. There are two guiding principles that govern how you can use AI in this course:1\n(1) Cognitive dimension: Working with AI should not reduce your ability to think clearly. We will practice using AI to facilitate—rather than hinder—learning.\n(2) Ethical dimension: Students using AI should be transparent about their use and make sure it aligns with academic integrity.\n\n✅ AI tools for code: You may make use of the technology for coding examples on assignments; if you do so, you must explicitly cite where you obtained the code. Any recycled code that is discovered and is not explicitly cited will be treated as plagiarism.\n❌ AI tools for narrative: Unless instructed otherwise, you may not use generative AI to write narrative on assignments. In general, you may use generative AI as a resource as you complete assignments but not to answer the exercises for you. You are ultimately responsible for the work you turn in; it should reflect your understanding of the course content."
+  },
+  {
+    "objectID": "slides/02/02-hello-data.html#academic-integrity",
+    "href": "slides/02/02-hello-data.html#academic-integrity",
+    "title": "Welcome (continued)",
+    "section": "Academic integrity",
+    "text": "Academic integrity\nTo uphold the Duke Community Standard:\n\n\nI will not lie, cheat, or steal in my academic endeavors;\nI will conduct myself honorably in all my endeavors; and\nI will act if the Standard is compromised.\n\n\n\n\nmost importantly:\nask if you’re not sure if something violates a policy!"
+  },
+  {
+    "objectID": "slides/02/02-hello-data.html#office-hours",
+    "href": "slides/02/02-hello-data.html#office-hours",
+    "title": "Welcome (continued)",
+    "section": "Office hours",
+    "text": "Office hours\n\nMine: Tuesdays 3:30 - 4:30 pm - Old Chem 213 + by appointment (on Zoom or in person depending on day/time)\nTAs: See the course team and course support pages on the course website. We have a total of 17 TA office hours per week!\n+ lots more resources listed on the syllabus!"
+  },
+  {
+    "objectID": "slides/02/02-hello-data.html#wellness",
+    "href": "slides/02/02-hello-data.html#wellness",
+    "title": "Welcome (continued)",
+    "section": "Wellness",
+    "text": "Wellness\nI want to make sure that you learn everything you were hoping to learn from this class. If this requires flexibility, please don’t hesitate to ask.\n\nYou never owe me personal information about your health (mental or physical) but you’re always welcome to talk to me. If I can’t help, I likely know someone who can.\nI want you to learn lots of things from this class, but I primarily want you to stay healthy, balanced, and grounded."
+  },
+  {
+    "objectID": "slides/02/02-hello-data.html#rstudio",
+    "href": "slides/02/02-hello-data.html#rstudio",
+    "title": "Welcome (continued)",
+    "section": "RStudio",
+    "text": "RStudio\n\nhttps://posit.cloud\n\n\nBrowser based RStudio instance(s) provided by Posit\nRequires internet connection to access\nProvides consistency in hardware and software environments\nLocal R installations are fine but we will not guarantee support"
+  },
+  {
+    "objectID": "slides/02/02-hello-data.html#slack",
+    "href": "slides/02/02-hello-data.html#slack",
+    "title": "Welcome (continued)",
+    "section": "Slack",
+    "text": "Slack\n\nOnline forum for asking and answering questions\nPrivate repo in the course organization\nYou will need to join the course organization for access\nAsk and answer questions related to course logistics, assignment, etc. here\nPersonal questions (e.g., extensions, illnesses, etc.) should be via email to me\nOnce you join, browse the channels to make sure you’re posting questions in the right channel, update your profile with your name, photo/avatar of you that matches your GitHub profile, and your pronouns\nUnfortunately Slack is not the best place to in-depth questions, but it’s a great place for real-time connection and collaboration"
+  },
+  {
+    "objectID": "slides/02/02-hello-data.html#to-do-before-1",
+    "href": "slides/02/02-hello-data.html#to-do-before-1",
+    "title": "Welcome (continued)",
+    "section": "To do before…",
+    "text": "To do before…\n\nwe move on\nSee course announcement (on Canvas or in your email) and click on the links to\n\nLog in to Posit Cloud – and update your profile\nLog in to Slack – and update your profile with your photo, pronouns, name pronunciation\n\n\n\nthe next class on Wednesday\n\nRead the syllabus\nComplete the Getting to know you survey on Canvas\nComplete the readings\n\n\n\nthe end of the week\n\nGet started on the lab assignment\nComplete the interactive tutorials"
+  },
+  {
+    "objectID": "slides/02/02-hello-data.html#footnotes",
+    "href": "slides/02/02-hello-data.html#footnotes",
+    "title": "Welcome (continued)",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nThese guiding principles are based on Course Policies related to ChatGPT and other AI Tools developed by Joel Gladd, Ph.D.↩︎"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html",
+    "href": "slides/01-meet-the-toolkit.html",
+    "title": "Meet the toolkit",
+    "section": "",
+    "text": "Course operation\n\nMaterials: sta199-s24.github.io\nDiscussion: Ed Discussion\n\n\nDoing data science\n\nR\nRStudio\ntidyverse\nQuarto"
+  },
+  {
+    "objectID": "syllabus.html#textbook",
+    "href": "syllabus.html#textbook",
+    "title": "Syllabus",
+    "section": "Textbook",
+    "text": "Textbook\nReadings for the course will come from the following textbook which is freely available online. You do not need to purchase a physical copy of the book to succeed in this class.\n[ims]: Mine Çetinkaya-Rundel and Jo Hardin. Introduction to Modern Statistics. 2nd edition. OpenIntro, 2024.",
+    "crumbs": [
+      "Home",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#inclusive-community",
+    "href": "syllabus.html#inclusive-community",
+    "title": "Syllabus",
+    "section": "Inclusive community",
+    "text": "Inclusive community\nIt is my intent that students from all diverse backgrounds and perspectives be well-served by this course, that students’ learning needs be addressed both in and out of class, and that the diversity that the students bring to this class be viewed as a resource, strength, and benefit. It is my intent to present materials and activities that are respectful of diversity and in alignment with Duke’s Commitment to Diversity and Inclusion. Your suggestions are encouraged and appreciated. Please let me know ways to improve the effectiveness of the course for you personally, or for other students or student groups.\nFurthermore, I would like to create a learning environment for my students that supports a diversity of thoughts, perspectives and experiences, and honors your identities. To help accomplish this:\n\nIf you have a name that differs from those that appear in your official Duke records, please let me know! You’ll be able to note this in the Getting to know you survey.\nIf you feel like your performance in the class is being impacted by your experiences outside of class, please don’t hesitate to come and talk with me. If you prefer to speak with someone outside of the course, your academic dean is an excellent resource.\nI (like many people) am still in the process of learning about diverse perspectives and identities. If something was said in class (by anyone) that made you feel uncomfortable, please let me or a member of the teaching team know.\n\n\nPronouns\nPronouns are meaningful tools to communicate identities and experiences, and using pronouns supports a campus environment where all community members can thrive.\nPlease update your gender pronouns in Duke Hub. You can learn more at the Center for Sexual and Gender Diversity’s website.\n\n\nAccessibility\nIf there is any portion of the course that is not accessible to you due to challenges with technology or the course format, please let me know so we can make appropriate accommodations.\nThe Student Disability Access Office (SDAO) is available to ensure that students are able to engage with their courses and related assignments. Students should be in touch with the Student Disability Access Office to request or update accommodations under these circumstances.\n\n\nCommunication\nAll lecture notes, assignment instructions, an up-to-date schedule, and other course materials may be found on the course website: sta101-f23.github.io.\nI will regularly send course announcements via email and Canvas, make sure to check one or the other of these regularly. If an announcement is sent Monday through Thursday, I will assume that you have read the announcement by the next day. If an announcement is sent on a Friday or over the weekend, I will assume that you have read it by Monday.\n\n\nWhere to get help\n\nIf you have a question during lecture or lab, feel free to ask it! There are likely other students with the same question, so by asking you will create a learning opportunity for everyone.\nThe teaching team is here to help you be successful in the course. You are encouraged to attend office hours to ask questions about the course content and assignments. Many questions are most effectively answered as you discuss them with others, so office hours are a valuable resource. Please use them!\nOutside of class and office hours, any general questions about course content or assignments should be posted on the course Slack. There is a chance another student has already asked a similar question, so please check the other posts on Slack before adding a new question. If you know the answer to a question posted on Slack, I encourage you to respond!\n\nCheck out the Support page for more resources.\nI want to make sure that you learn everything you were hoping to learn from this class. If this requires flexibility, please don’t hesitate to ask.\n\nYou never owe me personal information about your health (mental or physical) but you’re always welcome to talk to me. If I can’t help, I likely know someone who can.\nI want you to learn lots of things from this class, but I primarily want you to stay healthy, balanced, and grounded during this crisis.",
+    "crumbs": [
+      "Home",
+      "Syllabus"
+    ]
+  }
+]
