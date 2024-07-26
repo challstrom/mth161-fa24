@@ -1,0 +1,21 @@
+institute: "University of Portland"
+author: "Chris Hallstrom"
+
+# footer: "[🔗 sta199-s24.github.io](https://sta199-s24.github.io/)"
+# logo: "images/logo.png"
+format:
+  revealjs:
+    theme: [default, slides.scss]
+    transition: fade
+    slide-number: true
+    chalkboard: true
+    highlight-style: a11y-dark
+editor: visual
+execute:
+  freeze: auto
+  echo: true
+  warning: true
+knitr:
+  opts_chunk: 
+    R.options:
+      width: 90
