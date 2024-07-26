@@ -12,7 +12,7 @@ website:
         text: aboot
 
   sidebar:
-    background: "#798b93"
+    background: "#DAC0A3"
 #    logo: "images/logo.png"
     pinned: true
     align: center
@@ -26,7 +26,12 @@ website:
         text: Overview
       - href: syllabus.qmd
       - section: "Course information"
-      
+      - section: "Slides"
+        contents:
+          - href: slides/01/01-welcome.qmd
+            text: 01 Welcome
+          - href: slides/02/02-hello-data.qmd
+            text: 02 Hello Data
       
 format:
   html:

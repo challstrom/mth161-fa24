@@ -604,7 +604,12 @@
     "href": "slides/01/01-welcome.html#instructor",
     "title": "Welcome to MTH 161",
     "section": "Instructor",
-    "text": "Instructor\n\n\nProf. Chris Hallstrom\nBC 270\nhallstro@up.edu"
+    "text": "Instructor\n\n\nProf. Chris Hallstrom\nBC 270\nhallstro@up.edu",
+    "crumbs": [
+      "Home",
+      "Slides",
+      "01 Welcome"
+    ]
   },
   {
     "objectID": "slides/02/02-hello-data.html#from-canvas",
@@ -632,182 +637,312 @@
     "href": "slides/02/02-hello-data.html#application-exercise",
     "title": "Welcome (continued)",
     "section": "Application exercise",
-    "text": "Application exercise\nGo to Posit Cloud and start the project titled ae-02-Flint."
+    "text": "Application exercise\nGo to Posit Cloud and start the project titled ae-02-Flint.",
+    "crumbs": [
+      "Home",
+      "Slides",
+      "02 Hello Data"
+    ]
   },
   {
     "objectID": "slides/01/01-welcome.html#hello-data",
     "href": "slides/01/01-welcome.html#hello-data",
     "title": "Welcome to MTH 161",
     "section": "Hello data",
-    "text": "Hello data\nApplication exercise: UN Votes\n\nGo to Posit Cloud and start the project called UN Votes. Render the document titled unvotes.qmd. Review the narrative and the data visualization you just created.\nTake turns changing “Turkey” to another country of your choice and re-render the document. With your group, discuss:\n\nwhy you chose that country\nhow this new visualization is different than the original (and what that says about country politics, if anything).\n\nTime permitting: How were these data collected?"
+    "text": "Hello data\nApplication exercise: UN Votes\n\nGo to Posit Cloud and start the project called UN Votes. Render the document titled unvotes.qmd. Review the narrative and the data visualization you just created.\nTake turns changing “Turkey” to another country of your choice and re-render the document. With your group, discuss:\n\nwhy you chose that country\nhow this new visualization is different than the original (and what that says about country politics, if anything).\n\nTime permitting: How were these data collected?",
+    "crumbs": [
+      "Home",
+      "Slides",
+      "01 Welcome"
+    ]
   },
   {
     "objectID": "slides/02/02-hello-data.html#learning-objectives",
     "href": "slides/02/02-hello-data.html#learning-objectives",
     "title": "Welcome (continued)",
     "section": "Learning objectives",
-    "text": "Learning objectives\n\nRecognize the importance of data collection, identify limitations in data collection methods, and determine how they affect the scope of inference.\nUse statistical software to summarize data numerically and visually, and to perform data analysis.\nHave a conceptual understanding of the unified nature of statistical inference.\nApply estimation and testing methods to analyze single variables or the relationship between two variables in order to understand natural phenomena and make data-based decisions.\nModel numerical response variables using a single or multiple explanatory variables.\nInterpret results correctly, effectively, and in context without relying on statistical jargon.\nCritique data-based claims and evaluate data-based decisions.\nComplete research projects demonstrating mastery of statistical data analysis from exploratory analysis to inference to modeling."
+    "text": "Learning objectives\n\nRecognize the importance of data collection, identify limitations in data collection methods, and determine how they affect the scope of inference.\nUse statistical software to summarize data numerically and visually, and to perform data analysis.\nHave a conceptual understanding of the unified nature of statistical inference.\nApply estimation and testing methods to analyze single variables or the relationship between two variables in order to understand natural phenomena and make data-based decisions.\nModel numerical response variables using a single or multiple explanatory variables.\nInterpret results correctly, effectively, and in context without relying on statistical jargon.\nCritique data-based claims and evaluate data-based decisions.\nComplete research projects demonstrating mastery of statistical data analysis from exploratory analysis to inference to modeling.",
+    "crumbs": [
+      "Home",
+      "Slides",
+      "02 Hello Data"
+    ]
   },
   {
     "objectID": "slides/02/02-hello-data.html#course-website",
     "href": "slides/02/02-hello-data.html#course-website",
     "title": "Welcome (continued)",
     "section": "Course website",
-    "text": "Course website\n\nsta101-f23.github.io\n\n\naka “the one link to rule them all”"
+    "text": "Course website\n\nsta101-f23.github.io\n\n\naka “the one link to rule them all”",
+    "crumbs": [
+      "Home",
+      "Slides",
+      "02 Hello Data"
+    ]
   },
   {
     "objectID": "slides/02/02-hello-data.html#lectures",
     "href": "slides/02/02-hello-data.html#lectures",
     "title": "Welcome (continued)",
     "section": "Lectures",
-    "text": "Lectures\n\nIn person\nAttendance is required (as long as you’re healthy!)\nA little bit of everything:\n\nTraditional lecture\nLive coding + demos\nShort exercises + solution discussion\n\nRecordings will be posted after class – to be used for review + make-up if you can’t make it to class due to health reasons, they’re not an alternative to class attendance"
+    "text": "Lectures\n\nIn person\nAttendance is required (as long as you’re healthy!)\nA little bit of everything:\n\nTraditional lecture\nLive coding + demos\nShort exercises + solution discussion\n\nRecordings will be posted after class – to be used for review + make-up if you can’t make it to class due to health reasons, they’re not an alternative to class attendance",
+    "crumbs": [
+      "Home",
+      "Slides",
+      "02 Hello Data"
+    ]
   },
   {
     "objectID": "slides/02/02-hello-data.html#labs",
     "href": "slides/02/02-hello-data.html#labs",
     "title": "Welcome (continued)",
     "section": "Labs",
-    "text": "Labs\n\nAttendance is required (as long as you’re healthy!)\nOpportunity to work on course assignments with TA support\nOpportunity to work with teammates on projects"
+    "text": "Labs\n\nAttendance is required (as long as you’re healthy!)\nOpportunity to work on course assignments with TA support\nOpportunity to work with teammates on projects",
+    "crumbs": [
+      "Home",
+      "Slides",
+      "02 Hello Data"
+    ]
   },
   {
     "objectID": "slides/02/02-hello-data.html#announcements-1",
     "href": "slides/02/02-hello-data.html#announcements-1",
     "title": "Welcome (continued)",
     "section": "Announcements",
-    "text": "Announcements\n\nPosted on Canvas (Announcements) and sent via email, be sure to check both regularly\nI’ll assume that you’ve read an announcement by the next “business” day"
+    "text": "Announcements\n\nPosted on Canvas (Announcements) and sent via email, be sure to check both regularly\nI’ll assume that you’ve read an announcement by the next “business” day",
+    "crumbs": [
+      "Home",
+      "Slides",
+      "02 Hello Data"
+    ]
   },
   {
     "objectID": "slides/02/02-hello-data.html#diversity-and-inclusion",
     "href": "slides/02/02-hello-data.html#diversity-and-inclusion",
     "title": "Welcome (continued)",
     "section": "Diversity and inclusion",
-    "text": "Diversity and inclusion\nIt is my intent that students from all diverse backgrounds and perspectives be well-served by this course, that students’ learning needs be addressed both in and out of class, and that the diversity that the students bring to this class be viewed as a resource, strength and benefit.\n\nIf you have a name that differs from those that appear in your official Duke records, please let me know! Add your name pronunciation to your Canvas and Slack profiles.\nPlease let me know your preferred pronouns and add these to your Canvas and Slack profiles.\nIf you feel like your performance in the class is being impacted by your experiences outside of class, please don’t hesitate to come and talk with me. I want to be a resource for you. If you prefer to speak with someone outside of the course, your advisers and deans are excellent resources.\nI (like many people) am still in the process of learning about diverse perspectives and identities. If something was said in class (by anyone) that made you feel uncomfortable, please talk to me about it."
+    "text": "Diversity and inclusion\nIt is my intent that students from all diverse backgrounds and perspectives be well-served by this course, that students’ learning needs be addressed both in and out of class, and that the diversity that the students bring to this class be viewed as a resource, strength and benefit.\n\nIf you have a name that differs from those that appear in your official Duke records, please let me know! Add your name pronunciation to your Canvas and Slack profiles.\nPlease let me know your preferred pronouns and add these to your Canvas and Slack profiles.\nIf you feel like your performance in the class is being impacted by your experiences outside of class, please don’t hesitate to come and talk with me. I want to be a resource for you. If you prefer to speak with someone outside of the course, your advisers and deans are excellent resources.\nI (like many people) am still in the process of learning about diverse perspectives and identities. If something was said in class (by anyone) that made you feel uncomfortable, please talk to me about it.",
+    "crumbs": [
+      "Home",
+      "Slides",
+      "02 Hello Data"
+    ]
   },
   {
     "objectID": "slides/02/02-hello-data.html#accessibility",
     "href": "slides/02/02-hello-data.html#accessibility",
     "title": "Welcome (continued)",
     "section": "Accessibility",
-    "text": "Accessibility\n\nThe Student Disability Access Office (SDAO) is available to ensure that students are able to engage with their courses and related assignments.\nWe will have in class exams. If you need special accommodations, please book the testing center ASAP!\nI am committed to making all course materials accessible and I’m always learning how to do this better. If any course component is not accessible to you in any way, please don’t hesitate to let me know."
+    "text": "Accessibility\n\nThe Student Disability Access Office (SDAO) is available to ensure that students are able to engage with their courses and related assignments.\nWe will have in class exams. If you need special accommodations, please book the testing center ASAP!\nI am committed to making all course materials accessible and I’m always learning how to do this better. If any course component is not accessible to you in any way, please don’t hesitate to let me know.",
+    "crumbs": [
+      "Home",
+      "Slides",
+      "02 Hello Data"
+    ]
   },
   {
     "objectID": "slides/02/02-hello-data.html#attendance-participation-5",
     "href": "slides/02/02-hello-data.html#attendance-participation-5",
     "title": "Welcome (continued)",
     "section": "Attendance + participation (5%)",
-    "text": "Attendance + participation (5%)\n\nRequired throughout the semester in lecture and lab\nStudents who attend at least 80% of the lectures and participate regularly in lecture and/or other course venues (lab + Slack) will receive full credit for this portion of their grade\nParticipation in labs as well as on Slack will also count towards this component\n\n\n\n\n\n\n\nTip\n\n\n\nIf you attend at least 80% of the classes, you’ll get all available points for this component."
+    "text": "Attendance + participation (5%)\n\nRequired throughout the semester in lecture and lab\nStudents who attend at least 80% of the lectures and participate regularly in lecture and/or other course venues (lab + Slack) will receive full credit for this portion of their grade\nParticipation in labs as well as on Slack will also count towards this component\n\n\n\n\n\n\n\nTip\n\n\nIf you attend at least 80% of the classes, you’ll get all available points for this component.",
+    "crumbs": [
+      "Home",
+      "Slides",
+      "02 Hello Data"
+    ]
   },
   {
     "objectID": "slides/02/02-hello-data.html#interactive-tutorials-5",
     "href": "slides/02/02-hello-data.html#interactive-tutorials-5",
     "title": "Welcome (continued)",
     "section": "Interactive tutorials (5%)",
-    "text": "Interactive tutorials (5%)\n\nOnline, individual, can discuss with classmates\nCover reading that is due since the previous quiz and up to and including the deadline for the given quiz\nMake sure to fill out your name and Net ID prior to generating the hash to submit (more info on this coming soon)\nDue by 5 pm ET (on the indicated day on the course schedule\n\n\n\n\n\n\n\nTip\n\n\n\nIf you complete at least 80% of the tutorials, you’ll get all available points for this component."
+    "text": "Interactive tutorials (5%)\n\nOnline, individual, can discuss with classmates\nCover reading that is due since the previous quiz and up to and including the deadline for the given quiz\nMake sure to fill out your name and Net ID prior to generating the hash to submit (more info on this coming soon)\nDue by 5 pm ET (on the indicated day on the course schedule\n\n\n\n\n\n\n\nTip\n\n\nIf you complete at least 80% of the tutorials, you’ll get all available points for this component.",
+    "crumbs": [
+      "Home",
+      "Slides",
+      "02 Hello Data"
+    ]
   },
   {
     "objectID": "slides/02/02-hello-data.html#labs-25",
     "href": "slides/02/02-hello-data.html#labs-25",
     "title": "Welcome (continued)",
     "section": "Labs (25%)",
-    "text": "Labs (25%)\n\nSubmitted on Gradescope, individual, can discuss with classmates\nLab sessions allocated to working on assignments and getting feedback from TAs\nDue by 5 pm ET on the indicated day on the course schedule\nWeekly deadlines to keep you on track, hard deadlines by exams or end of class\n\n\n\n\n\n\n\nTip\n\n\n\nLowest lab score is dropped, whether it’s an actual low score or a 0 from not turning it in."
+    "text": "Labs (25%)\n\nSubmitted on Gradescope, individual, can discuss with classmates\nLab sessions allocated to working on assignments and getting feedback from TAs\nDue by 5 pm ET on the indicated day on the course schedule\nWeekly deadlines to keep you on track, hard deadlines by exams or end of class\n\n\n\n\n\n\n\nTip\n\n\nLowest lab score is dropped, whether it’s an actual low score or a 0 from not turning it in.",
+    "crumbs": [
+      "Home",
+      "Slides",
+      "02 Hello Data"
+    ]
   },
   {
     "objectID": "slides/02/02-hello-data.html#exams",
     "href": "slides/02/02-hello-data.html#exams",
     "title": "Welcome (continued)",
     "section": "Exams",
-    "text": "Exams\n\nTwo exams, each 20%\nEach exam comprised of two parts:\n\nIn class: 75 minute in-class exam. Closed book, one sheet of notes (“cheat sheet”, no larger than 8 1/2 x 11, both sides, must be prepared by you) – 70% of the grade\nTake home: 48 hours to complete the take home portion. The take home portion will follow from the in class exam and focus on the analysis of a dataset introduced in the take home exam – 30% of the grade\n\n\n\n\n\n\n\n\nCaution\n\n\n\nExam dates cannot be changed and no make-up exams will be given. If you can’t take the exams on these dates, you should drop this class."
+    "text": "Exams\n\nTwo exams, each 20%\nEach exam comprised of two parts:\n\nIn class: 75 minute in-class exam. Closed book, one sheet of notes (“cheat sheet”, no larger than 8 1/2 x 11, both sides, must be prepared by you) – 70% of the grade\nTake home: 48 hours to complete the take home portion. The take home portion will follow from the in class exam and focus on the analysis of a dataset introduced in the take home exam – 30% of the grade\n\n\n\n\n\n\n\n\nCaution\n\n\nExam dates cannot be changed and no make-up exams will be given. If you can’t take the exams on these dates, you should drop this class.",
+    "crumbs": [
+      "Home",
+      "Slides",
+      "02 Hello Data"
+    ]
   },
   {
     "objectID": "slides/02/02-hello-data.html#projects",
     "href": "slides/02/02-hello-data.html#projects",
     "title": "Welcome (continued)",
     "section": "Projects",
-    "text": "Projects\n\nProject 1 (10%)\n\nSame data, regression\nWrite-up only\n\nProject 2 (15%)\n\nDataset of your choice, method of your choice\nNew team\nPresentation and write-up\nPresentations on the final exam date\n\nInterim deadlines, peer review on content, peer evaluation for team contribution\nSome lab sessions allocated to working on projects, doing peer review, getting feedback from TAs\n\n\n\n\n\n\n\nCaution\n\n\n\nFinal presentation date cannot be changed. If you can’t present on that date, you should drop this class."
+    "text": "Projects\n\nProject 1 (10%)\n\nSame data, regression\nWrite-up only\n\nProject 2 (15%)\n\nDataset of your choice, method of your choice\nNew team\nPresentation and write-up\nPresentations on the final exam date\n\nInterim deadlines, peer review on content, peer evaluation for team contribution\nSome lab sessions allocated to working on projects, doing peer review, getting feedback from TAs\n\n\n\n\n\n\n\nCaution\n\n\nFinal presentation date cannot be changed. If you can’t present on that date, you should drop this class.",
+    "crumbs": [
+      "Home",
+      "Slides",
+      "02 Hello Data"
+    ]
   },
   {
     "objectID": "slides/02/02-hello-data.html#teams",
     "href": "slides/02/02-hello-data.html#teams",
     "title": "Welcome (continued)",
     "section": "Teams",
-    "text": "Teams\n\nTeamwork\n\nProjects (required), in class exercises (recommended)\nAssigned different teams for each project\nPeer evaluation during teamwork and after completion\n\nExpectations and roles\n\nEveryone is expected to contribute equal effort\nEveryone is expected to understand all code turned in\nIndividual contribution evaluated by peer evaluation, commits, etc."
+    "text": "Teams\n\nTeamwork\n\nProjects (required), in class exercises (recommended)\nAssigned different teams for each project\nPeer evaluation during teamwork and after completion\n\nExpectations and roles\n\nEveryone is expected to contribute equal effort\nEveryone is expected to understand all code turned in\nIndividual contribution evaluated by peer evaluation, commits, etc.",
+    "crumbs": [
+      "Home",
+      "Slides",
+      "02 Hello Data"
+    ]
   },
   {
     "objectID": "slides/02/02-hello-data.html#covid-policies",
     "href": "slides/02/02-hello-data.html#covid-policies",
     "title": "Welcome (continued)",
     "section": "COVID policies",
-    "text": "COVID policies\n\nWear a mask if the university requires\nStay home if you’re sick and follow guidance\nRead and follow university guidance"
+    "text": "COVID policies\n\nWear a mask if the university requires\nStay home if you’re sick and follow guidance\nRead and follow university guidance",
+    "crumbs": [
+      "Home",
+      "Slides",
+      "02 Hello Data"
+    ]
   },
   {
     "objectID": "slides/02/02-hello-data.html#late-work-policy",
     "href": "slides/02/02-hello-data.html#late-work-policy",
     "title": "Welcome (continued)",
     "section": "Late work policy",
-    "text": "Late work policy\n\nInteractive tutorials: Late submissions past the hard deadlines not accepted\nLabs:\n\nLate, but within 24 hours of deadline: -20% of available points\nAny later: No credit, and we will not provide written feedback\nNote that lowest lab score will be dropped, even if that score is a 0\n\nProject write-ups:\n\nLate, but within 24 hours of deadline: -20% of available points\nAny later: No credit, and we will not provide written feedback\nTwo days late or later: No credit, and we will not provide written feedback\n\nProject presentation: Late submissions not accepted\nPeer evaluation:\n\nLate submissions not accepted\nMust turn in peer evaluation if you want your own score from others"
+    "text": "Late work policy\n\nInteractive tutorials: Late submissions past the hard deadlines not accepted\nLabs:\n\nLate, but within 24 hours of deadline: -20% of available points\nAny later: No credit, and we will not provide written feedback\nNote that lowest lab score will be dropped, even if that score is a 0\n\nProject write-ups:\n\nLate, but within 24 hours of deadline: -20% of available points\nAny later: No credit, and we will not provide written feedback\nTwo days late or later: No credit, and we will not provide written feedback\n\nProject presentation: Late submissions not accepted\nPeer evaluation:\n\nLate submissions not accepted\nMust turn in peer evaluation if you want your own score from others",
+    "crumbs": [
+      "Home",
+      "Slides",
+      "02 Hello Data"
+    ]
   },
   {
     "objectID": "slides/02/02-hello-data.html#collaboration-policy",
     "href": "slides/02/02-hello-data.html#collaboration-policy",
     "title": "Welcome (continued)",
     "section": "Collaboration policy",
-    "text": "Collaboration policy\n\nOnly work that is clearly assigned as team work should be completed collaboratively (projects)\nExams must be completed individually, you may not discuss answers with teammates, clarification questions should only be asked to myself and the TAs\nLabs must be completed individually. You may not directly share answers / code with others, however you are welcome to discuss the problems in general and ask for advice"
+    "text": "Collaboration policy\n\nOnly work that is clearly assigned as team work should be completed collaboratively (projects)\nExams must be completed individually, you may not discuss answers with teammates, clarification questions should only be asked to myself and the TAs\nLabs must be completed individually. You may not directly share answers / code with others, however you are welcome to discuss the problems in general and ask for advice",
+    "crumbs": [
+      "Home",
+      "Slides",
+      "02 Hello Data"
+    ]
   },
   {
     "objectID": "slides/02/02-hello-data.html#sharing-reusing-code-policy",
     "href": "slides/02/02-hello-data.html#sharing-reusing-code-policy",
     "title": "Welcome (continued)",
     "section": "Sharing / reusing code policy",
-    "text": "Sharing / reusing code policy\n\nWe are aware that a huge volume of code is available on the web, and many tasks may have solutions posted\nUnless explicitly stated otherwise, this course’s policy is that you may make use of any online resources (e.g., StackOverflow) but you must explicitly cite where you obtained any code you directly use or use as inspiration in your solution(s)\nAny recycled code that is discovered and is not explicitly cited will be treated as plagiarism, regardless of source"
+    "text": "Sharing / reusing code policy\n\nWe are aware that a huge volume of code is available on the web, and many tasks may have solutions posted\nUnless explicitly stated otherwise, this course’s policy is that you may make use of any online resources (e.g., StackOverflow) but you must explicitly cite where you obtained any code you directly use or use as inspiration in your solution(s)\nAny recycled code that is discovered and is not explicitly cited will be treated as plagiarism, regardless of source",
+    "crumbs": [
+      "Home",
+      "Slides",
+      "02 Hello Data"
+    ]
   },
   {
     "objectID": "slides/02/02-hello-data.html#generative-ai-policy",
     "href": "slides/02/02-hello-data.html#generative-ai-policy",
     "title": "Welcome (continued)",
     "section": "Generative AI policy",
-    "text": "Generative AI policy\nYou should treat generative AI, such as ChatGPT, the same as other online resources. There are two guiding principles that govern how you can use AI in this course:1\n(1) Cognitive dimension: Working with AI should not reduce your ability to think clearly. We will practice using AI to facilitate—rather than hinder—learning.\n(2) Ethical dimension: Students using AI should be transparent about their use and make sure it aligns with academic integrity.\n\n✅ AI tools for code: You may make use of the technology for coding examples on assignments; if you do so, you must explicitly cite where you obtained the code. Any recycled code that is discovered and is not explicitly cited will be treated as plagiarism.\n❌ AI tools for narrative: Unless instructed otherwise, you may not use generative AI to write narrative on assignments. In general, you may use generative AI as a resource as you complete assignments but not to answer the exercises for you. You are ultimately responsible for the work you turn in; it should reflect your understanding of the course content."
+    "text": "Generative AI policy\nYou should treat generative AI, such as ChatGPT, the same as other online resources. There are two guiding principles that govern how you can use AI in this course:1\n(1) Cognitive dimension: Working with AI should not reduce your ability to think clearly. We will practice using AI to facilitate—rather than hinder—learning.\n(2) Ethical dimension: Students using AI should be transparent about their use and make sure it aligns with academic integrity.\n\n✅ AI tools for code: You may make use of the technology for coding examples on assignments; if you do so, you must explicitly cite where you obtained the code. Any recycled code that is discovered and is not explicitly cited will be treated as plagiarism.\n❌ AI tools for narrative: Unless instructed otherwise, you may not use generative AI to write narrative on assignments. In general, you may use generative AI as a resource as you complete assignments but not to answer the exercises for you. You are ultimately responsible for the work you turn in; it should reflect your understanding of the course content.\n\nThese guiding principles are based on Course Policies related to ChatGPT and other AI Tools developed by Joel Gladd, Ph.D.",
+    "crumbs": [
+      "Home",
+      "Slides",
+      "02 Hello Data"
+    ]
   },
   {
     "objectID": "slides/02/02-hello-data.html#academic-integrity",
     "href": "slides/02/02-hello-data.html#academic-integrity",
     "title": "Welcome (continued)",
     "section": "Academic integrity",
-    "text": "Academic integrity\nTo uphold the Duke Community Standard:\n\n\nI will not lie, cheat, or steal in my academic endeavors;\nI will conduct myself honorably in all my endeavors; and\nI will act if the Standard is compromised.\n\n\n\n\nmost importantly:\nask if you’re not sure if something violates a policy!"
+    "text": "Academic integrity\nTo uphold the Duke Community Standard:\n\nI will not lie, cheat, or steal in my academic endeavors;\nI will conduct myself honorably in all my endeavors; and\nI will act if the Standard is compromised.\n\n\n\nmost importantly:\nask if you’re not sure if something violates a policy!",
+    "crumbs": [
+      "Home",
+      "Slides",
+      "02 Hello Data"
+    ]
   },
   {
     "objectID": "slides/02/02-hello-data.html#office-hours",
     "href": "slides/02/02-hello-data.html#office-hours",
     "title": "Welcome (continued)",
     "section": "Office hours",
-    "text": "Office hours\n\nMine: Tuesdays 3:30 - 4:30 pm - Old Chem 213 + by appointment (on Zoom or in person depending on day/time)\nTAs: See the course team and course support pages on the course website. We have a total of 17 TA office hours per week!\n+ lots more resources listed on the syllabus!"
+    "text": "Office hours\n\nMine: Tuesdays 3:30 - 4:30 pm - Old Chem 213 + by appointment (on Zoom or in person depending on day/time)\nTAs: See the course team and course support pages on the course website. We have a total of 17 TA office hours per week!\n+ lots more resources listed on the syllabus!",
+    "crumbs": [
+      "Home",
+      "Slides",
+      "02 Hello Data"
+    ]
   },
   {
     "objectID": "slides/02/02-hello-data.html#wellness",
     "href": "slides/02/02-hello-data.html#wellness",
     "title": "Welcome (continued)",
     "section": "Wellness",
-    "text": "Wellness\nI want to make sure that you learn everything you were hoping to learn from this class. If this requires flexibility, please don’t hesitate to ask.\n\nYou never owe me personal information about your health (mental or physical) but you’re always welcome to talk to me. If I can’t help, I likely know someone who can.\nI want you to learn lots of things from this class, but I primarily want you to stay healthy, balanced, and grounded."
+    "text": "Wellness\nI want to make sure that you learn everything you were hoping to learn from this class. If this requires flexibility, please don’t hesitate to ask.\n\nYou never owe me personal information about your health (mental or physical) but you’re always welcome to talk to me. If I can’t help, I likely know someone who can.\nI want you to learn lots of things from this class, but I primarily want you to stay healthy, balanced, and grounded.",
+    "crumbs": [
+      "Home",
+      "Slides",
+      "02 Hello Data"
+    ]
   },
   {
     "objectID": "slides/02/02-hello-data.html#rstudio",
     "href": "slides/02/02-hello-data.html#rstudio",
     "title": "Welcome (continued)",
     "section": "RStudio",
-    "text": "RStudio\n\nhttps://posit.cloud\n\n\nBrowser based RStudio instance(s) provided by Posit\nRequires internet connection to access\nProvides consistency in hardware and software environments\nLocal R installations are fine but we will not guarantee support"
+    "text": "RStudio\n\nhttps://posit.cloud\n\n\nBrowser based RStudio instance(s) provided by Posit\nRequires internet connection to access\nProvides consistency in hardware and software environments\nLocal R installations are fine but we will not guarantee support",
+    "crumbs": [
+      "Home",
+      "Slides",
+      "02 Hello Data"
+    ]
   },
   {
     "objectID": "slides/02/02-hello-data.html#slack",
     "href": "slides/02/02-hello-data.html#slack",
     "title": "Welcome (continued)",
     "section": "Slack",
-    "text": "Slack\n\nOnline forum for asking and answering questions\nPrivate repo in the course organization\nYou will need to join the course organization for access\nAsk and answer questions related to course logistics, assignment, etc. here\nPersonal questions (e.g., extensions, illnesses, etc.) should be via email to me\nOnce you join, browse the channels to make sure you’re posting questions in the right channel, update your profile with your name, photo/avatar of you that matches your GitHub profile, and your pronouns\nUnfortunately Slack is not the best place to in-depth questions, but it’s a great place for real-time connection and collaboration"
+    "text": "Slack\n\nOnline forum for asking and answering questions\nPrivate repo in the course organization\nYou will need to join the course organization for access\nAsk and answer questions related to course logistics, assignment, etc. here\nPersonal questions (e.g., extensions, illnesses, etc.) should be via email to me\nOnce you join, browse the channels to make sure you’re posting questions in the right channel, update your profile with your name, photo/avatar of you that matches your GitHub profile, and your pronouns\nUnfortunately Slack is not the best place to in-depth questions, but it’s a great place for real-time connection and collaboration",
+    "crumbs": [
+      "Home",
+      "Slides",
+      "02 Hello Data"
+    ]
   },
   {
     "objectID": "slides/02/02-hello-data.html#to-do-before-1",
     "href": "slides/02/02-hello-data.html#to-do-before-1",
     "title": "Welcome (continued)",
     "section": "To do before…",
-    "text": "To do before…\n\nwe move on\nSee course announcement (on Canvas or in your email) and click on the links to\n\nLog in to Posit Cloud – and update your profile\nLog in to Slack – and update your profile with your photo, pronouns, name pronunciation\n\n\n\nthe next class on Wednesday\n\nRead the syllabus\nComplete the Getting to know you survey on Canvas\nComplete the readings\n\n\n\nthe end of the week\n\nGet started on the lab assignment\nComplete the interactive tutorials"
+    "text": "To do before…\nwe move on\nSee course announcement (on Canvas or in your email) and click on the links to\n\nLog in to Posit Cloud – and update your profile\nLog in to Slack – and update your profile with your photo, pronouns, name pronunciation\n\nthe next class on Wednesday\n\nRead the syllabus\nComplete the Getting to know you survey on Canvas\nComplete the readings\n\nthe end of the week\n\nGet started on the lab assignment\nComplete the interactive tutorials",
+    "crumbs": [
+      "Home",
+      "Slides",
+      "02 Hello Data"
+    ]
   },
   {
     "objectID": "slides/02/02-hello-data.html#footnotes",
