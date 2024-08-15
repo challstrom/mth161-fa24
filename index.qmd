@@ -1,6 +1,13 @@
 ---
 title: "MTH161 :: Elementary Statistics"
 subtitle: "Fall 2024"
+format:
+  html: 
+    toc: true
+  pdf:
+    toc: true
+    number-sections: true
+    colorlinks: true
 ---
 
 ## Welcome to the course pages for MTH 161, Sections H & I.

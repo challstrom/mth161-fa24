@@ -2,17 +2,26 @@ project:
   type: website
   output-dir: docs
 
+book:
+  title: "mybook"
+  author: "Jane Doe"
+  date: "8/18/2021"
+  chapters:
+    - index.qmd
+    - syllabus.qmd
+    - UPElements.qmd
+
 website:
   title: "mth161 :: Elementary Statistics"
   navbar:
+    background: "#112D4E"
     left:
       - href: index.qmd
         text: Home
       - href: about.qmd
         text: aboot
-
   sidebar:
-    background: "#DAC0A3"
+    background: "#3F72AF"
 #    logo: "images/logo.png"
     pinned: true
     align: center
@@ -25,18 +34,23 @@ website:
       - href: course-overview.qmd
         text: Overview
       - href: syllabus.qmd
-      - section: "Course information"
+      - href: UPElements.qmd
+        text: University Policies and Information
       - section: "Slides"
         contents:
           - href: slides/01/01-welcome.qmd
             text: 01 Welcome
           - href: slides/02/02-hello-data.qmd
             text: 02 Hello Data
+      - section: "AE"
+        contents:
+          - href: ae/ae-01-unvotes.qmd
+            text: ae-01 UN Votes
       
 format:
   html:
     theme: cosmo
-    css: styles.css
+    css: style/mth161.scss
     toc: true
 
 editor: visual
