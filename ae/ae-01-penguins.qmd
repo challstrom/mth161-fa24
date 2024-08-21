@@ -1,0 +1,98 @@
+---
+title: "AE-01: Meet the Penguins"
+categories: 
+  - Application exercise
+editor: visual
+---
+
+In this application exercise, we will meet some penguins, start thinking about data and variables, and see some R code in action.
+
+```{r}
+#| label: load-packages
+#| include: false
+
+library(tidyverse)
+library(palmerpenguins)
+```
+
+![](https://raw.githubusercontent.com/quarto-dev/quarto-web/main/docs/get-started/hello/rstudio/lter_penguins.png){style="float:right;" fig-alt="Illustration of three species of Palmer Archipelago penguins: Chinstrap, Gentoo, and Adelie. Artwork by @allison_horst." width="401"}
+
+The `penguins` data from the [**palmerpenguins**](https://allisonhorst.github.io/palmerpenguins "palmerpenguins R package") package contains size measurements for three species of penguins observed on three islands in the Palmer Archipelago, Antarctica.
+
+Data were collected and made available by [Dr. Kristen Gorman](https://www.uaf.edu/cfos/people/faculty/detail/kristen-gorman.php) and the [Palmer Station, Antarctica LTER](https://pallter.marine.rutgers.edu/), a member of the [Long Term Ecological Research Network](https://lternet.edu/).
+
+## Task 1
+
+Let's take a peek at the data with the following R code:
+
+```{r}
+head(penguins)
+```
+
+This tables shows us the first six rows of **data frame** containing this data. When working with data, we typically want each row to be an individual observation (or case), each column to be a variable and each entry (cell) to be a single value. Data in this format is called **tidy**.
+
+**Question:** What observations can you make about this table?
+
+## Task 2
+
+Here are many other ways to view data frames.
+
+```{r}
+print(penguins)
+```
+
+```{r}
+glimpse(penguins)
+```
+
+**Question:** what are the differences between these R commands?
+
+**Questions:** How many penguins are included in this dataset? How many variables?
+
+## Task 3
+
+Let's take a look at other ways to analyize our data using R. What is the code chunk below doing?
+
+```{r}
+penguins %>%
+  count(species)
+```
+
+### Exercise:
+
+Add a code chunk that does something similar to determine how many penguins are on each island.
+
+```{r}
+penguins %>%
+  count(island)
+
+count(penguins, island)
+```
+
+## Task 4
+
+```{r}
+penguins %>% 
+  group_by(species) %>% 
+  summarize(across(where(is.numeric), ~ mean(.x, na.rm = TRUE)))
+```
+
+The plot below shows the relationship between flipper and bill lengths of these penguins.
+
+```{r}
+#| label: plot-penguins
+#| warning: false
+#| echo: true
+
+ggplot(penguins, 
+       aes(x = flipper_length_mm, y = bill_length_mm)) +
+  geom_point(aes(color = species, shape = species)) +
+  scale_color_manual(values = c("darkorange","purple","cyan4")) +
+  labs(
+    title = "Flipper and bill length",
+    subtitle = "Dimensions for penguins at Palmer Station LTER",
+    x = "Flipper length (mm)", y = "Bill length (mm)",
+    color = "Penguin species", shape = "Penguin species"
+  ) +
+  theme_minimal()
+```

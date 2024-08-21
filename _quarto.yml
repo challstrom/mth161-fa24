@@ -3,8 +3,8 @@ project:
   output-dir: docs
 
 book:
-  title: "mybook"
-  author: "Jane Doe"
+  title: "MTH161 :: Fall 2024"
+  author: "Chris Hallstrom"
   date: "8/18/2021"
   chapters:
     - index.qmd
@@ -28,11 +28,13 @@ website:
 
     style: docked
     search: true
-    collapse-level: 1
+    collapse-level: 2
 
     contents:
-      - href: course-overview.qmd
-        text: Overview
+      - href: index.qmd
+        text: Welcome
+      - href: summary.qmd
+      - href: structure.qmd
       - href: syllabus.qmd
       - href: UPElements.qmd
         text: University Policies and Information
@@ -49,7 +51,8 @@ website:
       
 format:
   html:
-    theme: simplex
+    theme: cosmo
+    #theme: simplex
     css: style/mth161.scss
     toc: true
 

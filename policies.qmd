@@ -1,0 +1,52 @@
+---
+title: "Policies"
+format:
+  html: 
+    toc: true
+    toc-expand: 2
+    toc-title: "On this page"
+---
+
+## Collaboration
+
+-   While you are welcome to discuss lab assignments with classmate, your lab report should be completed individually.
+
+-   For the projects, collaboration within teams is expected. Communication between teams at a high level is also allowed however you may not share code or components of the project across teams.
+
+## Online resources
+
+I am well aware that a huge volume of R code is available on the web to solve any number of problems. Since our focus is not specifically on learning R, but rather on interpreting and understanding results, you may make use of online resources for coding examples **unless I explicitly tell you not to use something**. You do need to explicitly cite where you obtained any code you directly use (or use as inspiration).
+
+This policy includes the use of generative artificial intelligence (AI) such as Chat GPI. You should be mindful, however, of the following guiding principles for using AI in this course:[^1]
+
+[^1]: These guiding principles are based on [*Course Policies related to ChatGPT and other AI Tools*](https://docs.google.com/document/d/1WpCeTyiWCPQ9MNCsFeKMDQLSTsg1oKfNIH6MzoSFXqQ/preview) developed by Joel Gladd, Ph.D.
+
+1.  **Cognitive dimension:** Working with AI should not reduce your ability to think clearly.
+
+2.  **Ethical dimension:** Students using AI should be transparent about their use and make sure it aligns with academic integrity.
+
+::: {.callout-warning}
+Unless instructed otherwise, you **may not** use generative AI to write narrative on assignments. In general, you may use generative AI as a coding resource as you complete assignments but not to answer the exercises for you. You are ultimately responsible for the work you turn in; it should reflect your understanding of the course content.
+:::
+
+
+### Late work & extensions {#sec-late-work-extensions}
+
+Due dates for assignments are there to give you structure and to help you keep up with the course material. They also help me provide you with feedback in a timely manner. That said, I understand that things come up periodically that can make it difficult to complete an assignment by the deadline. Life happens!
+
+If something comes up that prevents you from completing an assignment by the stated due date, just send me email and let me know when I can expect your work. You do not need to provide an explanation. In general, I will expect to receive your work within **one week**.
+
+There are, however, two **hard deadlines** to be aware of: Oct. 11th (Friday before Fall break) and Dec. 6th (last day of classes). Except in unusual circumstances, I will not accept work after those dates.
+
+## Important dates {#sec-important-dates}
+
+-   **Tuesday, August 27:** Classes begin
+-   **Friday, August 30:** Last day to add/drop
+-   **Friday, October 11:** First hard deadline, Project 1 due
+-   **Monday, October 15**: Fall Break begins
+-   **Friday, November 17:** Exam 2 - Take home due
+-   **Monday, November 25:** Last day to Withdraw
+-   **Thursday, November 28:** Thanksgiving
+-   **Friday, December 6**: Last day of classes; 2nd hard deadline
+-   **Monday, December 9**: Section H: Project 2 presentations
+-   **Wednesday, December 11**: Section I: Project 2 presentations

@@ -10,4 +10,13 @@ format:
     colorlinks: true
 ---
 
-## Welcome to the course pages for MTH 161, Sections H & I.
+# Welcome! {.unnumbered}
+
+These webpages contain course materials and information for **MTH 161, Sections H & I** taught by Prof. Hallstrom.
+
+I am looking forward to working with each of you this semester and it is my sincere goal to make our time together (in class and out) productive, engaging, and fun.
+
+## Overview {.unnumbered}
+This course will introduce you to the discipline of statistics as a science of understanding and analyzing data. Themes include data collection, exploratory analysis, inference, and modeling. We will consider why in 1950, S. Wilks said, "Statistical thinking will one day be as necessary a qualification for efficient citizenship as the ability to read and write."
+
+You will learn how to effectively make use of data in the face of uncertainty: how to collect data, how to analyze data, and how to use data to make inferences and conclusions about real world phenomena. You will acquire a conceptual understanding and proficiency in statistical and quantitative reasoning tools to help you critique and evaluate data-based claims and decisions.

@@ -1,0 +1,61 @@
+---
+title: "Class Structure"
+format:
+  html: 
+    toc: true
+    toc-expand: 2
+    toc-title: "On this page"
+  pdf:
+    toc: true
+    number-sections: true
+    colorlinks: true
+---
+
+
+## Attendance and Engagement
+
+To be successful in this course, you should be present and actively engaged in class.  There are many ways to be engaged:  regularly attending class, completing pre-class work, completing assignments on-time,  engaging productively in group work, asking questions, supporting your classmates, coming to student support hours, and more.  To help you develop a habit of engagment, you will have a weekly opportunity to reflect on how you're engaging in our class.      
+
+Wile I do expect you to be in class, I recognize that occasionally things come up that might prevent you from being there.  If you miss class, you can check our class Moodle page to see what we covered that day.
+
+
+## Pre-class work
+
+Much of our class time will be devoted to working together on activities designed to build understanding on concepts introduced in the textbook. To help ensure that you're prepared for class, I will assign short daily homework (typically 2-3 problems from the book). 
+
+
+## Application Exercises (AE)
+
+These are in-class activities that we will work on in small groups. Each one is designed to introduce or reinforce specfic concepts as well as R code that we'll use for visualization and data analysis. If you have a laptop or tablet, you may find it helpful to bring it to class but as long as someone at your table has a device, that will be sufficient.  A short worksheet will accompany the AE.
+
+## Interactive R tutorials
+
+Each chapter in our book includes a number of interactive tutorials to help you learn how to use R for data visualization and analysis.  While these are not required, they are highly recommended for gaining proficiency in using R.  You can include this work in your weekly report.
+
+
+## Weekly Report
+
+Each week, I will ask you to complete a short one-page reflection on that week's work.  Your report should include the following information:
+
+- How did you engage in the class this week?  Did you attend class?  Did you attend student support hours?
+- Did you complete the assigned homework problems? Did you find them helpful?  
+- What questions came up for you have while doing these problems? How did you resolve these questions and/or what questions do you still have?
+
+Note: I am not asking you to submit solutions with your report, although you are welcome to if you have questions about your work and would like feedback.
+
+## Labs
+
+Approximately every two weeks, I will assign a lab.  You can think of these as extended homework that will combine concepts with practice. You will use RStudio to complete a lab report in qmd format which you'll submit on Moodle.  I will provide feedback after which you're welcome to resubmit any work within one week.
+
+## Projects
+
+There are two projects in this course - the first one is due mid-semester and the second one is due at the end of the semester.
+
+
+
+## Quizzes
+
+We will have occasional short in-class quizzes. The purpose of these is to check-in where you are in your understanding of various concepts throughout the semester.
+
+
+## Exams
