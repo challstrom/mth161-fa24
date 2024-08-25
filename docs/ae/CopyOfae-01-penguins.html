@@ -245,7 +245,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#other-points-of-view" id="toc-other-points-of-view" class="nav-link" data-scroll-target="#other-points-of-view">Other points of view</a></li>
   </ul></li>
   <li><a href="#summary-statistics" id="toc-summary-statistics" class="nav-link" data-scroll-target="#summary-statistics">Summary Statistics</a></li>
-  <li><a href="#relationships-between-variables" id="toc-relationships-between-variables" class="nav-link" data-scroll-target="#relationships-between-variables">Relationships between Variables</a></li>
+  <li><a href="#visualization" id="toc-visualization" class="nav-link" data-scroll-target="#visualization">Visualization</a></li>
+  <li><a href="#relationships-between-variables" id="toc-relationships-between-variables" class="nav-link" data-scroll-target="#relationships-between-variables">Relationships Between Variables</a></li>
   </ul>
 </nav>
     </div>
@@ -435,8 +436,8 @@ Task
 </div>
 </div>
 </section>
-<section id="relationships-between-variables" class="level2">
-<h2 class="anchored" data-anchor-id="relationships-between-variables">Relationships between Variables</h2>
+<section id="visualization" class="level2">
+<h2 class="anchored" data-anchor-id="visualization">Visualization</h2>
 <p>An important tool in understanding and analyzing data is visualization. For example, we can use a <strong>scatterplot</strong> to help us understand relationships between variables. Let’s look at a scatterpolot that compares body mass and flipper length.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins, </span>
@@ -449,7 +450,7 @@ Task
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="ae-01-penguins_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="CopyOfae-01-penguins_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -467,11 +468,41 @@ Questions
 <ul>
 <li>What does each point on the graph represent?</li>
 <li>Based on this scatterplot, how would you describe the relationship between these two variables?</li>
-<li>When we ran the code to make this graph, a warning message appeared. What do you think is going on?</li>
 </ul>
 </div>
 </div>
-<p>R gives us the ability to modify and customize our visualizations a great deal – indeed this is one of the main strengths of R! Let’s add one more feature to our graph. As we know, there are three different species of penguins in our data set – but our scatter plot does not show this!</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Code Explanation">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Code Explanation
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>In the code above, there are three main elements that go into producing our scatter plot:</p>
+<ul>
+<li>The first element to the <code>ggplot</code> command identifies the <strong>data</strong> frame – in this case <code>penguins</code></li>
+<li>The second element is the <strong>mapping</strong> which specifies how the variables are going to show up in the graph – in this case, the x and y axes are going to come from the flipper length and body mass respectively.</li>
+<li>The last element specifies the <strong>geom</strong> which determines how the data is represented – since we want a scatterplot, our geometric objects are points, hence <code>geom_point()</code></li>
+</ul>
+<p>Before we add more layers to this plot, let’s pause for a moment and review the warning message we got:</p>
+<blockquote class="blockquote">
+<p>Warning: Removed 2 rows containing missing values or values outside the scale range (<code>geom_point()</code>)</p>
+</blockquote>
+<p>We’re seeing this message because there are two penguins in our dataset with missing body mass and/or flipper length values and ggplot2 has no way of representing them on the plot without both of these values. Like R, ggplot2 subscribes to the philosophy that missing values should never silently go missing.</p>
+</div>
+</div>
+</div>
+<p>R gives us the ability to modify and customize our visualizations a great deal – indeed this is one of the main strengths of R. This is not a course in learning R, so we won’t go through these code chunks in great detail, but it’s helpful to have a basic understanding of what’s going on.</p>
+<p>Let’s modify our visualization!</p>
+</section>
+<section id="relationships-between-variables" class="level2">
+<h2 class="anchored" data-anchor-id="relationships-between-variables">Relationships Between Variables</h2>
+<p>Looking at our scatterplot above, what can you say about the relationship between body mass and flipper length? We will see later in Chapter 7 how to quantify this observation in a precise way but for the time being, let’s add one more feature to our graph. As we know, there are three different species of penguins in our data set – but our scatter plot does not show this! We can easily adust how our geom appears by specifying that the color of the point should be determined by some other variable – i.e species.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> penguins,</span>
@@ -484,7 +515,7 @@ Questions
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="ae-01-penguins_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="CopyOfae-01-penguins_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -505,7 +536,7 @@ Questions
 </ul>
 </div>
 </div>
-<p>Because people can perceive colors differently due to color blindness or other color vision differences and since different devices might display colors in unexpected ways, it’s good practice to not rely on color alone to distinguish points.</p>
+<p>It’s good practice to not rely on color alone to distinguish the points. People may perceive colors differently due to color blindness or other color vision differences and different devices might display colors in unexpected ways.</p>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="Try it!">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">

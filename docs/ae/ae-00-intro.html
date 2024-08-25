@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>mth161 :: Elementary Statistics - AE-01: Hello Penguins</title>
+<title>mth161 :: Elementary Statistics - AE-00: Hello Penguins</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -140,7 +140,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">AE-01: Hello Penguins</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">AE-00: Hello Penguins</li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -240,12 +240,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#a-first-look-at-the-data" id="toc-a-first-look-at-the-data" class="nav-link active" data-scroll-target="#a-first-look-at-the-data">A First Look at the Data</a>
-  <ul class="collapse">
-  <li><a href="#other-points-of-view" id="toc-other-points-of-view" class="nav-link" data-scroll-target="#other-points-of-view">Other points of view</a></li>
-  </ul></li>
-  <li><a href="#summary-statistics" id="toc-summary-statistics" class="nav-link" data-scroll-target="#summary-statistics">Summary Statistics</a></li>
-  <li><a href="#relationships-between-variables" id="toc-relationships-between-variables" class="nav-link" data-scroll-target="#relationships-between-variables">Relationships between Variables</a></li>
+  <li><a href="#a-first-look-at-the-data" id="toc-a-first-look-at-the-data" class="nav-link active" data-scroll-target="#a-first-look-at-the-data">A First Look at the Data</a></li>
   </ul>
 </nav>
     </div>
@@ -254,7 +249,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">AE-01: Hello Penguins</h1>
+<h1 class="title">AE-00: Hello Penguins</h1>
   <div class="quarto-categories">
     <div class="quarto-category">Application exercise</div>
   </div>
@@ -284,164 +279,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <section id="a-first-look-at-the-data" class="level2">
 <h2 class="anchored" data-anchor-id="a-first-look-at-the-data">A First Look at the Data</h2>
-<p>Let’s take a peek at the data with the following R code:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(penguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 8
-  species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g
-  &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;
-1 Adelie  Torgersen           39.1          18.7               181        3750
-2 Adelie  Torgersen           39.5          17.4               186        3800
-3 Adelie  Torgersen           40.3          18                 195        3250
-4 Adelie  Torgersen           NA            NA                  NA          NA
-5 Adelie  Torgersen           36.7          19.3               193        3450
-6 Adelie  Torgersen           39.3          20.6               190        3650
-# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;</code></pre>
-</div>
-</div>
-<p>This command gives us a table (tibble) which shows us the first six rows of the <strong>data frame</strong> called <code>penguins</code>. When working with data, we typically want each row to be an individual observation (or case), each column to be a variable, and each entry (cell) to be a single value. Data that is in this format is called <strong>tidy</strong>. A significant part of the work involved in analyzing data is getting it tidy (a process often referred to as “cleaning the data”) or at least accounting for ways in which it isn’t tidy.</p>
-<div class="callout callout-style-default callout-note no-icon callout-titled" title="Questions">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Questions
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li>What does each row in this data frame represent?</li>
-<li>Is this data tidy? Why or why not?</li>
-<li>What do you think the result of the R command <code>head(penguins, 10)</code> would be? Try it!</li>
-<li>What other questions do you have about this table?</li>
-</ul>
-</div>
-</div>
-<section id="other-points-of-view" class="level3">
-<h3 class="anchored" data-anchor-id="other-points-of-view">Other points of view</h3>
-<p>Here are two other R commands we can use to view the data.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(penguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 344 × 8
-   species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g
-   &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;
- 1 Adelie  Torgersen           39.1          18.7               181        3750
- 2 Adelie  Torgersen           39.5          17.4               186        3800
- 3 Adelie  Torgersen           40.3          18                 195        3250
- 4 Adelie  Torgersen           NA            NA                  NA          NA
- 5 Adelie  Torgersen           36.7          19.3               193        3450
- 6 Adelie  Torgersen           39.3          20.6               190        3650
- 7 Adelie  Torgersen           38.9          17.8               181        3625
- 8 Adelie  Torgersen           39.2          19.6               195        4675
- 9 Adelie  Torgersen           34.1          18.1               193        3475
-10 Adelie  Torgersen           42            20.2               190        4250
-# ℹ 334 more rows
-# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;</code></pre>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(penguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Rows: 344
-Columns: 8
-$ species           &lt;fct&gt; Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adel…
-$ island            &lt;fct&gt; Torgersen, Torgersen, Torgersen, Torgersen, Torgerse…
-$ bill_length_mm    &lt;dbl&gt; 39.1, 39.5, 40.3, NA, 36.7, 39.3, 38.9, 39.2, 34.1, …
-$ bill_depth_mm     &lt;dbl&gt; 18.7, 17.4, 18.0, NA, 19.3, 20.6, 17.8, 19.6, 18.1, …
-$ flipper_length_mm &lt;int&gt; 181, 186, 195, NA, 193, 190, 181, 195, 193, 190, 186…
-$ body_mass_g       &lt;int&gt; 3750, 3800, 3250, NA, 3450, 3650, 3625, 4675, 3475, …
-$ sex               &lt;fct&gt; male, female, female, NA, female, male, female, male…
-$ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007…</code></pre>
-</div>
-</div>
-<div class="callout callout-style-default callout-note no-icon callout-titled" title="Questions">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Questions
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li>What differences do you notice between these two R commands?</li>
-<li>How many penguins are included in this dataset?</li>
-<li>How many variables are there? Which are numerical? Which are categorical?</li>
-</ul>
-</div>
-</div>
-</section>
-</section>
-<section id="summary-statistics" class="level2">
-<h2 class="anchored" data-anchor-id="summary-statistics">Summary Statistics</h2>
-<p>A <strong>summary statistic</strong> is a single number that summarizes our data in some meaningful way. For example, we might ask:</p>
-<ul>
-<li>What percentage of our Adelie penguins were found on Torgersen island?</li>
-<li>What is the average (mean) flipper length of our penguins?</li>
-</ul>
-<p>We can use R to help us analyze the data to answer these questions. We might start by counting how many penguins of each species there are.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>penguins <span class="sc">|&gt;</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(species)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 3 × 2
-  species       n
-  &lt;fct&gt;     &lt;int&gt;
-1 Adelie      152
-2 Chinstrap    68
-3 Gentoo      124</code></pre>
-</div>
-</div>
-<p>We can do something similar to determine how many penguins are on each island.</p>
-<div class="callout callout-style-default callout-note no-icon callout-titled" title="Try It!">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Try It!
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Add a code chunk that determines how many penguins are on each island. Does this help us answer our question? Why or why not?</p>
-</div>
-</div>
-<p>To answer our question, it seems we need to dig deeper. Here we produce what’s sometimes called a two-way, or contingency table. We’ll see these again in Chapter 5.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(penguins<span class="sc">$</span>species, penguins<span class="sc">$</span>island)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>           
-            Biscoe Dream Torgersen
-  Adelie        44    56        52
-  Chinstrap      0    68         0
-  Gentoo       124     0         0</code></pre>
-</div>
-</div>
-<div class="callout callout-style-default callout-note no-icon callout-titled" title="Task">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Task
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Determine what percentage of the Adelie penguins are on Torgenson island.</p>
-</div>
-</div>
-</section>
-<section id="relationships-between-variables" class="level2">
-<h2 class="anchored" data-anchor-id="relationships-between-variables">Relationships between Variables</h2>
 <p>An important tool in understanding and analyzing data is visualization. For example, we can use a <strong>scatterplot</strong> to help us understand relationships between variables. Let’s look at a scatterpolot that compares body mass and flipper length.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins, </span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm, <span class="at">y =</span> body_mass_g)) <span class="sc">+</span></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: Removed 2 rows containing missing values or values outside the scale range
 (`geom_point()`).</code></pre>
@@ -449,74 +288,9 @@ Task
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="ae-01-penguins_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="ae-00-intro_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
-</div>
-</div>
-<div class="callout callout-style-default callout-note no-icon callout-titled" title="Questions">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Questions
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li>What does each point on the graph represent?</li>
-<li>Based on this scatterplot, how would you describe the relationship between these two variables?</li>
-<li>When we ran the code to make this graph, a warning message appeared. What do you think is going on?</li>
-</ul>
-</div>
-</div>
-<p>R gives us the ability to modify and customize our visualizations a great deal – indeed this is one of the main strengths of R! Let’s add one more feature to our graph. As we know, there are three different species of penguins in our data set – but our scatter plot does not show this!</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> penguins,</span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm, <span class="at">y =</span> body_mass_g)) <span class="sc">+</span></span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">color =</span> species))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing missing values or values outside the scale range
-(`geom_point()`).</code></pre>
-</div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="ae-01-penguins_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-note no-icon callout-titled" title="Questions">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Questions
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li>How does the addition of coloring by species change your understanding of this graph?</li>
-<li>What additional questions about this data can you come up with?</li>
-</ul>
-</div>
-</div>
-<p>Because people can perceive colors differently due to color blindness or other color vision differences and since different devices might display colors in unexpected ways, it’s good practice to not rely on color alone to distinguish points.</p>
-<div class="callout callout-style-default callout-note no-icon callout-titled" title="Try it!">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Try it!
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Modify your mapping of the points to include shape by adding <code>shape = species</code> to the <code>aes</code> mapping for the points. Don’t forget a comma!</p>
 </div>
 </div>
 
