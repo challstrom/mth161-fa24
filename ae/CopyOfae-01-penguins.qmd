@@ -96,7 +96,7 @@ table(penguins$species, penguins$island)
 Determine what percentage of the Adelie penguins are on Torgenson island.
 :::
 
-## Relationships between Variables
+## Visualization
 
 An important tool in understanding and analyzing data is visualization.  For example, we can use a **scatterplot** to help us understand relationships between variables.  Let's look at a scatterpolot that compares body mass and flipper length.
 
@@ -111,11 +111,30 @@ ggplot(data = penguins,
 ::: {.callout-note title="Questions" icon=false}
 - What does each point on the graph represent?
 - Based on this scatterplot, how would you describe the relationship between these two variables?
-- When we ran the code to make this graph, a warning message appeared.  What do you think is going on?
 :::
 
+::: {.callout-note title="Code Explanation" collapse=true}
+In the code above, there are three main elements that go into producing our scatter plot:
 
-R gives us the ability to modify and customize our visualizations a great deal -- indeed this is one of the main strengths of R! Let's add one more feature to our graph.  As we know, there are three different species of penguins in our data set -- but our scatter plot does not show this!
+- The first element to the `ggplot` command identifies the **data** frame -- in this case `penguins`
+- The second element is the **mapping** which specifies how the variables are going to show up in the graph -- in this case, the x and y axes are going to come from the flipper length and body mass respectively.
+- The last element specifies the **geom** which determines how the data is represented -- since we want a scatterplot, our geometric objects are points, hence `geom_point()`
+
+Before we add more layers to this plot, let’s pause for a moment and review the warning message we got:
+
+> Warning: Removed 2 rows containing missing values or values outside the scale range
+(`geom_point()`)
+
+We’re seeing this message because there are two penguins in our dataset with missing body mass and/or flipper length values and ggplot2 has no way of representing them on the plot without both of these values. Like R, ggplot2 subscribes to the philosophy that missing values should never silently go missing.
+:::
+
+R gives us the ability to modify and customize our visualizations a great deal -- indeed this is one of the main strengths of R.  This is not a course in learning R, so we won't go through these code chunks in great detail, but it's helpful to have a basic understanding of what's going on.
+
+Let's modify our visualization!
+
+## Relationships Between Variables
+
+Looking at our scatterplot above, what can you say about the relationship between body mass and flipper length?  We will see later in Chapter 7 how to quantify this observation in a precise way but for the time being, let's add one more feature to our graph.  As we know, there are three different species of penguins in our data set -- but our scatter plot does not show this!  We can easily adust how our geom appears by specifying that the color of the point should be determined by some other variable -- i.e species.
 
 ```{r}
 ggplot(
@@ -129,7 +148,7 @@ ggplot(
 - What additional questions about this data can you come up with?
 :::
 
-Because people can perceive colors differently due to color blindness or other color vision differences and since different devices might display colors in unexpected ways, it's good practice to not rely on color alone to distinguish points.   
+It's good practice to not rely on color alone to distinguish the points. People may perceive colors differently due to color blindness or other color vision differences and different devices might display colors in unexpected ways.  
 
 ::: {.callout-note icon=false title="Try it!"}
 Modify your mapping of the points to include shape by adding `shape = species` to the `aes` mapping for the points.  Don't forget a comma!

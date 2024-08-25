@@ -814,7 +814,7 @@
     "href": "structure.html",
     "title": "Class Structure",
     "section": "",
-    "text": "To be successful in this course, you should be present and actively engaged in class. There are many ways to be engaged: regularly attending class, completing pre-class work, completing assignments on-time, engaging productively in group work, asking questions, supporting your classmates, coming to student support hours, and more. To help you develop a habit of engagment, you will have a weekly opportunity to reflect on how you’re engaging in our class.\nWile I do expect you to be in class, I recognize that occasionally things come up that might prevent you from being there. If you miss class, you can check our class Moodle page to see what we covered that day.",
+    "text": "To get the most out of this course, you should be present and actively engaged in class. There are many ways to be engaged: regularly attending class, completing pre-class work, completing assignments on-time, engaging productively in group work, asking questions, supporting your classmates, coming to student support hours, and more. To help you develop a habit of engagment, you will have a weekly opportunity to reflect on how you’re engaging in our class.\nWile I do expect you to be in class, I recognize that occasionally things come up that might prevent you from being there. If you do miss class, you can always check our class Moodle page to see what we covered that day. If you find yourself missing class more than a few times, I will check with you to see how we can support your attendence better.",
     "crumbs": [
       "Home",
       "Class Structure"
@@ -825,7 +825,7 @@
     "href": "structure.html#attendance-and-engagement",
     "title": "Class Structure",
     "section": "",
-    "text": "To be successful in this course, you should be present and actively engaged in class. There are many ways to be engaged: regularly attending class, completing pre-class work, completing assignments on-time, engaging productively in group work, asking questions, supporting your classmates, coming to student support hours, and more. To help you develop a habit of engagment, you will have a weekly opportunity to reflect on how you’re engaging in our class.\nWile I do expect you to be in class, I recognize that occasionally things come up that might prevent you from being there. If you miss class, you can check our class Moodle page to see what we covered that day.",
+    "text": "To get the most out of this course, you should be present and actively engaged in class. There are many ways to be engaged: regularly attending class, completing pre-class work, completing assignments on-time, engaging productively in group work, asking questions, supporting your classmates, coming to student support hours, and more. To help you develop a habit of engagment, you will have a weekly opportunity to reflect on how you’re engaging in our class.\nWile I do expect you to be in class, I recognize that occasionally things come up that might prevent you from being there. If you do miss class, you can always check our class Moodle page to see what we covered that day. If you find yourself missing class more than a few times, I will check with you to see how we can support your attendence better.",
     "crumbs": [
       "Home",
       "Class Structure"
@@ -847,7 +847,7 @@
     "href": "structure.html#application-exercises-ae",
     "title": "Class Structure",
     "section": "Application Exercises (AE)",
-    "text": "Application Exercises (AE)\nThese are in-class activities that we will work on in small groups. Each one is designed to introduce or reinforce specfic concepts as well as R code that we’ll use for visualization and data analysis. If you have a laptop or tablet, you may find it helpful to bring it to class but as long as someone at your table has a device, that will be sufficient. A short worksheet will accompany the AE.",
+    "text": "Application Exercises (AE)\nThese are in-class activities that we will work on in groups. They are designed to introduce or reinforce specfic concepts as well as R code that we’ll use for visualization and data analysis. If you have a laptop or tablet, you may find it helpful to bring it to class but as long as someone at your table has a device, that will be sufficient.",
     "crumbs": [
       "Home",
       "Class Structure"
@@ -869,7 +869,7 @@
     "href": "structure.html#labs",
     "title": "Class Structure",
     "section": "Labs",
-    "text": "Labs\nApproximately every two weeks, I will assign a lab. You can think of these as extended homework that will combine concepts with practice. You will use RStudio to complete a lab report in qmd format which you’ll submit on Moodle. I will provide feedback after which you’re welcome to resubmit any work within one week.",
+    "text": "Labs\nApproximately every two weeks, I will assign a lab. You can think of these as extended homework that will combine concepts with practice. You will use RStudio to complete a lab report which you’ll submit on Moodle. I will provide feedback after which you’re welcome to resubmit any work within one week.",
     "crumbs": [
       "Home",
       "Class Structure"
@@ -1029,7 +1029,7 @@
     "href": "structure.html#weekly-report",
     "title": "Class Structure",
     "section": "Weekly Report",
-    "text": "Weekly Report\nEach week, I will ask you to complete a short one-page reflection on that week’s work. Your report should include the following information:\n\nHow did you engage in the class this week? Did you attend class? Did you attend student support hours?\nDid you complete the assigned homework problems? Did you find them helpful?\n\nWhat questions came up for you have while doing these problems? How did you resolve these questions and/or what questions do you still have?\n\nNote: I am not asking you to submit solutions with your report, although you are welcome to if you have questions about your work and would like feedback.",
+    "text": "Weekly Report\nEach week, I will ask you to complete a short one-page reflection on that week’s work. Your report should include the following information:\n\nHow did you engage in the class this week? Did you attend class? Were you on-time? Did you attend student support hours?\nDid you complete the assigned homework problems? Did you find them helpful?\n\nWhat questions came up for you have while doing these problems or doing the class activities? How did you resolve these questions and/or what questions do you still have?\nIn what ways were you able to help support the learning of your classmates?\nDid you add any evidence of your learning to your portfolio this week?\n\nNote: I am not asking you to submit solutions with your report, although you are welcome to if you have questions about your work and would like feedback.",
     "crumbs": [
       "Home",
       "Class Structure"
@@ -1307,7 +1307,7 @@
     "href": "slides/00-welcome.html#still-in-your-groups",
     "title": "Welcome to MTH 161",
     "section": "Still in your groups…",
-    "text": "Still in your groups…\n… for each of the following questions\n\n\n1. Think on your own about how you might answer\n2. Discuss with your group your responses\n3. Share out to the class one idea or thought"
+    "text": "Still in your groups…\n… for each of the following questions\n\n\n1. Think on your own about how you might answer (1 min)\n2. Discuss with your group your responses (5-8 min)\n3. Share out to the class one idea or thought (5 min)"
   },
   {
     "objectID": "slides/00-welcome.html#what-are-the-goals-of-a-college-education",
@@ -1711,9 +1711,9 @@
   {
     "objectID": "ae/ae-01-penguins.html",
     "href": "ae/ae-01-penguins.html",
-    "title": "AE-01: Meet the Penguins",
+    "title": "AE-01: Hello Penguins",
     "section": "",
-    "text": "In this application exercise, we will meet some penguins, start thinking about data and variables, and see some R code in action.\nThe penguins data from the palmerpenguins package contains size measurements for three species of penguins observed on three islands in the Palmer Archipelago, Antarctica.\nData were collected and made available by Dr. Kristen Gorman and the Palmer Station, Antarctica LTER, a member of the Long Term Ecological Research Network."
+    "text": "In this activity, we will meet some penguins, start thinking about data and variables, and see some R code in action. The penguins data from the palmerpenguins R package contains size measurements for three species of penguins observed on three islands in the Palmer Archipelago in Antarctica.\nData were collected and made available by Dr. Kristen Gorman and the Palmer Station, Antarctica LTER, a member of the Long Term Ecological Research Network.\nIn order to access this data, we need to load the package into R. While we’re at it, we can load any other packages that we need.\nlibrary(tidyverse)\nlibrary(palmerpenguins)"
   },
   {
     "objectID": "ae/ae-01-penguins.html#meet-the-penguins",
@@ -1727,27 +1727,487 @@
     "href": "ae/ae-01-penguins.html#task-1",
     "title": "AE-01: Meet the Penguins",
     "section": "Task 1",
-    "text": "Task 1\nLet’s take a peek at the data with the following R code:\n\nhead(penguins)\n\n# A tibble: 6 × 8\n  species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n  &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;\n1 Adelie  Torgersen           39.1          18.7               181        3750\n2 Adelie  Torgersen           39.5          17.4               186        3800\n3 Adelie  Torgersen           40.3          18                 195        3250\n4 Adelie  Torgersen           NA            NA                  NA          NA\n5 Adelie  Torgersen           36.7          19.3               193        3450\n6 Adelie  Torgersen           39.3          20.6               190        3650\n# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;\n\n\nThis tables shows us the first six rows of data frame containing this data. When working with data, we typically want each row to be an individual observation (or case), each column to be a variable and each entry (cell) to be a single value. Data in this format is called tidy.\nQuestion: What observations can you make about this table?"
+    "text": "Task 1\nLet’s take a peek at the data with the following R code:\n\nhead(penguins)\n\n# A tibble: 6 × 8\n  species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n  &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;\n1 Adelie  Torgersen           39.1          18.7               181        3750\n2 Adelie  Torgersen           39.5          17.4               186        3800\n3 Adelie  Torgersen           40.3          18                 195        3250\n4 Adelie  Torgersen           NA            NA                  NA          NA\n5 Adelie  Torgersen           36.7          19.3               193        3450\n6 Adelie  Torgersen           39.3          20.6               190        3650\n# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;\n\n\nThis table shows us the first six rows of a data frame containing this data. When working with data, we typically want each row to be an individual observation (or case), each column to be a variable and each entry (cell) to be a single value. Data in this format is called tidy.\n\n\n\n\n\n\nQuestions\n\n\n\nHow many variables are in this data frame? What other questions do you have about this table?"
   },
   {
     "objectID": "ae/ae-01-penguins.html#task-2",
     "href": "ae/ae-01-penguins.html#task-2",
     "title": "AE-01: Meet the Penguins",
     "section": "Task 2",
-    "text": "Task 2\nHere are many other ways to view data frames.\n\nprint(penguins)\n\n# A tibble: 344 × 8\n   species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n   &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;\n 1 Adelie  Torgersen           39.1          18.7               181        3750\n 2 Adelie  Torgersen           39.5          17.4               186        3800\n 3 Adelie  Torgersen           40.3          18                 195        3250\n 4 Adelie  Torgersen           NA            NA                  NA          NA\n 5 Adelie  Torgersen           36.7          19.3               193        3450\n 6 Adelie  Torgersen           39.3          20.6               190        3650\n 7 Adelie  Torgersen           38.9          17.8               181        3625\n 8 Adelie  Torgersen           39.2          19.6               195        4675\n 9 Adelie  Torgersen           34.1          18.1               193        3475\n10 Adelie  Torgersen           42            20.2               190        4250\n# ℹ 334 more rows\n# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;\n\n\n\nglimpse(penguins)\n\nRows: 344\nColumns: 8\n$ species           &lt;fct&gt; Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adel…\n$ island            &lt;fct&gt; Torgersen, Torgersen, Torgersen, Torgersen, Torgerse…\n$ bill_length_mm    &lt;dbl&gt; 39.1, 39.5, 40.3, NA, 36.7, 39.3, 38.9, 39.2, 34.1, …\n$ bill_depth_mm     &lt;dbl&gt; 18.7, 17.4, 18.0, NA, 19.3, 20.6, 17.8, 19.6, 18.1, …\n$ flipper_length_mm &lt;int&gt; 181, 186, 195, NA, 193, 190, 181, 195, 193, 190, 186…\n$ body_mass_g       &lt;int&gt; 3750, 3800, 3250, NA, 3450, 3650, 3625, 4675, 3475, …\n$ sex               &lt;fct&gt; male, female, female, NA, female, male, female, male…\n$ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007…\n\n\nQuestion: what are the differences between these R commands?\nQuestions: How many penguins are included in this dataset? How many variables?"
+    "text": "Task 2\nHere are two other ways to view data frames.\n\nprint(penguins)\n\n# A tibble: 344 × 8\n   species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n   &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;\n 1 Adelie  Torgersen           39.1          18.7               181        3750\n 2 Adelie  Torgersen           39.5          17.4               186        3800\n 3 Adelie  Torgersen           40.3          18                 195        3250\n 4 Adelie  Torgersen           NA            NA                  NA          NA\n 5 Adelie  Torgersen           36.7          19.3               193        3450\n 6 Adelie  Torgersen           39.3          20.6               190        3650\n 7 Adelie  Torgersen           38.9          17.8               181        3625\n 8 Adelie  Torgersen           39.2          19.6               195        4675\n 9 Adelie  Torgersen           34.1          18.1               193        3475\n10 Adelie  Torgersen           42            20.2               190        4250\n# ℹ 334 more rows\n# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;\n\n\n\nglimpse(penguins)\n\nRows: 344\nColumns: 8\n$ species           &lt;fct&gt; Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adel…\n$ island            &lt;fct&gt; Torgersen, Torgersen, Torgersen, Torgersen, Torgerse…\n$ bill_length_mm    &lt;dbl&gt; 39.1, 39.5, 40.3, NA, 36.7, 39.3, 38.9, 39.2, 34.1, …\n$ bill_depth_mm     &lt;dbl&gt; 18.7, 17.4, 18.0, NA, 19.3, 20.6, 17.8, 19.6, 18.1, …\n$ flipper_length_mm &lt;int&gt; 181, 186, 195, NA, 193, 190, 181, 195, 193, 190, 186…\n$ body_mass_g       &lt;int&gt; 3750, 3800, 3250, NA, 3450, 3650, 3625, 4675, 3475, …\n$ sex               &lt;fct&gt; male, female, female, NA, female, male, female, male…\n$ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007…\n\n\n\n\n\n\n\n\nQuestions\n\n\n\n\nWhat are the differences between these R commands?\nHow many penguins are included in this dataset?\nWhat type of variables are included? Which are numerical? Which are categorical?"
   },
   {
     "objectID": "ae/ae-01-penguins.html#task-3",
     "href": "ae/ae-01-penguins.html#task-3",
-    "title": "AE-01: Meet the Penguins",
+    "title": "AE-01: Hello Penguins",
     "section": "Task 3",
-    "text": "Task 3\nLet’s take a look at other ways to analyize our data using R. What is the code chunk below doing?\n\npenguins %&gt;%\n  count(species)\n\n# A tibble: 3 × 2\n  species       n\n  &lt;fct&gt;     &lt;int&gt;\n1 Adelie      152\n2 Chinstrap    68\n3 Gentoo      124\n\n\n\nExercise:\nAdd a code chunk that does something similar to determine how many penguins are on each island.\n\npenguins %&gt;%\n  count(island)\n\n# A tibble: 3 × 2\n  island        n\n  &lt;fct&gt;     &lt;int&gt;\n1 Biscoe      168\n2 Dream       124\n3 Torgersen    52\n\ncount(penguins, island)\n\n# A tibble: 3 × 2\n  island        n\n  &lt;fct&gt;     &lt;int&gt;\n1 Biscoe      168\n2 Dream       124\n3 Torgersen    52"
+    "text": "Task 3\nLet’s take a look at other ways to analyize our data using R. What do you think the code chunk below is doing?\n\npenguins %&gt;%\n  count(species)\n\n# A tibble: 3 × 2\n  species       n\n  &lt;fct&gt;     &lt;int&gt;\n1 Adelie      152\n2 Chinstrap    68\n3 Gentoo      124\n\n\n\nExercise:\nAdd a code chunk that does something similar to determine how many penguins are on each island.\n\npenguins %&gt;%\n  group_by(island)\n\n# A tibble: 344 × 8\n# Groups:   island [3]\n   species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n   &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;\n 1 Adelie  Torgersen           39.1          18.7               181        3750\n 2 Adelie  Torgersen           39.5          17.4               186        3800\n 3 Adelie  Torgersen           40.3          18                 195        3250\n 4 Adelie  Torgersen           NA            NA                  NA          NA\n 5 Adelie  Torgersen           36.7          19.3               193        3450\n 6 Adelie  Torgersen           39.3          20.6               190        3650\n 7 Adelie  Torgersen           38.9          17.8               181        3625\n 8 Adelie  Torgersen           39.2          19.6               195        4675\n 9 Adelie  Torgersen           34.1          18.1               193        3475\n10 Adelie  Torgersen           42            20.2               190        4250\n# ℹ 334 more rows\n# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;"
   },
   {
     "objectID": "ae/ae-01-penguins.html#task-4",
     "href": "ae/ae-01-penguins.html#task-4",
     "title": "AE-01: Meet the Penguins",
     "section": "Task 4",
-    "text": "Task 4\n\npenguins %&gt;% \n  group_by(species) %&gt;% \n  summarize(across(where(is.numeric), ~ mean(.x, na.rm = TRUE)))\n\n# A tibble: 3 × 6\n  species   bill_length_mm bill_depth_mm flipper_length_mm body_mass_g  year\n  &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;dbl&gt;       &lt;dbl&gt; &lt;dbl&gt;\n1 Adelie              38.8          18.3              190.       3701. 2008.\n2 Chinstrap           48.8          18.4              196.       3733. 2008.\n3 Gentoo              47.5          15.0              217.       5076. 2008.\n\n\nThe plot below shows the relationship between flipper and bill lengths of these penguins.\n\nggplot(penguins, \n       aes(x = flipper_length_mm, y = bill_length_mm)) +\n  geom_point(aes(color = species, shape = species)) +\n  scale_color_manual(values = c(\"darkorange\",\"purple\",\"cyan4\")) +\n  labs(\n    title = \"Flipper and bill length\",\n    subtitle = \"Dimensions for penguins at Palmer Station LTER\",\n    x = \"Flipper length (mm)\", y = \"Bill length (mm)\",\n    color = \"Penguin species\", shape = \"Penguin species\"\n  ) +\n  theme_minimal()"
+    "text": "Task 4\n\npenguins %&gt;% \n  group_by(species) %&gt;% \n  summarize(across(where(is.numeric), ~ mean(.x, na.rm = TRUE)))\n\n# A tibble: 3 × 6\n  species   bill_length_mm bill_depth_mm flipper_length_mm body_mass_g  year\n  &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;dbl&gt;       &lt;dbl&gt; &lt;dbl&gt;\n1 Adelie              38.8          18.3              190.       3701. 2008.\n2 Chinstrap           48.8          18.4              196.       3733. 2008.\n3 Gentoo              47.5          15.0              217.       5076. 2008.\n\n\nThe plot below shows the relationship between flipper and bill lengths of these penguins.\n\nggplot(penguins, \n       aes(x = flipper_length_mm, y = bill_length_mm)) +\n  geom_point(aes(color = species, shape = species)) +\n  scale_color_manual(values = c(\"darkorange\",\"purple\",\"cyan4\")) +\n  labs(\n    title = \"Flipper and bill length\",\n    subtitle = \"Dimensions for penguins at Palmer Station LTER\",\n    x = \"Flipper length (mm)\", y = \"Bill length (mm)\",\n    color = \"Penguin species\", shape = \"Penguin species\"\n  ) +\n  theme_minimal()\n\n\n\n\n\n\n\n\n\nggplot(data = penguins, \n                       aes(x = flipper_length_mm,\n                           y = body_mass_g)) +\n  geom_point(size = 2,\n             alpha = 0.5) +\n  labs(title = \"Penguin size, Palmer Station LTER\",\n       subtitle = \"Flipper length and body mass\",\n       x = \"Flipper length (mm)\",\n       y = \"Body mass (g)\") +\n  theme(legend.position = c(0.2, 0.7),\n        plot.title.position = \"plot\",\n        plot.caption = element_text(hjust = 0, face= \"italic\"),\n        plot.caption.position = \"plot\")\n\nWarning: A numeric `legend.position` argument in `theme()` was deprecated in ggplot2\n3.5.0.\nℹ Please use the `legend.position.inside` argument of `theme()` instead.\n\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n\nggplot(data = penguins, \n                       aes(x = flipper_length_mm,\n                           y = body_mass_g)) +\n  geom_point(aes(color = species, \n                 shape = species),\n             size = 2,\n             alpha = 0.5) +\n  scale_color_manual(values = c(\"darkorange\",\"purple\",\"cyan4\")) +\n  labs(title = \"Penguin size, Palmer Station LTER\",\n       subtitle = \"Flipper length and body mass for Adelie, Chinstrap and Gentoo Penguins\",\n       x = \"Flipper length (mm)\",\n       y = \"Body mass (g)\",\n       color = \"Penguin species\",\n       shape = \"Penguin species\") +\n  theme(legend.position = c(0.15, 0.8),\n        plot.title.position = \"plot\",\n        plot.caption = element_text(hjust = 0, face= \"italic\"),\n        plot.caption.position = \"plot\")\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_point()`)."
+  },
+  {
+    "objectID": "ae/ae-01-penguins.html#task-0",
+    "href": "ae/ae-01-penguins.html#task-0",
+    "title": "AE-01: Meet the Penguins",
+    "section": "Task 0",
+    "text": "Task 0\nBefore we can access this data, we need to load the package into R. While we’re at it, we can load any other packages that we need.\n\nlibrary(tidyverse)\nlibrary(palmerpenguins)"
+  },
+  {
+    "objectID": "ae/ae-01-penguins.html#a-peek-at-the-data",
+    "href": "ae/ae-01-penguins.html#a-peek-at-the-data",
+    "title": "AE-01: Meet the Penguins",
+    "section": "A Peek at the Data",
+    "text": "A Peek at the Data\nLet’s take a peek at the data with the following R code:\n\nhead(penguins)\n\n# A tibble: 6 × 8\n  species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n  &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;\n1 Adelie  Torgersen           39.1          18.7               181        3750\n2 Adelie  Torgersen           39.5          17.4               186        3800\n3 Adelie  Torgersen           40.3          18                 195        3250\n4 Adelie  Torgersen           NA            NA                  NA          NA\n5 Adelie  Torgersen           36.7          19.3               193        3450\n6 Adelie  Torgersen           39.3          20.6               190        3650\n# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;\n\n\nThis table shows us the first six rows of a data frame containing this data. When working with data, we typically want each row to be an individual observation (or case), each column to be a variable and each entry (cell) to be a single value. Data in this format is called tidy.\n\n\n\n\n\n\nQuestions\n\n\n\n\nWhat does each row in this data frame represent?\n\nHow many variables are there?\n\nWhat other questions do you have about this table?\n\n\n\n\nOther points of view\nHere are two other R commands we can use to view the data.\n\nprint(penguins)\n\n# A tibble: 344 × 8\n   species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n   &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;\n 1 Adelie  Torgersen           39.1          18.7               181        3750\n 2 Adelie  Torgersen           39.5          17.4               186        3800\n 3 Adelie  Torgersen           40.3          18                 195        3250\n 4 Adelie  Torgersen           NA            NA                  NA          NA\n 5 Adelie  Torgersen           36.7          19.3               193        3450\n 6 Adelie  Torgersen           39.3          20.6               190        3650\n 7 Adelie  Torgersen           38.9          17.8               181        3625\n 8 Adelie  Torgersen           39.2          19.6               195        4675\n 9 Adelie  Torgersen           34.1          18.1               193        3475\n10 Adelie  Torgersen           42            20.2               190        4250\n# ℹ 334 more rows\n# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;\n\n\n\nglimpse(penguins)\n\nRows: 344\nColumns: 8\n$ species           &lt;fct&gt; Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adel…\n$ island            &lt;fct&gt; Torgersen, Torgersen, Torgersen, Torgersen, Torgerse…\n$ bill_length_mm    &lt;dbl&gt; 39.1, 39.5, 40.3, NA, 36.7, 39.3, 38.9, 39.2, 34.1, …\n$ bill_depth_mm     &lt;dbl&gt; 18.7, 17.4, 18.0, NA, 19.3, 20.6, 17.8, 19.6, 18.1, …\n$ flipper_length_mm &lt;int&gt; 181, 186, 195, NA, 193, 190, 181, 195, 193, 190, 186…\n$ body_mass_g       &lt;int&gt; 3750, 3800, 3250, NA, 3450, 3650, 3625, 4675, 3475, …\n$ sex               &lt;fct&gt; male, female, female, NA, female, male, female, male…\n$ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007…\n\n\n\n\n\n\n\n\nQuestions\n\n\n\n\nWhat are the differences between these R commands?\nHow many penguins are included in this dataset?\nWhat type of variables are included? Which are numerical? Which are categorical?"
+  },
+  {
+    "objectID": "ae/ae-01-penguins.html#scatterplots-and-associations",
+    "href": "ae/ae-01-penguins.html#scatterplots-and-associations",
+    "title": "AE-01: Hello Penguins",
+    "section": "Scatterplots and Associations",
+    "text": "Scatterplots and Associations\n\nsummary(penguins$body_mass_g)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's \n   2700    3550    4050    4202    4750    6300       2 \n\n\n\nmean(penguins$body_mass_g, na.rm=TRUE)\n\n[1] 4201.754\n\n\n\npenguins %&gt;% \n  group_by(species) %&gt;% \n  summarize(across(where(is.numeric), ~ mean(.x, na.rm = TRUE)))\n\n# A tibble: 3 × 6\n  species   bill_length_mm bill_depth_mm flipper_length_mm body_mass_g  year\n  &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;dbl&gt;       &lt;dbl&gt; &lt;dbl&gt;\n1 Adelie              38.8          18.3              190.       3701. 2008.\n2 Chinstrap           48.8          18.4              196.       3733. 2008.\n3 Gentoo              47.5          15.0              217.       5076. 2008.\n\n\n\nggplot(\n  data = penguins,\n  mapping = aes(x = flipper_length_mm, y = body_mass_g)) +\n  geom_point()\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\nThe plot below shows the relationship between flipper and bill lengths of these penguins.\n\nggplot(penguins, \n       aes(x = flipper_length_mm, y = bill_length_mm)) +\n  geom_point(aes(color = species, shape = species)) +\n  scale_color_manual(values = c(\"darkorange\",\"purple\",\"cyan4\")) +\n  labs(\n    title = \"Flipper and bill length\",\n    subtitle = \"Dimensions for penguins at Palmer Station LTER\",\n    x = \"Flipper length (mm)\", y = \"Bill length (mm)\",\n    color = \"Penguin species\", shape = \"Penguin species\"\n  ) +\n  theme_minimal()\n\n\n\n\n\n\n\n\n\nggplot(data = penguins, \n                       aes(x = flipper_length_mm,\n                           y = body_mass_g)) +\n  geom_point(size = 2,\n             alpha = 0.5) +\n  labs(title = \"Penguin size, Palmer Station LTER\",\n       subtitle = \"Flipper length and body mass\",\n       x = \"Flipper length (mm)\",\n       y = \"Body mass (g)\") +\n  theme(legend.position = c(0.2, 0.7),\n        plot.title.position = \"plot\",\n        plot.caption = element_text(hjust = 0, face= \"italic\"),\n        plot.caption.position = \"plot\")\n\nWarning: A numeric `legend.position` argument in `theme()` was deprecated in ggplot2\n3.5.0.\nℹ Please use the `legend.position.inside` argument of `theme()` instead.\n\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n\nggplot(data = penguins, \n                       aes(x = flipper_length_mm,\n                           y = body_mass_g)) +\n  geom_point(aes(color = species, \n                 shape = species),\n             size = 2,\n             alpha = 0.5) +\n  scale_color_manual(values = c(\"darkorange\",\"purple\",\"cyan4\")) +\n  labs(title = \"Penguin size, Palmer Station LTER\",\n       subtitle = \"Flipper length and body mass for Adelie, Chinstrap and Gentoo Penguins\",\n       x = \"Flipper length (mm)\",\n       y = \"Body mass (g)\",\n       color = \"Penguin species\",\n       shape = \"Penguin species\") +\n  theme(legend.position = c(0.15, 0.8),\n        plot.title.position = \"plot\",\n        plot.caption = element_text(hjust = 0, face= \"italic\"),\n        plot.caption.position = \"plot\")\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_point()`)."
+  },
+  {
+    "objectID": "ae/ae-01-penguins.html#a-first-look-at-the-data",
+    "href": "ae/ae-01-penguins.html#a-first-look-at-the-data",
+    "title": "AE-01: Hello Penguins",
+    "section": "A First Look at the Data",
+    "text": "A First Look at the Data\nLet’s take a peek at the data with the following R code:\n\nhead(penguins)\n\n# A tibble: 6 × 8\n  species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n  &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;\n1 Adelie  Torgersen           39.1          18.7               181        3750\n2 Adelie  Torgersen           39.5          17.4               186        3800\n3 Adelie  Torgersen           40.3          18                 195        3250\n4 Adelie  Torgersen           NA            NA                  NA          NA\n5 Adelie  Torgersen           36.7          19.3               193        3450\n6 Adelie  Torgersen           39.3          20.6               190        3650\n# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;\n\n\nThis command gives us a table (tibble) which shows us the first six rows of the data frame called penguins. When working with data, we typically want each row to be an individual observation (or case), each column to be a variable, and each entry (cell) to be a single value. Data that is in this format is called tidy. A significant part of the work involved in analyzing data is getting it tidy (a process often referred to as “cleaning the data”) or at least accounting for ways in which it isn’t tidy.\n\n\n\n\n\n\nQuestions\n\n\n\n\nWhat does each row in this data frame represent?\nIs this data tidy? Why or why not?\nWhat do you think the result of the R command head(penguins, 10) would be? Try it!\nWhat other questions do you have about this table?\n\n\n\n\nOther points of view\nHere are two other R commands we can use to view the data.\n\nprint(penguins)\n\n# A tibble: 344 × 8\n   species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n   &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;\n 1 Adelie  Torgersen           39.1          18.7               181        3750\n 2 Adelie  Torgersen           39.5          17.4               186        3800\n 3 Adelie  Torgersen           40.3          18                 195        3250\n 4 Adelie  Torgersen           NA            NA                  NA          NA\n 5 Adelie  Torgersen           36.7          19.3               193        3450\n 6 Adelie  Torgersen           39.3          20.6               190        3650\n 7 Adelie  Torgersen           38.9          17.8               181        3625\n 8 Adelie  Torgersen           39.2          19.6               195        4675\n 9 Adelie  Torgersen           34.1          18.1               193        3475\n10 Adelie  Torgersen           42            20.2               190        4250\n# ℹ 334 more rows\n# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;\n\n\n\nglimpse(penguins)\n\nRows: 344\nColumns: 8\n$ species           &lt;fct&gt; Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adel…\n$ island            &lt;fct&gt; Torgersen, Torgersen, Torgersen, Torgersen, Torgerse…\n$ bill_length_mm    &lt;dbl&gt; 39.1, 39.5, 40.3, NA, 36.7, 39.3, 38.9, 39.2, 34.1, …\n$ bill_depth_mm     &lt;dbl&gt; 18.7, 17.4, 18.0, NA, 19.3, 20.6, 17.8, 19.6, 18.1, …\n$ flipper_length_mm &lt;int&gt; 181, 186, 195, NA, 193, 190, 181, 195, 193, 190, 186…\n$ body_mass_g       &lt;int&gt; 3750, 3800, 3250, NA, 3450, 3650, 3625, 4675, 3475, …\n$ sex               &lt;fct&gt; male, female, female, NA, female, male, female, male…\n$ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007…\n\n\n\n\n\n\n\n\nQuestions\n\n\n\n\nWhat differences do you notice between these two R commands?\nHow many penguins are included in this dataset?\nHow many variables are there? Which are numerical? Which are categorical?"
+  },
+  {
+    "objectID": "ae/ae-01-penguins.html#relationships-between-variables",
+    "href": "ae/ae-01-penguins.html#relationships-between-variables",
+    "title": "AE-01: Hello Penguins",
+    "section": "Relationships between Variables",
+    "text": "Relationships between Variables\nAn important tool in understanding and analyzing data is visualization. For example, we can use a scatterplot to help us understand relationships between variables. Let’s look at a scatterpolot that compares body mass and flipper length.\n\nggplot(data = penguins, \n       mapping = aes(x = flipper_length_mm, y = body_mass_g)) +\n  geom_point()\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuestions\n\n\n\n\nWhat does each point on the graph represent?\nBased on this scatterplot, how would you describe the relationship between these two variables?\nWhen we ran the code to make this graph, a warning message appeared. What do you think is going on?\n\n\n\nR gives us the ability to modify and customize our visualizations a great deal – indeed this is one of the main strengths of R! Let’s add one more feature to our graph. As we know, there are three different species of penguins in our data set – but our scatter plot does not show this!\n\nggplot(\n  data = penguins,\n  mapping = aes(x = flipper_length_mm, y = body_mass_g)) +\n  geom_point(mapping = aes(color = species))\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuestions\n\n\n\n\nHow does the addition of coloring by species change your understanding of this graph?\nWhat additional questions about this data can you come up with?\n\n\n\nBecause people can perceive colors differently due to color blindness or other color vision differences and since different devices might display colors in unexpected ways, it’s good practice to not rely on color alone to distinguish points.\n\n\n\n\n\n\nTry it!\n\n\n\nModify your mapping of the points to include shape by adding shape = species to the aes mapping for the points. Don’t forget a comma!"
+  },
+  {
+    "objectID": "ae/ae-01-penguins.html#summary-statistics",
+    "href": "ae/ae-01-penguins.html#summary-statistics",
+    "title": "AE-01: Hello Penguins",
+    "section": "Summary Statistics",
+    "text": "Summary Statistics\nA summary statistic is a single number that summarizes our data in some meaningful way. For example, we might ask:\n\nWhat percentage of our Adelie penguins were found on Torgersen island?\nWhat is the average (mean) flipper length of our penguins?\n\nWe can use R to help us analyze the data to answer these questions. We might start by counting how many penguins of each species there are.\n\npenguins |&gt;\n  count(species)\n\n# A tibble: 3 × 2\n  species       n\n  &lt;fct&gt;     &lt;int&gt;\n1 Adelie      152\n2 Chinstrap    68\n3 Gentoo      124\n\n\nWe can do something similar to determine how many penguins are on each island.\n\n\n\n\n\n\nTry It!\n\n\n\nAdd a code chunk that determines how many penguins are on each island. Does this help us answer our question? Why or why not?\n\n\nTo answer our question, it seems we need to dig deeper. Here we produce what’s sometimes called a two-way, or contingency table. We’ll see these again in Chapter 5.\n\ntable(penguins$species, penguins$island)\n\n           \n            Biscoe Dream Torgersen\n  Adelie        44    56        52\n  Chinstrap      0    68         0\n  Gentoo       124     0         0\n\n\n\n\n\n\n\n\nTask\n\n\n\nDetermine what percentage of the Adelie penguins are on Torgenson island."
+  },
+  {
+    "objectID": "ae/ae-01-penguins.html#summary-statistics-1",
+    "href": "ae/ae-01-penguins.html#summary-statistics-1",
+    "title": "AE-01: Hello Penguins",
+    "section": "Summary Statistics",
+    "text": "Summary Statistics\n\nsummary(penguins$body_mass_g)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's \n   2700    3550    4050    4202    4750    6300       2 \n\n\n\nmean(penguins$body_mass_g, na.rm=TRUE)\n\n[1] 4201.754\n\n\n\npenguins %&gt;% \n  group_by(species) %&gt;% \n  summarize(across(where(is.numeric), ~ mean(.x, na.rm = TRUE)))\n\n# A tibble: 3 × 6\n  species   bill_length_mm bill_depth_mm flipper_length_mm body_mass_g  year\n  &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;dbl&gt;       &lt;dbl&gt; &lt;dbl&gt;\n1 Adelie              38.8          18.3              190.       3701. 2008.\n2 Chinstrap           48.8          18.4              196.       3733. 2008.\n3 Gentoo              47.5          15.0              217.       5076. 2008.\n\n\n\nggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g)) +\n  geom_point()\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\nThe plot below shows the relationship between flipper and bill lengths of these penguins.\n\nggplot(penguins, \n       aes(x = flipper_length_mm, y = bill_length_mm)) +\n  geom_point(aes(color = species, shape = species)) +\n  scale_color_manual(values = c(\"darkorange\",\"purple\",\"cyan4\")) +\n  labs(\n    title = \"Flipper and bill length\",\n    subtitle = \"Dimensions for penguins at Palmer Station LTER\",\n    x = \"Flipper length (mm)\", y = \"Bill length (mm)\",\n    color = \"Penguin species\", shape = \"Penguin species\"\n  ) +\n  theme_minimal()\n\n\n\n\n\n\n\n\n\nggplot(data = penguins, \n                       aes(x = flipper_length_mm,\n                           y = body_mass_g)) +\n  geom_point(size = 2,\n             alpha = 0.5) +\n  labs(title = \"Penguin size, Palmer Station LTER\",\n       subtitle = \"Flipper length and body mass\",\n       x = \"Flipper length (mm)\",\n       y = \"Body mass (g)\") +\n  theme(legend.position = c(0.2, 0.7),\n        plot.title.position = \"plot\",\n        plot.caption = element_text(hjust = 0, face= \"italic\"),\n        plot.caption.position = \"plot\")\n\nWarning: A numeric `legend.position` argument in `theme()` was deprecated in ggplot2\n3.5.0.\nℹ Please use the `legend.position.inside` argument of `theme()` instead.\n\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n\nggplot(data = penguins, \n                       aes(x = flipper_length_mm,\n                           y = body_mass_g)) +\n  geom_point(aes(color = species, \n                 shape = species),\n             size = 2,\n             alpha = 0.5) +\n  scale_color_manual(values = c(\"darkorange\",\"purple\",\"cyan4\")) +\n  labs(title = \"Penguin size, Palmer Station LTER\",\n       subtitle = \"Flipper length and body mass for Adelie, Chinstrap and Gentoo Penguins\",\n       x = \"Flipper length (mm)\",\n       y = \"Body mass (g)\",\n       color = \"Penguin species\",\n       shape = \"Penguin species\") +\n  theme(legend.position = c(0.15, 0.8),\n        plot.title.position = \"plot\",\n        plot.caption = element_text(hjust = 0, face= \"italic\"),\n        plot.caption.position = \"plot\")\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_point()`)."
+  },
+  {
+    "objectID": "ae/ae-01-penguins.html#visualization",
+    "href": "ae/ae-01-penguins.html#visualization",
+    "title": "AE-01: Hello Penguins",
+    "section": "Visualization",
+    "text": "Visualization\nAn important tool in understanding and analyzing data is visualization. For example, we can use a scatterplot to help us understand relationships between variables. Let’s look at a scatterpolot that compares body mass and flipper length.\n\nggplot(data = penguins, \n       mapping = aes(x = flipper_length_mm, y = body_mass_g)) +\n  geom_point()\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuestions\n\n\n\n\nWhat does each point on the graph represent?\nBased on this scatterplot, how would you describe the relationship between these two variables?\nWhen we ran the code to make this graph, a warning message appeared. What do you think is going on?\n\n\n\nR gives us the ability to modify and customize our visualizations a great deal – indeed this is one of the main strengths of R! Let’s add one more feature to our graph. As we know, there are three different species of penguins in our data set – but our scatter plot does not show this!\n\nggplot(\n  data = penguins,\n  mapping = aes(x = flipper_length_mm, y = body_mass_g)) +\n  geom_point(mapping = aes(color = species))\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuestions\n\n\n\n\nHow does the addition of coloring by species change your understanding of this graph?\nWhat additional questions about this data can you come up with?\n\n\n\nBecause people can perceive colors differently due to color blindness or other color vision differences and since different devices might display colors in unexpected ways, it’s good practice to not rely on color alone to distinguish points.\n\n\n\n\n\n\nTry it!\n\n\n\nModify your mapping of the points to include shape by adding shape = species to the aes mapping for the points. Don’t forget a comma!"
+  },
+  {
+    "objectID": "ae/ae-01-penguins.html#relationships-between-variables.",
+    "href": "ae/ae-01-penguins.html#relationships-between-variables.",
+    "title": "AE-01: Hello Penguins",
+    "section": "Relationships Between Variables.",
+    "text": "Relationships Between Variables.\nLooking at our scatterplot above, what can you say about the relationship between body mass and flipper length? We will see later in Chapter 7 how to quantify this observation in a precise way but for the time being, let’s add one more feature to our graph. As we know, there are three different species of penguins in our data set – but our scatter plot does not show this! We can easily adust how our geom appears by specifying that the color of the point should be determined by some other variable – i.e species.\n\nggplot(\n  data = penguins,\n  mapping = aes(x = flipper_length_mm, y = body_mass_g)) +\n  geom_point(mapping = aes(color = species))\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_point()`)."
+  },
+  {
+    "objectID": "ae/ae-00-intro.html",
+    "href": "ae/ae-00-intro.html",
+    "title": "AE-00: Hello Penguins",
+    "section": "",
+    "text": "In this activity, we will meet some penguins, start thinking about data and variables, and see some R code in action. The penguins data from the palmerpenguins R package contains size measurements for three species of penguins observed on three islands in the Palmer Archipelago in Antarctica.\nData were collected and made available by Dr. Kristen Gorman and the Palmer Station, Antarctica LTER, a member of the Long Term Ecological Research Network.\nIn order to access this data, we need to load the package into R. While we’re at it, we can load any other packages that we need.\nlibrary(tidyverse)\nlibrary(palmerpenguins)"
+  },
+  {
+    "objectID": "ae/ae-00-intro.html#a-first-look-at-the-data",
+    "href": "ae/ae-00-intro.html#a-first-look-at-the-data",
+    "title": "AE-00: Hello Penguins",
+    "section": "A First Look at the Data",
+    "text": "A First Look at the Data\nAn important tool in understanding and analyzing data is visualization. For example, we can use a scatterplot to help us understand relationships between variables. Let’s look at a scatterpolot that compares body mass and flipper length.\n\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_point()`)."
+  },
+  {
+    "objectID": "ae/CopyOfae-01-penguins.html",
+    "href": "ae/CopyOfae-01-penguins.html",
+    "title": "AE-01: Hello Penguins",
+    "section": "",
+    "text": "In this activity, we will meet some penguins, start thinking about data and variables, and see some R code in action. The penguins data from the palmerpenguins R package contains size measurements for three species of penguins observed on three islands in the Palmer Archipelago in Antarctica.\nData were collected and made available by Dr. Kristen Gorman and the Palmer Station, Antarctica LTER, a member of the Long Term Ecological Research Network.\nIn order to access this data, we need to load the package into R. While we’re at it, we can load any other packages that we need.\nlibrary(tidyverse)\nlibrary(palmerpenguins)"
+  },
+  {
+    "objectID": "ae/CopyOfae-01-penguins.html#a-first-look-at-the-data",
+    "href": "ae/CopyOfae-01-penguins.html#a-first-look-at-the-data",
+    "title": "AE-01: Hello Penguins",
+    "section": "A First Look at the Data",
+    "text": "A First Look at the Data\nLet’s take a peek at the data with the following R code:\n\nhead(penguins)\n\n# A tibble: 6 × 8\n  species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n  &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;\n1 Adelie  Torgersen           39.1          18.7               181        3750\n2 Adelie  Torgersen           39.5          17.4               186        3800\n3 Adelie  Torgersen           40.3          18                 195        3250\n4 Adelie  Torgersen           NA            NA                  NA          NA\n5 Adelie  Torgersen           36.7          19.3               193        3450\n6 Adelie  Torgersen           39.3          20.6               190        3650\n# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;\n\n\nThis command gives us a table (tibble) which shows us the first six rows of the data frame called penguins. When working with data, we typically want each row to be an individual observation (or case), each column to be a variable, and each entry (cell) to be a single value. Data that is in this format is called tidy. A significant part of the work involved in analyzing data is getting it tidy (a process often referred to as “cleaning the data”) or at least accounting for ways in which it isn’t tidy.\n\n\n\n\n\n\nQuestions\n\n\n\n\nWhat does each row in this data frame represent?\nIs this data tidy? Why or why not?\nWhat do you think the result of the R command head(penguins, 10) would be? Try it!\nWhat other questions do you have about this table?\n\n\n\n\nOther points of view\nHere are two other R commands we can use to view the data.\n\nprint(penguins)\n\n# A tibble: 344 × 8\n   species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n   &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;\n 1 Adelie  Torgersen           39.1          18.7               181        3750\n 2 Adelie  Torgersen           39.5          17.4               186        3800\n 3 Adelie  Torgersen           40.3          18                 195        3250\n 4 Adelie  Torgersen           NA            NA                  NA          NA\n 5 Adelie  Torgersen           36.7          19.3               193        3450\n 6 Adelie  Torgersen           39.3          20.6               190        3650\n 7 Adelie  Torgersen           38.9          17.8               181        3625\n 8 Adelie  Torgersen           39.2          19.6               195        4675\n 9 Adelie  Torgersen           34.1          18.1               193        3475\n10 Adelie  Torgersen           42            20.2               190        4250\n# ℹ 334 more rows\n# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;\n\n\n\nglimpse(penguins)\n\nRows: 344\nColumns: 8\n$ species           &lt;fct&gt; Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adel…\n$ island            &lt;fct&gt; Torgersen, Torgersen, Torgersen, Torgersen, Torgerse…\n$ bill_length_mm    &lt;dbl&gt; 39.1, 39.5, 40.3, NA, 36.7, 39.3, 38.9, 39.2, 34.1, …\n$ bill_depth_mm     &lt;dbl&gt; 18.7, 17.4, 18.0, NA, 19.3, 20.6, 17.8, 19.6, 18.1, …\n$ flipper_length_mm &lt;int&gt; 181, 186, 195, NA, 193, 190, 181, 195, 193, 190, 186…\n$ body_mass_g       &lt;int&gt; 3750, 3800, 3250, NA, 3450, 3650, 3625, 4675, 3475, …\n$ sex               &lt;fct&gt; male, female, female, NA, female, male, female, male…\n$ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007…\n\n\n\n\n\n\n\n\nQuestions\n\n\n\n\nWhat differences do you notice between these two R commands?\nHow many penguins are included in this dataset?\nHow many variables are there? Which are numerical? Which are categorical?"
+  },
+  {
+    "objectID": "ae/CopyOfae-01-penguins.html#summary-statistics",
+    "href": "ae/CopyOfae-01-penguins.html#summary-statistics",
+    "title": "AE-01: Hello Penguins",
+    "section": "Summary Statistics",
+    "text": "Summary Statistics\nA summary statistic is a single number that summarizes our data in some meaningful way. For example, we might ask:\n\nWhat percentage of our Adelie penguins were found on Torgersen island?\nWhat is the average (mean) flipper length of our penguins?\n\nWe can use R to help us analyze the data to answer these questions. We might start by counting how many penguins of each species there are.\n\npenguins |&gt;\n  count(species)\n\n# A tibble: 3 × 2\n  species       n\n  &lt;fct&gt;     &lt;int&gt;\n1 Adelie      152\n2 Chinstrap    68\n3 Gentoo      124\n\n\nWe can do something similar to determine how many penguins are on each island.\n\n\n\n\n\n\nTry It!\n\n\n\nAdd a code chunk that determines how many penguins are on each island. Does this help us answer our question? Why or why not?\n\n\nTo answer our question, it seems we need to dig deeper. Here we produce what’s sometimes called a two-way, or contingency table. We’ll see these again in Chapter 5.\n\ntable(penguins$species, penguins$island)\n\n           \n            Biscoe Dream Torgersen\n  Adelie        44    56        52\n  Chinstrap      0    68         0\n  Gentoo       124     0         0\n\n\n\n\n\n\n\n\nTask\n\n\n\nDetermine what percentage of the Adelie penguins are on Torgenson island."
+  },
+  {
+    "objectID": "ae/CopyOfae-01-penguins.html#visualization",
+    "href": "ae/CopyOfae-01-penguins.html#visualization",
+    "title": "AE-01: Hello Penguins",
+    "section": "Visualization",
+    "text": "Visualization\nAn important tool in understanding and analyzing data is visualization. For example, we can use a scatterplot to help us understand relationships between variables. Let’s look at a scatterpolot that compares body mass and flipper length.\n\nggplot(data = penguins, \n       mapping = aes(x = flipper_length_mm, y = body_mass_g)) +\n  geom_point()\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuestions\n\n\n\n\nWhat does each point on the graph represent?\nBased on this scatterplot, how would you describe the relationship between these two variables?\n\n\n\n\n\n\n\n\n\nCode Explanation\n\n\n\n\n\nIn the code above, there are three main elements that go into producing our scatter plot:\n\nThe first element to the ggplot command identifies the data frame – in this case penguins\nThe second element is the mapping which specifies how the variables are going to show up in the graph – in this case, the x and y axes are going to come from the flipper length and body mass respectively.\nThe last element specifies the geom which determines how the data is represented – since we want a scatterplot, our geometric objects are points, hence geom_point()\n\nBefore we add more layers to this plot, let’s pause for a moment and review the warning message we got:\n\nWarning: Removed 2 rows containing missing values or values outside the scale range (geom_point())\n\nWe’re seeing this message because there are two penguins in our dataset with missing body mass and/or flipper length values and ggplot2 has no way of representing them on the plot without both of these values. Like R, ggplot2 subscribes to the philosophy that missing values should never silently go missing.\n\n\n\nR gives us the ability to modify and customize our visualizations a great deal – indeed this is one of the main strengths of R. This is not a course in learning R, so we won’t go through these code chunks in great detail, but it’s helpful to have a basic understanding of what’s going on.\nLet’s modify our visualization!"
+  },
+  {
+    "objectID": "ae/CopyOfae-01-penguins.html#relationships-between-variables",
+    "href": "ae/CopyOfae-01-penguins.html#relationships-between-variables",
+    "title": "AE-01: Hello Penguins",
+    "section": "Relationships Between Variables",
+    "text": "Relationships Between Variables\nLooking at our scatterplot above, what can you say about the relationship between body mass and flipper length? We will see later in Chapter 7 how to quantify this observation in a precise way but for the time being, let’s add one more feature to our graph. As we know, there are three different species of penguins in our data set – but our scatter plot does not show this! We can easily adust how our geom appears by specifying that the color of the point should be determined by some other variable – i.e species.\n\nggplot(\n  data = penguins,\n  mapping = aes(x = flipper_length_mm, y = body_mass_g)) +\n  geom_point(mapping = aes(color = species))\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuestions\n\n\n\n\nHow does the addition of coloring by species change your understanding of this graph?\nWhat additional questions about this data can you come up with?\n\n\n\nIt’s good practice to not rely on color alone to distinguish the points. People may perceive colors differently due to color blindness or other color vision differences and different devices might display colors in unexpected ways.\n\n\n\n\n\n\nTry it!\n\n\n\nModify your mapping of the points to include shape by adding shape = species to the aes mapping for the points. Don’t forget a comma!"
+  },
+  {
+    "objectID": "slides/00-welcome.html#add-a-trend-line",
+    "href": "slides/00-welcome.html#add-a-trend-line",
+    "title": "Welcome to MTH 161",
+    "section": "Add a trend line",
+    "text": "Add a trend line"
+  },
+  {
+    "objectID": "slides/00-welcome.html#penguins",
+    "href": "slides/00-welcome.html#penguins",
+    "title": "Welcome to MTH 161",
+    "section": "Penguins",
+    "text": "Penguins\nData were collected and made available by Dr. Kristen Gorman and the Palmer Station, Antarctica LTER, a member of the Long Term Ecological Research Network."
+  },
+  {
+    "objectID": "slides/00-welcome.html#adjust-for-different-species",
+    "href": "slides/00-welcome.html#adjust-for-different-species",
+    "title": "Welcome to MTH 161",
+    "section": "Adjust for different species",
+    "text": "Adjust for different species"
+  },
+  {
+    "objectID": "slides/00-welcome.html#adjust-for-different-species-1",
+    "href": "slides/00-welcome.html#adjust-for-different-species-1",
+    "title": "Welcome to MTH 161",
+    "section": "Adjust for different species",
+    "text": "Adjust for different species"
+  },
+  {
+    "objectID": "slides/00-welcome.html#scatterplot",
+    "href": "slides/00-welcome.html#scatterplot",
+    "title": "Welcome to MTH 161",
+    "section": "Scatterplot",
+    "text": "Scatterplot"
+  },
+  {
+    "objectID": "slides/00-welcome.html#meet-your-professor",
+    "href": "slides/00-welcome.html#meet-your-professor",
+    "title": "Welcome to MTH 161",
+    "section": "Meet your professor",
+    "text": "Meet your professor\n\n\nProf. Chris Hallstrom\n( he / him)\nhallstro@up.edu\nBuckley Center 270"
+  },
+  {
+    "objectID": "slides/00-welcome.html#how-can-we-create-an-environment-where-risk-taking-is-encouraged-and-productive-failure-is-valued",
+    "href": "slides/00-welcome.html#how-can-we-create-an-environment-where-risk-taking-is-encouraged-and-productive-failure-is-valued",
+    "title": "Welcome to MTH 161",
+    "section": "How can we create an environment where risk taking is encouraged and productive failure is valued?",
+    "text": "How can we create an environment where risk taking is encouraged and productive failure is valued?"
+  },
+  {
+    "objectID": "slides/00-welcome.html#look-for-relationships-between-variables",
+    "href": "slides/00-welcome.html#look-for-relationships-between-variables",
+    "title": "Welcome to MTH 161",
+    "section": "Look for relationships between variables",
+    "text": "Look for relationships between variables"
+  },
+  {
+    "objectID": "structure.html#homework",
+    "href": "structure.html#homework",
+    "title": "Class Structure",
+    "section": "Homework",
+    "text": "Homework\nMuch of our class time will be devoted to working together on activities designed to build understanding on concepts introduced in the textbook. To help ensure that you’re prepared for class, I will assign short daily homework (typically 2-3 problems from the book). You should plan on coming to class prepared to discuss this work with your classmates.",
+    "crumbs": [
+      "Home",
+      "Class Structure"
+    ]
+  },
+  {
+    "objectID": "structure.html#quizzes-and-exams",
+    "href": "structure.html#quizzes-and-exams",
+    "title": "Class Structure",
+    "section": "Quizzes and Exams",
+    "text": "Quizzes and Exams\nWe will have occasional short in-class quizzes which will serve as a mechanism for both you an me to check-in about where you are with your understanding of what we’re covering at that moment of the semester.\nWe will not have traditional midterm or final exams.",
+    "crumbs": [
+      "Home",
+      "Class Structure"
+    ]
+  },
+  {
+    "objectID": "structure.html#portfolio",
+    "href": "structure.html#portfolio",
+    "title": "Class Structure",
+    "section": "Portfolio",
+    "text": "Portfolio\nYou are encouraged to use the portfolio template in our posit.cloud space to keep track of your learning over the course of the semester. Think of this as your course scrapbook - add any homework, activity, or other evidence of your learning.",
+    "crumbs": [
+      "Home",
+      "Class Structure"
+    ]
+  },
+  {
+    "objectID": "slides/CopyOf00-welcome.html",
+    "href": "slides/CopyOf00-welcome.html",
+    "title": "Welcome to MTH 161",
+    "section": "",
+    "text": "MTH 161 – Elementary Statistics\nSection I: TR 8:10-9:35, DB 230\nSection H: TR 11:20-12:45, DB 230\n\n\n\n\nProf. Chris Hallstrom\n( he / him)\nhallstro@up.edu\nBuckley Center 270"
+  },
+  {
+    "objectID": "slides/CopyOf00-welcome.html#meet-the-professor",
+    "href": "slides/CopyOf00-welcome.html#meet-the-professor",
+    "title": "Welcome to MTH 161",
+    "section": "",
+    "text": "Prof. Chris Hallstrom\n( he / him)\nhallstro@up.edu\nBuckley Center 270"
+  },
+  {
+    "objectID": "slides/CopyOf00-welcome.html#still-in-your-groups",
+    "href": "slides/CopyOf00-welcome.html#still-in-your-groups",
+    "title": "Welcome to MTH 161",
+    "section": "Still in your groups…",
+    "text": "Still in your groups…\n\n… for each of the following questions\n\n\n1. Think on your own about how you might answer\n2. Discuss with your group your responses\n3. Share out to the class one idea or thought"
+  },
+  {
+    "objectID": "slides/CopyOf00-welcome.html#what-are-the-goals-of-a-college-education",
+    "href": "slides/CopyOf00-welcome.html#what-are-the-goals-of-a-college-education",
+    "title": "Welcome to MTH 161",
+    "section": "What are the goals of a college education?",
+    "text": "What are the goals of a college education?"
+  },
+  {
+    "objectID": "slides/CopyOf00-welcome.html#how-does-a-person-learn-something-new",
+    "href": "slides/CopyOf00-welcome.html#how-does-a-person-learn-something-new",
+    "title": "Welcome to MTH 161",
+    "section": "How does a person learn something new?",
+    "text": "How does a person learn something new?"
+  },
+  {
+    "objectID": "slides/CopyOf00-welcome.html#what-do-you-expect-to-remember-from-your-classes-20-years-from-now",
+    "href": "slides/CopyOf00-welcome.html#what-do-you-expect-to-remember-from-your-classes-20-years-from-now",
+    "title": "Welcome to MTH 161",
+    "section": "What do you expect to remember from your classes 20 years from now?",
+    "text": "What do you expect to remember from your classes 20 years from now?"
+  },
+  {
+    "objectID": "slides/CopyOf00-welcome.html#what-is-the-value-of-making-mistakes",
+    "href": "slides/CopyOf00-welcome.html#what-is-the-value-of-making-mistakes",
+    "title": "Welcome to MTH 161",
+    "section": "What is the value of making mistakes?",
+    "text": "What is the value of making mistakes?"
+  },
+  {
+    "objectID": "slides/CopyOf00-welcome.html#how-can-we-create-a-safe-environment-where-risk-taking-is-encouraged-and-productive-failure-is-valued",
+    "href": "slides/CopyOf00-welcome.html#how-can-we-create-a-safe-environment-where-risk-taking-is-encouraged-and-productive-failure-is-valued",
+    "title": "Welcome to MTH 161",
+    "section": "How can we create a safe environment where risk taking is encouraged and productive failure is valued?",
+    "text": "How can we create a safe environment where risk taking is encouraged and productive failure is valued?"
+  },
+  {
+    "objectID": "slides/CopyOf00-welcome.html#excel",
+    "href": "slides/CopyOf00-welcome.html#excel",
+    "title": "Welcome to MTH 161",
+    "section": "Excel",
+    "text": "Excel\n\nbasic tool, but we want something more!"
+  },
+  {
+    "objectID": "slides/CopyOf00-welcome.html#r",
+    "href": "slides/CopyOf00-welcome.html#r",
+    "title": "Welcome to MTH 161",
+    "section": "R",
+    "text": "R\n\n\na free, open source statistical programming language widely used for statistical analysis and visualization."
+  },
+  {
+    "objectID": "slides/CopyOf00-welcome.html#rstudio",
+    "href": "slides/CopyOf00-welcome.html#rstudio",
+    "title": "Welcome to MTH 161",
+    "section": "RStudio",
+    "text": "RStudio\na programming environment (or IDE: integrated development enviornment)\nWe will access this tool through posit.cloud"
+  },
+  {
+    "objectID": "slides/CopyOf00-welcome.html#data-science-life-cycle-1",
+    "href": "slides/CopyOf00-welcome.html#data-science-life-cycle-1",
+    "title": "Welcome to MTH 161",
+    "section": "Data science life cycle",
+    "text": "Data science life cycle"
+  },
+  {
+    "objectID": "slides/CopyOf00-welcome.html#import",
+    "href": "slides/CopyOf00-welcome.html#import",
+    "title": "Welcome to MTH 161",
+    "section": "Import",
+    "text": "Import"
+  },
+  {
+    "objectID": "slides/CopyOf00-welcome.html#tidy-transform",
+    "href": "slides/CopyOf00-welcome.html#tidy-transform",
+    "title": "Welcome to MTH 161",
+    "section": "Tidy + transform",
+    "text": "Tidy + transform"
+  },
+  {
+    "objectID": "slides/CopyOf00-welcome.html#visualize",
+    "href": "slides/CopyOf00-welcome.html#visualize",
+    "title": "Welcome to MTH 161",
+    "section": "Visualize",
+    "text": "Visualize"
+  },
+  {
+    "objectID": "slides/CopyOf00-welcome.html#model",
+    "href": "slides/CopyOf00-welcome.html#model",
+    "title": "Welcome to MTH 161",
+    "section": "Model",
+    "text": "Model"
+  },
+  {
+    "objectID": "slides/CopyOf00-welcome.html#understand",
+    "href": "slides/CopyOf00-welcome.html#understand",
+    "title": "Welcome to MTH 161",
+    "section": "Understand",
+    "text": "Understand"
+  },
+  {
+    "objectID": "slides/CopyOf00-welcome.html#section",
+    "href": "slides/CopyOf00-welcome.html#section",
+    "title": "Welcome to MTH 161",
+    "section": "",
+    "text": "# A tibble: 5 × 2\n  date             season\n  &lt;chr&gt;            &lt;chr&gt; \n1 23 January 2017  winter\n2 4 March 2017     spring\n3 14 June 2017     summer\n4 1 September 2017 fall  \n5 ...              ..."
+  },
+  {
+    "objectID": "slides/CopyOf00-welcome.html#communicate",
+    "href": "slides/CopyOf00-welcome.html#communicate",
+    "title": "Welcome to MTH 161",
+    "section": "Communicate",
+    "text": "Communicate"
+  },
+  {
+    "objectID": "slides/CopyOf00-welcome.html#understand-communicate",
+    "href": "slides/CopyOf00-welcome.html#understand-communicate",
+    "title": "Welcome to MTH 161",
+    "section": "Understand + communicate",
+    "text": "Understand + communicate"
+  },
+  {
+    "objectID": "slides/CopyOf00-welcome.html#program",
+    "href": "slides/CopyOf00-welcome.html#program",
+    "title": "Welcome to MTH 161",
+    "section": "Program",
+    "text": "Program"
+  },
+  {
+    "objectID": "slides/CopyOf00-welcome.html#application-exercise",
+    "href": "slides/CopyOf00-welcome.html#application-exercise",
+    "title": "Welcome to MTH 161",
+    "section": "Application exercise",
+    "text": "Application exercise\n\nOr more like demo for today…\n📋 github.com/sta199-s24/ae-00-unvotes"
+  },
+  {
+    "objectID": "slides/CopyOf00-welcome.html#homepage",
+    "href": "slides/CopyOf00-welcome.html#homepage",
+    "title": "Welcome to MTH 161",
+    "section": "Homepage",
+    "text": "Homepage\nhttps://sta199-s24.github.io\n\nAll course materials\nLinks to Canvas, GitHub, RStudio containers, etc."
+  },
+  {
+    "objectID": "slides/CopyOf00-welcome.html#course-toolkit",
+    "href": "slides/CopyOf00-welcome.html#course-toolkit",
+    "title": "Welcome to MTH 161",
+    "section": "Course toolkit",
+    "text": "Course toolkit\nAll linked from the course website:\n\nGitHub organization: github.com/sta199-s24\nRStudio containers: cmgr.oit.duke.edu/containers\nCommunication: Ed Discussion\nAssignment submission and feedback: Gradescope"
+  },
+  {
+    "objectID": "slides/CopyOf00-welcome.html#activities",
+    "href": "slides/CopyOf00-welcome.html#activities",
+    "title": "Welcome to MTH 161",
+    "section": "Activities",
+    "text": "Activities\n\nIntroduce new content and prepare for lectures by watching the videos and completing the readings\nAttend and actively participate in lectures and labs, office hours, team meetings\nPractice applying statistical concepts and computing with application exercises during lecture, graded for completion\nPut together what you’ve learned to analyze real-world data\n\nLab assignments x 7\nExams x 2\nTerm project presented in the last lab session"
+  },
+  {
+    "objectID": "slides/CopyOf00-welcome.html#exams",
+    "href": "slides/CopyOf00-welcome.html#exams",
+    "title": "Welcome to MTH 161",
+    "section": "Exams",
+    "text": "Exams\n\nTwo exams, each 20%\nEach exam comprised of two parts:\n\nIn class: 75 minute in-class exam. Closed book, one sheet of notes (“cheat sheet”, no larger than 8 1/2 x 11, both sides, must be prepared by you) – 70% of the grade\nTake home: The take home portion will follow from the in class exam and focus on the analysis of a dataset introduced in the take home exam – 30% of the grade\n\n\n\n\n\n\n\n\nCaution\n\n\n\nExam dates cannot be changed and no make-up exams will be given. If you can’t take the exams on these dates, you should drop this class."
+  },
+  {
+    "objectID": "slides/CopyOf00-welcome.html#project",
+    "href": "slides/CopyOf00-welcome.html#project",
+    "title": "Welcome to MTH 161",
+    "section": "Project",
+    "text": "Project\n\nDataset of your choice, method of your choice\nTeamwork\nPresentation and write-up\nPresentations in the last lab\nInterim deadlines, peer review on content, peer evaluation for team contribution\nSome lab sessions allocated to working on projects, doing peer review, getting feedback from TAs\n\n\n\n\n\n\n\nCaution\n\n\n\nFinal presentation date cannot be changed. If you can’t present on that date, you should drop this class. You must complete the project to pass this class."
+  },
+  {
+    "objectID": "slides/CopyOf00-welcome.html#teams",
+    "href": "slides/CopyOf00-welcome.html#teams",
+    "title": "Welcome to MTH 161",
+    "section": "Teams",
+    "text": "Teams\n\nAssigned by me\nProject\nPeer evaluation during teamwork and after completion\nExpectations and roles\n\nEveryone is expected to contribute equal effort\nEveryone is expected to understand all code turned in\nIndividual contribution evaluated by peer evaluation, commits, etc."
+  },
+  {
+    "objectID": "slides/CopyOf00-welcome.html#grading",
+    "href": "slides/CopyOf00-welcome.html#grading",
+    "title": "Welcome to MTH 161",
+    "section": "Grading",
+    "text": "Grading\n\n\n\nCategory\nPercentage\n\n\n\n\nLabs\n35%\n\n\nProject\n20%\n\n\nExam 1\n20%\n\n\nExam 2\n20%\n\n\nApplication Exercises\n5%\n\n\n\nNo specific points allocated to attendance, but attendance will be recorded periodically throughout the semester, and this information will be used as “extra credit” if you’re in between two grades and a minor bump would help.\nSee course syllabus for how the final letter grade will be determined."
+  },
+  {
+    "objectID": "slides/CopyOf00-welcome.html#support",
+    "href": "slides/CopyOf00-welcome.html#support",
+    "title": "Welcome to MTH 161",
+    "section": "Support",
+    "text": "Support\n\nAttend office hours\nAsk and answer questions on the discussion forum\nReserve email for questions on personal matters and/or grades\nRead the course support page"
+  },
+  {
+    "objectID": "slides/CopyOf00-welcome.html#announcements",
+    "href": "slides/CopyOf00-welcome.html#announcements",
+    "title": "Welcome to MTH 161",
+    "section": "Announcements",
+    "text": "Announcements\n\nPosted on Canvas (Announcements tool) and sent via email, be sure to check both regularly\nI’ll assume that you’ve read an announcement by the next “business” day\nI’ll (try my best to) send a weekly update announcement each Friday, outlining the plan for the following week and reminding you what you need to do to prepare, practice, and perform"
+  },
+  {
+    "objectID": "slides/CopyOf00-welcome.html#diversity-inclusion",
+    "href": "slides/CopyOf00-welcome.html#diversity-inclusion",
+    "title": "Welcome to MTH 161",
+    "section": "Diversity + inclusion",
+    "text": "Diversity + inclusion\nIt is my intent that students from all diverse backgrounds and perspectives be well-served by this course, that students’ learning needs be addressed both in and out of class, and that the diversity that the students bring to this class be viewed as a resource, strength and benefit.\n\n\nPlease let me know your preferred name and pronouns on the Getting to know you survey.\nIf you feel like your performance in the class is being impacted by your experiences outside of class, please don’t hesitate to come and talk with me. I want to be a resource for you. If you prefer to speak with someone outside of the course, your advisors, and deans are excellent resources.\nI (like many people) am still in the process of learning about diverse perspectives and identities. If something was said in class (by anyone) that made you feel uncomfortable, please talk to me about it."
+  },
+  {
+    "objectID": "slides/CopyOf00-welcome.html#accessibility",
+    "href": "slides/CopyOf00-welcome.html#accessibility",
+    "title": "Welcome to MTH 161",
+    "section": "Accessibility",
+    "text": "Accessibility\n\nThe Student Disability Access Office (SDAO) is available to ensure that students are able to engage with their courses and related assignments.\nI am committed to making all course materials accessible and I’m always learning how to do this better. If any course component is not accessible to you in any way, please don’t hesitate to let me know."
+  },
+  {
+    "objectID": "slides/CopyOf00-welcome.html#late-work-waivers-regrades-policy",
+    "href": "slides/CopyOf00-welcome.html#late-work-waivers-regrades-policy",
+    "title": "Welcome to MTH 161",
+    "section": "Late work, waivers, regrades policy",
+    "text": "Late work, waivers, regrades policy\n\nWe have policies!\nRead about them on the course syllabus and refer back to them when you need it"
+  },
+  {
+    "objectID": "slides/CopyOf00-welcome.html#academic-integrity",
+    "href": "slides/CopyOf00-welcome.html#academic-integrity",
+    "title": "Welcome to MTH 161",
+    "section": "Academic integrity",
+    "text": "Academic integrity\n\nTo uphold the Duke Community Standard:\n\nI will not lie, cheat, or steal in my academic endeavors;\nI will conduct myself honorably in all my endeavors; and\nI will act if the Standard is compromised."
+  },
+  {
+    "objectID": "slides/CopyOf00-welcome.html#this-weeks-tasks",
+    "href": "slides/CopyOf00-welcome.html#this-weeks-tasks",
+    "title": "Welcome to MTH 161",
+    "section": "This week’s tasks",
+    "text": "This week’s tasks\n\nComplete Lab 0\n\nComputational setup\nGetting to know you survey\n\nRead the syllabus\nStart readings for next week"
+  },
+  {
+    "objectID": "slides/CopyOf00-welcome.html#midori-says",
+    "href": "slides/CopyOf00-welcome.html#midori-says",
+    "title": "Welcome to MTH 161",
+    "section": "Midori says…",
+    "text": "Midori says…"
   }
 ]

@@ -64,7 +64,7 @@ You are expected to put in \~6 hours of work / week outside of class. Some of yo
 
 ## Textbook
 
-Readings for the course will come from the following textbook which is **freely available online**.  You do not need to purchase a physical copy of the book to succeed in this class.
+Readings for the course will come from the following textbook which is **freely available online**. You do not need to purchase a physical copy of the book to succeed in this class.
 
 `[ims]`: Mine Çetinkaya-Rundel and Jo Hardin. [Introduction to Modern Statistics](https://openintro-ims2.netlify.app/). 2nd edition. OpenIntro, 2024.
 
@@ -114,15 +114,13 @@ I want to make sure that you learn everything you were hoping to learn from this
 
 The goal of both the lectures and the labs is for them to be as interactive as possible. My role as instructor is to introduce you new tools and techniques, but it is up to you to take them and make use of them. A lot of what you do in this course will involve writing code, and coding is a skill that is best learned by doing. Therefore, as much as possible, you will be working on a variety of tasks and activities throughout each lecture and lab. Attendance will not be taken during class but you are expected to attend all lecture and lab sessions and meaningfully contribute to in-class exercises and discussion.
 
-If you have a laptop or table, you may find it helpful to bring it to class so that you can take part in the in-class exercises. However, you will typically be working in groups, so as long as someone at your table has a laptop, that will be sufficient.  
+If you have a laptop or table, you may find it helpful to bring it to class so that you can take part in the in-class exercises. However, you will typically be working in groups, so as long as someone at your table has a laptop, that will be sufficient.
 
 ## Assessments and grading
 
-
-
 ### Attendance and participation
 
-I expect you to be present at class meetings and to actively participate in discussions and activities. While your attendance and participation do not factor directly into your course grade, they do factor indirectly in that your learning is a direct result of engaging with the material.  If you do need to miss class for any reason, you can check the class Moodle page to see what we covered.  I will also post all slides.
+I expect you to be present at class meetings and to actively participate in discussions and activities. While your attendance and participation do not factor directly into your course grade, they do factor indirectly in that your learning is a direct result of engaging with the material. If you do need to miss class for any reason, you can check the class Moodle page to see what we covered. I will also post all slides.
 
 ### Interactive tutorials
 
@@ -138,7 +136,7 @@ In labs, you will apply the concepts discussed in class to various data analysis
 
 ### Quizzes
 
-We will have occasional short in-class quizzes.  The purpose of these is to check-in where you are in your understanding of various concepts throughout the semester.
+We will have occasional short in-class quizzes. The purpose of these is to check-in where you are in your understanding of various concepts throughout the semester.
 
 ### Projects
 
@@ -152,12 +150,13 @@ See @sec-important-dates for dates and times of project deadlines. Project deadl
 
 ### Collaboration
 
-    -   While you are welcome to discuss lab assignments with classmate, your lab report should be completed individually.
+```         
+-   While you are welcome to discuss lab assignments with classmate, your lab report should be completed individually.
 
-    -   For the projects, collaboration within teams is expected. Communication between teams at a high level is also allowed however you may not share code or components of the project across teams.
+-   For the projects, collaboration within teams is expected. Communication between teams at a high level is also allowed however you may not share code or components of the project across teams.
+```
 
-
--   **Online resources:** I am well aware that a huge volume of R code is available on the web to solve any number of problems. Unless I explicitly tell you not to use something, the course's policy is that you may make use of any online resources (e.g., StackOverflow) but you must explicitly cite where you obtained any code you directly use (or use as inspiration).   This is not a course in learning R, but rather interpreting the results of analysis.
+-   **Online resources:** I am well aware that a huge volume of R code is available on the web to solve any number of problems. Unless I explicitly tell you not to use something, the course's policy is that you may make use of any online resources (e.g., StackOverflow) but you must explicitly cite where you obtained any code you directly use (or use as inspiration). This is not a course in learning R, but rather interpreting the results of analysis.
 
 -   **Use of generative artificial intelligence (AI)**: You should treat generative AI, such as ChatGPT, the same as other online resources. There are two guiding principles that govern how you shoulud use AI in this course:[^1] (1) *Cognitive dimension:* Working with AI should not reduce your ability to think clearly. We will practice using AI to facilitate---rather than hinder---learning. (2) *Ethical dimension***:** Students using AI should be transparent about their use and make sure it aligns with academic integrity.
 
@@ -171,16 +170,11 @@ Regardless of course delivery format, it is the responsibility of all students t
 
 ### Late work & extensions {#sec-late-work-extensions}
 
-Due dates for assignments are there to give you structure and to help you keep up with the course material.  They also help me provide you with feedback in a timely manner.   That said, I understand that things come up periodically that can make it difficult to complete an assignment by the deadline. Life happens!
+Due dates for assignments are there to give you structure and to help you keep up with the course material. They also help me provide you with feedback in a timely manner. That said, I understand that things come up periodically that can make it difficult to complete an assignment by the deadline. Life happens!
 
-If something comes up that prevents you from completing an assignment by the stated due date, 
-just send me email and let me know when I can expect your work.  You do not need to provide an explanation.  In general, I will expect to receive your work within **one week**.
+If something comes up that prevents you from completing an assignment by the stated due date, just send me email and let me know when I can expect your work. You do not need to provide an explanation. In general, I will expect to receive your work within **one week**.
 
-There are, however, two **hard deadlines** to be aware of:  Oct. 11th (Friday before Fall break) and Dec. 6th (last day of classes).  Except in unusual circumstances, I will not accept work after those dates.
-
-
-
-
+There are, however, two **hard deadlines** to be aware of: Oct. 11th (Friday before Fall break) and Dec. 6th (last day of classes). Except in unusual circumstances, I will not accept work after those dates.
 
 ## Important dates {#sec-important-dates}
 
@@ -192,7 +186,5 @@ There are, however, two **hard deadlines** to be aware of:  Oct. 11th (Friday be
 -   **Monday, November 25:** Last day to Withdraw
 -   **Thursday, November 28:** Thanksgiving
 -   **Friday, December 6**: Last day of classes; 2nd hard deadline
--   **Monday, December 9**: Section H:  Project 2 presentations
--   **Wednesday, December 11**: Section I:  Project 2 presentations
-
-
+-   **Monday, December 9**: Section H: Project 2 presentations
+-   **Wednesday, December 11**: Section I: Project 2 presentations
