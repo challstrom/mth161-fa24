@@ -14,12 +14,12 @@ book:
 website:
   title: "mth161 :: Elementary Statistics"
   navbar:
-    background: "#5B99C2"
-    left:
+    background: "#A1D6B2"
+    right:
       - href: index.qmd
-        text: Home
+        text: Course at a Glance
   sidebar:
-    background: "#F9DBBA"
+    background: "#CEDF9F"
 #    logo: "images/logo.png"
     pinned: true
     align: center
