@@ -1,31 +1,24 @@
 ---
 title: "Meet the toolkit"
-subtitle: "Lecture 1"
 # date: "August 29, 2024"
 format: revealjs
 ---
 
-# Course toolkit
+# Toolkit
 
-::: columns
-::: {.column width="50%"}
 **Course operation**
 
--   Materials: [sta199-s24.github.io](https://sta199-s24.github.io/)
--   Discussion: Ed Discussion
-:::
+-   Materials: [challstrom.github.io/mth161-fa24/](https://challstrom.github.io/mth161-fa24/)
 
-::: {.column width="50%"}
+- Moodle
+
 **Doing data science**
 
 -   R
 -   RStudio
--   tidyverse
 -   Quarto
-:::
-:::
 
-# Toolkit: Computing
+
 
 ## Learning goals {.smaller}
 
@@ -36,12 +29,9 @@ By the end of the course, you will be able to...
 -   gain insight from data, **reproducibly**
 -   gain insight from data, reproducibly, **using modern programming tools and techniques**
 -   gain insight from data, reproducibly **and collaboratively**, using modern programming tools and techniques
--   gain insight from data, reproducibly **(with literate programming and version control)** and collaboratively, using modern programming tools and techniques
 :::
 
-# Reproducible data analysis
-
-## Reproducibility checklist {.smaller}
+## Reproducible data analysis
 
 ::: question
 What does it mean for a data analysis to be "reproducible"?
@@ -64,9 +54,9 @@ What does it mean for a data analysis to be "reproducible"?
 
 ## Toolkit for reproducibility
 
--   Scriptability $\rightarrow$ R
--   Literate programming (code, narrative, output in one place) $\rightarrow$ Quarto
--   Version control $\rightarrow$ Git / GitHub
+### Quarto
+
+Literate programming (code, narrative, output all in one document) 
 
 # R and RStudio
 
@@ -113,31 +103,8 @@ Source: [Modern Dive](https://moderndive.com/1-getting-started.html).
 <sup>2</sup> [CRAN contributed packages](https://cran.r-project.org/web/packages/).
 :::
 
-## Tour: R + RStudio {.smaller}
 
-::: columns
-::: {.column width="50%"}
-::: demo
-**Option 1:**
-
-Sit back and enjoy the show!
-:::
-:::
-
-::: {.column width="50%"}
-::: appex
-**Option 2:**
-
-Clone the corresponding application exercise repo and follow along.
-
-{{< fa laptop >}} `ae-01-meet-the-penguins`
-
-Go to the [course GitHub organization](https://github.com/sta199-s24) and clone [`ae-01-meet-the-penguins`](https://github.com/sta199-s24/ae-01-penguins) to [your container](https://cmgr.oit.duke.edu/containers).
-:::
-:::
-:::
-
-## Tour recap: R + RStudio
+## Tour of R + RStudio
 
 ![](images/tour-r-rstudio.png)
 
