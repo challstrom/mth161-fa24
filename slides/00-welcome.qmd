@@ -5,29 +5,45 @@ format: revealjs
 
 # Welcome!
 
-MTH 161 -- Elementary Statistics
-
-Section I: TR 8:10-9:35, DB 230
-
-Section H: TR 11:20-12:45, DB 230
-
-## Meet your professor
-
 ::: columns
-::: {.column width="50%"}
-Prof. Chris Hallstrom
+::: {.column width="60%"}
+Section I
 
-( he / him)
+-   TR 8:10-9:35, DB 230
 
-[hallstro\@up.edu](mailto:hallstro@up.edu)
+Section H
 
-Buckley Center 270
+-   TR 11:20-12:45, DB 230
 :::
 
-::: {.column width="50%"}
+::: {.column width="30%"}
+![](images/dancing_penguins.png){.r-stretch fig-alt="penguins" fig-align="center"}
+:::
+:::
+
+
+
+## Meet your professor/coach
+
+::: columns
+::: {.column width="60%"}
+Chris Hallstrom ( he / him)
+
+-   [hallstro\@up.edu](mailto:hallstro@up.edu)
+-   Buckley Center 270
+-   Drop-in hours tba!\
+    + This week - TR 1-3, Wed afternoon, Friday 10-12 / 2-4
+:::
+
+::: {.column width="40%"}
 ![](images/cch.png){fig-alt="Headshot of Chris Hallstrom" fig-align="center"}
 :::
 :::
+
+## I invite you to...
+
+### think about how we use data to understand the world
+
 
 # Introductions
 
@@ -37,7 +53,6 @@ In groups of 3-4:
 
 -   Find one thing that you all have in common
 
-10 minutes...
 
 Report to the class - everyone introduce someone else from the group.
 
@@ -57,13 +72,13 @@ Report to the class - everyone introduce someone else from the group.
 
 ## How does a person learn something new? {.center}
 
-## What do you expect to remember from your classes 20 years from now? {.center}
+## What do you expect to remember from your classes 10 years from now? {.center}
 
 ## What is the value of making mistakes? {.center}
 
 ## How can we create an environment where risk taking is encouraged and productive failure is valued? {.center}
 
-## Penguins 
+## Penguins
 
 Data were collected and made available by [Dr. Kristen Gorman](https://www.uaf.edu/cfos/people/faculty/detail/kristen-gorman.php) and the [Palmer Station, Antarctica LTER](https://pallter.marine.rutgers.edu/), a member of the [Long Term Ecological Research Network](https://lternet.edu/).
 

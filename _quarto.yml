@@ -14,14 +14,12 @@ book:
 website:
   title: "mth161 :: Elementary Statistics"
   navbar:
-    #background: "#112D4E"
+    background: "#5B99C2"
     left:
       - href: index.qmd
         text: Home
-      - href: about.qmd
-        text: aboot
   sidebar:
-    #background: "#3F72AF"
+    background: "#F9DBBA"
 #    logo: "images/logo.png"
     pinned: true
     align: center
@@ -38,6 +36,8 @@ website:
       - href: syllabus.qmd
       - href: UPElements.qmd
         text: University Policies and Information
+      - href: course-links.qmd
+        text: Useful Links
       - section: "Slides"
         contents:
           - href: slides/01/01-welcome.qmd
@@ -51,8 +51,8 @@ website:
       
 format:
   html:
-    theme: cosmo
-    #theme: simplex
+    #theme: cosmo
+    theme: simplex
     css: style/mth161.scss
     toc: true
 

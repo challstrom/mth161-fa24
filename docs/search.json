@@ -935,7 +935,7 @@
     "href": "index.html",
     "title": "MTH161 :: Elementary Statistics",
     "section": "",
-    "text": "These webpages contain course materials and information for MTH 161, Sections H & I taught by Prof. Hallstrom.\nI am looking forward to working with each of you this semester and it is my sincere goal to make our time together (in class and out) productive, engaging, and fun.\n\n\nThis course will introduce you to the discipline of statistics as a science of understanding and analyzing data. Themes include data collection, exploratory analysis, inference, and modeling. We will consider why in 1950, S. Wilks said, “Statistical thinking will one day be as necessary a qualification for efficient citizenship as the ability to read and write.”\nYou will learn how to effectively make use of data in the face of uncertainty: how to collect data, how to analyze data, and how to use data to make inferences and conclusions about real world phenomena. You will acquire a conceptual understanding and proficiency in statistical and quantitative reasoning tools to help you critique and evaluate data-based claims and decisions.",
+    "text": "These pages contain course materials and information for MTH 161, Sections H & I taught by Prof. Hallstrom.\nI am looking forward to working with each of you this semester and it is my sincere goal to make our time together (in class and out) productive, engaging, and fun.",
     "crumbs": [
       "Home",
       "Welcome"
@@ -945,8 +945,8 @@
     "objectID": "index.html#overview",
     "href": "index.html#overview",
     "title": "MTH161 :: Elementary Statistics",
-    "section": "",
-    "text": "This course will introduce you to the discipline of statistics as a science of understanding and analyzing data. Themes include data collection, exploratory analysis, inference, and modeling. We will consider why in 1950, S. Wilks said, “Statistical thinking will one day be as necessary a qualification for efficient citizenship as the ability to read and write.”\nYou will learn how to effectively make use of data in the face of uncertainty: how to collect data, how to analyze data, and how to use data to make inferences and conclusions about real world phenomena. You will acquire a conceptual understanding and proficiency in statistical and quantitative reasoning tools to help you critique and evaluate data-based claims and decisions.",
+    "section": "Overview",
+    "text": "Overview\nThis course will introduce you to the discipline of statistics as a science of understanding and analyzing data. Themes include data collection, exploratory analysis, inference, and modeling. We will consider why in 1950, S. Wilks said, “Statistical thinking will one day be as necessary a qualification for efficient citizenship as the ability to read and write.”\nYou will learn how to effectively make use of data in the face of uncertainty: how to collect data, how to analyze data, and how to use data to make inferences and conclusions about real world phenomena. You will acquire a conceptual understanding and proficiency in statistical and quantitative reasoning tools to help you critique and evaluate data-based claims and decisions.",
     "crumbs": [
       "Home",
       "Welcome"
@@ -2209,5 +2209,72 @@
     "title": "Welcome to MTH 161",
     "section": "Midori says…",
     "text": "Midori says…"
+  },
+  {
+    "objectID": "course-links.html",
+    "href": "course-links.html",
+    "title": "Useful links",
+    "section": "",
+    "text": "Posit Cloud\n🔗 Posit Cloud\n\n\nTextbooks\n🔗 Introduction to Modern Statistics, 2nd Edition\n🔗 R for Data Science, 2nd Edition\n\n\nCourse Moodle Page.\n🔗 learning.up.edu",
+    "crumbs": [
+      "Home",
+      "Useful Links"
+    ]
+  },
+  {
+    "objectID": "slides/00-welcome.html#meet-your-professorcoach",
+    "href": "slides/00-welcome.html#meet-your-professorcoach",
+    "title": "Welcome to MTH 161",
+    "section": "Meet your professor/coach",
+    "text": "Meet your professor/coach\n\n\nChris Hallstrom ( he / him)\n\nhallstro@up.edu\nBuckley Center 270\nDrop-in hours tba!\n\n\nThis week - TR 1-3, Wed afternoon, Friday 10-12 / 2-4"
+  },
+  {
+    "objectID": "slides/00-welcome.html#i-invite-you-to",
+    "href": "slides/00-welcome.html#i-invite-you-to",
+    "title": "Welcome to MTH 161",
+    "section": "I invite you to…",
+    "text": "I invite you to…\nthink about how we use data to understand the world"
+  },
+  {
+    "objectID": "slides/00-welcome.html#what-do-you-expect-to-remember-from-your-classes-10-years-from-now",
+    "href": "slides/00-welcome.html#what-do-you-expect-to-remember-from-your-classes-10-years-from-now",
+    "title": "Welcome to MTH 161",
+    "section": "What do you expect to remember from your classes 10 years from now?",
+    "text": "What do you expect to remember from your classes 10 years from now?"
+  },
+  {
+    "objectID": "ae/ae-00-penguin-demo.html",
+    "href": "ae/ae-00-penguin-demo.html",
+    "title": "AE-01: Hello Penguins",
+    "section": "",
+    "text": "In this activity, we will meet some penguins, start thinking about data and variables, and see some R code in action. The penguins data from the palmerpenguins R package contains size measurements for three species of penguins observed on three islands in the Palmer Archipelago in Antarctica.\nData were collected and made available by Dr. Kristen Gorman and the Palmer Station, Antarctica LTER, a member of the Long Term Ecological Research Network.\nIn order to access this data, we need to load the package into R. While we’re at it, we can load any other packages that we need.\nlibrary(tidyverse)\nlibrary(palmerpenguins)"
+  },
+  {
+    "objectID": "ae/ae-00-penguin-demo.html#a-first-look-at-the-data",
+    "href": "ae/ae-00-penguin-demo.html#a-first-look-at-the-data",
+    "title": "AE-01: Hello Penguins",
+    "section": "A First Look at the Data",
+    "text": "A First Look at the Data\nLet’s take a peek at the data with the following R code:\n\nhead(penguins)\n\n# A tibble: 6 × 8\n  species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n  &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;\n1 Adelie  Torgersen           39.1          18.7               181        3750\n2 Adelie  Torgersen           39.5          17.4               186        3800\n3 Adelie  Torgersen           40.3          18                 195        3250\n4 Adelie  Torgersen           NA            NA                  NA          NA\n5 Adelie  Torgersen           36.7          19.3               193        3450\n6 Adelie  Torgersen           39.3          20.6               190        3650\n# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;\n\n\nThis command gives us a table (tibble) which shows us the first six rows of the data frame called penguins. When working with data, we typically want each row to be an individual observation (or case), each column to be a variable, and each entry (cell) to be a single value. Data that is in this format is called tidy. A significant part of the work involved in analyzing data is getting it tidy (a process often referred to as “cleaning the data”) or at least accounting for ways in which it isn’t tidy.\n\n\n\n\n\n\nQuestions\n\n\n\n\nWhat does each row in this data frame represent?\nIs this data tidy? Why or why not?\nWhat do you think the result of the R command head(penguins, 10) would be? Try it!\nWhat other questions do you have about this table?\n\n\n\n\nOther points of view\nHere are two other R commands we can use to view the data.\n\nprint(penguins)\n\n# A tibble: 344 × 8\n   species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n   &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;\n 1 Adelie  Torgersen           39.1          18.7               181        3750\n 2 Adelie  Torgersen           39.5          17.4               186        3800\n 3 Adelie  Torgersen           40.3          18                 195        3250\n 4 Adelie  Torgersen           NA            NA                  NA          NA\n 5 Adelie  Torgersen           36.7          19.3               193        3450\n 6 Adelie  Torgersen           39.3          20.6               190        3650\n 7 Adelie  Torgersen           38.9          17.8               181        3625\n 8 Adelie  Torgersen           39.2          19.6               195        4675\n 9 Adelie  Torgersen           34.1          18.1               193        3475\n10 Adelie  Torgersen           42            20.2               190        4250\n# ℹ 334 more rows\n# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;\n\n\n\nglimpse(penguins)\n\nRows: 344\nColumns: 8\n$ species           &lt;fct&gt; Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adel…\n$ island            &lt;fct&gt; Torgersen, Torgersen, Torgersen, Torgersen, Torgerse…\n$ bill_length_mm    &lt;dbl&gt; 39.1, 39.5, 40.3, NA, 36.7, 39.3, 38.9, 39.2, 34.1, …\n$ bill_depth_mm     &lt;dbl&gt; 18.7, 17.4, 18.0, NA, 19.3, 20.6, 17.8, 19.6, 18.1, …\n$ flipper_length_mm &lt;int&gt; 181, 186, 195, NA, 193, 190, 181, 195, 193, 190, 186…\n$ body_mass_g       &lt;int&gt; 3750, 3800, 3250, NA, 3450, 3650, 3625, 4675, 3475, …\n$ sex               &lt;fct&gt; male, female, female, NA, female, male, female, male…\n$ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007…\n\n\n\n\n\n\n\n\nQuestions\n\n\n\n\nWhat differences do you notice between these two R commands?\nHow many penguins are included in this dataset?\nHow many variables are there? Which are numerical? Which are categorical?"
+  },
+  {
+    "objectID": "ae/ae-00-penguin-demo.html#summary-statistics",
+    "href": "ae/ae-00-penguin-demo.html#summary-statistics",
+    "title": "AE-01: Hello Penguins",
+    "section": "Summary Statistics",
+    "text": "Summary Statistics\nA summary statistic is a single number that summarizes our data in some meaningful way. For example, we might ask:\n\nWhat percentage of our Adelie penguins were found on Torgersen island?\nWhat is the average (mean) flipper length of our penguins?\n\nWe can use R to help us analyze the data to answer these questions. We might start by counting how many penguins of each species there are.\n\npenguins |&gt;\n  count(species)\n\n# A tibble: 3 × 2\n  species       n\n  &lt;fct&gt;     &lt;int&gt;\n1 Adelie      152\n2 Chinstrap    68\n3 Gentoo      124\n\n\nWe can do something similar to determine how many penguins are on each island.\n\n\n\n\n\n\nTry It!\n\n\n\nAdd a code chunk that determines how many penguins are on each island. Does this help us answer our question? Why or why not?\n\n\nTo answer our question, it seems we need to dig deeper. Here we produce what’s sometimes called a two-way, or contingency table. We’ll see these again in Chapter 5.\n\ntable(penguins$species, penguins$island)\n\n           \n            Biscoe Dream Torgersen\n  Adelie        44    56        52\n  Chinstrap      0    68         0\n  Gentoo       124     0         0\n\n\n\n\n\n\n\n\nTask\n\n\n\nDetermine what percentage of the Adelie penguins are on Torgenson island."
+  },
+  {
+    "objectID": "ae/ae-00-penguin-demo.html#visualization",
+    "href": "ae/ae-00-penguin-demo.html#visualization",
+    "title": "AE-01: Hello Penguins",
+    "section": "Visualization",
+    "text": "Visualization\nAn important tool in understanding and analyzing data is visualization. For example, we can use a scatterplot to help us understand relationships between variables. Let’s look at a scatterpolot that compares body mass and flipper length.\n\nggplot(data = penguins, \n       mapping = aes(x = flipper_length_mm, y = body_mass_g)) +\n  geom_point()\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuestions\n\n\n\n\nWhat does each point on the graph represent?\nBased on this scatterplot, how would you describe the relationship between these two variables?\n\n\n\n\n\n\n\n\n\nCode Explanation\n\n\n\n\n\nIn the code above, there are three main elements that go into producing our scatter plot:\n\nThe first element to the ggplot command identifies the data frame – in this case penguins\nThe second element is the mapping which specifies how the variables are going to show up in the graph – in this case, the x and y axes are going to come from the flipper length and body mass respectively.\nThe last element specifies the geom which determines how the data is represented – since we want a scatterplot, our geometric objects are points, hence geom_point()\n\nBefore we add more layers to this plot, let’s pause for a moment and review the warning message we got:\n\nWarning: Removed 2 rows containing missing values or values outside the scale range (geom_point())\n\nWe’re seeing this message because there are two penguins in our dataset with missing body mass and/or flipper length values and ggplot2 has no way of representing them on the plot without both of these values. Like R, ggplot2 subscribes to the philosophy that missing values should never silently go missing.\n\n\n\nR gives us the ability to modify and customize our visualizations a great deal – indeed this is one of the main strengths of R. This is not a course in learning R, so we won’t go through these code chunks in great detail, but it’s helpful to have a basic understanding of what’s going on.\nLet’s modify our visualization!"
+  },
+  {
+    "objectID": "ae/ae-00-penguin-demo.html#relationships-between-variables",
+    "href": "ae/ae-00-penguin-demo.html#relationships-between-variables",
+    "title": "AE-01: Hello Penguins",
+    "section": "Relationships Between Variables",
+    "text": "Relationships Between Variables\nLooking at our scatterplot above, what can you say about the relationship between body mass and flipper length? We will see later in Chapter 7 how to quantify this observation in a precise way but for the time being, let’s add one more feature to our graph. As we know, there are three different species of penguins in our data set – but our scatter plot does not show this! We can easily adust how our geom appears by specifying that the color of the point should be determined by some other variable – i.e species.\n\nggplot(\n  data = penguins,\n  mapping = aes(x = flipper_length_mm, y = body_mass_g)) +\n  geom_point(mapping = aes(color = species))\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuestions\n\n\n\n\nHow does the addition of coloring by species change your understanding of this graph?\nWhat additional questions about this data can you come up with?\n\n\n\nIt’s good practice to not rely on color alone to distinguish the points. People may perceive colors differently due to color blindness or other color vision differences and different devices might display colors in unexpected ways.\n\n\n\n\n\n\nTry it!\n\n\n\nModify your mapping of the points to include shape by adding shape = species to the aes mapping for the points. Don’t forget a comma!"
   }
 ]
