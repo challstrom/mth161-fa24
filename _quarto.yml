@@ -35,19 +35,10 @@ website:
       - href: structure.qmd
       - href: syllabus.qmd
       - href: UPElements.qmd
-        text: University Policies and Information
+        text: University Policies
       - href: course-links.qmd
         text: Useful Links
-      - section: "Slides"
-        contents:
-          - href: slides/01/01-welcome.qmd
-            text: 01 Welcome
-          - href: slides/02/02-hello-data.qmd
-            text: 02 Hello Data
-      - section: "AE"
-        contents:
-          - href: ae/ae-01-unvotes.qmd
-            text: ae-01 UN Votes
+
       
 format:
   html:
