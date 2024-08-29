@@ -1,6 +1,6 @@
 ---
 title: "MTH161 :: Elementary Statistics"
-subtitle: "Fall 2024"
+subtitle: "Fall 2024 -- Sections H, I"
 format:
   html: 
     toc: true
@@ -10,16 +10,16 @@ format:
     colorlinks: true
 ---
 
-::: {.center}
+::: center
 # Welcome! {.unnumbered}
 :::
 
-These pages contain course materials and information for **MTH 161, Sections H & I** taught by Prof. Hallstrom.
+I am looking forward to working with each of you this semester!  It is my top priority to support your growth as a learner and to make our time together both in class and out productive and engaging.  I will strive to create an learning environment where all of our different perspectives and identities are valued and respected, where the contributions of every person are celebrated, and where you feel comfortable fully engaging in class.
 
-I am looking forward to working with each of you this semester and it is my sincere goal to make our time together (in class and out) productive, engaging, and fun.
+While I'll do everything in my power to support you, your success in this course ultimately depends on you. I ask you to bring a readiness to work and a belief that you can learn.  **I absolutely believe this about each of you**.  I will also ask you to do tasks that are just at the edge of what you can handle because that is how the best learning happens, but if you are prepared to invest your time and energy, and to communicate with me about how you're doing, I can and will support you.
 
-## Overview {.unnumbered}
+As we work together this semester, your suggestions are encouraged and appreciated. Please let me know ways to improve the effectiveness of the course for you personally, or for other students or student groups.  In particular, if you ever feel like your experience in this class is being impacted by your experiences outside of class, please don't hesitate to come and talk with me. If you prefer to speak with someone outside of the class, your academic deans are an excellent resource.
 
-This course will introduce you to the discipline of statistics as a science of understanding and analyzing data. Themes include data collection, exploratory analysis, inference, and modeling. We will consider why in 1950, S. Wilks said, "Statistical thinking will one day be as necessary a qualification for efficient citizenship as the ability to read and write."
 
-You will learn how to effectively make use of data in the face of uncertainty: how to collect data, how to analyze data, and how to use data to make inferences and conclusions about real world phenomena. You will acquire a conceptual understanding and proficiency in statistical and quantitative reasoning tools to help you critique and evaluate data-based claims and decisions.
+
+
