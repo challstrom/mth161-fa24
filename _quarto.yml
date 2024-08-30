@@ -34,9 +34,9 @@ website:
       - href: general.qmd
         text: General Info
       - href: support.qmd
-      - href: summary.qmd
+      - href: content.qmd
       - href: structure.qmd
-      - href: syllabus.qmd
+      - href: grades.qmd
       - href: UPElements.qmd
         text: University Policies
       - href: course-links.qmd

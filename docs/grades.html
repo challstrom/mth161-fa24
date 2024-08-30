@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.554">
+<meta name="generator" content="quarto-1.4.555">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>mth161 :: Elementary Statistics - Class Structure</title>
+<title>mth161 :: Elementary Statistics - Grades</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -66,6 +66,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="style/mth161.scss">
 </head>
@@ -102,7 +131,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Class Structure</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./grades.html">Grades</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -142,7 +171,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link">
+  <a href="./content.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Course Content</span></a>
   </div>
 </li>
@@ -150,6 +179,12 @@ ul.task-list li input[type="checkbox"] {
   <div class="sidebar-item-container"> 
   <a href="./structure.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Class Structure</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./grades.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Grades</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -174,15 +209,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#attendance-and-engagement" id="toc-attendance-and-engagement" class="nav-link active" data-scroll-target="#attendance-and-engagement">Attendance and Engagement</a></li>
-  <li><a href="#homework" id="toc-homework" class="nav-link" data-scroll-target="#homework">Homework</a></li>
-  <li><a href="#application-exercises-ae" id="toc-application-exercises-ae" class="nav-link" data-scroll-target="#application-exercises-ae">Application Exercises (AE)</a></li>
-  <li><a href="#interactive-r-tutorials" id="toc-interactive-r-tutorials" class="nav-link" data-scroll-target="#interactive-r-tutorials">Interactive R tutorials</a></li>
-  <li><a href="#weekly-report" id="toc-weekly-report" class="nav-link" data-scroll-target="#weekly-report">Weekly Report</a></li>
-  <li><a href="#labs" id="toc-labs" class="nav-link" data-scroll-target="#labs">Labs</a></li>
-  <li><a href="#quizzes-and-exams" id="toc-quizzes-and-exams" class="nav-link" data-scroll-target="#quizzes-and-exams">Quizzes and Exams</a></li>
-  <li><a href="#portfolio" id="toc-portfolio" class="nav-link" data-scroll-target="#portfolio">Portfolio</a></li>
-  <li><a href="#projects" id="toc-projects" class="nav-link" data-scroll-target="#projects">Projects</a></li>
+  <li><a href="#feedback-and-revisions" id="toc-feedback-and-revisions" class="nav-link active" data-scroll-target="#feedback-and-revisions">Feedback and Revisions</a></li>
+  <li><a href="#collaborative-grading" id="toc-collaborative-grading" class="nav-link" data-scroll-target="#collaborative-grading">Collaborative Grading</a></li>
+  <li><a href="#engagement" id="toc-engagement" class="nav-link" data-scroll-target="#engagement">Engagement</a></li>
+  <li><a href="#grade-guidelines" id="toc-grade-guidelines" class="nav-link" data-scroll-target="#grade-guidelines">Grade Guidelines</a></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="grades.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
@@ -191,7 +221,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Class Structure</h1>
+<h1 class="title">Grades</h1>
 </div>
 
 
@@ -208,50 +238,93 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="attendance-and-engagement" class="level2">
-<h2 class="anchored" data-anchor-id="attendance-and-engagement">Attendance and Engagement</h2>
-<p>To get the most out of this course, you should be present and actively engaged in class. There are many ways to be engaged: regularly attending class, completing pre-class and other assignments on-time, engaging productively in group work, asking questions, supporting your classmates, coming to student support hours, and more. To help you develop a habit of engagment, you will have a weekly opportunity to reflect on how you’re engaging in our class.</p>
-<p>While I do expect you to be in class, I also recognize that occasionally things come up that might prevent you from being there. If you do miss class, you can always check our class Moodle page to see what we covered that day. If you find yourself missing class more than a few times, you can expect that I will check with you to see how I can support your attendence better.</p>
-</section>
-<section id="homework" class="level2">
-<h2 class="anchored" data-anchor-id="homework">Homework</h2>
-<p>Much of our class time will be devoted to working together on activities designed to build understanding on concepts introduced in the textbook. To help ensure that you’re prepared for class, I will assign short daily homework (typically 2-3 problems from the book). You should plan on coming to class prepared to discuss this work with your classmates.</p>
-</section>
-<section id="application-exercises-ae" class="level2">
-<h2 class="anchored" data-anchor-id="application-exercises-ae">Application Exercises (AE)</h2>
-<p>These are in-class activities that we will work on in groups. They are designed to introduce or reinforce specfic concepts as well as introduce chunks of R code that we’ll use for visualization and data analysis. If you have a laptop or tablet, you may find it helpful to bring it to class but as long as someone at your table has a device, that will be sufficient.</p>
-</section>
-<section id="interactive-r-tutorials" class="level2">
-<h2 class="anchored" data-anchor-id="interactive-r-tutorials">Interactive R tutorials</h2>
-<p>Each chapter in our book includes a number of interactive tutorials to help you learn how to use R for data visualization and analysis. While these are not required, they are highly recommended for gaining proficiency in using R. You can include this work in your weekly report.</p>
-</section>
-<section id="weekly-report" class="level2">
-<h2 class="anchored" data-anchor-id="weekly-report">Weekly Report</h2>
-<p>Each week, I will ask you to complete a short one-page reflection on that week’s engagment. Your report should include the following information:</p>
+<blockquote class="blockquote">
+<p>Extrinsic motivation, which includes a desire to get better grades, is not only different from, but often undermines, intrinsic motivation, a desire to learn for its own sake.</p>
+<div style="text-align: right">
+<p>– Alfie Kohn, <a href="https://www.alfiekohn.org/article/case-grades/">“The Case Against Grades”</a></p>
+</div>
+</blockquote>
+<p>Grades, as they are traditionally thought of, are inherently imprecise and don’t represent a full picture of your growth and learning over the course of a semester. Worse than that, research shows that grades undermine the learning process in several ways:</p>
 <ul>
-<li>How did you engage in the class this week? Did you attend class? Were you on-time? Did you attend student support hours?</li>
-<li>Did you complete the assigned homework problems? Did you find them helpful?<br>
-</li>
-<li>What questions came up for you have while doing these problems or doing the class activities? How did you resolve these questions? What questions do you still have?</li>
-<li>In what ways were you able to help support the learning of your classmates?</li>
+<li><p>Grades tend to diminish interest in what you’re learning.</p></li>
+<li><p>Grades create a preference for the easiest task so that students tend to do what they need to get a certain grade, but no more.</p></li>
+<li><p>Grades tend to reduce the quality of student thinking. The moment we ask ``<strong>how</strong> am I doing?’’ we lose track of <strong>what</strong> we’re doing.</p></li>
+</ul>
+<p>Unfortunately, I am required to submit a grade for each student at the end of the semester – but I will do what I can to de-emphasize the role of grades in this course so that as much as possible our focus is on learning.</p>
+<section id="feedback-and-revisions" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="feedback-and-revisions">Feedback and Revisions</h2>
+<p>Your goal throughout the semester is to demonstrate your understanding of the course material and specifically our stated learning objectives through your work. Rather than giving you marks on individual assignments, I will instead give you written feedback to let you know how I see your understanding reflected in your work. After addressing that feedback, you’re welcome to resubmit for further feedback if needed.</p>
+<p>Throughout the semester, I will also periodically ask you to reflect carefully on your work and to self-evaluate your progress. The primary pieces of evidence of your learning will be the labs and the projects, but you’re welcome to include any other work in these reflections that you feel demonstrates your learning.</p>
+</section>
+<section id="collaborative-grading" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="collaborative-grading">Collaborative Grading</h2>
+<p>At mid-semester and again at the end of the semester, we will compare notes about where you are in your learning. I’ll ask you to present evidence of your learning and in this way, we will determine your your grade collaboratively.</p>
+<p>The intention here is to help you focus on learning in a way that is more organic, as opposed to simply working as you think you’re expected to. If this process causes more anxiety than it alleviates, please see me at any point to confer about your progress in the course – I’m always happy to talk with you about your learning!</p>
+</section>
+<section id="engagement" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="engagement">Engagement</h2>
+<p>Although your course grade will primarily be based on your <strong>understanding</strong> of course content and not on course engagement, in my experience these typically go hand in hand. So while engagement in the course is not itself evidence of understanding, it does usually help us achieve that goal.</p>
+<p>Here are some ways that you can engage with the class:</p>
+<ul>
+<li>Attend class regularly</li>
+<li>Complete assigned problems before class so you’re prepared to engage with that day’s material.</li>
+<li>Contribute to in-class group work including Application Exercises.</li>
+<li>Complete weekly engagment reports</li>
+<li>Come to drop-in hours to ask questions.</li>
+<li>Complete labs on time – and asking for help when needed.</li>
+<li>Completing projects on time – and asking for help when needed.</li>
 </ul>
 </section>
-<section id="labs" class="level2">
-<h2 class="anchored" data-anchor-id="labs">Labs</h2>
-<p>Approximately every two weeks, I will assign a lab. You can think of these as extended homework assignments that will combine concepts with practice. You will use RStudio (posit.cloud) to complete a lab report which you’ll submit on Moodle. I will provide feedback after which you’re welcome to resubmit any work within one week.</p>
-</section>
-<section id="quizzes-and-exams" class="level2">
-<h2 class="anchored" data-anchor-id="quizzes-and-exams">Quizzes and Exams</h2>
-<p>We will have occasional short in-class quizzes which will serve as a mechanism for both you an me to check-in about where you are with your understanding of the material. Whether or not you include these check-ins in your portfolio as evidence of your understanding is up to you.</p>
-<p>We will not have traditional midterm or final exams.</p>
-</section>
-<section id="portfolio" class="level2">
-<h2 class="anchored" data-anchor-id="portfolio">Portfolio</h2>
-<p>You are encouraged to use the portfolio template in our posit.cloud space to keep track of your learning over the course of the semester. Think of this as your course scrapbook to which you can add any homework, activities, or other evidence of your learning.</p>
-</section>
-<section id="projects" class="level2">
-<h2 class="anchored" data-anchor-id="projects">Projects</h2>
-<p>There are two projects in this course - the first one is due mid-semester and the second one is due at the end of the semester.</p>
+<section id="grade-guidelines" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="grade-guidelines">Grade Guidelines</h2>
+<p>Here are some qualitative descriptions that I find helpful in thinking about student grades. You might find them helpful as well.</p>
+<dl>
+<dt>A</dt>
+<dd>
+<p>This grade generally indicates superior work that demonstrates a deep understanding of the material such that you could apply the material in unfamiliar or especially complex situations. You should should consistently demonstrate this deep understanding of the material using a wide variety of methods described above. This grade likely includes:</p>
+</dd>
+</dl>
+<ul>
+<li>demonstrating <strong>significant</strong> course engagement, including homework, as evidenced in weekly engagement reports</li>
+<li>successfully completing <strong>all</strong> lab assignments</li>
+<li>successfully completing <strong>both</strong> projects</li>
+</ul>
+<dl>
+<dt>B</dt>
+<dd>
+<p>This grade indicates good work that is eminently satisfactory. You should be able to use and extend this knowledge in many situations although you might have difficulty with particularly challenging or unfamilar problems. You should consistently demonstrate your understanding of the material using some of the methods described above. This grade likely includes</p>
+</dd>
+</dl>
+<ul>
+<li>demonstrating <strong>many</strong> elements of course engagement as evidenced in weekly engagement reports</li>
+<li>completing <strong>most</strong> lab assignments</li>
+<li>completing <strong>both</strong> projects</li>
+</ul>
+<dl>
+<dt>C</dt>
+<dd>
+<p>This grade indicates competent work that demonstrates an basic understanding of the course material. You should be able to handle most of the more straightforward problems encountered but might struggle with more challenging problems. You might consistently meet only a few of the criteria listed above or else meet several criteria but less often. This grade likely includes</p>
+</dd>
+</dl>
+<ul>
+<li>demonstrating <strong>some</strong> elements of course engagement as evidence in weekly engagement reports</li>
+<li>completing <strong>some</strong> lab assignments</li>
+<li>completing Project 1 and making some progress on Project 2</li>
+</ul>
+<dl>
+<dt>D/F</dt>
+<dd>
+<p>These grades represent a fundamental breakdown of expectations. A D represents a meaningful but unsuccessful attempt at earning a C or above. An F represents such a severe lack of engagement, effort, or understanding that there is no evidence of meaningful progress.</p>
+</dd>
+<dt>+/-</dt>
+<dd>
+<p>In discussing your course grade together, we may opt to add a modifier to your grade.</p>
+</dd>
+</dl>
+<ul>
+<li><p>A <span class="math inline">\(\mathbf{-}\)</span> modifier might be added to your grade if you’ve met the standards for a particular grade with the exception of one element (engagement, labs, or projects e.g.)</p></li>
+<li><p>A <span class="math inline">\(\mathbf{+}\)</span> modifier might be added to your grade if you’ve met the standards for a particular grade <strong>and</strong> you’ve met one of the elements for a higher grade.</p></li>
+</ul>
 
 
 </section>
