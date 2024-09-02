@@ -1,7 +1,8 @@
 ---
 title: Week Two
 subtitle: Tuesday
-format: revealjs
+format: 
+  revealjs
 auto-stretch: false
 ---
 

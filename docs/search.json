@@ -2111,12 +2111,11 @@
     "objectID": "slides/03/03-sampling.html#announcements",
     "href": "slides/03/03-sampling.html#announcements",
     "title": "Week Two",
-    "section": "",
-    "text": "Think about what you will add to this week’s engagement report.\nLab 01 due on Friday",
+    "section": "Announcements",
+    "text": "Announcements\n\nThink about what you will add to this week’s engagement report.\nLab 01 due on Friday",
     "crumbs": [
       "Quick Links",
-      "Slides",
-      "Week Two"
+      "Slides"
     ]
   },
   {
@@ -2127,8 +2126,7 @@
     "text": "More Penguins\nRecall our palmerpenguins data frame\n\nglimpse(penguins)\n\nRows: 344\nColumns: 8\n$ species           &lt;fct&gt; Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adelie…\n$ island            &lt;fct&gt; Torgersen, Torgersen, Torgersen, Torgersen, Torgersen, Torgers…\n$ bill_length_mm    &lt;dbl&gt; 39.1, 39.5, 40.3, NA, 36.7, 39.3, 38.9, 39.2, 34.1, 42.0, 37.8…\n$ bill_depth_mm     &lt;dbl&gt; 18.7, 17.4, 18.0, NA, 19.3, 20.6, 17.8, 19.6, 18.1, 20.2, 17.1…\n$ flipper_length_mm &lt;int&gt; 181, 186, 195, NA, 193, 190, 181, 195, 193, 190, 186, 180, 182…\n$ body_mass_g       &lt;int&gt; 3750, 3800, 3250, NA, 3450, 3650, 3625, 4675, 3475, 4250, 3300…\n$ sex               &lt;fct&gt; male, female, female, NA, female, male, female, male, NA, NA, …\n$ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 20…\n\n\n\nWhere did this data come from?",
     "crumbs": [
       "Quick Links",
-      "Slides",
-      "Week Two"
+      "Slides"
     ]
   },
   {
@@ -2136,11 +2134,10 @@
     "href": "slides/03/03-sampling.html#begin-with-research-questions",
     "title": "Week Two",
     "section": "Begin with Research Question(s)",
-    "text": "Begin with Research Question(s)\n\n\n\nCan physical measurements be used to determine sex in penguins?\n\nFrom 2007 to 2009 Dr. Kristen Gorman and colleauges collected data to try to answer this and other questions.",
+    "text": "Begin with Research Question(s)\n\n\nCan physical measurements be used to determine sex in penguins?\n\nFrom 2007 to 2009 Dr. Kristen Gorman and colleauges collected data to try to answer this and other questions.",
     "crumbs": [
       "Quick Links",
-      "Slides",
-      "Week Two"
+      "Slides"
     ]
   },
   {
@@ -2148,11 +2145,10 @@
     "href": "slides/03/03-sampling.html#observational-study",
     "title": "Week Two",
     "section": "Observational Study",
-    "text": "Observational Study\n\nWhat is the population in question?\n\nCollect data for every case in the population -&gt; census\nCollect data for smaller fraction -&gt; sample\n\nFind (calculate) a numerical summary relevant to our question.\n\nNumber calculated for entire population -&gt; parameter\nNumber calculated for sample -&gt; statistic\n\n\n\n\n\nHopefully, the statistic is close to the parameter!",
+    "text": "Observational Study\n\nWhat is the population in question?\n\nCollect data for every case in the population -&gt; census\nCollect data for smaller fraction -&gt; sample\n\nFind (calculate) a numerical summary relevant to our question.\n\nNumber calculated for entire population -&gt; parameter\nNumber calculated for sample -&gt; statistic\n\n\n\n\nHopefully, the statistic is close to the parameter!",
     "crumbs": [
       "Quick Links",
-      "Slides",
-      "Week Two"
+      "Slides"
     ]
   },
   {
@@ -2163,8 +2159,7 @@
     "text": "Sampling Methods\nGoal: choose sample so that it accurately represents the population.\n\n\nChallenges (making sure sample represents entire population)\n\nnon-response rates in surveys\nHow were samples chosen – are they truly random?\nwatch out for convenience samples!",
     "crumbs": [
       "Quick Links",
-      "Slides",
-      "Week Two"
+      "Slides"
     ]
   },
   {
@@ -2175,8 +2170,7 @@
     "text": "Simple Random Sample\n\n\n\n\n\nSimple to understand, but often difficult to implement for large populations!",
     "crumbs": [
       "Quick Links",
-      "Slides",
-      "Week Two"
+      "Slides"
     ]
   },
   {
@@ -2187,8 +2181,7 @@
     "text": "Stratified Sampling\n\n\n\n\n\nPopulation is divided into groups (strata). Then another method (e.g. simple random sampling) is used within each stratum.",
     "crumbs": [
       "Quick Links",
-      "Slides",
-      "Week Two"
+      "Slides"
     ]
   },
   {
@@ -2199,8 +2192,7 @@
     "text": "Cluster Sample\n Population divided into groups (clusters) and a fixed number of clusters are chosen (sampled). All observations within a cluster are used.\n\nTypically, clusters are similar to each other",
     "crumbs": [
       "Quick Links",
-      "Slides",
-      "Week Two"
+      "Slides"
     ]
   },
   {
@@ -2211,8 +2203,7 @@
     "text": "Multistage Sampling\n\n\n\n\n\nAgain, clusters – but then sampling within the clusters.",
     "crumbs": [
       "Quick Links",
-      "Slides",
-      "Week Two"
+      "Slides"
     ]
   },
   {
@@ -2223,8 +2214,7 @@
     "text": "Penguins\nThree separate populations: all Gentoo, Adelie, Chinstrap penguins in Palmer Archipelago region of Antarctica.\n \nQ: How would you sample?",
     "crumbs": [
       "Quick Links",
-      "Slides",
-      "Week Two"
+      "Slides"
     ]
   },
   {
@@ -2235,8 +2225,7 @@
     "text": "Palmer Archipelago",
     "crumbs": [
       "Quick Links",
-      "Slides",
-      "Week Two"
+      "Slides"
     ]
   },
   {

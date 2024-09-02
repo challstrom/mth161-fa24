@@ -41,9 +41,7 @@ website:
         text: University Policies
       - href: course-links.qmd
         text: Useful Links
-      - section: "Slides"
-        contents:
-          - href: slides/03/03-sampling.qmd
+
 
       
 format:
