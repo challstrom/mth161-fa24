@@ -1,0 +1,108 @@
+---
+title: Week Two
+subtitle: Tuesday
+format: revealjs
+auto-stretch: false
+---
+
+## Announcements
+
+-   Think about what you will add to this week's engagement report.
+-   Lab 01 due on Friday
+
+## More Penguins
+
+Recall our `palmerpenguins` data frame
+
+```{r}
+#| label: load-packages
+#| warning: false
+#| message: false
+#| echo: false
+
+library(tidyverse)
+library(palmerpenguins)
+```
+
+```{r}
+glimpse(penguins)
+```
+
+\
+Where did this data come from?
+
+## Begin with Research Question(s)
+
+\
+
+### Can physical measurements be used to determine sex in penguins?
+
+\
+From 2007 to 2009 Dr. Kristen Gorman and colleauges collected data to try to answer this and other questions.
+
+![](gorman13.png){fig-align="center" width="800"}
+
+## Observational Study
+
+-   What is the **population** in question?
+
+    -   Collect data for every case in the population -\> **census**
+
+    -   Collect data for smaller fraction -\> **sample**
+
+-   Find (calculate) a numerical summary relevant to our question.
+
+    -   Number calculated for entire population -\> **parameter**
+    -   Number calculated for sample -\> **statistic**
+
+\
+
+### Hopefully, the statistic is close to the parameter!
+
+## Sampling Methods
+
+Goal: choose sample so that it accurately represents the population.
+
+\
+
+**Challenges** (making sure sample represents entire population)
+
+-   **non-response** rates in surveys
+-   How were samples chosen -- are they truly random?
+-   watch out for **convenience** samples!
+
+## Simple Random Sample
+
+![](simple.png){fig-align="center" width="1000"}
+
+Simple to understand, but often difficult to implement for large populations!
+
+## Stratified Sampling
+
+![](stratified.png){fig-align="center" width="1000"}
+
+Population is divided into groups (**strata**). Then another method (e.g. simple random sampling) is used within each stratum.
+
+## Cluster Sample
+
+![](cluster.png){fig-align="center" width="1000"} Population divided into groups (**clusters**) and a fixed number of clusters are chosen (sampled). All observations within a cluster are used.
+
+-   Typically, clusters are similar to each other
+
+## Multistage Sampling
+
+![](multistage.png){fig-align="center" width="1000"}
+
+Again, clusters -- but then sampling within the clusters.
+
+## Penguins
+
+Three separate populations: all Gentoo, Adelie, Chinstrap penguins in Palmer Archipelago region of Antarctica.
+
+ 
+
+Q: How would **you** sample?
+
+## Palmer Archipelago
+
+![](PA.png){fig-align="center" width="900"}

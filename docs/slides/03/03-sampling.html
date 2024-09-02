@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Chris Hallstrom">
 
-<title>mth161 :: Elementary Statistics - MTH161 :: Elementary Statistics  Fall 2024</title>
+<title>mth161 :: Elementary Statistics - Week Two</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,24 +21,58 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -67,7 +102,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="style/mth161.scss">
+<link rel="stylesheet" href="../../style/mth161.scss">
 </head>
 
 <body class="nav-sidebar docked nav-fixed">
@@ -77,7 +112,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">mth161 :: Elementary Statistics</span>
     </a>
   </div>
@@ -88,7 +123,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./course-links.html" aria-current="page"> 
+    <a class="nav-link active" href="../../course-links.html" aria-current="page"> 
 <span class="menu-text">Quick Links</span></a>
   </li>  
 </ul>
@@ -102,7 +137,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Welcome</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../slides/03/03-sampling.html">Slides</a></li><li class="breadcrumb-item"><a href="../../slides/03/03-sampling.html">Week Two</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -124,49 +159,49 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Welcome</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./general.html" class="sidebar-item-text sidebar-link">
+  <a href="../../general.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">General Info</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./support.html" class="sidebar-item-text sidebar-link">
+  <a href="../../support.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Student Support</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./content.html" class="sidebar-item-text sidebar-link">
+  <a href="../../content.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Course Content</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./structure.html" class="sidebar-item-text sidebar-link">
+  <a href="../../structure.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Class Structure</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./grades.html" class="sidebar-item-text sidebar-link">
+  <a href="../../grades.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Grades</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./UPElements.html" class="sidebar-item-text sidebar-link">
+  <a href="../../UPElements.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">University Policies</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./course-links.html" class="sidebar-item-text sidebar-link">
+  <a href="../../course-links.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Useful Links</span></a>
   </div>
 </li>
@@ -181,7 +216,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./slides/03/03-sampling.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/03/03-sampling.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Week Two</span></a>
   </div>
 </li>
@@ -197,24 +232,53 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#welcome" id="toc-welcome" class="nav-link active" data-scroll-target="#welcome">Welcome!</a></li>
+  <li><a href="#announcements" id="toc-announcements" class="nav-link active" data-scroll-target="#announcements">Announcements</a></li>
+  <li><a href="#more-penguins" id="toc-more-penguins" class="nav-link" data-scroll-target="#more-penguins">More Penguins</a></li>
+  <li><a href="#begin-with-research-questions" id="toc-begin-with-research-questions" class="nav-link" data-scroll-target="#begin-with-research-questions">Begin with Research Question(s)</a>
+  <ul class="collapse">
+  <li><a href="#can-physical-measurements-be-used-to-determine-sex-in-penguins" id="toc-can-physical-measurements-be-used-to-determine-sex-in-penguins" class="nav-link" data-scroll-target="#can-physical-measurements-be-used-to-determine-sex-in-penguins">Can physical measurements be used to determine sex in penguins?</a></li>
+  </ul></li>
+  <li><a href="#observational-study" id="toc-observational-study" class="nav-link" data-scroll-target="#observational-study">Observational Study</a>
+  <ul class="collapse">
+  <li><a href="#hopefully-the-statistic-is-close-to-the-parameter" id="toc-hopefully-the-statistic-is-close-to-the-parameter" class="nav-link" data-scroll-target="#hopefully-the-statistic-is-close-to-the-parameter">Hopefully, the statistic is close to the parameter!</a></li>
+  </ul></li>
+  <li><a href="#sampling-methods" id="toc-sampling-methods" class="nav-link" data-scroll-target="#sampling-methods">Sampling Methods</a></li>
+  <li><a href="#simple-random-sample" id="toc-simple-random-sample" class="nav-link" data-scroll-target="#simple-random-sample">Simple Random Sample</a></li>
+  <li><a href="#stratified-sampling" id="toc-stratified-sampling" class="nav-link" data-scroll-target="#stratified-sampling">Stratified Sampling</a></li>
+  <li><a href="#cluster-sample" id="toc-cluster-sample" class="nav-link" data-scroll-target="#cluster-sample">Cluster Sample</a></li>
+  <li><a href="#multistage-sampling" id="toc-multistage-sampling" class="nav-link" data-scroll-target="#multistage-sampling">Multistage Sampling</a></li>
+  <li><a href="#penguins" id="toc-penguins" class="nav-link" data-scroll-target="#penguins">Penguins</a></li>
+  <li><a href="#palmer-archipelago" id="toc-palmer-archipelago" class="nav-link" data-scroll-target="#palmer-archipelago">Palmer Archipelago</a></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="index.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="03-sampling.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../slides/03/03-sampling.html">Slides</a></li><li class="breadcrumb-item"><a href="../../slides/03/03-sampling.html">Week Two</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">MTH161 :: Elementary Statistics <br> Fall 2024</h1>
-<p class="subtitle lead">Sections H, I</p>
+<h1 class="title">Week Two</h1>
+<p class="subtitle lead">Tuesday</p>
 </div>
 
 
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Author</div>
+  <div class="quarto-title-meta-heading">Affiliation</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author">Chris Hallstrom </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            University of Portland
+          </p>
+      </div>
+  </div>
 
 <div class="quarto-title-meta">
 
-    
+      
   
     
   </div>
@@ -224,14 +288,131 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="welcome" class="level1 unnumbered center">
-<h1 class="unnumbered">Welcome!</h1>
+<section id="announcements" class="level2">
+<h2 class="anchored" data-anchor-id="announcements">Announcements</h2>
+<ul>
+<li>Think about what you will add to this week’s engagement report.</li>
+<li>Lab 01 due on Friday</li>
+</ul>
 </section>
-<p>I am looking forward to working with each of you this semester! It is my top priority to support your growth as a learner and to make our time together both in class and out productive and engaging. I will strive to create an learning environment where all of our different perspectives and identities are valued and respected, where the contributions of every person are celebrated, and where you feel comfortable fully engaging in class.</p>
-<p>While I’ll do everything in my power to support you, your success in this course ultimately depends on you. I ask you to bring a readiness to work and a belief that you can learn. <strong>I absolutely believe this about each of you</strong>. I will also ask you to do tasks that are just at the edge of what you can handle because that is how the best learning happens, but if you are prepared to invest your time and energy, and to communicate with me about how you’re doing, I can and will support you.</p>
-<p>As we work together this semester, your suggestions are encouraged and appreciated. Please let me know ways to improve the effectiveness of the course for you personally, or for other students or student groups. In particular, if you ever feel like your experience in this class is being impacted by your experiences outside of class, please don’t hesitate to come and talk with me. If you prefer to speak with someone outside of the class, your academic deans are an excellent resource.</p>
+<section id="more-penguins" class="level2">
+<h2 class="anchored" data-anchor-id="more-penguins">More Penguins</h2>
+<p>Recall our <code>palmerpenguins</code> data frame</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(penguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 344
+Columns: 8
+$ species           &lt;fct&gt; Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adelie…
+$ island            &lt;fct&gt; Torgersen, Torgersen, Torgersen, Torgersen, Torgersen, Torgers…
+$ bill_length_mm    &lt;dbl&gt; 39.1, 39.5, 40.3, NA, 36.7, 39.3, 38.9, 39.2, 34.1, 42.0, 37.8…
+$ bill_depth_mm     &lt;dbl&gt; 18.7, 17.4, 18.0, NA, 19.3, 20.6, 17.8, 19.6, 18.1, 20.2, 17.1…
+$ flipper_length_mm &lt;int&gt; 181, 186, 195, NA, 193, 190, 181, 195, 193, 190, 186, 180, 182…
+$ body_mass_g       &lt;int&gt; 3750, 3800, 3250, NA, 3450, 3650, 3625, 4675, 3475, 4250, 3300…
+$ sex               &lt;fct&gt; male, female, female, NA, female, male, female, male, NA, NA, …
+$ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 20…</code></pre>
+</div>
+</div>
+<p><br>
+Where did this data come from?</p>
+</section>
+<section id="begin-with-research-questions" class="level2">
+<h2 class="anchored" data-anchor-id="begin-with-research-questions">Begin with Research Question(s)</h2>
+<p><br>
+</p>
+<section id="can-physical-measurements-be-used-to-determine-sex-in-penguins" class="level3">
+<h3 class="anchored" data-anchor-id="can-physical-measurements-be-used-to-determine-sex-in-penguins">Can physical measurements be used to determine sex in penguins?</h3>
+<p><br>
+From 2007 to 2009 Dr.&nbsp;Kristen Gorman and colleauges collected data to try to answer this and other questions.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="gorman13.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="800"></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="observational-study" class="level2">
+<h2 class="anchored" data-anchor-id="observational-study">Observational Study</h2>
+<ul>
+<li><p>What is the <strong>population</strong> in question?</p>
+<ul>
+<li><p>Collect data for every case in the population -&gt; <strong>census</strong></p></li>
+<li><p>Collect data for smaller fraction -&gt; <strong>sample</strong></p></li>
+</ul></li>
+<li><p>Find (calculate) a numerical summary relevant to our question.</p>
+<ul>
+<li>Number calculated for entire population -&gt; <strong>parameter</strong></li>
+<li>Number calculated for sample -&gt; <strong>statistic</strong></li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<section id="hopefully-the-statistic-is-close-to-the-parameter" class="level3">
+<h3 class="anchored" data-anchor-id="hopefully-the-statistic-is-close-to-the-parameter">Hopefully, the statistic is close to the parameter!</h3>
+</section>
+</section>
+<section id="sampling-methods" class="level2">
+<h2 class="anchored" data-anchor-id="sampling-methods">Sampling Methods</h2>
+<p>Goal: choose sample so that it accurately represents the population.</p>
+<p><br>
+</p>
+<p><strong>Challenges</strong> (making sure sample represents entire population)</p>
+<ul>
+<li><strong>non-response</strong> rates in surveys</li>
+<li>How were samples chosen – are they truly random?</li>
+<li>watch out for <strong>convenience</strong> samples!</li>
+</ul>
+</section>
+<section id="simple-random-sample" class="level2">
+<h2 class="anchored" data-anchor-id="simple-random-sample">Simple Random Sample</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="simple.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1000"></p>
+</figure>
+</div>
+<p>Simple to understand, but often difficult to implement for large populations!</p>
+</section>
+<section id="stratified-sampling" class="level2">
+<h2 class="anchored" data-anchor-id="stratified-sampling">Stratified Sampling</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="stratified.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1000"></p>
+</figure>
+</div>
+<p>Population is divided into groups (<strong>strata</strong>). Then another method (e.g.&nbsp;simple random sampling) is used within each stratum.</p>
+</section>
+<section id="cluster-sample" class="level2">
+<h2 class="anchored" data-anchor-id="cluster-sample">Cluster Sample</h2>
+<p><img src="cluster.png" class="img-fluid quarto-figure quarto-figure-center" width="1000"> Population divided into groups (<strong>clusters</strong>) and a fixed number of clusters are chosen (sampled). All observations within a cluster are used.</p>
+<ul>
+<li>Typically, clusters are similar to each other</li>
+</ul>
+</section>
+<section id="multistage-sampling" class="level2">
+<h2 class="anchored" data-anchor-id="multistage-sampling">Multistage Sampling</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="multistage.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1000"></p>
+</figure>
+</div>
+<p>Again, clusters – but then sampling within the clusters.</p>
+</section>
+<section id="penguins" class="level2">
+<h2 class="anchored" data-anchor-id="penguins">Penguins</h2>
+<p>Three separate populations: all Gentoo, Adelie, Chinstrap penguins in Palmer Archipelago region of Antarctica.</p>
+<p>&nbsp;</p>
+<p>Q: How would <strong>you</strong> sample?</p>
+</section>
+<section id="palmer-archipelago" class="level2">
+<h2 class="anchored" data-anchor-id="palmer-archipelago">Palmer Archipelago</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="PA.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="900"></p>
+</figure>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

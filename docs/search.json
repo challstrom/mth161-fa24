@@ -215,8 +215,8 @@
     "objectID": "slides/01/01-meet-the-toolkit.html#learning-goals",
     "href": "slides/01/01-meet-the-toolkit.html#learning-goals",
     "title": "Meet the toolkit",
-    "section": "Learning goals",
-    "text": "Learning goals\nBy the end of the course, you will be able to…\n\n\ngain insight from data\ngain insight from data, reproducibly\ngain insight from data, reproducibly, using modern programming tools and techniques\ngain insight from data, reproducibly and collaboratively, using modern programming tools and techniques\ngain insight from data, reproducibly (with literate programming and version control) and collaboratively, using modern programming tools and techniques"
+    "section": "",
+    "text": "By the end of the course, you will be able to…\n\n\ngain insight from data\ngain insight from data, reproducibly\ngain insight from data, reproducibly, using modern programming tools and techniques\ngain insight from data, reproducibly and collaboratively, using modern programming tools and techniques"
   },
   {
     "objectID": "slides/01/01-meet-the-toolkit.html#reproducibility-checklist",
@@ -229,8 +229,8 @@
     "objectID": "slides/01/01-meet-the-toolkit.html#toolkit-for-reproducibility",
     "href": "slides/01/01-meet-the-toolkit.html#toolkit-for-reproducibility",
     "title": "Meet the toolkit",
-    "section": "Toolkit for reproducibility",
-    "text": "Toolkit for reproducibility\n\nScriptability \\(\\rightarrow\\) R\nLiterate programming (code, narrative, output in one place) \\(\\rightarrow\\) Quarto\nVersion control \\(\\rightarrow\\) Git / GitHub"
+    "section": "",
+    "text": "Literate programming (code, narrative, output all in one document)"
   },
   {
     "objectID": "slides/01/01-meet-the-toolkit.html#r-and-rstudio-1",
@@ -272,14 +272,14 @@
     "href": "slides/01/01-meet-the-toolkit.html#a-short-list-for-now-of-r-essentials",
     "title": "Meet the toolkit",
     "section": "A short list (for now) of R essentials",
-    "text": "A short list (for now) of R essentials\n\nFunctions are (most often) verbs, followed by what they will be applied to in parentheses:\n\n\ndo_this(to_this)\ndo_that(to_this, to_that, with_those)\n\n\n\nPackages are installed with the install.packages() function and loaded with the library function, once per session:\n\n\ninstall.packages(\"package_name\")\nlibrary(package_name)"
+    "text": "A short list (for now) of R essentials\n\nFunctions are (most often) verbs, followed by what they will be applied to in parentheses:\n\n\ndo_this(to_this)\ndo_that(to_this, to_that, with_those)\n\n. . .\n\nPackages are installed with the install.packages() function and loaded with the library function, once per session:\n\n\ninstall.packages(\"package_name\")\nlibrary(package_name)"
   },
   {
     "objectID": "slides/01/01-meet-the-toolkit.html#r-essentials-continued",
     "href": "slides/01/01-meet-the-toolkit.html#r-essentials-continued",
     "title": "Meet the toolkit",
     "section": "R essentials (continued)",
-    "text": "R essentials (continued)\n\nColumns (variables) in data frames are accessed with $:\n\n\ndataframe$var_name\n\n\n\nObject documentation can be accessed with ?\n\n\n?mean"
+    "text": "R essentials (continued)\n\nColumns (variables) in data frames are accessed with $:\n\n\ndataframe$var_name\n\n. . .\n\nObject documentation can be accessed with ?\n\n\n?mean"
   },
   {
     "objectID": "slides/01/01-meet-the-toolkit.html#tidyverse",
@@ -314,7 +314,7 @@
     "href": "slides/01/01-meet-the-toolkit.html#environments",
     "title": "Meet the toolkit",
     "section": "Environments",
-    "text": "Environments\n\n\n\n\n\n\nImportant\n\n\nThe environment of your Quarto document is separate from the Console!\n\n\n\nRemember this, and expect it to bite you a few times as you’re learning to work with Quarto!"
+    "text": "Environments\n\n\n\n\n\n\nImportant\n\n\n\nThe environment of your Quarto document is separate from the Console!\n\n\nRemember this, and expect it to bite you a few times as you’re learning to work with Quarto!"
   },
   {
     "objectID": "slides/01/01-meet-the-toolkit.html#environments-1",
@@ -2066,5 +2066,233 @@
       "Quick Links",
       "Course Content"
     ]
+  },
+  {
+    "objectID": "slides/01/01-meet-the-toolkit.html",
+    "href": "slides/01/01-meet-the-toolkit.html",
+    "title": "Meet the toolkit",
+    "section": "",
+    "text": "Course operation\n\nMaterials: challstrom.github.io/mth161-fa24/\nMoodle\n\nDoing data science\n\nR\nRStudio\nQuarto\n\n\n\nBy the end of the course, you will be able to…\n\n\ngain insight from data\ngain insight from data, reproducibly\ngain insight from data, reproducibly, using modern programming tools and techniques\ngain insight from data, reproducibly and collaboratively, using modern programming tools and techniques\n\n\n\n\n\n\nWhat does it mean for a data analysis to be “reproducible”?\n\n. . .\nShort-term goals:\n\nAre the tables and figures reproducible from the code and data?\nDoes the code actually do what you think it does?\nIn addition to what was done, is it clear why it was done?\n\n. . .\nLong-term goals:\n\nCan the code be used for other data?\nCan you extend the code to do other things?\n\n\n\n\n\n\nLiterate programming (code, narrative, output all in one document)"
+  },
+  {
+    "objectID": "slides/01/01-meet-the-toolkit.html#reproducible-data-analysis",
+    "href": "slides/01/01-meet-the-toolkit.html#reproducible-data-analysis",
+    "title": "Meet the toolkit",
+    "section": "",
+    "text": "What does it mean for a data analysis to be “reproducible”?\n\n. . .\nShort-term goals:\n\nAre the tables and figures reproducible from the code and data?\nDoes the code actually do what you think it does?\nIn addition to what was done, is it clear why it was done?\n\n. . .\nLong-term goals:\n\nCan the code be used for other data?\nCan you extend the code to do other things?"
+  },
+  {
+    "objectID": "slides/01/01-meet-the-toolkit.html#tour-of-r-rstudio",
+    "href": "slides/01/01-meet-the-toolkit.html#tour-of-r-rstudio",
+    "title": "Meet the toolkit",
+    "section": "Tour of R + RStudio",
+    "text": "Tour of R + RStudio"
+  },
+  {
+    "objectID": "slides/01/01-meet-the-toolkit.html#quarto-2",
+    "href": "slides/01/01-meet-the-toolkit.html#quarto-2",
+    "title": "Meet the toolkit",
+    "section": "Quarto",
+    "text": "Quarto\n\n\nFully reproducible reports – each time you render the analysis is ran from the beginning\nCode goes in chunks narrative goes outside of chunks\nA visual editor for a familiar / Google docs-like editing experience"
+  },
+  {
+    "objectID": "slides/03/03-sampling.html",
+    "href": "slides/03/03-sampling.html",
+    "title": "Week Two",
+    "section": "",
+    "text": "Think about what you will add to this week’s engagement report.\nLab 01 due on Friday",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Week Two"
+    ]
+  },
+  {
+    "objectID": "slides/03/03-sampling.html#announcements",
+    "href": "slides/03/03-sampling.html#announcements",
+    "title": "Week Two",
+    "section": "",
+    "text": "Think about what you will add to this week’s engagement report.\nLab 01 due on Friday",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Week Two"
+    ]
+  },
+  {
+    "objectID": "slides/03/03-sampling.html#more-penguins",
+    "href": "slides/03/03-sampling.html#more-penguins",
+    "title": "Week Two",
+    "section": "More Penguins",
+    "text": "More Penguins\nRecall our palmerpenguins data frame\n\nglimpse(penguins)\n\nRows: 344\nColumns: 8\n$ species           &lt;fct&gt; Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adelie…\n$ island            &lt;fct&gt; Torgersen, Torgersen, Torgersen, Torgersen, Torgersen, Torgers…\n$ bill_length_mm    &lt;dbl&gt; 39.1, 39.5, 40.3, NA, 36.7, 39.3, 38.9, 39.2, 34.1, 42.0, 37.8…\n$ bill_depth_mm     &lt;dbl&gt; 18.7, 17.4, 18.0, NA, 19.3, 20.6, 17.8, 19.6, 18.1, 20.2, 17.1…\n$ flipper_length_mm &lt;int&gt; 181, 186, 195, NA, 193, 190, 181, 195, 193, 190, 186, 180, 182…\n$ body_mass_g       &lt;int&gt; 3750, 3800, 3250, NA, 3450, 3650, 3625, 4675, 3475, 4250, 3300…\n$ sex               &lt;fct&gt; male, female, female, NA, female, male, female, male, NA, NA, …\n$ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 20…\n\n\n\nWhere did this data come from?",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Week Two"
+    ]
+  },
+  {
+    "objectID": "slides/03/03-sampling.html#begin-with-research-questions",
+    "href": "slides/03/03-sampling.html#begin-with-research-questions",
+    "title": "Week Two",
+    "section": "Begin with Research Question(s)",
+    "text": "Begin with Research Question(s)\n\n\n\nCan physical measurements be used to determine sex in penguins?\n\nFrom 2007 to 2009 Dr. Kristen Gorman and colleauges collected data to try to answer this and other questions.",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Week Two"
+    ]
+  },
+  {
+    "objectID": "slides/03/03-sampling.html#observational-study",
+    "href": "slides/03/03-sampling.html#observational-study",
+    "title": "Week Two",
+    "section": "Observational Study",
+    "text": "Observational Study\n\nWhat is the population in question?\n\nCollect data for every case in the population -&gt; census\nCollect data for smaller fraction -&gt; sample\n\nFind (calculate) a numerical summary relevant to our question.\n\nNumber calculated for entire population -&gt; parameter\nNumber calculated for sample -&gt; statistic\n\n\n\n\n\nHopefully, the statistic is close to the parameter!",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Week Two"
+    ]
+  },
+  {
+    "objectID": "slides/03/03-sampling.html#sampling-methods",
+    "href": "slides/03/03-sampling.html#sampling-methods",
+    "title": "Week Two",
+    "section": "Sampling Methods",
+    "text": "Sampling Methods\nGoal: choose sample so that it accurately represents the population.\n\n\nChallenges (making sure sample represents entire population)\n\nnon-response rates in surveys\nHow were samples chosen – are they truly random?\nwatch out for convenience samples!",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Week Two"
+    ]
+  },
+  {
+    "objectID": "slides/03/03-sampling.html#simple-random-sample",
+    "href": "slides/03/03-sampling.html#simple-random-sample",
+    "title": "Week Two",
+    "section": "Simple Random Sample",
+    "text": "Simple Random Sample\n\n\n\n\n\nSimple to understand, but often difficult to implement for large populations!",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Week Two"
+    ]
+  },
+  {
+    "objectID": "slides/03/03-sampling.html#stratified-sampling",
+    "href": "slides/03/03-sampling.html#stratified-sampling",
+    "title": "Week Two",
+    "section": "Stratified Sampling",
+    "text": "Stratified Sampling\n\n\n\n\n\nPopulation is divided into groups (strata). Then another method (e.g. simple random sampling) is used within each stratum.",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Week Two"
+    ]
+  },
+  {
+    "objectID": "slides/03/03-sampling.html#cluster-sample",
+    "href": "slides/03/03-sampling.html#cluster-sample",
+    "title": "Week Two",
+    "section": "Cluster Sample",
+    "text": "Cluster Sample\n Population divided into groups (clusters) and a fixed number of clusters are chosen (sampled). All observations within a cluster are used.\n\nTypically, clusters are similar to each other",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Week Two"
+    ]
+  },
+  {
+    "objectID": "slides/03/03-sampling.html#multistage-sampling",
+    "href": "slides/03/03-sampling.html#multistage-sampling",
+    "title": "Week Two",
+    "section": "Multistage Sampling",
+    "text": "Multistage Sampling\n\n\n\n\n\nAgain, clusters – but then sampling within the clusters.",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Week Two"
+    ]
+  },
+  {
+    "objectID": "slides/03/03-sampling.html#penguins",
+    "href": "slides/03/03-sampling.html#penguins",
+    "title": "Week Two",
+    "section": "Penguins",
+    "text": "Penguins\nThree separate populations: all Gentoo, Adelie, Chinstrap penguins in Palmer Archipelago region of Antarctica.\n \nQ: How would you sample?",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Week Two"
+    ]
+  },
+  {
+    "objectID": "slides/03/03-sampling.html#palmer-archipelago",
+    "href": "slides/03/03-sampling.html#palmer-archipelago",
+    "title": "Week Two",
+    "section": "Palmer Archipelago",
+    "text": "Palmer Archipelago",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Week Two"
+    ]
+  },
+  {
+    "objectID": "slides/00/00-welcome.html",
+    "href": "slides/00/00-welcome.html",
+    "title": "Welcome to MTH 161",
+    "section": "",
+    "text": "Section I\n\nTR 8:10-9:35, DB 230\n\nSection H\n\nTR 11:20-12:45, DB 230\n\n\n\n\n\n\n\n\n\n\n\n\n\nChris Hallstrom ( he / him)\n\nhallstro@up.edu\nBuckley Center 270\nDrop-in hours tba!\n\n\nThis week - TR 1-3, Wed afternoon, Friday 10-12 / 2-4"
+  },
+  {
+    "objectID": "slides/00/00-welcome.html#meet-your-professorcoach",
+    "href": "slides/00/00-welcome.html#meet-your-professorcoach",
+    "title": "Welcome to MTH 161",
+    "section": "",
+    "text": "Chris Hallstrom ( he / him)\n\nhallstro@up.edu\nBuckley Center 270\nDrop-in hours tba!\n\n\nThis week - TR 1-3, Wed afternoon, Friday 10-12 / 2-4"
+  },
+  {
+    "objectID": "slides/00/00-welcome.html#still-in-your-groups",
+    "href": "slides/00/00-welcome.html#still-in-your-groups",
+    "title": "Welcome to MTH 161",
+    "section": "Still in your groups…",
+    "text": "Still in your groups…\n\n… for each of the following questions\n\n\n1. Think on your own about how you might answer (1 min)\n2. Discuss with your group your responses (5-8 min)\n3. Share out to the class one idea or thought (5 min)"
+  },
+  {
+    "objectID": "slides/00/00-welcome.html#what-are-the-goals-of-a-college-education",
+    "href": "slides/00/00-welcome.html#what-are-the-goals-of-a-college-education",
+    "title": "Welcome to MTH 161",
+    "section": "What are the goals of a college education?",
+    "text": "What are the goals of a college education?"
+  },
+  {
+    "objectID": "slides/00/00-welcome.html#how-does-a-person-learn-something-new",
+    "href": "slides/00/00-welcome.html#how-does-a-person-learn-something-new",
+    "title": "Welcome to MTH 161",
+    "section": "How does a person learn something new?",
+    "text": "How does a person learn something new?"
+  },
+  {
+    "objectID": "slides/00/00-welcome.html#what-do-you-expect-to-remember-from-your-classes-10-years-from-now",
+    "href": "slides/00/00-welcome.html#what-do-you-expect-to-remember-from-your-classes-10-years-from-now",
+    "title": "Welcome to MTH 161",
+    "section": "What do you expect to remember from your classes 10 years from now?",
+    "text": "What do you expect to remember from your classes 10 years from now?"
+  },
+  {
+    "objectID": "slides/00/00-welcome.html#what-is-the-value-of-making-mistakes",
+    "href": "slides/00/00-welcome.html#what-is-the-value-of-making-mistakes",
+    "title": "Welcome to MTH 161",
+    "section": "What is the value of making mistakes?",
+    "text": "What is the value of making mistakes?"
+  },
+  {
+    "objectID": "slides/00/00-welcome.html#how-can-we-create-an-environment-where-risk-taking-is-encouraged-and-productive-failure-is-valued",
+    "href": "slides/00/00-welcome.html#how-can-we-create-an-environment-where-risk-taking-is-encouraged-and-productive-failure-is-valued",
+    "title": "Welcome to MTH 161",
+    "section": "How can we create an environment where risk taking is encouraged and productive failure is valued?",
+    "text": "How can we create an environment where risk taking is encouraged and productive failure is valued?"
   }
 ]

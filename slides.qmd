@@ -1,0 +1,16 @@
+---
+title: "Class Structure"
+format:
+  html: 
+    toc: true
+    toc-expand: 2
+    toc-title: "On this page"
+  pdf:
+    toc: true
+    number-sections: true
+    colorlinks: true
+---
+
+## Slides
+
+[Tuesday, Week 2](https://https://challstrom.github.io/mth161-fa24/slides/03-sampling.html)
