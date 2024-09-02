@@ -41,7 +41,7 @@ Where did this data come from?
 \
 From 2007 to 2009 Dr. Kristen Gorman and colleauges collected data to try to answer this and other questions.
 
-![](gorman13.png){fig-align="center" width="800"}
+![](images/gorman13.png){fig-align="center" width="800"}
 
 ## Observational Study
 
@@ -74,25 +74,25 @@ Goal: choose sample so that it accurately represents the population.
 
 ## Simple Random Sample
 
-![](simple.png){fig-align="center" width="1000"}
+![](images/simple.png){fig-align="center" width="1000"}
 
 Simple to understand, but often difficult to implement for large populations!
 
 ## Stratified Sampling
 
-![](stratified.png){fig-align="center" width="1000"}
+![](images/stratified.png){fig-align="center" width="1000"}
 
 Population is divided into groups (**strata**). Then another method (e.g. simple random sampling) is used within each stratum.
 
 ## Cluster Sample
 
-![](cluster.png){fig-align="center" width="1000"} Population divided into groups (**clusters**) and a fixed number of clusters are chosen (sampled). All observations within a cluster are used.
+![](images/cluster.png){fig-align="center" width="1000"} Population divided into groups (**clusters**) and a fixed number of clusters are chosen (sampled). All observations within a cluster are used.
 
 -   Typically, clusters are similar to each other
 
 ## Multistage Sampling
 
-![](multistage.png){fig-align="center" width="1000"}
+![](images/multistage.png){fig-align="center" width="1000"}
 
 Again, clusters -- but then sampling within the clusters.
 
@@ -106,4 +106,4 @@ Q: How would **you** sample?
 
 ## Palmer Archipelago
 
-![](PA.png){fig-align="center" width="900"}
+![](images/PA.png){fig-align="center" width="900"}
