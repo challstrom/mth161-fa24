@@ -1,0 +1,144 @@
+---
+title: Week Three
+subtitle: Tuesday
+format: revealjs
+auto-stretch: false
+
+title-block-style: none
+---
+
+## Homework Discussion
+
+Section 4.8, #1, 2, 3, 5
+
+What are your questions?
+
+## Ch. 4: Exploring Categorical Data
+
+-   **Visualizations:** Bar graphs, mosaic graphs, pie charts, waffle charts
+
+-   **Summary statistics:** proportions
+
+## Last week: COVID deaths
+
+```{r}
+#| message: false
+library(tidyverse)
+delta <- read_csv("delta.csv")
+```
+
+```{r}
+print(delta)
+```
+
+## summarize two categorical variables
+
+\
+
+::: columns
+::: {.column width="50%"}
+### Count
+
+```{r}
+#| label: delta-1
+#| fig-show: hide
+
+delta |>
+  count(vaccine, outcome)
+```
+:::
+
+::: {.column width="50%"}
+### Contingency Table
+
+(also known as *two-way* table)
+
+```{r}
+table(delta$vaccine, delta$outcome)
+```
+:::
+:::
+
+## Contingency Table with Totals
+
+\
+
+|                  | died | survived |        |
+|------------------|------|----------|--------|
+| **Unvaccinated** | 250  | 150802   | 151052 |
+| **Vaccinated**   | 447  | 116637   | 117084 |
+|                  | 697  | 267439   | 268136 |
+
+\
+Can easily calculate proportions from this table. E.g. proportion of vaccinated patients that died: $$
+\frac{447}{117084} = 0.004
+$$
+
+## Row and column proportions
+
+Convert each entry to a proportion of either column or row total.
+
+E.g. row proportions gives proportion of all vaccinated/unvaccinate patients that died
+
+|                  | died  | survived |     |
+|------------------|-------|----------|-----|
+| **Unvaccinated** | 0.002 | 0.998    | 1   |
+| **Vaccinated**   | 0.004 | 0.436    | 1   |
+
+## Bar plot (graph)
+
+Visualize one (or more) categorical variables
+
+```{r}
+#| label: bar-1
+
+ggplot(delta, aes(x = vaccine)) +
+  geom_bar(fill = "brown4")
+```
+
+------------------------------------------------------------------------
+
+### Vertical axis can be proportion
+
+```{r}
+#| echo: false
+
+ggplot(delta, aes(x = vaccine, y = after_stat(prop), group = 1)) +
+  geom_bar(fill = "brown4")
+```
+
+## Stacked bar graphs
+
+### more than one variable
+
+```{r}
+ggplot(delta, aes(x = vaccine, fill = age)) +
+  geom_bar(position = "stack")
+```
+
+## Standardized bar graphs
+
+```{r}
+ggplot(delta, aes(x = vaccine, fill = age)) +
+  geom_bar(position = "fill") +
+  labs( y = "Proportion")
+```
+
+## Dodged bar graphs
+
+```{r}
+ggplot(delta, aes(x = vaccine, fill = age)) +
+  geom_bar(position = "dodge")
+```
+
+## Pie charts
+
+Similar to bar charts ![](pie1.png){width="1000em" fig-align="center"}
+
+## Pie charts
+
+can be difficult to interpret
+
+What is the relative frequency of Respiratory conditions?
+
+![](pie2.png){width="100%"}
