@@ -41,7 +41,10 @@ website:
         text: University Policies
       - href: course-links.qmd
         text: Useful Links
-
+      - section: "Slides"
+        contents:
+          - href: slides/05/05-chapter4.qmd
+            text: "Tuesday, Week 3"
 
       
 format:

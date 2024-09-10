@@ -2259,83 +2259,143 @@
     "href": "slides/05/05-chapter4.html#homework-discussion",
     "title": "Week Three",
     "section": "Homework Discussion",
-    "text": "Homework Discussion\nSection 4.8, #1, 2, 3, 5\nWhat are your questions?"
+    "text": "Homework Discussion\nSection 4.8, #1, 2, 3, 5\nWhat are your questions?",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 3"
+    ]
   },
   {
     "objectID": "slides/05/05-chapter4.html#ch.-4-exploring-categorical-data",
     "href": "slides/05/05-chapter4.html#ch.-4-exploring-categorical-data",
     "title": "Week Three",
     "section": "Ch. 4: Exploring Categorical Data",
-    "text": "Ch. 4: Exploring Categorical Data\n\nVisualizations: Bar graphs, mosaic graphs, pie charts, waffle charts\nSummary statistics: proportions"
+    "text": "Ch. 4: Exploring Categorical Data\n\nVisualizations: Bar graphs, mosaic graphs, pie charts, waffle charts\nSummary statistics: proportions",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 3"
+    ]
   },
   {
     "objectID": "slides/05/05-chapter4.html#last-week-covid-deaths",
     "href": "slides/05/05-chapter4.html#last-week-covid-deaths",
     "title": "Week Three",
     "section": "Last week: COVID deaths",
-    "text": "Last week: COVID deaths\n\nlibrary(tidyverse)\ndelta &lt;- read_csv(\"delta.csv\")\n\n\nprint(delta)\n\n# A tibble: 268,166 × 3\n   vaccine    age   outcome\n   &lt;chr&gt;      &lt;chr&gt; &lt;chr&gt;  \n 1 Vaccinated &lt;50   died   \n 2 Vaccinated &lt;50   died   \n 3 Vaccinated &lt;50   died   \n 4 Vaccinated &lt;50   died   \n 5 Vaccinated &lt;50   died   \n 6 Vaccinated &lt;50   died   \n 7 Vaccinated &lt;50   died   \n 8 Vaccinated &lt;50   died   \n 9 Vaccinated &lt;50   died   \n10 Vaccinated &lt;50   died   \n# ℹ 268,156 more rows"
+    "text": "Last week: COVID deaths\n\nlibrary(tidyverse)\ndelta &lt;- read_csv(\"delta.csv\")\n\n\nprint(delta)\n\n# A tibble: 268,166 × 3\n   vaccine    age   outcome\n   &lt;chr&gt;      &lt;chr&gt; &lt;chr&gt;  \n 1 Vaccinated &lt;50   died   \n 2 Vaccinated &lt;50   died   \n 3 Vaccinated &lt;50   died   \n 4 Vaccinated &lt;50   died   \n 5 Vaccinated &lt;50   died   \n 6 Vaccinated &lt;50   died   \n 7 Vaccinated &lt;50   died   \n 8 Vaccinated &lt;50   died   \n 9 Vaccinated &lt;50   died   \n10 Vaccinated &lt;50   died   \n# ℹ 268,156 more rows",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 3"
+    ]
   },
   {
     "objectID": "slides/05/05-chapter4.html#summarize-two-categorical-variables",
     "href": "slides/05/05-chapter4.html#summarize-two-categorical-variables",
     "title": "Week Three",
     "section": "summarize two categorical variables",
-    "text": "summarize two categorical variables\n\n\n\n\nCount\n\ndelta |&gt;\n  count(vaccine, outcome)\n\n# A tibble: 4 × 3\n  vaccine      outcome       n\n  &lt;chr&gt;        &lt;chr&gt;     &lt;int&gt;\n1 Unvaccinated died        250\n2 Unvaccinated survived 150802\n3 Vaccinated   died        477\n4 Vaccinated   survived 116637\n\n\n\nContingency Table\n(also known as two-way table)\n\ntable(delta$vaccine, delta$outcome)\n\n              \n                 died survived\n  Unvaccinated    250   150802\n  Vaccinated      477   116637"
+    "text": "summarize two categorical variables\n\n\n\n\nCount\n\ndelta |&gt;\n  count(vaccine, outcome)\n\n# A tibble: 4 × 3\n  vaccine      outcome       n\n  &lt;chr&gt;        &lt;chr&gt;     &lt;int&gt;\n1 Unvaccinated died        250\n2 Unvaccinated survived 150802\n3 Vaccinated   died        477\n4 Vaccinated   survived 116637\n\n\n\nContingency Table\n(also known as two-way table)\n\ntable(delta$vaccine, delta$outcome)\n\n              \n                 died survived\n  Unvaccinated    250   150802\n  Vaccinated      477   116637",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 3"
+    ]
   },
   {
     "objectID": "slides/05/05-chapter4.html#contingency-table-with-totals",
     "href": "slides/05/05-chapter4.html#contingency-table-with-totals",
     "title": "Week Three",
     "section": "Contingency Table with Totals",
-    "text": "Contingency Table with Totals\n\n\n\n\n\n\ndied\nsurvived\n\n\n\n\n\nUnvaccinated\n250\n150802\n151052\n\n\nVaccinated\n447\n116637\n117084\n\n\n\n697\n267439\n268136\n\n\n\n\nCan easily calculate proportions from this table. E.g. proportion of vaccinated patients that died: \\[\n\\frac{447}{117084} = 0.004\n\\]"
+    "text": "Contingency Table with Totals\n\n\n\n\n\n\ndied\nsurvived\n\n\n\n\n\nUnvaccinated\n250\n150802\n151052\n\n\nVaccinated\n447\n116637\n117084\n\n\n\n697\n267439\n268136\n\n\n\n\nCan easily calculate proportions from this table. E.g. proportion of vaccinated patients that died: \\[\n\\frac{447}{117084} = 0.004\n\\]",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 3"
+    ]
   },
   {
     "objectID": "slides/05/05-chapter4.html#row-and-column-proportions",
     "href": "slides/05/05-chapter4.html#row-and-column-proportions",
     "title": "Week Three",
     "section": "Row and column proportions",
-    "text": "Row and column proportions\nConvert each entry to a proportion of either column or row total.\nE.g. row proportions gives proportion of all vaccinated/unvaccinate patients that died\n\n\n\n\ndied\nsurvived\n\n\n\n\n\nUnvaccinated\n0.002\n0.998\n1\n\n\nVaccinated\n0.004\n0.436\n1"
+    "text": "Row and column proportions\nConvert each entry to a proportion of either column or row total.\nE.g. row proportions gives proportion of all vaccinated/unvaccinate patients that died\n\n\n\n\ndied\nsurvived\n\n\n\n\n\nUnvaccinated\n0.002\n0.998\n1\n\n\nVaccinated\n0.004\n0.436\n1",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 3"
+    ]
   },
   {
     "objectID": "slides/05/05-chapter4.html#bar-plot-graph",
     "href": "slides/05/05-chapter4.html#bar-plot-graph",
     "title": "Week Three",
     "section": "Bar plot (graph)",
-    "text": "Bar plot (graph)\nVisualize one (or more) categorical variables\n\nggplot(delta, aes(x = vaccine)) +\n  geom_bar(fill = \"brown4\")"
+    "text": "Bar plot (graph)\nVisualize one (or more) categorical variables\n\nggplot(delta, aes(x = vaccine)) +\n  geom_bar(fill = \"brown4\")",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 3"
+    ]
   },
   {
     "objectID": "slides/05/05-chapter4.html#stacked-bar-graphs",
     "href": "slides/05/05-chapter4.html#stacked-bar-graphs",
     "title": "Week Three",
     "section": "Stacked bar graphs",
-    "text": "Stacked bar graphs\nmore than one variable\n\nggplot(delta, aes(x = vaccine, fill = age)) +\n  geom_bar(position = \"stack\")"
+    "text": "Stacked bar graphs\nmore than one variable\n\nggplot(delta, aes(x = vaccine, fill = age)) +\n  geom_bar(position = \"stack\")",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 3"
+    ]
   },
   {
     "objectID": "slides/05/05-chapter4.html#standardized-bar-graphs",
     "href": "slides/05/05-chapter4.html#standardized-bar-graphs",
     "title": "Week Three",
     "section": "Standardized bar graphs",
-    "text": "Standardized bar graphs\n\nggplot(delta, aes(x = vaccine, fill = age)) +\n  geom_bar(position = \"fill\") +\n  labs( y = \"Proportion\")"
+    "text": "Standardized bar graphs\n\nggplot(delta, aes(x = vaccine, fill = age)) +\n  geom_bar(position = \"fill\") +\n  labs( y = \"Proportion\")",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 3"
+    ]
   },
   {
     "objectID": "slides/05/05-chapter4.html#dodged-bar-graphs",
     "href": "slides/05/05-chapter4.html#dodged-bar-graphs",
     "title": "Week Three",
     "section": "Dodged bar graphs",
-    "text": "Dodged bar graphs\n\nggplot(delta, aes(x = vaccine, fill = age)) +\n  geom_bar(position = \"dodge\")"
+    "text": "Dodged bar graphs\n\nggplot(delta, aes(x = vaccine, fill = age)) +\n  geom_bar(position = \"dodge\")",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 3"
+    ]
   },
   {
     "objectID": "slides/05/05-chapter4.html#pie-charts",
     "href": "slides/05/05-chapter4.html#pie-charts",
     "title": "Week Three",
     "section": "Pie charts",
-    "text": "Pie charts\nSimilar to bar charts"
+    "text": "Pie charts\nSimilar to bar charts",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 3"
+    ]
   },
   {
     "objectID": "slides/05/05-chapter4.html#pie-charts-1",
     "href": "slides/05/05-chapter4.html#pie-charts-1",
     "title": "Week Three",
     "section": "Pie charts",
-    "text": "Pie charts\ncan be difficult to interpret\nWhat is the relative frequency of Respiratory conditions?"
+    "text": "Pie charts\ncan be difficult to interpret\nWhat is the relative frequency of Respiratory conditions?",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 3"
+    ]
   }
 ]
