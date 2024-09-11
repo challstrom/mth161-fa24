@@ -2397,5 +2397,53 @@
       "Slides",
       "Tuesday, Week 3"
     ]
+  },
+  {
+    "objectID": "slides/06/06-explore-categorical.html#in-groups",
+    "href": "slides/06/06-explore-categorical.html#in-groups",
+    "title": "Exploring categorical data",
+    "section": "In groups",
+    "text": "In groups\n\nToday’s homework: section 4.8, #8, 9\nDiscuss: what is Simpson’s paradox?",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Thursday, Week 3"
+    ]
+  },
+  {
+    "objectID": "slides/06/06-explore-categorical.html#durham-city-and-county-resident-survey",
+    "href": "slides/06/06-explore-categorical.html#durham-city-and-county-resident-survey",
+    "title": "Exploring categorical data",
+    "section": "2020 Durham City and County Resident Survey",
+    "text": "2020 Durham City and County Resident Survey",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Thursday, Week 3"
+    ]
+  },
+  {
+    "objectID": "slides/06/06-explore-categorical.html#sample-survey-questions---demographics",
+    "href": "slides/06/06-explore-categorical.html#sample-survey-questions---demographics",
+    "title": "Exploring categorical data",
+    "section": "Sample survey questions - demographics",
+    "text": "Sample survey questions - demographics",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Thursday, Week 3"
+    ]
+  },
+  {
+    "objectID": "slides/06/06-explore-categorical.html#application-exercise",
+    "href": "slides/06/06-explore-categorical.html#application-exercise",
+    "title": "Exploring categorical data",
+    "section": "Application exercise",
+    "text": "Application exercise\nGo to Posit Cloud and start the project titled ae-03-Durham.",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Thursday, Week 3"
+    ]
   }
 ]

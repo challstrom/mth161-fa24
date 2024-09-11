@@ -1,0 +1,24 @@
+---
+title: Exploring categorical data
+subtitle: Chapter 4
+format: revealjs
+auto-stretch: false
+---
+
+## In groups
+
+-   Today's homework: section 4.8, #8, 9
+
+-   Discuss: what is Simpson's paradox?
+
+## 2020 Durham City and County Resident Survey
+
+![](images/services.png){fig-align="center" width="800"}
+
+## Sample survey questions - demographics
+
+![](images/demographics.png){fig-align="center" width="800"}
+
+## Application exercise
+
+Go to Posit Cloud and start the project titled **ae-03-Durham**.

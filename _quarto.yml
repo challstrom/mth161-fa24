@@ -45,6 +45,8 @@ website:
         contents:
           - href: slides/05/05-chapter4.qmd
             text: "Tuesday, Week 3"
+          - href: slides/06/06-explore-categorical.qmd
+            text: "Thursday, Week 3"
 
       
 format:
