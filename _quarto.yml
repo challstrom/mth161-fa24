@@ -47,6 +47,8 @@ website:
             text: "Tuesday, Week 3"
           - href: slides/06/06-explore-categorical.qmd
             text: "Thursday, Week 3"
+          - href: slides/07/07-explore-numerical.qmd
+            text: "Tuesday, Week 4"
 
       
 format:

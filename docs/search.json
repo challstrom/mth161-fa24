@@ -2445,5 +2445,262 @@
       "Slides",
       "Thursday, Week 3"
     ]
+  },
+  {
+    "objectID": "slides/07/07-explore-numerical.html#in-groups",
+    "href": "slides/07/07-explore-numerical.html#in-groups",
+    "title": "Exploring numerical data",
+    "section": "In groups",
+    "text": "In groups\n\nToday’s homework: section 5.10, #1, 2, 5a,b",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 4"
+    ]
+  },
+  {
+    "objectID": "slides/07/07-explore-numerical.html#durham-city-and-county-resident-survey",
+    "href": "slides/07/07-explore-numerical.html#durham-city-and-county-resident-survey",
+    "title": "Exploring categorical data",
+    "section": "2020 Durham City and County Resident Survey",
+    "text": "2020 Durham City and County Resident Survey"
+  },
+  {
+    "objectID": "slides/07/07-explore-numerical.html#sample-survey-questions---demographics",
+    "href": "slides/07/07-explore-numerical.html#sample-survey-questions---demographics",
+    "title": "Exploring categorical data",
+    "section": "Sample survey questions - demographics",
+    "text": "Sample survey questions - demographics"
+  },
+  {
+    "objectID": "slides/07/07-explore-numerical.html#application-exercise",
+    "href": "slides/07/07-explore-numerical.html#application-exercise",
+    "title": "Exploring categorical data",
+    "section": "Application exercise",
+    "text": "Application exercise\nGo to Posit Cloud and start the project titled ae-03-Durham."
+  },
+  {
+    "objectID": "slides/07/07-explore-numerical.html#scatterplots",
+    "href": "slides/07/07-explore-numerical.html#scatterplots",
+    "title": "Exploring numerical data",
+    "section": "Scatterplots",
+    "text": "Scatterplots\nCompare two numerical variables",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 4"
+    ]
+  },
+  {
+    "objectID": "slides/07/07-explore-numerical.html#dot-plot",
+    "href": "slides/07/07-explore-numerical.html#dot-plot",
+    "title": "Exploring numerical data",
+    "section": "Dot Plot",
+    "text": "Dot Plot\nVisualize the distribution of one numerical variable\n\nggplot(data = penguins, \n       mapping = aes(x = flipper_length_mm)) +\n  geom_dotplot(dotsize=0.75, binwidth=1)",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 4"
+    ]
+  },
+  {
+    "objectID": "slides/07/07-explore-numerical.html#flipper",
+    "href": "slides/07/07-explore-numerical.html#flipper",
+    "title": "Exploring numerical data",
+    "section": "flipper",
+    "text": "flipper\n\npenguins |&gt; count(flipper_length_mm) |&gt; print(n=20)\n\n# A tibble: 56 × 2\n   flipper_length_mm     n\n               &lt;int&gt; &lt;int&gt;\n 1               172     1\n 2               174     1\n 3               176     1\n 4               178     4\n 5               179     1\n 6               180     5\n 7               181     7\n 8               182     3\n 9               183     2\n10               184     7\n11               185     9\n12               186     7\n13               187    16\n14               188     6\n15               189     7\n16               190    22\n17               191    13\n18               192     7\n19               193    15\n20               194     5\n# ℹ 36 more rows"
+  },
+  {
+    "objectID": "slides/07/07-explore-numerical.html#flipper_length_mm",
+    "href": "slides/07/07-explore-numerical.html#flipper_length_mm",
+    "title": "Exploring numerical data",
+    "section": "flipper_length_mm",
+    "text": "flipper_length_mm\n\npenguins |&gt; count(flipper_length_mm) |&gt; print(n=20)\n\n# A tibble: 56 × 2\n   flipper_length_mm     n\n               &lt;int&gt; &lt;int&gt;\n 1               172     1\n 2               174     1\n 3               176     1\n 4               178     4\n 5               179     1\n 6               180     5\n 7               181     7\n 8               182     3\n 9               183     2\n10               184     7\n11               185     9\n12               186     7\n13               187    16\n14               188     6\n15               189     7\n16               190    22\n17               191    13\n18               192     7\n19               193    15\n20               194     5\n# ℹ 36 more rows",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 4"
+    ]
+  },
+  {
+    "objectID": "slides/07/07-explore-numerical.html#section",
+    "href": "slides/07/07-explore-numerical.html#section",
+    "title": "Exploring numerical data",
+    "section": "",
+    "text": "penguins |&gt;\n  filter(species == \"Gentoo\") |&gt;\n  ggplot(aes(x = flipper_length_mm)) +\n  geom_dotplot(dotsize=0.75, binwidth=1)"
+  },
+  {
+    "objectID": "slides/07/07-explore-numerical.html#average",
+    "href": "slides/07/07-explore-numerical.html#average",
+    "title": "Exploring numerical data",
+    "section": "Average",
+    "text": "Average\nVisualize the distribution of one numerical variable\n\nggplot(data = penguins, \n       mapping = aes(x = flipper_length_mm)) +\n  geom_dotplot(dotsize=0.75, binwidth=1) +\n  geom_point(aes(x=200.9, y=-0.05), shape = 24, size = 5, fill=\"red\")"
+  },
+  {
+    "objectID": "slides/07/07-explore-numerical.html#average-mean-flipper-length",
+    "href": "slides/07/07-explore-numerical.html#average-mean-flipper-length",
+    "title": "Exploring numerical data",
+    "section": "Average (mean) flipper length?",
+    "text": "Average (mean) flipper length?\n\nmean(penguins$flipper_length_mm, na.rm = TRUE)\n\n[1] 200.9152\n\n\nVisualize the distribution of one numerical variable\n\nggplot(data = penguins, \n       mapping = aes(x = flipper_length_mm)) +\n  geom_dotplot(dotsize=0.75, binwidth=1) +\n  geom_point(aes(x=200.9, y=-0.05), shape = 24, size = 5, fill=\"red\")"
+  },
+  {
+    "objectID": "slides/07/07-explore-numerical.html#mean-average-flipper-length",
+    "href": "slides/07/07-explore-numerical.html#mean-average-flipper-length",
+    "title": "Exploring numerical data",
+    "section": "Mean (average) flipper length?",
+    "text": "Mean (average) flipper length?\n\nmean(penguins$flipper_length_mm, na.rm = TRUE)\n\n[1] 200.9152\n\n\n\n\n\npenguins |&gt;\n  summarize( mean = mean(flipper_length_mm, na.rm = TRUE))\n\n# A tibble: 1 × 1\n   mean\n  &lt;dbl&gt;\n1  201.",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 4"
+    ]
+  },
+  {
+    "objectID": "slides/07/07-explore-numerical.html#calculuate-the-mean",
+    "href": "slides/07/07-explore-numerical.html#calculuate-the-mean",
+    "title": "Exploring numerical data",
+    "section": "Calculuate the Mean",
+    "text": "Calculuate the Mean\nSample mean \\(\\overline{x}\\)\n\\[\n\\overline{x} = \\frac{ x_1 + x_2 + x_3 + \\ldots + x_n}{n}\n\\]\n\n\nPopulation mean \\(\\mu\\) (Greek letter “mu”) \\[\n\\overline{x} \\approx \\mu\n\\]"
+  },
+  {
+    "objectID": "slides/07/07-explore-numerical.html#more",
+    "href": "slides/07/07-explore-numerical.html#more",
+    "title": "Exploring numerical data",
+    "section": "more",
+    "text": "more"
+  },
+  {
+    "objectID": "slides/07/07-explore-numerical.html#visualize-the-mean",
+    "href": "slides/07/07-explore-numerical.html#visualize-the-mean",
+    "title": "Exploring numerical data",
+    "section": "Visualize the Mean",
+    "text": "Visualize the Mean\nA measure of center of a distribution.",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 4"
+    ]
+  },
+  {
+    "objectID": "slides/07/07-explore-numerical.html#calculuating-the-mean",
+    "href": "slides/07/07-explore-numerical.html#calculuating-the-mean",
+    "title": "Exploring numerical data",
+    "section": "Calculuating the Mean",
+    "text": "Calculuating the Mean\nSample mean \\(\\overline{x}\\)\n\\[\n\\overline{x} = \\frac{ x_1 + x_2 + x_3 + \\ldots + x_n}{n}\n\\]\n\n\nPopulation mean \\(\\mu\\) (Greek letter “mu”) \\[\n\\overline{x} \\approx \\mu\n\\]\n\nQuestion: what is the average age of the people in this room?",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 4"
+    ]
+  },
+  {
+    "objectID": "slides/07/07-explore-numerical.html#histogram",
+    "href": "slides/07/07-explore-numerical.html#histogram",
+    "title": "Exploring numerical data",
+    "section": "Histogram",
+    "text": "Histogram\n\nggplot(data = penguins, \n       mapping = aes(x = flipper_length_mm)) +\n  geom_histogram(binwidth = 5, color=\"white\" )\n\n\n\n\n\n\n\n\nThis distribution is bimodal and right skewed",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 4"
+    ]
+  },
+  {
+    "objectID": "slides/07/07-explore-numerical.html#body-mass",
+    "href": "slides/07/07-explore-numerical.html#body-mass",
+    "title": "Exploring numerical data",
+    "section": "Body Mass",
+    "text": "Body Mass\n\nggplot(data = penguins, \n       mapping = aes(x = body_mass_g)) +\n  geom_histogram(binwidth = 250, col=\"white\")\n\n\n\n\n\n\n\n\nThis distribution is unimodal and right skewed",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 4"
+    ]
+  },
+  {
+    "objectID": "slides/07/07-explore-numerical.html#bill-depth",
+    "href": "slides/07/07-explore-numerical.html#bill-depth",
+    "title": "Exploring numerical data",
+    "section": "Bill Depth",
+    "text": "Bill Depth\n\nggplot(data = penguins, \n       mapping = aes(x = bill_depth_mm)) +\n  geom_histogram(binwidth = 0.5, col=\"white\")\n\n\n\n\n\n\n\n\nThis distribution is bimodal and right skewed",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 4"
+    ]
+  },
+  {
+    "objectID": "slides/07/07-explore-numerical.html#new-slide",
+    "href": "slides/07/07-explore-numerical.html#new-slide",
+    "title": "Exploring numerical data",
+    "section": "new slide",
+    "text": "new slide\n\nload(\"thermometry.rda\")\n\nggplot(data = thermometry, \n       mapping = aes(x = body.temp)) +\n  geom_histogram(binwidth = 0.4, col=\"white\")"
+  },
+  {
+    "objectID": "slides/07/07-explore-numerical.html#mean-average-body-temperature",
+    "href": "slides/07/07-explore-numerical.html#mean-average-body-temperature",
+    "title": "Exploring numerical data",
+    "section": "Mean (average) Body Temperature",
+    "text": "Mean (average) Body Temperature\nWhat do you think it is?",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 4"
+    ]
+  },
+  {
+    "objectID": "slides/07/07-explore-numerical.html#mean-average-body-temperature-1",
+    "href": "slides/07/07-explore-numerical.html#mean-average-body-temperature-1",
+    "title": "Exploring numerical data",
+    "section": "Mean (average) Body Temperature",
+    "text": "Mean (average) Body Temperature\n\nmean(thermometry$body.temp)\n\n[1] 98.24923",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 4"
+    ]
+  },
+  {
+    "objectID": "slides/07/07-explore-numerical.html#variance",
+    "href": "slides/07/07-explore-numerical.html#variance",
+    "title": "Exploring numerical data",
+    "section": "Variance",
+    "text": "Variance\nMeasure of variation or how spread out distribution is. It’s the average squared distance from the mean.\nSample variance is \\(s^2\\)\nwhere s is the sample standard deviation \\[\ns = \\sqrt{ \\frac{ \\sum_{i=1}^n (x_i - \\overline{x})^2 }{n-1}}\n\\]\n\n\n\nPopulation variance: \\(\\sigma^2\\) (Greek letter “sigma”)",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 4"
+    ]
+  },
+  {
+    "objectID": "slides/07/07-explore-numerical.html#standard-deviation",
+    "href": "slides/07/07-explore-numerical.html#standard-deviation",
+    "title": "Exploring numerical data",
+    "section": "Standard Deviation",
+    "text": "Standard Deviation\ns is the sample standard deviation. Represents the typical deviation from the mean \\[\ns = \\sqrt{ \\frac{ \\sum_{i=1}^n (x_i - \\overline{x})^2 }{n-1}}\n\\]\nEmpirical Rule\nTypically, about 68% of the data (observations) lie within one s.d. of the mean.\nAbout 98% of the data lie within two s.d. of the mean.\nThese percentages are not hard and fast rules!",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 4"
+    ]
+  },
+  {
+    "objectID": "slides/07/07-explore-numerical.html#empirical-rule",
+    "href": "slides/07/07-explore-numerical.html#empirical-rule",
+    "title": "Exploring numerical data",
+    "section": "Empirical Rule",
+    "text": "Empirical Rule\nRepresents the typical deviation from the mean. Typically, about 68% of the data (observations) lie within one s.d. of the mean.\nEmpirical Rule\nTypically, about 98% of the data lie within two s.d. of the mean.\nThese percentages are not hard and fast rules!\n\nthermometry |&gt;\n   summarize( mean = mean(body.temp), sd = sd(body.temp))\n\n      mean        sd\n1 98.24923 0.7331832"
+  },
+  {
+    "objectID": "slides/07/07-explore-numerical.html#body-temperature",
+    "href": "slides/07/07-explore-numerical.html#body-temperature",
+    "title": "Exploring numerical data",
+    "section": "Body Temperature",
+    "text": "Body Temperature\n\nthermometry |&gt;\n   summarize( mean = mean(body.temp), sd = sd(body.temp))\n\n      mean        sd\n1 98.24923 0.7331832\n\n\nUsing the empirical rule, about 68% of observations lie in what range of temperatures?",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 4"
+    ]
   }
 ]

@@ -1,0 +1,207 @@
+---
+title: Exploring numerical data
+subtitle: Chapter 5
+format: revealjs
+auto-stretch: false
+---
+
+## In groups
+
+-   Today's homework: section 5.10, #1, 2, 5a,b
+
+
+## Scatterplots
+
+Compare **two** numerical variables
+
+```{r}
+#| echo: false
+#| message: false
+library(palmerpenguins)
+library(tidyverse)
+```
+
+```{r}
+#| echo: false
+#| warning: false
+
+ggplot(data = penguins, 
+       mapping = aes(x = flipper_length_mm, y = body_mass_g)) +
+  geom_point()
+
+```
+
+## Dot Plot
+
+Visualize the *distribution* of **one** numerical variable
+```{r}
+#| warning: false
+ggplot(data = penguins, 
+       mapping = aes(x = flipper_length_mm)) +
+  geom_dotplot(dotsize=0.75, binwidth=1)
+```
+
+## flipper_length_mm
+
+```{r}
+penguins |> count(flipper_length_mm) |> print(n=20)
+```
+
+
+## Mean (average) flipper length?
+```{r}
+mean(penguins$flipper_length_mm, na.rm = TRUE)
+```
+
+\
+
+```{r}
+penguins |>
+  summarize( mean = mean(flipper_length_mm, na.rm = TRUE))
+```
+
+## Visualize the Mean
+
+A measure of **center** of a distribution.
+
+```{r}
+#| warning: false
+#| echo: false
+
+ggplot(data = penguins, 
+       mapping = aes(x = flipper_length_mm)) +
+  geom_dotplot(dotsize=0.75, binwidth=1) +
+  geom_point(aes(x=201, y=-0.05), shape = 24, size = 5, fill="red")
+
+```
+
+
+
+## Calculuating the Mean
+
+Sample mean $\overline{x}$
+
+$$
+\overline{x} = \frac{ x_1 + x_2 + x_3 + \ldots + x_n}{n}
+$$
+
+\
+
+Population mean $\mu$ (Greek letter "mu")
+$$
+\overline{x} \approx \mu
+$$
+
+\
+**Question:** what is the average age of the people in this room?
+
+## Histogram
+
+```{r}
+#| warning: false
+#| fig-width: 8
+#| fig-asp: 0.5
+#| fig-align: center
+
+ggplot(data = penguins, 
+       mapping = aes(x = flipper_length_mm)) +
+  geom_histogram(binwidth = 5, color="white" )
+```
+
+This distribution is **bimodal** and **right skewed**
+
+## Body Mass
+```{r}
+#| warning: false
+#| fig-width: 8
+#| fig-asp: 0.5
+#| fig-align: center
+
+ggplot(data = penguins, 
+       mapping = aes(x = body_mass_g)) +
+  geom_histogram(binwidth = 250, col="white")
+```
+
+This distribution is **unimodal** and **right skewed**
+
+## Bill Depth
+```{r}
+#| warning: false
+#| fig-width: 8
+#| fig-asp: 0.5
+#| fig-align: center
+
+ggplot(data = penguins, 
+       mapping = aes(x = bill_depth_mm)) +
+  geom_histogram(binwidth = 0.5, col="white")
+```
+
+This distribution is **bimodal** and **right skewed**
+
+## Mean (average) Body Temperature
+
+What do you think it is?
+
+
+## Mean (average) Body Temperature
+```{r}
+#| echo: false
+load("thermometry.rda")
+```
+
+```{r}
+mean(thermometry$body.temp)
+```
+
+```{r}
+#| message: false
+#| warning: false
+#| echo: false
+ggplot(data = thermometry, 
+       mapping = aes(x = body.temp)) +
+  geom_histogram(binwidth = 0.4, col="white") +
+  geom_point(aes(x=mean(body.temp), y=-0.05), shape = 24, size = 5, fill="red")
+```
+
+## Variance
+
+Measure of *variation* or how *spread out* distribution is.  It's the *average squared distance from the mean*.
+
+Sample **variance** is $s^2$
+
+where *s* is the sample **standard deviation**
+$$
+s = \sqrt{ \frac{ \sum_{i=1}^n (x_i - \overline{x})^2 }{n-1}}
+$$
+
+\
+\
+
+Population variance:  $\sigma^2$
+(Greek letter "sigma")
+
+
+## Standard Deviation
+
+*s* is the sample **standard deviation**.  Represents the typical deviation from the mean
+$$
+s = \sqrt{ \frac{ \sum_{i=1}^n (x_i - \overline{x})^2 }{n-1}}
+$$
+
+### Empirical Rule
+Typically, about 68% of the data (observations) lie within one 
+s.d. of the mean.
+
+About 98% of the data lie within two s.d. of the mean.
+
+These percentages are **not** hard and fast rules!
+
+## Body Temperature
+
+```{r}
+thermometry |>
+   summarize( mean = mean(body.temp), sd = sd(body.temp))
+```
+
+Using the **empirical rule**, about 68% of observations lie in what range of temperatures?
+
