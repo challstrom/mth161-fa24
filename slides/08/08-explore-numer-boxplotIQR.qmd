@@ -16,8 +16,6 @@ library(openintro)
 
 -   Practice from last time: $\S$ 5.10, #8, 9, 11, 22
 
-
-
 ## `nycflights`
 
 ```{r}
@@ -28,18 +26,18 @@ glimpse(nycflights)
 ## Arrival delays at PDX
 
 How would you describe the distribution?
+
 ```{r}
 #| echo: false
 
 pdx_flights <- nycflights |> filter(dest == "PDX")
-sfo_flights <- nycflights |> filter(dest == "SFO")
+lax_flights <- nycflights |> filter(dest == "LAX")
 ```
 
 ```{r}
 ggplot(data = pdx_flights, aes(x = arr_delay)) +
   geom_histogram(binwidth = 10, fill = "plum4", color="white")
 ```
-
 
 ## Box plots
 
@@ -52,11 +50,10 @@ ggplot(data = pdx_flights, aes(x = arr_delay)) +
   geom_boxplot()
 ```
 
-
 ## Box plots: median and quartiles
 
-- The *box* contains the middle 50% of the data points.  The **median** splits the data in half.
-- The *whiskers* depict each of the remaining **quartiles**.
+-   The *box* contains the middle 50% of the data points. The **median** splits the data in half.
+-   The *whiskers* depict each of the remaining **quartiles**.
 
 ```{r, out.width = "80%"}
 #| echo: false
@@ -66,11 +63,10 @@ ggplot(data = pdx_flights, aes(x = arr_delay)) +
 
 ```
 
-
 ## Box plots: interquartile range
 
-- The length of the box is the **interquartile range**, or **IQR**
-- $IQR = Q_3 - Q_1$
+-   The length of the box is the **interquartile range**, or **IQR**
+-   $IQR = Q_3 - Q_1$
 
 ```{r, out.width = "85%"}
 #| echo: false
@@ -96,8 +92,6 @@ ggplot(data = pdx_flights, aes(x = arr_delay)) +
 
 ```
 
-
-
 ## Outliers
 
 We can remove outliers to inspect the bulk of the data more closely.
@@ -108,16 +102,31 @@ ggplot(data = pdx_flights, aes(x = arr_delay)) +
   geom_boxplot(outliers = FALSE)
 ```
 
+## Another Example
+
+```{r}
+ggplot(data = nycflights, aes(x = arr_delay)) +
+  geom_histogram(binwidth = 10, fill = "plum4", color="white")
+```
+
+## Same Distribution
+```{r}
+ggplot(data = nycflights, aes(x = arr_delay)) +
+  geom_boxplot()
+```
+
+## Same Distribution
+```{r}
+ggplot(data = nycflights, aes(x = arr_delay)) +
+  geom_boxplot(outliers = FALSE)
+```
+
+
 ## Outliers
 
-- A data point is generally considered an **outlier** when it is more than $1.5 \times IQR$ away from the 1st or 3rd quartile.
+-   A data point is generally considered an **outlier** when it is more than $1.5 \times IQR$ away from the 1st or 3rd quartile.
 
-- An outlier is not necessarily a mistake or a problem, just extreme relative to the rest of the data
-
-
-
-
-
+-   An outlier is not necessarily a mistake or a problem, just extreme relative to the rest of the data
 
 ## Practice
 

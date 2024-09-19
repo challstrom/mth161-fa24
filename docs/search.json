@@ -2450,8 +2450,8 @@
     "objectID": "slides/07/07-explore-numerical.html#in-groups",
     "href": "slides/07/07-explore-numerical.html#in-groups",
     "title": "Exploring numerical data",
-    "section": "In groups",
-    "text": "In groups\n\nToday’s homework: section 5.10, #1, 2, 5a,b",
+    "section": "",
+    "text": "Today’s homework: section 5.10, #1, 2, 5a,b",
     "crumbs": [
       "Quick Links",
       "Slides",
@@ -2677,7 +2677,7 @@
     "href": "slides/07/07-explore-numerical.html#standard-deviation",
     "title": "Exploring numerical data",
     "section": "Standard Deviation",
-    "text": "Standard Deviation\ns is the sample standard deviation. Represents the typical deviation from the mean \\[\ns = \\sqrt{ \\frac{ \\sum_{i=1}^n (x_i - \\overline{x})^2 }{n-1}}\n\\]\nEmpirical Rule\nTypically, about 68% of the data (observations) lie within one s.d. of the mean.\nAbout 98% of the data lie within two s.d. of the mean.\nThese percentages are not hard and fast rules!",
+    "text": "Standard Deviation\ns is the sample standard deviation. Represents the typical deviation from the mean \\[\ns = \\sqrt{ \\frac{ \\sum_{i=1}^n (x_i - \\overline{x})^2 }{n-1}}\n\\]\n\nEmpirical Rule\nTypically, about 68% of the data (observations) lie within one s.d. of the mean.\nAbout 98% of the data lie within two s.d. of the mean.\nThese percentages are not hard and fast rules!",
     "crumbs": [
       "Quick Links",
       "Slides",
@@ -2847,5 +2847,45 @@
     "title": "Chp 5 - Exploring numerical data",
     "section": "Box plots: interquartile range",
     "text": "Box plots: interquartile range\n\npdx_flights |&gt;\n  summarise(median_ad = median(arr_delay), \n            IQR_ad = IQR(arr_delay))\n\n# A tibble: 1 × 2\n  median_ad IQR_ad\n      &lt;dbl&gt;  &lt;dbl&gt;\n1     -10.5     31"
+  },
+  {
+    "objectID": "slides/07/07-explore-numerical.html",
+    "href": "slides/07/07-explore-numerical.html",
+    "title": "Exploring numerical data",
+    "section": "",
+    "text": "Today’s homework: section 5.10, #1, 2, 5a,b",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 4"
+    ]
+  },
+  {
+    "objectID": "slides/08/08-explore-numer-boxplotIQR.html#more-outliers",
+    "href": "slides/08/08-explore-numer-boxplotIQR.html#more-outliers",
+    "title": "Chp 5 - Exploring numerical data",
+    "section": "More Outliers",
+    "text": "More Outliers\n\nggplot(data = nycflights, aes(x = arr_delay)) +\n  geom_histogram(binwidth = 10, fill = \"plum4\", color=\"white\")"
+  },
+  {
+    "objectID": "slides/08/08-explore-numer-boxplotIQR.html#same-distribution",
+    "href": "slides/08/08-explore-numer-boxplotIQR.html#same-distribution",
+    "title": "Chp 5 - Exploring numerical data",
+    "section": "Same Distribution",
+    "text": "Same Distribution\n\nggplot(data = nycflights, aes(x = arr_delay)) +\n  geom_boxplot()"
+  },
+  {
+    "objectID": "slides/08/08-explore-numer-boxplotIQR.html#another-example",
+    "href": "slides/08/08-explore-numer-boxplotIQR.html#another-example",
+    "title": "Chp 5 - Exploring numerical data",
+    "section": "Another Example",
+    "text": "Another Example\n\nggplot(data = nycflights, aes(x = arr_delay)) +\n  geom_histogram(binwidth = 10, fill = \"plum4\", color=\"white\")"
+  },
+  {
+    "objectID": "slides/08/08-explore-numer-boxplotIQR.html#same-distribution-1",
+    "href": "slides/08/08-explore-numer-boxplotIQR.html#same-distribution-1",
+    "title": "Chp 5 - Exploring numerical data",
+    "section": "Same Distribution",
+    "text": "Same Distribution\n\nggplot(data = nycflights, aes(x = arr_delay)) +\n  geom_boxplot(outliers = FALSE)"
   }
 ]

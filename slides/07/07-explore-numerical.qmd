@@ -1,7 +1,7 @@
 ---
 title: Exploring numerical data
 subtitle: Chapter 5
-format: pdf
+format: html
 auto-stretch: false
 ---
 
@@ -200,8 +200,8 @@ thermometry |>
 
 Using the **empirical rule**, about 68% of observations lie in what range of temperatures?
 
-
 ## IQR
+
 ```{r}
 summary(thermometry$body.temp)
 ```
