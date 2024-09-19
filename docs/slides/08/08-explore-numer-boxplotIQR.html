@@ -8,10 +8,10 @@
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.555">
+  <meta name="generator" content="quarto-1.4.554">
 
   <meta name="author" content="Chris Hallstrom">
-  <title>mth161 :: Elementary Statistics - Exploring numerical data</title>
+  <title>mth161 :: Elementary Statistics - Chp 5 - Exploring numerical data</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -393,8 +393,8 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Exploring numerical data</h1>
-  <p class="subtitle">Chapter 5</p>
+  <h1 class="title">Chp 5 - Exploring numerical data</h1>
+  <p class="subtitle">Boxplots, median, and IQR</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -411,231 +411,148 @@ Chris Hallstrom
 <section id="in-groups" class="slide level2">
 <h2>In groups</h2>
 <ul>
-<li>Today’s homework: section 5.10, #1, 2, 5a,b</li>
+<li>Practice from last time: <span class="math inline">\(\S\)</span> 5.10, #8, 9, 11, 22</li>
 </ul>
 </section>
-<section id="scatterplots" class="slide level2">
-<h2>Scatterplots</h2>
-<p>Compare <strong>two</strong> numerical variables</p>
+<section id="nycflights" class="slide level2">
+<h2><code>nycflights</code></h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">glimpse</span>(nycflights)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 32,735
+Columns: 16
+$ year      &lt;int&gt; 2013, 2013, 2013, 2013, 2013, 2013, 2013, 2013, 2013, 2013, 2013, 2013…
+$ month     &lt;int&gt; 6, 5, 12, 5, 7, 1, 12, 8, 9, 4, 6, 11, 4, 3, 10, 1, 2, 8, 10, 8, 11, 1…
+$ day       &lt;int&gt; 30, 7, 8, 14, 21, 1, 9, 13, 26, 30, 17, 22, 26, 25, 21, 23, 8, 5, 21, …
+$ dep_time  &lt;int&gt; 940, 1657, 859, 1841, 1102, 1817, 1259, 1920, 725, 1323, 940, 1320, 80…
+$ dep_delay &lt;dbl&gt; 15, -3, -1, -4, -3, -3, 14, 85, -10, 62, 5, 5, -2, 115, -4, 37, -1, -3…
+$ arr_time  &lt;int&gt; 1216, 2104, 1238, 2122, 1230, 2008, 1617, 2032, 1027, 1549, 1050, 1628…
+$ arr_delay &lt;dbl&gt; -4, 10, 11, -34, -8, 3, 22, 71, -8, 60, -4, -2, 22, 91, -6, 29, 20, -2…
+$ carrier   &lt;chr&gt; "VX", "DL", "DL", "DL", "9E", "AA", "WN", "B6", "AA", "EV", "B6", "B6"…
+$ tailnum   &lt;chr&gt; "N626VA", "N3760C", "N712TW", "N914DL", "N823AY", "N3AXAA", "N218WN", …
+$ flight    &lt;int&gt; 407, 329, 422, 2391, 3652, 353, 1428, 1407, 2279, 4162, 20, 1639, 5790…
+$ origin    &lt;chr&gt; "JFK", "JFK", "JFK", "JFK", "LGA", "LGA", "EWR", "JFK", "LGA", "EWR", …
+$ dest      &lt;chr&gt; "LAX", "SJU", "LAX", "TPA", "ORF", "ORD", "HOU", "IAD", "MIA", "JAX", …
+$ air_time  &lt;dbl&gt; 313, 216, 376, 135, 50, 138, 240, 48, 148, 110, 50, 161, 87, 104, 46, …
+$ distance  &lt;dbl&gt; 2475, 1598, 2475, 1005, 296, 733, 1411, 228, 1096, 820, 264, 1080, 533…
+$ hour      &lt;dbl&gt; 9, 16, 8, 18, 11, 18, 12, 19, 7, 13, 9, 13, 8, 20, 12, 20, 6, 7, 8, 16…
+$ minute    &lt;dbl&gt; 40, 57, 59, 41, 2, 17, 59, 20, 25, 23, 40, 20, 9, 54, 17, 24, 44, 57, …</code></pre>
+</div>
+</div>
+</section>
+<section id="arrival-delays-at-pdx" class="slide level2">
+<h2>Arrival delays at PDX</h2>
+<p>How would you describe the distribution?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> pdx_flights, <span class="fu">aes</span>(<span class="at">x =</span> arr_delay)) <span class="sc">+</span></span>
+<span id="cb3-2"><a></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">10</span>, <span class="at">fill =</span> <span class="st">"plum4"</span>, <span class="at">color=</span><span class="st">"white"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="08-explore-numer-boxplotIQR_files/figure-revealjs/unnamed-chunk-4-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="box-plots" class="slide level2">
+<h2>Box plots</h2>
+<p>Another way to visualize the distribution for <code>arr_delay</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> pdx_flights, <span class="fu">aes</span>(<span class="at">x =</span> arr_delay)) <span class="sc">+</span></span>
+<span id="cb4-2"><a></a>  <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="08-explore-numer-boxplotIQR_files/figure-revealjs/unnamed-chunk-5-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="box-plots-median-and-quartiles" class="slide level2">
+<h2>Box plots: median and quartiles</h2>
+<ul>
+<li>The <em>box</em> contains the middle 50% of the data points. The <strong>median</strong> splits the data in half.</li>
+<li>The <em>whiskers</em> depict each of the remaining <strong>quartiles</strong>.</li>
+</ul>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="07-explore-numerical_files/figure-revealjs/unnamed-chunk-2-1.png" width="960"></p>
+<p><img data-src="08-explore-numer-boxplotIQR_files/figure-revealjs/unnamed-chunk-6-1.png" style="width:80.0%"></p>
 </figure>
 </div>
 </div>
 </div>
 </section>
-<section id="dot-plot" class="slide level2">
-<h2>Dot Plot</h2>
-<p>Visualize the <em>distribution</em> of <strong>one</strong> numerical variable</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins, </span>
-<span id="cb1-2"><a></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm)) <span class="sc">+</span></span>
-<span id="cb1-3"><a></a>  <span class="fu">geom_dotplot</span>(<span class="at">dotsize=</span><span class="fl">0.75</span>, <span class="at">binwidth=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure>
-<p><img data-src="07-explore-numerical_files/figure-revealjs/unnamed-chunk-3-1.png" width="960"></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="flipper_length_mm" class="slide level2">
-<h2>flipper_length_mm</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>penguins <span class="sc">|&gt;</span> <span class="fu">count</span>(flipper_length_mm) <span class="sc">|&gt;</span> <span class="fu">print</span>(<span class="at">n=</span><span class="dv">20</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 56 × 2
-   flipper_length_mm     n
-               &lt;int&gt; &lt;int&gt;
- 1               172     1
- 2               174     1
- 3               176     1
- 4               178     4
- 5               179     1
- 6               180     5
- 7               181     7
- 8               182     3
- 9               183     2
-10               184     7
-11               185     9
-12               186     7
-13               187    16
-14               188     6
-15               189     7
-16               190    22
-17               191    13
-18               192     7
-19               193    15
-20               194     5
-# ℹ 36 more rows</code></pre>
-</div>
-</div>
-</section>
-<section id="mean-average-flipper-length" class="slide level2">
-<h2>Mean (average) flipper length?</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">mean</span>(penguins<span class="sc">$</span>flipper_length_mm, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 200.9152</code></pre>
-</div>
-</div>
-<p><br>
-</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>penguins <span class="sc">|&gt;</span></span>
-<span id="cb6-2"><a></a>  <span class="fu">summarize</span>( <span class="at">mean =</span> <span class="fu">mean</span>(flipper_length_mm, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 1 × 1
-   mean
-  &lt;dbl&gt;
-1  201.</code></pre>
-</div>
-</div>
-</section>
-<section id="visualize-the-mean" class="slide level2">
-<h2>Visualize the Mean</h2>
-<p>A measure of <strong>center</strong> of a distribution.</p>
+<section id="box-plots-interquartile-range" class="slide level2">
+<h2>Box plots: interquartile range</h2>
+<ul>
+<li>The length of the box is the <strong>interquartile range</strong>, or <strong>IQR</strong></li>
+<li><span class="math inline">\(IQR = Q_3 - Q_1\)</span></li>
+</ul>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="07-explore-numerical_files/figure-revealjs/unnamed-chunk-7-1.png" width="960"></p>
+<p><img data-src="08-explore-numer-boxplotIQR_files/figure-revealjs/unnamed-chunk-7-1.png" style="width:85.0%"></p>
 </figure>
 </div>
 </div>
 </div>
 </section>
-<section id="calculuating-the-mean" class="slide level2">
-<h2>Calculuating the Mean</h2>
-<p>Sample mean <span class="math inline">\(\overline{x}\)</span></p>
-<p><span class="math display">\[
-\overline{x} = \frac{ x_1 + x_2 + x_3 + \ldots + x_n}{n}
-\]</span></p>
-<p><br>
-</p>
-<p>Population mean <span class="math inline">\(\mu\)</span> (Greek letter “mu”) <span class="math display">\[
-\overline{x} \approx \mu
-\]</span></p>
-<p><br>
-<strong>Question:</strong> what is the average age of the people in this room?</p>
-</section>
-<section id="histogram" class="slide level2">
-<h2>Histogram</h2>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins, </span>
-<span id="cb8-2"><a></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm)) <span class="sc">+</span></span>
-<span id="cb8-3"><a></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">5</span>, <span class="at">color=</span><span class="st">"white"</span> )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="07-explore-numerical_files/figure-revealjs/unnamed-chunk-8-1.png" class="quarto-figure quarto-figure-center" width="768"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>This distribution is <strong>bimodal</strong> and <strong>right skewed</strong></p>
-</section>
-<section id="body-mass" class="slide level2">
-<h2>Body Mass</h2>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins, </span>
-<span id="cb9-2"><a></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> body_mass_g)) <span class="sc">+</span></span>
-<span id="cb9-3"><a></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">250</span>, <span class="at">col=</span><span class="st">"white"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="07-explore-numerical_files/figure-revealjs/unnamed-chunk-9-1.png" class="quarto-figure quarto-figure-center" width="768"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>This distribution is <strong>unimodal</strong> and <strong>right skewed</strong></p>
-</section>
-<section id="bill-depth" class="slide level2">
-<h2>Bill Depth</h2>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins, </span>
-<span id="cb10-2"><a></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> bill_depth_mm)) <span class="sc">+</span></span>
-<span id="cb10-3"><a></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="fl">0.5</span>, <span class="at">col=</span><span class="st">"white"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="07-explore-numerical_files/figure-revealjs/unnamed-chunk-10-1.png" class="quarto-figure quarto-figure-center" width="768"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>This distribution is <strong>bimodal</strong> and <strong>right skewed</strong></p>
-</section>
-<section id="mean-average-body-temperature" class="slide level2">
-<h2>Mean (average) Body Temperature</h2>
-<p>What do you think it is?</p>
-</section>
-<section id="mean-average-body-temperature-1" class="slide level2">
-<h2>Mean (average) Body Temperature</h2>
+<section id="box-plots-interquartile-range-1" class="slide level2">
+<h2>Box plots: interquartile range</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">mean</span>(thermometry<span class="sc">$</span>body.temp)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>pdx_flights <span class="sc">|&gt;</span></span>
+<span id="cb5-2"><a></a>  <span class="fu">summarise</span>(<span class="at">median_ad =</span> <span class="fu">median</span>(arr_delay), </span>
+<span id="cb5-3"><a></a>            <span class="at">IQR_ad =</span> <span class="fu">IQR</span>(arr_delay))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 98.24923</code></pre>
+<pre><code># A tibble: 1 × 2
+  median_ad IQR_ad
+      &lt;dbl&gt;  &lt;dbl&gt;
+1     -10.5     31</code></pre>
 </div>
 </div>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="07-explore-numerical_files/figure-revealjs/unnamed-chunk-13-1.png" width="960"></p>
+<p><img data-src="08-explore-numer-boxplotIQR_files/figure-revealjs/unnamed-chunk-9-1.png" style="width:80.0%"></p>
 </figure>
 </div>
 </div>
 </div>
 </section>
-<section id="variance" class="slide level2">
-<h2>Variance</h2>
-<p>Measure of <em>variation</em> or how <em>spread out</em> distribution is. It’s the <em>average squared distance from the mean</em>.</p>
-<p>Sample <strong>variance</strong> is <span class="math inline">\(s^2\)</span></p>
-<p>where <em>s</em> is the sample <strong>standard deviation</strong> <span class="math display">\[
-s = \sqrt{ \frac{ \sum_{i=1}^n (x_i - \overline{x})^2 }{n-1}}
-\]</span></p>
-<p><br>
-<br>
-</p>
-<p>Population variance: <span class="math inline">\(\sigma^2\)</span> (Greek letter “sigma”)</p>
-</section>
-<section id="standard-deviation" class="slide level2">
-<h2>Standard Deviation</h2>
-<p><em>s</em> is the sample <strong>standard deviation</strong>. Represents the typical deviation from the mean <span class="math display">\[
-s = \sqrt{ \frac{ \sum_{i=1}^n (x_i - \overline{x})^2 }{n-1}}
-\]</span></p>
-<h3 id="empirical-rule">Empirical Rule</h3>
-<p>Typically, about 68% of the data (observations) lie within one s.d. of the mean.</p>
-<p>About 98% of the data lie within two s.d. of the mean.</p>
-<p>These percentages are <strong>not</strong> hard and fast rules!</p>
-</section>
-<section id="body-temperature" class="slide level2">
-<h2>Body Temperature</h2>
+<section id="outliers" class="slide level2">
+<h2>Outliers</h2>
+<p>We can remove outliers to inspect the bulk of the data more closely.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>thermometry <span class="sc">|&gt;</span></span>
-<span id="cb13-2"><a></a>   <span class="fu">summarize</span>( <span class="at">mean =</span> <span class="fu">mean</span>(body.temp), <span class="at">sd =</span> <span class="fu">sd</span>(body.temp))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>      mean        sd
-1 98.24923 0.7331832</code></pre>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> pdx_flights, <span class="fu">aes</span>(<span class="at">x =</span> arr_delay)) <span class="sc">+</span></span>
+<span id="cb7-2"><a></a>  <span class="fu">geom_boxplot</span>(<span class="at">outliers =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="08-explore-numer-boxplotIQR_files/figure-revealjs/unnamed-chunk-10-1.png" style="width:75.0%"></p>
+</figure>
 </div>
 </div>
-<p>Using the <strong>empirical rule</strong>, about 68% of observations lie in what range of temperatures?</p>
+</div>
 </section>
-<section id="iqr" class="slide level2">
-<h2>IQR</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="fu">summary</span>(thermometry<span class="sc">$</span>body.temp)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-  96.30   97.80   98.30   98.25   98.70  100.80 </code></pre>
-</div>
-</div>
+<section id="outliers-1" class="slide level2">
+<h2>Outliers</h2>
+<ul>
+<li><p>A data point is generally considered an <strong>outlier</strong> when it is more than <span class="math inline">\(1.5 \times IQR\)</span> away from the 1st or 3rd quartile.</p></li>
+<li><p>An outlier is not necessarily a mistake or a problem, just extreme relative to the rest of the data</p></li>
+</ul>
+</section>
+<section id="practice" class="slide level2">
+<h2>Practice</h2>
+<ol type="1">
+<li>Sketch a possible box plot for a data set that is strongly left-skewed with two low outliers.</li>
+<li>In what kind of distribution is the median smaller than the mean?</li>
+</ol>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">

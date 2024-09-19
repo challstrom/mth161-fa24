@@ -1,14 +1,13 @@
 ---
 title: Exploring numerical data
 subtitle: Chapter 5
-format: revealjs
+format: pdf
 auto-stretch: false
 ---
 
 ## In groups
 
 -   Today's homework: section 5.10, #1, 2, 5a,b
-
 
 ## Scatterplots
 
@@ -34,6 +33,7 @@ ggplot(data = penguins,
 ## Dot Plot
 
 Visualize the *distribution* of **one** numerical variable
+
 ```{r}
 #| warning: false
 ggplot(data = penguins, 
@@ -47,8 +47,8 @@ ggplot(data = penguins,
 penguins |> count(flipper_length_mm) |> print(n=20)
 ```
 
-
 ## Mean (average) flipper length?
+
 ```{r}
 mean(penguins$flipper_length_mm, na.rm = TRUE)
 ```
@@ -75,8 +75,6 @@ ggplot(data = penguins,
 
 ```
 
-
-
 ## Calculuating the Mean
 
 Sample mean $\overline{x}$
@@ -87,8 +85,7 @@ $$
 
 \
 
-Population mean $\mu$ (Greek letter "mu")
-$$
+Population mean $\mu$ (Greek letter "mu") $$
 \overline{x} \approx \mu
 $$
 
@@ -111,6 +108,7 @@ ggplot(data = penguins,
 This distribution is **bimodal** and **right skewed**
 
 ## Body Mass
+
 ```{r}
 #| warning: false
 #| fig-width: 8
@@ -125,6 +123,7 @@ ggplot(data = penguins,
 This distribution is **unimodal** and **right skewed**
 
 ## Bill Depth
+
 ```{r}
 #| warning: false
 #| fig-width: 8
@@ -142,8 +141,8 @@ This distribution is **bimodal** and **right skewed**
 
 What do you think it is?
 
-
 ## Mean (average) Body Temperature
+
 ```{r}
 #| echo: false
 load("thermometry.rda")
@@ -165,32 +164,28 @@ ggplot(data = thermometry,
 
 ## Variance
 
-Measure of *variation* or how *spread out* distribution is.  It's the *average squared distance from the mean*.
+Measure of *variation* or how *spread out* distribution is. It's the *average squared distance from the mean*.
 
 Sample **variance** is $s^2$
 
-where *s* is the sample **standard deviation**
-$$
+where *s* is the sample **standard deviation** $$
 s = \sqrt{ \frac{ \sum_{i=1}^n (x_i - \overline{x})^2 }{n-1}}
 $$
 
 \
 \
 
-Population variance:  $\sigma^2$
-(Greek letter "sigma")
-
+Population variance: $\sigma^2$ (Greek letter "sigma")
 
 ## Standard Deviation
 
-*s* is the sample **standard deviation**.  Represents the typical deviation from the mean
-$$
+*s* is the sample **standard deviation**. Represents the typical deviation from the mean $$
 s = \sqrt{ \frac{ \sum_{i=1}^n (x_i - \overline{x})^2 }{n-1}}
 $$
 
 ### Empirical Rule
-Typically, about 68% of the data (observations) lie within one 
-s.d. of the mean.
+
+Typically, about 68% of the data (observations) lie within one s.d. of the mean.
 
 About 98% of the data lie within two s.d. of the mean.
 
@@ -205,3 +200,8 @@ thermometry |>
 
 Using the **empirical rule**, about 68% of observations lie in what range of temperatures?
 
+
+## IQR
+```{r}
+summary(thermometry$body.temp)
+```

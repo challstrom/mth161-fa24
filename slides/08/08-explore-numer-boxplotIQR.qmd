@@ -1,0 +1,125 @@
+---
+title: Chp 5 - Exploring numerical data
+subtitle: Boxplots, median, and IQR
+format: revealjs
+auto-stretch: false
+---
+
+```{r}
+#| echo: false
+#| message: false
+library(tidyverse)
+library(openintro)
+```
+
+## In groups
+
+-   Practice from last time: $\S$ 5.10, #8, 9, 11, 22
+
+
+
+## `nycflights`
+
+```{r}
+
+glimpse(nycflights)
+```
+
+## Arrival delays at PDX
+
+How would you describe the distribution?
+```{r}
+#| echo: false
+
+pdx_flights <- nycflights |> filter(dest == "PDX")
+sfo_flights <- nycflights |> filter(dest == "SFO")
+```
+
+```{r}
+ggplot(data = pdx_flights, aes(x = arr_delay)) +
+  geom_histogram(binwidth = 10, fill = "plum4", color="white")
+```
+
+
+## Box plots
+
+Another way to visualize the distribution for `arr_delay`.
+
+```{r}
+#| echo: true
+
+ggplot(data = pdx_flights, aes(x = arr_delay)) +
+  geom_boxplot()
+```
+
+
+## Box plots: median and quartiles
+
+- The *box* contains the middle 50% of the data points.  The **median** splits the data in half.
+- The *whiskers* depict each of the remaining **quartiles**.
+
+```{r, out.width = "80%"}
+#| echo: false
+
+ggplot(data = pdx_flights, aes(x = arr_delay)) +
+    geom_boxplot()
+
+```
+
+
+## Box plots: interquartile range
+
+- The length of the box is the **interquartile range**, or **IQR**
+- $IQR = Q_3 - Q_1$
+
+```{r, out.width = "85%"}
+#| echo: false
+
+ggplot(data = pdx_flights, aes(x = arr_delay)) +
+    geom_boxplot()
+
+```
+
+## Box plots: interquartile range
+
+```{r}
+pdx_flights |>
+  summarise(median_ad = median(arr_delay), 
+            IQR_ad = IQR(arr_delay))
+```
+
+```{r, out.width = "80%"}
+#| echo: false
+
+ggplot(data = pdx_flights, aes(x = arr_delay)) +
+    geom_boxplot()
+
+```
+
+
+
+## Outliers
+
+We can remove outliers to inspect the bulk of the data more closely.
+
+```{r, out.width = "75%"}
+#| echo: true
+ggplot(data = pdx_flights, aes(x = arr_delay)) +
+  geom_boxplot(outliers = FALSE)
+```
+
+## Outliers
+
+- A data point is generally considered an **outlier** when it is more than $1.5 \times IQR$ away from the 1st or 3rd quartile.
+
+- An outlier is not necessarily a mistake or a problem, just extreme relative to the rest of the data
+
+
+
+
+
+
+## Practice
+
+(1) Sketch a possible box plot for a data set that is strongly left-skewed with two low outliers.
+(2) In what kind of distribution is the median smaller than the mean?
