@@ -49,7 +49,8 @@ website:
             text: "Thursday, Week 3"
           - href: slides/07/07-explore-numerical.qmd
             text: "Tuesday, Week 4"
-
+          - href: slides/08/08-explore-numer-boxplotIQR.qmd
+            text: "Thursday, Week 4"
       
 format:
   html:
