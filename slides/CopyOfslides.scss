@@ -1,0 +1,118 @@
+/*-- scss:defaults --*/
+
+// fonts
+@import 'https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap';
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+$font-family-sans-serif: "Atkinson Hyperlegible", sans-serif;
+$font-family-monospace: "Source Code Pro", monospace;
+$presentation-heading-color: #102c57;
+$presentation-title-slide-text-align: "left";
+$link-color: #3A5883;
+$code-color: #3A5883;
+$code-block-font-size: 0.7em;
+$presentation-h2-font-size: 1.4em !default;
+$presentation-h3-font-size: 1.1em !default;
+$presentation-font-size-root: 36px !default;
+$presentation-title-slide-text-align: right;
+
+$body-bg: #FEFAf6;
+
+
+/*-- scss:rules --*/
+
+details>summary {
+  font-size: 0.75em;
+}
+
+#title-slide .title {
+  text-align: left;
+  color: #102c57;
+}
+
+#title-slide .subtitle {
+  color: #102c57;
+  font-weight: bold;
+  text-align: left;
+}
+
+#title-slide .author {
+  text-align: left;
+}
+
+#title-slide .institute {
+  text-align: center;
+  padding-bottom: 200px;
+}
+
+.small {
+  font-size: 0.75em;
+}
+
+.xsmall {
+  font-size: 0.6em;
+}
+
+.xxsmall {
+  font-size: 0.5em;
+}
+
+.reveal .slide .question {
+  border-left: 3px solid #102c57;
+  padding-left: 0.5em;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+  background: #EADBC8
+}
+
+.reveal .slide .poll {
+  border-left: 3px solid #102c57;
+  padding-left: 0.5em;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+  background: #EADBC8;
+}
+
+.reveal .slide .appex {
+  border-left: 3px solid #102c57;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  padding: 0.5em;
+  background: #DAC0A3;
+}
+
+.reveal .slide .demo {
+  border-left: 3px solid #102c57;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  padding: 0.5em;
+  background: #EADBC8;
+}
+
+.reveal pre code {
+  width: 1100px;
+  font-size: 0.8em;
+}
+
+.reveal .hand {
+  font-family: 'Architects Daughter', cursive;
+  font-weight: 400;
+  font-size: 1.2em
+}
+
+.reveal .slide .task {
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  margin-bottom: 6px;
+  margin-top: 6px;
+  border-left: solid 5px  #102c57;
+  background-color:#DAC0A3;
+}
+
+.reveal dl.code-annotation-container-grid {
+    margin-left: 0.1em;
+    background-color: #ecf1f7;
+}

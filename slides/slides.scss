@@ -1,24 +1,21 @@
 /*-- scss:defaults --*/
 
 // fonts
-@import 'https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap';
-@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
+
 
 $font-family-sans-serif: "Atkinson Hyperlegible", sans-serif;
 $font-family-monospace: "Source Code Pro", monospace;
-$presentation-heading-color: #102c57;
-$presentation-title-slide-text-align: "left";
-$link-color: #3A5883;
-$code-color: #3A5883;
+$presentation-heading-color: #798b93;
+$link-color: #798b93;
+$code-color: #798b93;
 $code-block-font-size: 0.7em;
 $presentation-h2-font-size: 1.4em !default;
 $presentation-h3-font-size: 1.1em !default;
 $presentation-font-size-root: 36px !default;
 $presentation-title-slide-text-align: right;
-
-$body-bg: #FEFAf6;
-
 
 /*-- scss:rules --*/
 
@@ -26,19 +23,15 @@ details>summary {
   font-size: 0.75em;
 }
 
-#title-slide .title {
-  text-align: left;
-  color: #102c57;
-}
-
 #title-slide .subtitle {
-  color: #102c57;
+  color: #798b93;
   font-weight: bold;
   text-align: left;
 }
 
-#title-slide .author {
+#title-slide .title {
   text-align: left;
+  color: #798b93;
 }
 
 #title-slide .institute {
@@ -50,55 +43,35 @@ details>summary {
   font-size: 0.75em;
 }
 
-.xsmall {
-  font-size: 0.6em;
-}
-
-.xxsmall {
+.smallest {
   font-size: 0.5em;
 }
 
-.reveal .slide .question {
-  border-left: 3px solid #102c57;
-  padding-left: 0.5em;
-  padding-top: 0.25em;
-  padding-bottom: 0.25em;
-  background: #EADBC8
+.large {
+  font-size: 1.5em;
 }
 
-.reveal .slide .poll {
-  border-left: 3px solid #102c57;
-  padding-left: 0.5em;
-  padding-top: 0.25em;
-  padding-bottom: 0.25em;
-  background: #EADBC8;
+.medium {
+  font-size: 0.9em;
 }
 
-.reveal .slide .appex {
-  border-left: 3px solid #102c57;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  padding: 0.5em;
-  background: #DAC0A3;
+.center-align {
+  text-align: center;
 }
 
-.reveal .slide .demo {
-  border-left: 3px solid #102c57;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  padding: 0.5em;
-  background: #EADBC8;
-}
-
-.reveal pre code {
-  width: 1100px;
-  font-size: 0.8em;
+.reveal h3 {
+  color: #93798b;
 }
 
 .reveal .hand {
-  font-family: 'Architects Daughter', cursive;
-  font-weight: 400;
-  font-size: 1.2em
+  font-family: 'Gochi Hand', cursive;
+  font-size: 1.2em;
+}
+
+.reveal .hand-pink {
+  font-family: 'Gochi Hand', cursive;
+  font-size: 1.2em;
+  color: #93798b;
 }
 
 .reveal .slide .task {
@@ -108,11 +81,6 @@ details>summary {
   padding-bottom: 3px;
   margin-bottom: 6px;
   margin-top: 6px;
-  border-left: solid 5px  #102c57;
-  background-color:#DAC0A3;
-}
-
-.reveal dl.code-annotation-container-grid {
-    margin-left: 0.1em;
-    background-color: #ecf1f7;
+  border-left: solid 5px #798b93;
+  background-color: #798b9350;
 }
