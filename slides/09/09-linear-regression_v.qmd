@@ -1,0 +1,207 @@
+---
+title: Linear Regression
+subtitle: Chp 7
+format: revealjs
+auto-stretch: false
+---
+
+```{r}
+#| echo: false
+#| message: false
+library(tidyverse)
+library(openintro)
+```
+
+## In groups
+
+-   Practice from last time: \S 7.5 (3, 7, 9, 19)
+\
+
+- Practice for next time: \S 7.5 ()
+
+
+## Associations between two numerical variables
+
+- Explanatory variable: $x$, independent 
+(a variable you think might be related to response )
+- Response variable: $y$, dependent 
+(a variable you want to understand)
+
+![](09images/grid.png){fig-align="center" width="300"}
+
+
+## Data: `possum`
+
+```{r, out.width = "85%"}
+data(possum)
+
+glimpse(possum)
+```
+
+
+## Possums: `tail_l' vs 'total_l' 
+
+Do possums' tail length and total body length seem to be associated?  Might knowing one help us predict the other?
+
+```{r, out.width = "90%"}
+ggplot(data = possum, aes(y = total_l, x = tail_l)) +
+  geom_point() +
+   labs(x = "Length of Possum Tail (cm)",
+       y = "Length of Possum Body (cm)")
+```
+
+
+## Linear model: "line of best fit"
+
+```{r, out.width = "80%"}
+#| echo: true
+
+ggplot(data = possum, aes(y = total_l, x = tail_l)) +
+  geom_point() + 
+  geom_smooth(method = "lm", se = FALSE)
+```
+
+
+## Finding the "least squares" regression line
+
+Recall: a line has the equation
+$$ y=mx+b$$
+where $m$ = slope and $b$ = $y$-intercept.  Here, we want a line of the form
+
+$$ \textrm{Total body length} = b_0 + b_1 \cdot \textrm{(Tail length)} $$
+
+How could you use this line to predict the total body length of a possum with tail 41.6 cm long?
+
+
+
+## Properties
+
+The **least squares regression line** has the following properties:
+
+- Minimizes (sum of squared) distance between data points and line
+- The *residuals* balance out above and below line
+- The point $(\bar{x}, \bar{y})$ always lies on line (though it's not necessarily a data point!)
+
+
+## Correlation coefficient, *r*
+
+Also called the Pearson Product-Moment Correlation, here's how *r* is calculated:
+$$ r(x,y) = \frac{\sum_{i=1}^{n} (x_i-\bar{x})(y_i-\bar{y})}{\sqrt{\sum_{i=1}^{n}(x_i-\bar{x})^2 \cdot\sum_{i=1}^{n}(y_i-\bar{y})^2 }}$$
+This is a good computation to have R do for us!
+
+## Correlation coefficient, *r*
+
+```{r}
+#| echo: true
+possum |>
+  summarize(N = n(), 
+      r = cor(tail_l, total_l, 
+              use = "pairwise.complete.obs"))
+
+```
+
+What does this number mean?
+
+
+## Visualizing the correlation coefficient, *r*
+
+![](09images/correlation.png){fig-align="center" width="400"}
+
+What would a correlation of $r = -0.998$ look like?  How about $r=1$?
+
+
+## Finding the "least squares" regression line
+
+$$ y = b_0 + b_1 \cdot x $$
+First we find the slope: $$b_1 = r \left( \frac{s_y}{s_x} \right)$$
+
+where: 
+
+- $r$ = correlation coefficient
+- $s_y$ = standard deviation of $y$
+- $s_x$ = standard deviation of $x$
+
+Next we use the fact that $(\bar{x}, \bar{y})$ lies on our line to solve for the intercept, $b_0$: 
+
+$$\bar{y} = b_0 + b_1 \cdot \bar{x} $$
+
+
+
+## Example (continued)
+
+To model the association between `tail_l` and `total_l`, we need summary statistics to find the slope and intercept of the linear regression:
+
+```{r}
+#| echo = TRUE
+  
+possum |>
+  summarize( 
+    mean_x = mean(tail_l),
+    sd_x = sd(tail_l),
+    mean_y = mean(total_l),
+    sd_y = sd(total_l),
+    r = cor(tail_l, total_l)
+    )
+```
+
+What line does this produce?
+
+
+## Example: `Possum` regression line
+
+First, find the slope: 
+
+$$
+b_1 = r \cdot \left( \frac{s_y}{s_x} \right) = .566 \left( \frac{4.31}{1.96} \right) = 1.24
+$$
+Next, use $(\bar{x}, \bar{y})$ to find the intercept:
+$$
+\bar{y} = b_0 + b_1 \cdot \bar{x}  \quad \implies \quad 87.1 = b_0 + 1.24(37.0)  
+$$
+
+$$
+\implies  b_0 = 87.1 - 1.24 (37.0) = 41.2
+$$ 
+
+Thus: $y = 41.2 + 1.24 x$ is the linear model describing these two possum variables.
+
+## Example: `Possum` regression line
+
+$$
+y = 41.2 + 1.24 x
+$$
+
+```{r, out.width = "90%"}
+#| echo: false
+
+ggplot(data = possum, aes(y = total_l, x = tail_l)) +
+  geom_point() + 
+  geom_smooth(method = "lm", se = FALSE)
+```
+
+
+## Example: `Possum` regression line
+
+Alternately, we can find the entire **linear model** in one go:
+```{r}
+#| message: false
+
+library(tidymodels)
+```
+
+```{r}
+#| echo: true
+#| 
+ model_fit <- linear_reg() |>
+      fit(total_l ~ tail_l, data = possum)
+ 
+tidy(model_fit)
+```
+
+- What does the intercept (41) mean?  
+- What does the slope (1.24) tell us?
+
+
+## Practice
+
+

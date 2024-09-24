@@ -2952,5 +2952,394 @@
       "Slides",
       "Thursday, Week 4"
     ]
+  },
+  {
+    "objectID": "slides/09/09-linear-regression.html#in-groups",
+    "href": "slides/09/09-linear-regression.html#in-groups",
+    "title": "Linear Regression",
+    "section": "In groups",
+    "text": "In groups\n\nDiscuss Homework: 7.5 #1, 3, 7, 9, 19",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 5"
+    ]
+  },
+  {
+    "objectID": "slides/09/09-linear-regression.html#associations-between-two-numerical-variables",
+    "href": "slides/09/09-linear-regression.html#associations-between-two-numerical-variables",
+    "title": "Linear Regression",
+    "section": "Associations between two numerical variables",
+    "text": "Associations between two numerical variables\n\nExplanatory variable: \\(x\\), independent (a variable you think might be related to response )\nResponse variable: \\(y\\), dependent (a variable you want to understand)"
+  },
+  {
+    "objectID": "slides/09/09-linear-regression.html#data-possum",
+    "href": "slides/09/09-linear-regression.html#data-possum",
+    "title": "Linear Regression",
+    "section": "Data: possum",
+    "text": "Data: possum\n\ndata(possum)\n\nglimpse(possum)\n\nRows: 104\nColumns: 8\n$ site    &lt;int&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, …\n$ pop     &lt;fct&gt; Vic, Vic, Vic, Vic, Vic, Vic, Vic, Vic, Vic, Vic, Vic, Vic, Vic, Vic, Vi…\n$ sex     &lt;fct&gt; m, f, f, f, f, f, m, f, f, f, f, f, m, m, m, m, f, m, f, f, f, m, f, m, …\n$ age     &lt;int&gt; 8, 6, 6, 6, 2, 1, 2, 6, 9, 6, 9, 5, 5, 3, 5, 4, 1, 2, 5, 4, 3, 3, 4, 2, …\n$ head_l  &lt;dbl&gt; 94.1, 92.5, 94.0, 93.2, 91.5, 93.1, 95.3, 94.8, 93.4, 91.8, 93.3, 94.9, …\n$ skull_w &lt;dbl&gt; 60.4, 57.6, 60.0, 57.1, 56.3, 54.8, 58.2, 57.6, 56.3, 58.0, 57.2, 55.6, …\n$ total_l &lt;dbl&gt; 89.0, 91.5, 95.5, 92.0, 85.5, 90.5, 89.5, 91.0, 91.5, 89.5, 89.5, 92.0, …\n$ tail_l  &lt;dbl&gt; 36.0, 36.5, 39.0, 38.0, 36.0, 35.5, 36.0, 37.0, 37.0, 37.5, 39.0, 35.5, …"
+  },
+  {
+    "objectID": "slides/09/09-linear-regression.html#possums-tail_l-vs-total_l",
+    "href": "slides/09/09-linear-regression.html#possums-tail_l-vs-total_l",
+    "title": "Linear Regression",
+    "section": "Possums: `tail_l’ vs ‘total_l’",
+    "text": "Possums: `tail_l’ vs ‘total_l’\nDo possums’ tail length and total body length seem to be associated?\n\nggplot(data = possum, aes(y = total_l, x = tail_l)) +\n  geom_point() +\n   labs(x = \"Length of Possum Tail (cm)\",\n       y = \"Length of Possum Body (cm)\")"
+  },
+  {
+    "objectID": "slides/09/09-linear-regression.html#linear-model-line-of-best-fit",
+    "href": "slides/09/09-linear-regression.html#linear-model-line-of-best-fit",
+    "title": "Linear Regression",
+    "section": "Linear model: “line of best fit”",
+    "text": "Linear model: “line of best fit”\n\nggplot(data = possum, aes(y = total_l, x = tail_l)) +\n  geom_point() + \n  geom_smooth(method = \"lm\", se = FALSE)\n\n`geom_smooth()` using formula = 'y ~ x'"
+  },
+  {
+    "objectID": "slides/09/09-linear-regression.html#finding-the-least-squares-regression-line",
+    "href": "slides/09/09-linear-regression.html#finding-the-least-squares-regression-line",
+    "title": "Linear Regression",
+    "section": "Finding the “least squares” regression line",
+    "text": "Finding the “least squares” regression line\n\\[ \\hat{y} = b_0 + b_1 \\cdot \\hat{x} \\] Next we use the fact that \\((\\bar{x}, \\bar{y})\\) is on the line. Plug them into line equation\n\\[\\bar{y} = b_0 + b_1 \\cdot \\bar{x} \\] Now everything is known except \\(b_0\\) so we can solve for that!\n\\[\nb_0 = \\bar{y} - b_1 \\bar{x}\n\\]"
+  },
+  {
+    "objectID": "slides/09/09-linear-regression.html#properties",
+    "href": "slides/09/09-linear-regression.html#properties",
+    "title": "Linear Regression",
+    "section": "Properties",
+    "text": "Properties\nThe least squares regression line has the following properties:\n\nMinimizes (sum of squared) distance between data points and line\nResiduals balance out above and below line\nThe point \\((\\bar{x}, \\bar{y})\\) always lies on line (though it’s not necessarily a data point!)"
+  },
+  {
+    "objectID": "slides/09/09-linear-regression.html#correlation-coefficient-r",
+    "href": "slides/09/09-linear-regression.html#correlation-coefficient-r",
+    "title": "Linear Regression",
+    "section": "Correlation coefficient, r",
+    "text": "Correlation coefficient, r\nAlso called the Pearson Product-Moment Correlation, here’s how r is calculated:\n\\[ r = \\frac{1}{n-1}\\sum_{i=1}^n \\frac{ x_i - \\bar{x}}{s_x} \\frac{y_i - \\bar{y}}{s_y}\n\\] We’ll have R do this for us!",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 5"
+    ]
+  },
+  {
+    "objectID": "slides/09/09-linear-regression.html#correlation-coefficient-r-1",
+    "href": "slides/09/09-linear-regression.html#correlation-coefficient-r-1",
+    "title": "Linear Regression",
+    "section": "Correlation coefficient, r",
+    "text": "Correlation coefficient, r\n\ncrickets |&gt;\n  summarize(N = n(), \n            mean_x = mean(temp_F),\n            sd_x = sd(temp_F),\n            mean_y = mean(chirps_in_15s),\n            sd_y = sd(chirps_in_15s),\n            r = cor(temp_F, chirps_in_15s)\n  )\n\n# A tibble: 1 × 6\n      N mean_x  sd_x mean_y  sd_y     r\n  &lt;int&gt;  &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1    15   80.1  6.72   16.6  1.72 0.825",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 5"
+    ]
+  },
+  {
+    "objectID": "slides/09/09-linear-regression.html#visualizing-the-correlation-coefficient-r",
+    "href": "slides/09/09-linear-regression.html#visualizing-the-correlation-coefficient-r",
+    "title": "Linear Regression",
+    "section": "Visualizing the correlation coefficient, r",
+    "text": "Visualizing the correlation coefficient, r\nInsert pictures of various strengths of correlation?"
+  },
+  {
+    "objectID": "slides/09/09-linear-regression.html#finding-the-least-squares-regression-line-1",
+    "href": "slides/09/09-linear-regression.html#finding-the-least-squares-regression-line-1",
+    "title": "Linear Regression",
+    "section": "Finding the “least squares” regression line",
+    "text": "Finding the “least squares” regression line\n\\[ \\hat{y} = b_0 + b_1 \\cdot \\hat{x} \\] Next we use the fact that \\((\\bar{x}, \\bar{y})\\) is on the line. Plug them into line equation\n\\[\\bar{y} = b_0 + b_1 \\cdot \\bar{x} \\] Now everything is known except \\(b_0\\) so we can solve for that!\n\\[\nb_0 = \\bar{y} - b_1 \\bar{x}\n\\]"
+  },
+  {
+    "objectID": "slides/09/09-linear-regression.html#finding-the-least-squares-regression-line-2",
+    "href": "slides/09/09-linear-regression.html#finding-the-least-squares-regression-line-2",
+    "title": "Linear Regression",
+    "section": "Finding the “least squares” regression line",
+    "text": "Finding the “least squares” regression line\n\\[ \\hat{y} = b_0 + b_1 \\cdot \\hat{x} \\] Next we use the fact that \\((\\bar{x}, \\bar{y})\\) is on the line. Plug them into line equation\n\\[\\bar{y} = b_0 + b_1 \\cdot \\bar{x} \\] Now everything is known except \\(b_0\\) so we can solve for that!\n\\[\nb_0 = \\bar{y} - b_1 \\bar{x}\n\\]"
+  },
+  {
+    "objectID": "slides/09/09-linear-regression.html#data-mammals",
+    "href": "slides/09/09-linear-regression.html#data-mammals",
+    "title": "Linear Regression",
+    "section": "Data: mammals",
+    "text": "Data: mammals\n\ndata(mammals)\nglimpse(mammals)\n\nRows: 62\nColumns: 11\n$ species      &lt;fct&gt; Africanelephant, Africangiantpouchedrat, ArcticFox, Arcticgroundsqu…\n$ body_wt      &lt;dbl&gt; 6654.000, 1.000, 3.385, 0.920, 2547.000, 10.550, 0.023, 160.000, 3.…\n$ brain_wt     &lt;dbl&gt; 5712.0, 6.6, 44.5, 5.7, 4603.0, 179.5, 0.3, 169.0, 25.6, 440.0, 6.4…\n$ non_dreaming &lt;dbl&gt; NA, 6.3, NA, NA, 2.1, 9.1, 15.8, 5.2, 10.9, 8.3, 11.0, 3.2, 7.6, NA…\n$ dreaming     &lt;dbl&gt; NA, 2.0, NA, NA, 1.8, 0.7, 3.9, 1.0, 3.6, 1.4, 1.5, 0.7, 2.7, NA, 2…\n$ total_sleep  &lt;dbl&gt; 3.3, 8.3, 12.5, 16.5, 3.9, 9.8, 19.7, 6.2, 14.5, 9.7, 12.5, 3.9, 10…\n$ life_span    &lt;dbl&gt; 38.6, 4.5, 14.0, NA, 69.0, 27.0, 19.0, 30.4, 28.0, 50.0, 7.0, 30.0,…\n$ gestation    &lt;dbl&gt; 645, 42, 60, 25, 624, 180, 35, 392, 63, 230, 112, 281, NA, 365, 42,…\n$ predation    &lt;int&gt; 3, 3, 1, 5, 3, 4, 1, 4, 1, 1, 5, 5, 2, 5, 1, 2, 2, 2, 1, 1, 5, 5, 3…\n$ exposure     &lt;int&gt; 5, 1, 1, 2, 5, 4, 1, 5, 2, 1, 4, 5, 1, 5, 1, 2, 2, 2, 2, 1, 5, 5, 1…\n$ danger       &lt;int&gt; 3, 3, 1, 3, 4, 4, 1, 4, 1, 1, 4, 5, 2, 5, 1, 2, 2, 2, 1, 1, 5, 5, 2…"
+  },
+  {
+    "objectID": "slides/09/09-linear-regression.html#data-crickets",
+    "href": "slides/09/09-linear-regression.html#data-crickets",
+    "title": "Linear Regression",
+    "section": "Data: crickets",
+    "text": "Data: crickets\n\ncrickets &lt;- read_csv(\"crickets.csv\")\n\nggplot(data = crickets, aes(x = temp_F, y = chirps_in_15s)) +\n  geom_point() +\n  labs(\n    x = \"Temperature\", \n    y = \"Chirps per 15s\", \n    title = \"Cricket Chirps and Temperature\",\n  )"
+  },
+  {
+    "objectID": "slides/09/09-linear-regression.html#linear-correlation",
+    "href": "slides/09/09-linear-regression.html#linear-correlation",
+    "title": "Linear Regression",
+    "section": "Linear correlation",
+    "text": "Linear correlation\n\nggplot(data = crickets, aes(x = temp_F, y = chirps_in_15s)) +\n  geom_point()"
+  },
+  {
+    "objectID": "slides/09/09-linear-regression.html#practice",
+    "href": "slides/09/09-linear-regression.html#practice",
+    "title": "Linear Regression",
+    "section": "Practice",
+    "text": "Practice\n\nSketch a possible box plot for a data set that is strongly left-skewed with two low outliers.\nIn what kind of distribution is the median smaller than the mean?"
+  },
+  {
+    "objectID": "slides/09/09-linear-regression.html#section",
+    "href": "slides/09/09-linear-regression.html#section",
+    "title": "Linear Regression",
+    "section": "",
+    "text": "ggplot(data = crickets, aes(x = temp_F, y = chirps_in_15s)) +\n  geom_point() +\n  labs(\n    x = \"Temperature\", \n    y = \"Chirps per 15s\", \n    title = \"Cricket Chirps and Temperature\",\n  )"
+  },
+  {
+    "objectID": "slides/09/09-linear-regression.html#graph",
+    "href": "slides/09/09-linear-regression.html#graph",
+    "title": "Linear Regression",
+    "section": "Graph",
+    "text": "Graph"
+  },
+  {
+    "objectID": "slides/09/09-linear-regression.html#cricket-chirps-and-temperature",
+    "href": "slides/09/09-linear-regression.html#cricket-chirps-and-temperature",
+    "title": "Linear Regression",
+    "section": "Cricket Chirps and Temperature",
+    "text": "Cricket Chirps and Temperature\nDo cricket chirp rates and air temperature seem to be associated?",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 5"
+    ]
+  },
+  {
+    "objectID": "slides/09/09-linear-regression.html#crickets",
+    "href": "slides/09/09-linear-regression.html#crickets",
+    "title": "Linear Regression",
+    "section": "crickets",
+    "text": "crickets\n\ncrickets &lt;- read_csv(\"crickets.csv\")\n\nggplot(data = crickets, aes(x = temp_F, y = chirps_in_15s)) +\n  geom_point() +\n  labs(\n    x = \"Temperature\", \n    y = \"Chirps per 15s\", \n    title = \"Cricket Chirps and Temperature\",\n  )"
+  },
+  {
+    "objectID": "slides/09/09-linear-regression.html#simple-regression-model-and-notation",
+    "href": "slides/09/09-linear-regression.html#simple-regression-model-and-notation",
+    "title": "Linear Regression",
+    "section": "Simple regression model and notation",
+    "text": "Simple regression model and notation\n\\[\ny = \\beta_0 + \\beta_1 x + \\epsilon\n\\]\n\n\n\\(x\\): the predictor. Also commonly referred to as explanatory or independent variable”\n\\(y\\): the response variable. Also called the outcome or dependent variable. In prediction problems, this is what we are interested in predicting.\n\\(\\beta_0\\), \\(\\beta_1\\) are constants or coefficients. They are population parameters. \\(\\beta_0\\) has another special name, “the intercept”.\n\\(\\epsilon\\): the error. This quantity represents observational error, i.e. the difference between our observation and the true population-level expected value: \\(\\beta_0 + \\beta_1 x\\).\n\n\n\nEffectively this model says our data \\(y\\) is linearly related to \\(x\\) (but not exactly linear)"
+  },
+  {
+    "objectID": "slides/09/09-linear-regression.html#linear-regression-best-fit-line",
+    "href": "slides/09/09-linear-regression.html#linear-regression-best-fit-line",
+    "title": "Linear Regression",
+    "section": "Linear Regression (best fit line)",
+    "text": "Linear Regression (best fit line)\n\\[ \\hat{y} = m \\hat{x} + b\\]"
+  },
+  {
+    "objectID": "slides/09/09-linear-regression.html#linear-regression",
+    "href": "slides/09/09-linear-regression.html#linear-regression",
+    "title": "Linear Regression",
+    "section": "Linear Regression",
+    "text": "Linear Regression\nBest fit line\nLinear model",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 5"
+    ]
+  },
+  {
+    "objectID": "slides/09/09-linear-regression_v.html#in-groups",
+    "href": "slides/09/09-linear-regression_v.html#in-groups",
+    "title": "Linear Regression",
+    "section": "",
+    "text": "Practice from last time: 7.5 (3, 7, 9, 19)\n\nPractice for next time: 7.5 ()"
+  },
+  {
+    "objectID": "slides/09/09-linear-regression_v.html#associations-between-two-numerical-variables",
+    "href": "slides/09/09-linear-regression_v.html#associations-between-two-numerical-variables",
+    "title": "Linear Regression",
+    "section": "Associations between two numerical variables",
+    "text": "Associations between two numerical variables\n\nExplanatory variable: \\(x\\), independent (a variable you think might be related to response )\nResponse variable: \\(y\\), dependent (a variable you want to understand)"
+  },
+  {
+    "objectID": "slides/09/09-linear-regression_v.html#data-possum",
+    "href": "slides/09/09-linear-regression_v.html#data-possum",
+    "title": "Linear Regression",
+    "section": "Data: possum",
+    "text": "Data: possum\n\ndata(possum)\n\nglimpse(possum)\n\nRows: 104\nColumns: 8\n$ site    &lt;int&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, …\n$ pop     &lt;fct&gt; Vic, Vic, Vic, Vic, Vic, Vic, Vic, Vic, Vic, Vic, Vic, Vic, Vic, Vic, Vi…\n$ sex     &lt;fct&gt; m, f, f, f, f, f, m, f, f, f, f, f, m, m, m, m, f, m, f, f, f, m, f, m, …\n$ age     &lt;int&gt; 8, 6, 6, 6, 2, 1, 2, 6, 9, 6, 9, 5, 5, 3, 5, 4, 1, 2, 5, 4, 3, 3, 4, 2, …\n$ head_l  &lt;dbl&gt; 94.1, 92.5, 94.0, 93.2, 91.5, 93.1, 95.3, 94.8, 93.4, 91.8, 93.3, 94.9, …\n$ skull_w &lt;dbl&gt; 60.4, 57.6, 60.0, 57.1, 56.3, 54.8, 58.2, 57.6, 56.3, 58.0, 57.2, 55.6, …\n$ total_l &lt;dbl&gt; 89.0, 91.5, 95.5, 92.0, 85.5, 90.5, 89.5, 91.0, 91.5, 89.5, 89.5, 92.0, …\n$ tail_l  &lt;dbl&gt; 36.0, 36.5, 39.0, 38.0, 36.0, 35.5, 36.0, 37.0, 37.0, 37.5, 39.0, 35.5, …"
+  },
+  {
+    "objectID": "slides/09/09-linear-regression_v.html#possums-tail_l-vs-total_l",
+    "href": "slides/09/09-linear-regression_v.html#possums-tail_l-vs-total_l",
+    "title": "Linear Regression",
+    "section": "Possums: `tail_l’ vs ‘total_l’",
+    "text": "Possums: `tail_l’ vs ‘total_l’\nDo possums’ tail length and total body length seem to be associated? Might knowing one help us predict the other?\n\nggplot(data = possum, aes(y = total_l, x = tail_l)) +\n  geom_point() +\n   labs(x = \"Length of Possum Tail (cm)\",\n       y = \"Length of Possum Body (cm)\")"
+  },
+  {
+    "objectID": "slides/09/09-linear-regression_v.html#linear-model-line-of-best-fit",
+    "href": "slides/09/09-linear-regression_v.html#linear-model-line-of-best-fit",
+    "title": "Linear Regression",
+    "section": "Linear model: “line of best fit”",
+    "text": "Linear model: “line of best fit”\n\nggplot(data = possum, aes(y = total_l, x = tail_l)) +\n  geom_point() + \n  geom_smooth(method = \"lm\", se = FALSE)\n\n`geom_smooth()` using formula = 'y ~ x'"
+  },
+  {
+    "objectID": "slides/09/09-linear-regression_v.html#finding-the-least-squares-regression-line",
+    "href": "slides/09/09-linear-regression_v.html#finding-the-least-squares-regression-line",
+    "title": "Linear Regression",
+    "section": "Finding the “least squares” regression line",
+    "text": "Finding the “least squares” regression line\nRecall: a line has the equation \\[ y=mx+b\\] where \\(m\\) = slope and \\(b\\) = \\(y\\)-intercept. Here, we want a line of the form\n\\[ \\textrm{Total body length} = b_0 + b_1 \\cdot \\textrm{(Tail length)} \\]\nHow could you use this line to predict the total body length of a possum with tail 41.6 cm long?"
+  },
+  {
+    "objectID": "slides/09/09-linear-regression_v.html#properties",
+    "href": "slides/09/09-linear-regression_v.html#properties",
+    "title": "Linear Regression",
+    "section": "Properties",
+    "text": "Properties\nThe least squares regression line has the following properties:\n\nMinimizes (sum of squared) distance between data points and line\nThe residuals balance out above and below line\nThe point \\((\\bar{x}, \\bar{y})\\) always lies on line (though it’s not necessarily a data point!)"
+  },
+  {
+    "objectID": "slides/09/09-linear-regression_v.html#correlation-coefficient-r",
+    "href": "slides/09/09-linear-regression_v.html#correlation-coefficient-r",
+    "title": "Linear Regression",
+    "section": "Correlation coefficient, r",
+    "text": "Correlation coefficient, r\nAlso called the Pearson Product-Moment Correlation, here’s how r is calculated: \\[ r(x,y) = \\frac{\\sum_{i=1}^{n} (x_i-\\bar{x})(y_i-\\bar{y})}{\\sqrt{\\sum_{i=1}^{n}(x_i-\\bar{x})^2 \\cdot\\sum_{i=1}^{n}(y_i-\\bar{y})^2 }}\\] This is a good computation to have R do for us!"
+  },
+  {
+    "objectID": "slides/09/09-linear-regression_v.html#correlation-coefficient-r-1",
+    "href": "slides/09/09-linear-regression_v.html#correlation-coefficient-r-1",
+    "title": "Linear Regression",
+    "section": "Correlation coefficient, r",
+    "text": "Correlation coefficient, r\n\npossum |&gt;\n  summarize(N = n(), \n      r = cor(tail_l, total_l, \n              use = \"pairwise.complete.obs\"))\n\n# A tibble: 1 × 2\n      N     r\n  &lt;int&gt; &lt;dbl&gt;\n1   104 0.566\n\n\nWhat does this number mean?"
+  },
+  {
+    "objectID": "slides/09/09-linear-regression_v.html#visualizing-the-correlation-coefficient-r",
+    "href": "slides/09/09-linear-regression_v.html#visualizing-the-correlation-coefficient-r",
+    "title": "Linear Regression",
+    "section": "Visualizing the correlation coefficient, r",
+    "text": "Visualizing the correlation coefficient, r\n\n\n\n\n\nWhat would a correlation of \\(r = -0.998\\) look like? How about \\(r=1\\)?"
+  },
+  {
+    "objectID": "slides/09/09-linear-regression_v.html#finding-the-least-squares-regression-line-1",
+    "href": "slides/09/09-linear-regression_v.html#finding-the-least-squares-regression-line-1",
+    "title": "Linear Regression",
+    "section": "Finding the “least squares” regression line",
+    "text": "Finding the “least squares” regression line\n\\[ y = b_0 + b_1 \\cdot x \\] First we find the slope: \\[b_1 = r \\left( \\frac{s_y}{s_x} \\right)\\]\nwhere:\n\n\\(r\\) = correlation coefficient\n\\(s_y\\) = standard deviation of \\(y\\)\n\\(s_x\\) = standard deviation of \\(x\\)\n\nNext we use the fact that \\((\\bar{x}, \\bar{y})\\) lies on our line to solve for the intercept, \\(b_0\\):\n\\[\\bar{y} = b_0 + b_1 \\cdot \\bar{x} \\]"
+  },
+  {
+    "objectID": "slides/09/09-linear-regression_v.html#example-continued",
+    "href": "slides/09/09-linear-regression_v.html#example-continued",
+    "title": "Linear Regression",
+    "section": "Example (continued)",
+    "text": "Example (continued)\nTo model the association between tail_l and total_l, we need summary statistics to find the slope and intercept of the linear regression:\n\npossum |&gt;\n  summarize( \n    mean_x = mean(tail_l),\n    sd_x = sd(tail_l),\n    mean_y = mean(total_l),\n    sd_y = sd(total_l),\n    r = cor(tail_l, total_l)\n    )\n\n# A tibble: 1 × 5\n  mean_x  sd_x mean_y  sd_y     r\n   &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1   37.0  1.96   87.1  4.31 0.566\n\n\nWhat line does this produce?"
+  },
+  {
+    "objectID": "slides/09/09-linear-regression_v.html#example-possum-regression-line",
+    "href": "slides/09/09-linear-regression_v.html#example-possum-regression-line",
+    "title": "Linear Regression",
+    "section": "Example: Possum regression line",
+    "text": "Example: Possum regression line\nFirst, find the slope:\n\\[\nb_1 = r \\cdot \\left( \\frac{s_y}{s_x} \\right) = .566 \\left( \\frac{4.31}{1.96} \\right) = 1.24\n\\] Next, use \\((\\bar{x}, \\bar{y})\\) to find the intercept: \\[\n\\bar{y} = b_0 + b_1 \\cdot \\bar{x}  \\quad \\implies \\quad 87.1 = b_0 + 1.24(37.0)  \n\\]\n\\[\n\\implies  b_0 = 87.1 - 1.24 (37.0) = 41.2\n\\]\nThus: \\(y = 41.2 + 1.24 x\\) is the linear model describing these two possum variables."
+  },
+  {
+    "objectID": "slides/09/09-linear-regression_v.html#example-possum-regression-line-1",
+    "href": "slides/09/09-linear-regression_v.html#example-possum-regression-line-1",
+    "title": "Linear Regression",
+    "section": "Example: Possum regression line",
+    "text": "Example: Possum regression line\n\\[\ny = 41.2 + 1.24 x\n\\]\n\n\n`geom_smooth()` using formula = 'y ~ x'"
+  },
+  {
+    "objectID": "slides/09/09-linear-regression_v.html#example-possum-regression-line-2",
+    "href": "slides/09/09-linear-regression_v.html#example-possum-regression-line-2",
+    "title": "Linear Regression",
+    "section": "Example: Possum regression line",
+    "text": "Example: Possum regression line\nAlternately, we can find the entire linear model in one go:\n\nlibrary(tidymodels)\n\n\n model_fit &lt;- linear_reg() |&gt;\n      fit(total_l ~ tail_l, data = possum)\n \ntidy(model_fit)\n\n# A tibble: 2 × 5\n  term        estimate std.error statistic  p.value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;\n1 (Intercept)    41.0      6.66       6.16 1.43e- 8\n2 tail_l          1.24     0.180      6.93 3.94e-10\n\n\n\nWhat does the intercept (41) mean?\n\nWhat does the slope (1.24) tell us?"
+  },
+  {
+    "objectID": "slides/09/09-linear-regression_v.html#practice",
+    "href": "slides/09/09-linear-regression_v.html#practice",
+    "title": "Linear Regression",
+    "section": "Practice",
+    "text": "Practice"
+  },
+  {
+    "objectID": "slides/09/09-linear-regression.html#residuals",
+    "href": "slides/09/09-linear-regression.html#residuals",
+    "title": "Linear Regression",
+    "section": "Residuals",
+    "text": "Residuals",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 5"
+    ]
+  },
+  {
+    "objectID": "slides/09/09-linear-regression.html#next-steps",
+    "href": "slides/09/09-linear-regression.html#next-steps",
+    "title": "Linear Regression",
+    "section": "Next Steps",
+    "text": "Next Steps\n\nWhat can we do with our linear model (i.e. regression line)?\nWhat is the significance of correlation coefficient \\(r\\)?",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 5"
+    ]
+  },
+  {
+    "objectID": "slides/09/09-linear-regression.html#finding-the-regression-line",
+    "href": "slides/09/09-linear-regression.html#finding-the-regression-line",
+    "title": "Linear Regression",
+    "section": "Finding the regression line",
+    "text": "Finding the regression line\nRecall – a line has the equation \\[ y = m x + b\\] where \\(m\\) is the slope and \\(b\\) is the intercept.\n\n\n\n\\(x\\) is the predictor or explanatory or independent variable\n\\(y\\) is the response or outcome or dependent variable. In prediction problems, this is what we are interested in predicting.",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 5"
+    ]
+  },
+  {
+    "objectID": "slides/09/09-linear-regression.html#finding-the-regression-line-1",
+    "href": "slides/09/09-linear-regression.html#finding-the-regression-line-1",
+    "title": "Linear Regression",
+    "section": "Finding the regression line",
+    "text": "Finding the regression line\n\\[ \\hat{y} = b_0 + b_1 \\cdot \\hat{x} \\] First we find the slope: \\[b_1 = r \\left( \\frac{s_y}{s_x} \\right)\\]\nIn this formula:\n\n\\(r\\) = correlation coefficient\n\\(s_y\\) = standard deviation of \\(y\\)\n\\(s_x\\) = standard deviation of \\(x\\)",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 5"
+    ]
+  },
+  {
+    "objectID": "slides/09/09-linear-regression.html#least-squares-regression-line",
+    "href": "slides/09/09-linear-regression.html#least-squares-regression-line",
+    "title": "Linear Regression",
+    "section": "least squares regression line",
+    "text": "least squares regression line\n\\[ \\hat{y} = b_0 + b_1 \\cdot \\hat{x} \\]\n\nMinimizes (sum of squared) distance between data points and line\nResiduals balance out above and below line\nThe point \\((\\bar{x}, \\bar{y})\\) always lies on line (though it’s not necessarily a data point!)",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 5"
+    ]
+  },
+  {
+    "objectID": "slides/09/09-linear-regression.html#finding-the-regression-line-2",
+    "href": "slides/09/09-linear-regression.html#finding-the-regression-line-2",
+    "title": "Linear Regression",
+    "section": "Finding the regression line",
+    "text": "Finding the regression line\n\\[ \\hat{y} = b_0 + b_1 \\cdot \\hat{x} \\] Next we use the fact that \\((\\bar{x}, \\bar{y})\\) is on the line. Plug these values into line equation\n\\[\\bar{y} = b_0 + b_1 \\cdot \\bar{x} \\] Now everything is known except \\(b_0\\) so we can solve for that!\n\\[\nb_0 = \\bar{y} - b_1 \\bar{x}\n\\]",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 5"
+    ]
+  },
+  {
+    "objectID": "slides/09/09-linear-regression.html#linear-model",
+    "href": "slides/09/09-linear-regression.html#linear-model",
+    "title": "Linear Regression",
+    "section": "Linear Model",
+    "text": "Linear Model\n\\[\n\\hat{y} = 0.212 \\hat{x} - 0.372\n\\]\n\nggplot(data = crickets, aes(x = temp_F, y = chirps_in_15s)) +\n  geom_point() +\n  geom_abline(slope = 0.212, intercept = -0.372, color=\"blue\")",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 5"
+    ]
+  },
+  {
+    "objectID": "slides/09/09-linear-regression_v.html",
+    "href": "slides/09/09-linear-regression_v.html",
+    "title": "Linear Regression",
+    "section": "",
+    "text": "Practice from last time: 7.5 (3, 7, 9, 19)\n\nPractice for next time: 7.5 ()"
   }
 ]

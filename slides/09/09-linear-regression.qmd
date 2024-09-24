@@ -1,0 +1,236 @@
+---
+title: Linear Regression
+subtitle: Chp 7
+format: revealjs
+auto-stretch: false
+author: ""
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+```{r}
+#| echo: false
+#| message: false
+library(tidyverse)
+library(openintro)
+library(tidymodels)
+```
+
+## In groups
+
+-   Discuss Homework: \S 7.5 #1, 3, 7, 9, 19
+
+## `crickets` {visibility="hidden"}
+
+```{r}
+#| message: false
+#| echo: false
+
+crickets <- read_csv("crickets.csv")
+```
+
+```{r, out.width = "85%"}
+#| eval: false
+
+crickets <- read_csv("crickets.csv")
+
+ggplot(data = crickets, aes(x = temp_F, y = chirps_in_15s)) +
+  geom_point() +
+  labs(
+    x = "Temperature", 
+    y = "Chirps per 15s", 
+    title = "Cricket Chirps and Temperature",
+  )
+```
+
+------------------------------------------------------------------------
+
+## Cricket Chirps and Temperature
+
+Do cricket chirp rates and air temperature seem to be associated?
+
+```{r, out.width = "85%"}
+#| echo: false
+
+ggplot(data = crickets, aes(x = temp_F, y = chirps_in_15s)) +
+  geom_point()
+```
+
+## Linear Regression
+
+Best fit line
+
+Linear model
+
+```{r, out.width = "85%"}
+#| echo: false
+#| message: false
+
+ggplot(data = crickets, aes(x = temp_F, y = chirps_in_15s)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE)
+```
+
+## Simple regression model and notation {.smaller visibility="hidden"}
+
+$$
+y = \beta_0 + \beta_1 x + \epsilon
+$$
+
+::: incremental
+-   $x$: the **predictor**. Also commonly referred to as *explanatory*
+    or *independent* variable"
+
+-   $y$: the **response** variable. Also called the *outcome* or
+    *dependent variable*. In prediction problems, this is what we are
+    interested in predicting.
+
+-   $\beta_0$, $\beta_1$ are constants or **coefficients**. They are
+    **population parameters**. $\beta_0$ has another special name, "the
+    intercept".
+
+-   $\epsilon$: the **error**. This quantity represents observational
+    error, i.e. the difference between our observation and the true
+    population-level expected value: $\beta_0 + \beta_1 x$.
+:::
+
+. . .
+
+Effectively this model says our data $y$ is linearly related to $x$ (but
+not exactly linear)
+
+
+
+
+## linear_reg {visibility="hidden"}
+
+```{r}
+#| echo: true
+
+ model_fit <- linear_reg() |>
+      fit(chirps_in_15s ~ temp_F, data = crickets)
+ 
+tidy(model_fit)
+```
+
+## Finding the regression line
+
+Recall -- a line has the equation $$ y = m x + b$$ where $m$ is the
+**slope** and $b$ is the **intercept**.  
+
+\
+
+-   $x$ is the **predictor** or **explanatory** or **independent** variable
+
+-   $y$ is the **response** or **outcome** or
+    **dependent** variable. In prediction problems, this is what we are
+    interested in predicting.
+    
+    
+
+## Residuals
+```{r}
+#| echo: false
+#| message: false
+
+predict_chirp <- function(x) {
+  return(-0.372 + (0.212*x))
+}
+
+xPoints <- crickets$temp_F
+yPoints <- crickets$chirps_in_15s
+yHat <- predict_chirp(xPoints)
+
+crickets |>
+  ggplot(aes(x = temp_F, y = chirps_in_15s)) +
+  geom_point() + 
+  geom_smooth(method = "lm", se = FALSE) +
+#  geom_abline(slope = 0.212, intercept = -0.372) +
+  geom_segment(x = xPoints, xend = xPoints, y  = yPoints, yend = yHat, color = "red")
+```
+  
+
+##  **least squares** regression line
+
+$$ \hat{y} = b_0 + b_1 \cdot \hat{x} $$ 
+
+
+-   Minimizes (sum of squared) distance between data points and line
+-   *Residuals* balance out above and below line
+-   The point $(\bar{x}, \bar{y})$ always lies on line (though it's not
+    necessarily a data point!)
+
+## Correlation coefficient, *r*
+
+Also called the Pearson Product-Moment Correlation, here's how *r* is
+calculated:
+
+$$ r = \frac{1}{n-1}\sum_{i=1}^n \frac{ x_i - \bar{x}}{s_x} \frac{y_i - \bar{y}}{s_y}
+$$
+We'll have R do this for us!
+
+
+
+## Correlation coefficient, *r*
+
+```{r}
+#| echo: true
+crickets |>
+  summarize(N = n(), 
+            mean_x = mean(temp_F),
+            sd_x = sd(temp_F),
+            mean_y = mean(chirps_in_15s),
+            sd_y = sd(chirps_in_15s),
+            r = cor(temp_F, chirps_in_15s)
+  )
+
+```
+
+
+## Finding the regression line
+
+$$ \hat{y} = b_0 + b_1 \cdot \hat{x} $$ 
+First we find the slope:
+$$b_1 = r \left( \frac{s_y}{s_x} \right)$$
+
+In this formula:
+
+-   $r$ = correlation coefficient
+-   $s_y$ = standard deviation of $y$
+-   $s_x$ = standard deviation of $x$
+
+## Finding the regression line
+
+$$ \hat{y} = b_0 + b_1 \cdot \hat{x} $$ 
+Next we use the fact that $(\bar{x}, \bar{y})$ is on the line.  Plug these values into line equation
+
+$$\bar{y} = b_0 + b_1 \cdot \bar{x} $$
+Now everything is known except $b_0$ so we can solve for that!
+
+$$
+b_0 = \bar{y} - b_1 \bar{x}
+$$
+
+## Linear Model
+
+$$
+\hat{y} = 0.212 \hat{x} - 0.372
+$$
+
+```{r, out.width = "85%"}
+#| echo: true
+#| message: false
+
+ggplot(data = crickets, aes(x = temp_F, y = chirps_in_15s)) +
+  geom_point() +
+  geom_abline(slope = 0.212, intercept = -0.372, color="blue")
+
+```
+
+
+## Next Steps
+
+- What can we do with our linear model (i.e. regression line)?
+- What is the significance of correlation coefficient $r$?
+
