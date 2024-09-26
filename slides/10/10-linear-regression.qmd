@@ -1,12 +1,9 @@
 ---
 title: Linear Regression, Cont.
-subtitle: Chp 7
+subtitle: Chapter 7
 format: revealjs
 auto-stretch: false
 author: ""
-editor: 
-  markdown: 
-    wrap: 72
 ---
 
 ```{r}
@@ -15,28 +12,67 @@ editor:
 library(tidyverse)
 library(openintro)
 library(tidymodels)
+library(datasauRus)
 ```
 
 ## In groups
 
 -   Discuss Homework: \S 7.5 #7, 21, 30, 31
 
-
 ## Goals
 
-- We have a linear model!  Now what?
-- Interpreting $r$ (correlation coefficient)
+-   Interpreting $r$ (correlation coefficient)
+-   Interpreting linear model
 
+## Correlation Coefficient
 
+::: {.callout-note icon="false" appearance="simple"}
+A number between -1 and 1 which describes the strength and direction of a **linear** relationship. Denoted $r$
+:::
 
+![](../images/correlations.png){fig-align="center" width="90%"}
 
+## What do these datasets all have in common?
 
+```{r}
+#| echo: false
 
+library(datasauRus)
+```
 
+```{r}
+#| echo: false
 
+ ggplot(datasaurus_dozen, aes(x = x, y = y, colour = dataset))+
+    geom_point()+
+    theme_void()+
+    theme(legend.position = "none")+
+    facet_wrap(~dataset, ncol = 5)
+```
 
+::: fragment
+The all have roughly the same correlation $r = -0.06$
 
+Correlation is only meaningful for **linear** assocations
+:::
 
+## Strength of Fit
+
+Correlation $r$ describes strength and direction of linear relationships
+
+more commonly use $r^2$ -- which is usually capitalized $R^2$.
+
+\
+
+> $R^2$ measures the amount of variation in outcome variable that's explained by the linear model.
+
+## $R^2$ Example
+
+For our cricket chirps we found $r=0.825$
+
+so $R^2 = (0.825)^2 = 0.681$.
+
+> This means that $0.681$ or $68.1$% of the variation we see in cricket chirp rates can be explained by the ambient temperature. What might account for the other $31.9$% of the variation in chirps?
 
 ## `crickets` {visibility="hidden"}
 
@@ -44,43 +80,14 @@ library(tidymodels)
 #| message: false
 #| echo: false
 
-crickets <- read_csv("crickets.csv")
-```
-
-```{r, out.width = "85%"}
-#| eval: false
-
-crickets <- read_csv("crickets.csv")
-
-ggplot(data = crickets, aes(x = temp_F, y = chirps_in_15s)) +
-  geom_point() +
-  labs(
-    x = "Temperature", 
-    y = "Chirps per 15s", 
-    title = "Cricket Chirps and Temperature",
-  )
-```
-
-------------------------------------------------------------------------
-
-## Cricket Chirps and Temperature
-
-Do cricket chirp rates and air temperature seem to be associated?
-
-```{r, out.width = "85%"}
-#| echo: false
-
-ggplot(data = crickets, aes(x = temp_F, y = chirps_in_15s)) +
-  geom_point()
+crickets <- read_csv("../data/crickets.csv")
 ```
 
 ## Linear Regression
 
-Best fit line
+$$ \hat{y} = b_0 + b_1 \cdot \hat{x} $$
 
-Linear model
-
-```{r, out.width = "85%"}
+```{r, out.width = "90%"}
 #| echo: false
 #| message: false
 
@@ -89,35 +96,7 @@ ggplot(data = crickets, aes(x = temp_F, y = chirps_in_15s)) +
   geom_smooth(method = "lm", se = FALSE)
 ```
 
-## Simple regression model and notation {.smaller visibility="hidden"}
-
-$$
-y = \beta_0 + \beta_1 x + \epsilon
-$$
-
-::: incremental
--   $x$: the **predictor**. Also commonly referred to as *explanatory*
-    or *independent* variable"
-
--   $y$: the **response** variable. Also called the *outcome* or
-    *dependent variable*. In prediction problems, this is what we are
-    interested in predicting.
-
--   $\beta_0$, $\beta_1$ are constants or **coefficients**. They are
-    **population parameters**. $\beta_0$ has another special name, "the
-    intercept".
-
--   $\epsilon$: the **error**. This quantity represents observational
-    error, i.e. the difference between our observation and the true
-    population-level expected value: $\beta_0 + \beta_1 x$.
-:::
-
-. . .
-
-Effectively this model says our data $y$ is linearly related to $x$ (but
-not exactly linear)
-
-## linear_reg {visibility="hidden"}
+## A Shortcut!
 
 ```{r}
 #| echo: true
@@ -128,114 +107,39 @@ not exactly linear)
 tidy(model_fit)
 ```
 
-## Finding the regression line
+$$ \hat{y} = -0.372 + 0.212 \, \hat{x} $$
 
-Recall -- a line has the equation $$ y = m x + b$$ where $m$ is the
-**slope** and $b$ is the **intercept**.
+## Don't Extrapolate!!
 
-\
+$$ \hat{y} = -0.372 + 0.212 \, \hat{x} $$
 
--   $x$ is the **predictor** or **explanatory** or **independent**
-    variable
+What do you expect the chirp rate will be if temperature is 100?
 
--   $y$ is the **response** or **outcome** or **dependent** variable. In
-    prediction problems, this is what we are interested in predicting.
-
-## Residuals
-
-```{r}
+```{r, out.width = "80%"}
 #| echo: false
-#| message: false
-
-predict_chirp <- function(x) {
-  return(-0.372 + (0.212*x))
-}
-
-xPoints <- crickets$temp_F
-yPoints <- crickets$chirps_in_15s
-yHat <- predict_chirp(xPoints)
-
-crickets |>
-  ggplot(aes(x = temp_F, y = chirps_in_15s)) +
-  geom_point() + 
-  geom_smooth(method = "lm", se = FALSE) +
-#  geom_abline(slope = 0.212, intercept = -0.372) +
-  geom_segment(x = xPoints, xend = xPoints, y  = yPoints, yend = yHat, color = "red")
-```
-
-## **least squares** regression line
-
-$$ \hat{y} = b_0 + b_1 \cdot \hat{x} $$
-
--   Minimizes (sum of squared) distance between data points and line
--   *Residuals* balance out above and below line
--   The point $(\bar{x}, \bar{y})$ always lies on line (though it's not
-    necessarily a data point!)
-
-## Correlation coefficient, *r*
-
-Also called the Pearson Product-Moment Correlation, here's how *r* is
-calculated:
-
-$$ r = \frac{1}{n-1}\sum_{i=1}^n \frac{ x_i - \bar{x}}{s_x} \frac{y_i - \bar{y}}{s_y}
-$$ We'll have R do this for us!
-
-## Correlation coefficient, *r*
-
-```{r}
-#| echo: true
-crickets |>
-  summarize(N = n(), 
-            mean_x = mean(temp_F),
-            sd_x = sd(temp_F),
-            mean_y = mean(chirps_in_15s),
-            sd_y = sd(chirps_in_15s),
-            r = cor(temp_F, chirps_in_15s)
-  )
-
-```
-
-## Finding the regression line
-
-$$ \hat{y} = b_0 + b_1 \cdot \hat{x} $$ First we find the slope:
-$$b_1 = r \left( \frac{s_y}{s_x} \right)$$
-
-In this formula:
-
--   $r$ = correlation coefficient
--   $s_y$ = standard deviation of $y$
--   $s_x$ = standard deviation of $x$
-
-## Finding the regression line
-
-$$ \hat{y} = b_0 + b_1 \cdot \hat{x} $$ Next we use the fact that
-$(\bar{x}, \bar{y})$ is on the line. Plug these values into line
-equation
-
-$$\bar{y} = b_0 + b_1 \cdot \bar{x} $$ Now everything is known except
-$b_0$ so we can solve for that!
-
-$$
-b_0 = \bar{y} - b_1 \bar{x}
-$$
-
-## Linear Model
-
-$$
-\hat{y} = 0.212 \hat{x} - 0.372
-$$
-
-```{r, out.width = "85%"}
-#| echo: true
 #| message: false
 
 ggplot(data = crickets, aes(x = temp_F, y = chirps_in_15s)) +
   geom_point() +
-  geom_abline(slope = 0.212, intercept = -0.372, color="blue")
-
+  geom_smooth(method = "lm", se = FALSE)
 ```
 
-## Next Steps
+## Interpreting the slope
 
--   What can we do with our linear model (i.e. regression line)?
--   What is the significance of correlation coefficient $r$?
+$$ \hat{y} = -0.372 + 0.212 \, \hat{x} $$
+
+Slope of $0.212$ means that for every increase of 1 degree (F), the chirp rate will increase by 0.212.
+
+## Outliers
+
+Each data set has at least one outlier. How do the outliers affect the slope of the regression line?
+
+![](10images/residuals_outlier.png){fig-align="center" width="90%"}
+
+## Practice for next time
+
+Section 11.5 #1, 3
+
+\
+
+Now head to Posit Cloud for [AE05 - Finnish Fish](https://posit.cloud/spaces/519774/content/8841417)!

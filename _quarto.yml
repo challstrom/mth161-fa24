@@ -52,7 +52,9 @@ website:
           - href: slides/08/08-explore-numer-boxplotIQR.qmd
             text: "Thursday, Week 4"
           - href: slides/09/09-linear-regression.qmd
-            text: "Tuesday, Week 5"  
+            text: "Tuesday, Week 5"
+          - href: slides/10/10-linear-regression.qmd
+            text: "Thursday, Week 5" 
       
 format:
   html:

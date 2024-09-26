@@ -66,10 +66,11 @@ Linear model
 ```{r, out.width = "85%"}
 #| echo: false
 #| message: false
+#| warning: false
 
 ggplot(data = crickets, aes(x = temp_F, y = chirps_in_15s)) +
   geom_point() +
-  geom_smooth(method = "lm", se = FALSE)
+  geom_smooth(method = "lm", se = FALSE) 
 ```
 
 ## Simple regression model and notation {.smaller visibility="hidden"}
@@ -201,6 +202,15 @@ $b_0$ so we can solve for that!
 $$
 b_0 = \bar{y} - b_1 \bar{x}
 $$
+
+## Calculuate!
+```{r}
+
+lm(chirps_in_15s ~ temp_F, data=crickets)
+  
+```
+
+
 
 ## Linear Model
 

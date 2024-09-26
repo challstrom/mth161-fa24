@@ -2957,8 +2957,8 @@
     "objectID": "slides/09/09-linear-regression.html#in-groups",
     "href": "slides/09/09-linear-regression.html#in-groups",
     "title": "Linear Regression",
-    "section": "In groups",
-    "text": "In groups\n\nDiscuss Homework: 7.5 #1, 3, 7, 9, 19",
+    "section": "",
+    "text": "Discuss Homework: 7.5 #1, 3, 7, 9, 19",
     "crumbs": [
       "Quick Links",
       "Slides",
@@ -3111,14 +3111,24 @@
     "href": "slides/09/09-linear-regression.html#crickets",
     "title": "Linear Regression",
     "section": "crickets",
-    "text": "crickets\n\ncrickets &lt;- read_csv(\"crickets.csv\")\n\nggplot(data = crickets, aes(x = temp_F, y = chirps_in_15s)) +\n  geom_point() +\n  labs(\n    x = \"Temperature\", \n    y = \"Chirps per 15s\", \n    title = \"Cricket Chirps and Temperature\",\n  )"
+    "text": "crickets\n\ncrickets &lt;- read_csv(\"crickets.csv\")\n\nggplot(data = crickets, aes(x = temp_F, y = chirps_in_15s)) +\n  geom_point() +\n  labs(\n    x = \"Temperature\", \n    y = \"Chirps per 15s\", \n    title = \"Cricket Chirps and Temperature\",\n  )",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 5"
+    ]
   },
   {
     "objectID": "slides/09/09-linear-regression.html#simple-regression-model-and-notation",
     "href": "slides/09/09-linear-regression.html#simple-regression-model-and-notation",
     "title": "Linear Regression",
     "section": "Simple regression model and notation",
-    "text": "Simple regression model and notation\n\\[\ny = \\beta_0 + \\beta_1 x + \\epsilon\n\\]\n\n\n\\(x\\): the predictor. Also commonly referred to as explanatory or independent variable”\n\\(y\\): the response variable. Also called the outcome or dependent variable. In prediction problems, this is what we are interested in predicting.\n\\(\\beta_0\\), \\(\\beta_1\\) are constants or coefficients. They are population parameters. \\(\\beta_0\\) has another special name, “the intercept”.\n\\(\\epsilon\\): the error. This quantity represents observational error, i.e. the difference between our observation and the true population-level expected value: \\(\\beta_0 + \\beta_1 x\\).\n\n\n\nEffectively this model says our data \\(y\\) is linearly related to \\(x\\) (but not exactly linear)"
+    "text": "Simple regression model and notation\n\\[\ny = \\beta_0 + \\beta_1 x + \\epsilon\n\\]\n\n\n\\(x\\): the predictor. Also commonly referred to as explanatory or independent variable”\n\\(y\\): the response variable. Also called the outcome or dependent variable. In prediction problems, this is what we are interested in predicting.\n\\(\\beta_0\\), \\(\\beta_1\\) are constants or coefficients. They are population parameters. \\(\\beta_0\\) has another special name, “the intercept”.\n\\(\\epsilon\\): the error. This quantity represents observational error, i.e. the difference between our observation and the true population-level expected value: \\(\\beta_0 + \\beta_1 x\\).\n\n\n. . .\nEffectively this model says our data \\(y\\) is linearly related to \\(x\\) (but not exactly linear)",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 5"
+    ]
   },
   {
     "objectID": "slides/09/09-linear-regression.html#linear-regression-best-fit-line",
@@ -3341,5 +3351,374 @@
     "title": "Linear Regression",
     "section": "",
     "text": "Practice from last time: 7.5 (3, 7, 9, 19)\n\nPractice for next time: 7.5 ()"
+  },
+  {
+    "objectID": "slides/09/09-linear-regression.html#calculuate",
+    "href": "slides/09/09-linear-regression.html#calculuate",
+    "title": "Linear Regression",
+    "section": "Calculuate!",
+    "text": "Calculuate!\n\nlm(chirps_in_15s ~ temp_F, data=crickets)\n\n\nCall:\nlm(formula = chirps_in_15s ~ temp_F, data = crickets)\n\nCoefficients:\n(Intercept)       temp_F  \n    -0.3721       0.2118",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 5"
+    ]
+  },
+  {
+    "objectID": "slides/10/10-linear-regression.html#in-groups",
+    "href": "slides/10/10-linear-regression.html#in-groups",
+    "title": "Linear Regression, Cont.",
+    "section": "In groups",
+    "text": "In groups\n\nDiscuss Homework: 7.5 #7, 21, 30, 31",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Thursday, Week 5"
+    ]
+  },
+  {
+    "objectID": "slides/10/10-linear-regression.html#goals",
+    "href": "slides/10/10-linear-regression.html#goals",
+    "title": "Linear Regression, Cont.",
+    "section": "Goals",
+    "text": "Goals\n\nInterpreting \\(r\\) (correlation coefficient)\nInterpreting linear model",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Thursday, Week 5"
+    ]
+  },
+  {
+    "objectID": "slides/10/10-linear-regression.html#correlation-coefficient",
+    "href": "slides/10/10-linear-regression.html#correlation-coefficient",
+    "title": "Linear Regression, Cont.",
+    "section": "Correlation Coefficient",
+    "text": "Correlation Coefficient\n\n\n\nA number between -1 and 1 which describes the strength and direction of a linear relationship. Denoted \\(r\\)",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Thursday, Week 5"
+    ]
+  },
+  {
+    "objectID": "slides/10/10-linear-regression.html#cricket-chirps-and-temperature",
+    "href": "slides/10/10-linear-regression.html#cricket-chirps-and-temperature",
+    "title": "Linear Regression, Cont.",
+    "section": "Cricket Chirps and Temperature",
+    "text": "Cricket Chirps and Temperature\nDo cricket chirp rates and air temperature seem to be associated?"
+  },
+  {
+    "objectID": "slides/10/10-linear-regression.html#linear-regression",
+    "href": "slides/10/10-linear-regression.html#linear-regression",
+    "title": "Linear Regression, Cont.",
+    "section": "Linear Regression",
+    "text": "Linear Regression\n\\[ \\hat{y} = b_0 + b_1 \\cdot \\hat{x} \\]",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Thursday, Week 5"
+    ]
+  },
+  {
+    "objectID": "slides/10/10-linear-regression.html#finding-the-regression-line",
+    "href": "slides/10/10-linear-regression.html#finding-the-regression-line",
+    "title": "Linear Regression, Cont.",
+    "section": "Finding the regression line",
+    "text": "Finding the regression line\nRecall – a line has the equation \\[ y = m x + b\\] where \\(m\\) is the slope and \\(b\\) is the intercept.\n\n\n\n\\(x\\) is the predictor or explanatory or independent variable\n\\(y\\) is the response or outcome or dependent variable. In prediction problems, this is what we are interested in predicting."
+  },
+  {
+    "objectID": "slides/10/10-linear-regression.html#residuals",
+    "href": "slides/10/10-linear-regression.html#residuals",
+    "title": "Linear Regression, Cont.",
+    "section": "Residuals",
+    "text": "Residuals"
+  },
+  {
+    "objectID": "slides/10/10-linear-regression.html#least-squares-regression-line",
+    "href": "slides/10/10-linear-regression.html#least-squares-regression-line",
+    "title": "Linear Regression, Cont.",
+    "section": "least squares regression line",
+    "text": "least squares regression line\n\\[ \\hat{y} = b_0 + b_1 \\cdot \\hat{x} \\]\n\nMinimizes (sum of squared) distance between data points and line\nResiduals balance out above and below line\nThe point \\((\\bar{x}, \\bar{y})\\) always lies on line (though it’s not necessarily a data point!)"
+  },
+  {
+    "objectID": "slides/10/10-linear-regression.html#correlation-coefficient-r",
+    "href": "slides/10/10-linear-regression.html#correlation-coefficient-r",
+    "title": "Linear Regression, Cont.",
+    "section": "Correlation coefficient, r",
+    "text": "Correlation coefficient, r\nAlso called the Pearson Product-Moment Correlation, here’s how r is calculated:\n\\[ r = \\frac{1}{n-1}\\sum_{i=1}^n \\frac{ x_i - \\bar{x}}{s_x} \\frac{y_i - \\bar{y}}{s_y}\n\\] We’ll have R do this for us!"
+  },
+  {
+    "objectID": "slides/10/10-linear-regression.html#correlation-coefficient-r-1",
+    "href": "slides/10/10-linear-regression.html#correlation-coefficient-r-1",
+    "title": "Linear Regression, Cont.",
+    "section": "Correlation coefficient, r",
+    "text": "Correlation coefficient, r\n\ncrickets |&gt;\n  summarize(N = n(), \n            mean_x = mean(temp_F),\n            sd_x = sd(temp_F),\n            mean_y = mean(chirps_in_15s),\n            sd_y = sd(chirps_in_15s),\n            r = cor(temp_F, chirps_in_15s)\n  )\n\n# A tibble: 1 × 6\n      N mean_x  sd_x mean_y  sd_y     r\n  &lt;int&gt;  &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1    15   80.1  6.72   16.6  1.72 0.825"
+  },
+  {
+    "objectID": "slides/10/10-linear-regression.html#finding-the-regression-line-1",
+    "href": "slides/10/10-linear-regression.html#finding-the-regression-line-1",
+    "title": "Linear Regression, Cont.",
+    "section": "Finding the regression line",
+    "text": "Finding the regression line\n\\[ \\hat{y} = b_0 + b_1 \\cdot \\hat{x} \\] First we find the slope: \\[b_1 = r \\left( \\frac{s_y}{s_x} \\right)\\]\nIn this formula:\n\n\\(r\\) = correlation coefficient\n\\(s_y\\) = standard deviation of \\(y\\)\n\\(s_x\\) = standard deviation of \\(x\\)"
+  },
+  {
+    "objectID": "slides/10/10-linear-regression.html#finding-the-regression-line-2",
+    "href": "slides/10/10-linear-regression.html#finding-the-regression-line-2",
+    "title": "Linear Regression, Cont.",
+    "section": "Finding the regression line",
+    "text": "Finding the regression line\n\\[ \\hat{y} = b_0 + b_1 \\cdot \\hat{x} \\] Next we use the fact that \\((\\bar{x}, \\bar{y})\\) is on the line. Plug these values into line equation\n\\[\\bar{y} = b_0 + b_1 \\cdot \\bar{x} \\] Now everything is known except \\(b_0\\) so we can solve for that!\n\\[\nb_0 = \\bar{y} - b_1 \\bar{x}\n\\]"
+  },
+  {
+    "objectID": "slides/10/10-linear-regression.html#linear-model",
+    "href": "slides/10/10-linear-regression.html#linear-model",
+    "title": "Linear Regression, Cont.",
+    "section": "Linear Model",
+    "text": "Linear Model\n\\[\n\\hat{y} = 0.212 \\hat{x} - 0.372\n\\]\n\nggplot(data = crickets, aes(x = temp_F, y = chirps_in_15s)) +\n  geom_point() +\n  geom_abline(slope = 0.212, intercept = -0.372, color=\"blue\")"
+  },
+  {
+    "objectID": "slides/10/10-linear-regression.html#next-steps",
+    "href": "slides/10/10-linear-regression.html#next-steps",
+    "title": "Linear Regression, Cont.",
+    "section": "Next Steps",
+    "text": "Next Steps\n\nWhat can we do with our linear model (i.e. regression line)?\nWhat is the significance of correlation coefficient \\(r\\)?"
+  },
+  {
+    "objectID": "slides/10/10-linear-regression.html#strength-of-fit",
+    "href": "slides/10/10-linear-regression.html#strength-of-fit",
+    "title": "Linear Regression, Cont.",
+    "section": "Strength of Fit",
+    "text": "Strength of Fit\nCorrelation \\(r\\) describes strength and direction of linear relationships\nmore commonly use \\(r^2\\) – which is usually capitalized \\(R^2\\).\n\n\n\n\\(R^2\\) measures the amount of variation in outcome variable that’s explained by the linear model.",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Thursday, Week 5"
+    ]
+  },
+  {
+    "objectID": "slides/10/10-linear-regression.html#nonlinear-trends",
+    "href": "slides/10/10-linear-regression.html#nonlinear-trends",
+    "title": "Linear Regression, Cont.",
+    "section": "Nonlinear trends?",
+    "text": "Nonlinear trends?"
+  },
+  {
+    "objectID": "slides/10/10-linear-regression.html#linear_reg",
+    "href": "slides/10/10-linear-regression.html#linear_reg",
+    "title": "Linear Regression, Cont.",
+    "section": "linear_reg",
+    "text": "linear_reg\n\n model_fit &lt;- linear_reg() |&gt;\n      fit(chirps_in_15s ~ temp_F, data = crickets)\n \ntidy(model_fit)\n\n# A tibble: 2 × 5\n  term        estimate std.error statistic  p.value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;\n1 (Intercept)   -0.372    3.23      -0.115 0.910   \n2 temp_F         0.212    0.0402     5.27  0.000151"
+  },
+  {
+    "objectID": "slides/10/10-linear-regressionV.html#in-groups",
+    "href": "slides/10/10-linear-regressionV.html#in-groups",
+    "title": "Linear Regression, Part 2",
+    "section": "In groups",
+    "text": "In groups\n\nPractice from last time: 7.5 (21, 30, 31)"
+  },
+  {
+    "objectID": "slides/10/10-linear-regressionV.html#a-note-on-r-the-correlation-coefficient",
+    "href": "slides/10/10-linear-regressionV.html#a-note-on-r-the-correlation-coefficient",
+    "title": "Linear Regression, Part 2",
+    "section": "A note on \\(r\\), the correlation coefficient",
+    "text": "A note on \\(r\\), the correlation coefficient\nThe correlation coefficient, \\(r\\), makes sense only when a linear model is appropriate. Otherwise, it is not really telling us about strength of association."
+  },
+  {
+    "objectID": "slides/10/10-linear-regressionV.html#recap-finding-the-least-squares-linear-regression",
+    "href": "slides/10/10-linear-regressionV.html#recap-finding-the-least-squares-linear-regression",
+    "title": "Linear Regression, Part 2",
+    "section": "Recap: finding the least squares linear regression",
+    "text": "Recap: finding the least squares linear regression\nThe least squares regression line for a data set with explanatory variable x and response variable y is given by \\[ \\hat{y} = b_0 + b_1 \\cdot \\hat{x} \\] where the slope is \\[ b_1 = r \\left( \\frac{s_y}{s_x} \\right) \\]\nand where the intercept is found by inputting the two means \\((\\bar{x}, \\bar{y})\\) into the equation and solving for \\(b_0\\)."
+  },
+  {
+    "objectID": "slides/10/10-linear-regressionV.html#example-possum-regression-line",
+    "href": "slides/10/10-linear-regressionV.html#example-possum-regression-line",
+    "title": "Linear Regression, Part 2",
+    "section": "Example: Possum regression line",
+    "text": "Example: Possum regression line\n\n\n\\[\ny = 41.2 + 1.24 x\n\\]\n\n\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\n\n\n\n\n\n\nWhat does the slope (1.24) tell us in the context of the possums?"
+  },
+  {
+    "objectID": "slides/10/10-linear-regressionV.html#example-possum-regression-line-1",
+    "href": "slides/10/10-linear-regressionV.html#example-possum-regression-line-1",
+    "title": "Linear Regression, Part 2",
+    "section": "Example: Possum regression line",
+    "text": "Example: Possum regression line\nWe can also find the entire linear model in one go (after loading the tidymodels library):\n\nlibrary(tidymodels)\n\n── Attaching packages ──────────────────────────────────────────────── tidymodels 1.2.0 ──\n\n\n✔ broom        1.0.6      ✔ rsample      1.2.1 \n✔ dials        1.2.1      ✔ tune         1.2.1 \n✔ infer        1.0.7      ✔ workflows    1.1.4 \n✔ modeldata    1.3.0      ✔ workflowsets 1.1.0 \n✔ parsnip      1.2.1      ✔ yardstick    1.3.1 \n✔ recipes      1.0.10     \n\n\n── Conflicts ─────────────────────────────────────────────────── tidymodels_conflicts() ──\n✖ scales::discard() masks purrr::discard()\n✖ dplyr::filter()   masks stats::filter()\n✖ recipes::fixed()  masks stringr::fixed()\n✖ dplyr::lag()      masks stats::lag()\n✖ yardstick::spec() masks readr::spec()\n✖ recipes::step()   masks stats::step()\n• Dig deeper into tidy modeling with R at https://www.tmwr.org\n\n\n\n model_fit &lt;- linear_reg() |&gt;\n      fit(total_l ~ tail_l, data = possum)\n \ntidy(model_fit)\n\n# A tibble: 2 × 5\n  term        estimate std.error statistic  p.value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;\n1 (Intercept)    41.0      6.66       6.16 1.43e- 8\n2 tail_l          1.24     0.180      6.93 3.94e-10"
+  },
+  {
+    "objectID": "slides/10/10-linear-regressionV.html#cricket-chirps-and-temperature",
+    "href": "slides/10/10-linear-regressionV.html#cricket-chirps-and-temperature",
+    "title": "Linear Regression, Part 2",
+    "section": "Cricket Chirps and Temperature",
+    "text": "Cricket Chirps and Temperature\nDo cricket chirp rates and air temperature seem to be associated?\n\n\nRows: 15 Columns: 2\n── Column specification ──────────────────────────────────────────────────────────────────\nDelimiter: \",\"\ndbl (2): temp_F, chirps_in_15s\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message."
+  },
+  {
+    "objectID": "slides/10/10-linear-regressionV.html#cricket-chirps-and-temperature-1",
+    "href": "slides/10/10-linear-regressionV.html#cricket-chirps-and-temperature-1",
+    "title": "Linear Regression, Part 2",
+    "section": "Cricket Chirps and Temperature",
+    "text": "Cricket Chirps and Temperature\nHere are the summary statistics for cricket chirps.\n\n\n# A tibble: 1 × 6\n      N mean_x  sd_x mean_y  sd_y     r\n  &lt;int&gt;  &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1    15   80.1  6.72   16.6  1.72 0.825\n\n\n\n\nFind the linear regression model for these data: \\(\\hat{y} = b_0 + b_1\\hat{x}\\)."
+  },
+  {
+    "objectID": "slides/10/10-linear-regressionV.html#cricket-chirps-and-temperature-2",
+    "href": "slides/10/10-linear-regressionV.html#cricket-chirps-and-temperature-2",
+    "title": "Linear Regression, Part 2",
+    "section": "Cricket Chirps and Temperature",
+    "text": "Cricket Chirps and Temperature\n\n\n\\(\\hat{y} = 0.211 \\hat{x} - 0.314\\)\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow many chirps (per 15 sec) would you predict when it’s \\(74^\\circ F\\) out?\nIf you measure 76 chirps in a minute, what is the temperature likely to be?"
+  },
+  {
+    "objectID": "slides/10/10-linear-regressionV.html#extrapolation",
+    "href": "slides/10/10-linear-regressionV.html#extrapolation",
+    "title": "Linear Regression, Part 2",
+    "section": "Extrapolation",
+    "text": "Extrapolation\n\n\n\\(\\hat{y} = 0.211 \\hat{x} - 0.314\\)\n\n\n\n\n\n\n\n\n\n\n\n\nAccording to this linear model, how many chirps (per 15 sec) are predicted when the temperature is \\(0^\\circ F\\)?"
+  },
+  {
+    "objectID": "slides/10/10-linear-regressionV.html#residuals",
+    "href": "slides/10/10-linear-regressionV.html#residuals",
+    "title": "Linear Regression, Part 2",
+    "section": "Residuals",
+    "text": "Residuals"
+  },
+  {
+    "objectID": "slides/10/10-linear-regressionV.html#cricket-residuals",
+    "href": "slides/10/10-linear-regressionV.html#cricket-residuals",
+    "title": "Linear Regression, Part 2",
+    "section": "Cricket residuals",
+    "text": "Cricket residuals"
+  },
+  {
+    "objectID": "slides/10/10-linear-regressionV.html#residuals-and-outliers",
+    "href": "slides/10/10-linear-regressionV.html#residuals-and-outliers",
+    "title": "Linear Regression, Part 2",
+    "section": "Residuals and outliers",
+    "text": "Residuals and outliers\nEach data set has at least one outlier. How do the outliers affect the slope of the regression line?"
+  },
+  {
+    "objectID": "slides/10/10-linear-regressionV.html#strength-of-fit-r2",
+    "href": "slides/10/10-linear-regressionV.html#strength-of-fit-r2",
+    "title": "Linear Regression, Part 2",
+    "section": "Strength of fit: \\(R^2\\)",
+    "text": "Strength of fit: \\(R^2\\)\nThe coefficient of determination, \\(R^2\\) (read “R squared”), is the amount of variation in the response variable that can be explained by the linear model.\n\n\nDespite the capitalization, \\(R^2\\) just equals \\(r^2\\).\n\n\n\nExample: For cricket chirps, \\(r=0.825\\), so \\(R^2 = (0.825)^2 = 0.681\\).\n\nThis means that \\(0.681\\) or \\(68.1\\)% of the variation we see in cricket chirp rates can be explained by the ambient temperature. What might account for the other \\(31.9\\)% of the variation in chirps?"
+  },
+  {
+    "objectID": "slides/10/10-linear-regressionV.html#practice-for-next-time",
+    "href": "slides/10/10-linear-regressionV.html#practice-for-next-time",
+    "title": "Linear Regression, Part 2",
+    "section": "Practice for next time",
+    "text": "Practice for next time\n\n\\(\\S\\) 11.5 (1, 3)\n\n\n\nNow head to Posit Cloud for AE05 - Fish!"
+  },
+  {
+    "objectID": "slides/10/10-linear-regression.html#section",
+    "href": "slides/10/10-linear-regression.html#section",
+    "title": "Linear Regression, Cont.",
+    "section": "",
+    "text": "ggplot(datasaurus_dozen, aes(x = x, y = y, colour = dataset))+\n    geom_point()+\n    theme_void()+\n    theme(legend.position = \"none\")+\n    facet_wrap(~dataset, ncol = 3) +\n    coord_fixed()"
+  },
+  {
+    "objectID": "slides/10/10-linear-regression.html#what-do-these-datasets-all-have-in-common",
+    "href": "slides/10/10-linear-regression.html#what-do-these-datasets-all-have-in-common",
+    "title": "Linear Regression, Cont.",
+    "section": "What do these datasets all have in common?",
+    "text": "What do these datasets all have in common?\n\n\n\n\n\n\n\n\n\n\nThe all have roughly the same correlation \\(r = -0.06\\)\nCorrelation is only meaningful for linear assocations",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Thursday, Week 5"
+    ]
+  },
+  {
+    "objectID": "slides/10/10-linear-regression.html#a-shortcut",
+    "href": "slides/10/10-linear-regression.html#a-shortcut",
+    "title": "Linear Regression, Cont.",
+    "section": "A Shortcut!",
+    "text": "A Shortcut!\n\n model_fit &lt;- linear_reg() |&gt;\n      fit(chirps_in_15s ~ temp_F, data = crickets)\n \ntidy(model_fit)\n\n# A tibble: 2 × 5\n  term        estimate std.error statistic  p.value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;\n1 (Intercept)   -0.372    3.23      -0.115 0.910   \n2 temp_F         0.212    0.0402     5.27  0.000151\n\n\n\\[ \\hat{y} = -0.372 + 0.212 \\, \\hat{x} \\]",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Thursday, Week 5"
+    ]
+  },
+  {
+    "objectID": "slides/10/10-linear-regression.html#r2-example",
+    "href": "slides/10/10-linear-regression.html#r2-example",
+    "title": "Linear Regression, Cont.",
+    "section": "\\(R^2\\) Example",
+    "text": "\\(R^2\\) Example\nFor our cricket chirps we found \\(r=0.825\\)\nso \\(R^2 = (0.825)^2 = 0.681\\).\n\nThis means that \\(0.681\\) or \\(68.1\\)% of the variation we see in cricket chirp rates can be explained by the ambient temperature. What might account for the other \\(31.9\\)% of the variation in chirps?",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Thursday, Week 5"
+    ]
+  },
+  {
+    "objectID": "slides/10/10-linear-regression.html#interpreting-the-slope",
+    "href": "slides/10/10-linear-regression.html#interpreting-the-slope",
+    "title": "Linear Regression, Cont.",
+    "section": "Interpreting the slope",
+    "text": "Interpreting the slope\n\\[ \\hat{y} = -0.372 + 0.212 \\, \\hat{x} \\]\nSlope of \\(0.212\\) means that for every increase of 1 degree (F), the chirp rate will increase by 0.212.",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Thursday, Week 5"
+    ]
+  },
+  {
+    "objectID": "slides/10/10-linear-regression.html#dont-extrapolate",
+    "href": "slides/10/10-linear-regression.html#dont-extrapolate",
+    "title": "Linear Regression, Cont.",
+    "section": "Don’t Extrapolate!!",
+    "text": "Don’t Extrapolate!!\n\\[ \\hat{y} = -0.372 + 0.212 \\, \\hat{x} \\]\nWhat do you expect the chirp rate will be if temperature is 100?",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Thursday, Week 5"
+    ]
+  },
+  {
+    "objectID": "slides/10/10-linear-regression.html#outliers",
+    "href": "slides/10/10-linear-regression.html#outliers",
+    "title": "Linear Regression, Cont.",
+    "section": "Outliers",
+    "text": "Outliers\nEach data set has at least one outlier. How do the outliers affect the slope of the regression line?",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Thursday, Week 5"
+    ]
+  },
+  {
+    "objectID": "slides/10/10-linear-regression.html#practice-for-next-time",
+    "href": "slides/10/10-linear-regression.html#practice-for-next-time",
+    "title": "Linear Regression, Cont.",
+    "section": "Practice for next time",
+    "text": "Practice for next time\nSection 11.5 #1, 3\n\n\nNow head to Posit Cloud for AE05 - Finnish Fish!",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Thursday, Week 5"
+    ]
+  },
+  {
+    "objectID": "slides/09/09-linear-regression.html",
+    "href": "slides/09/09-linear-regression.html",
+    "title": "Linear Regression",
+    "section": "",
+    "text": "Discuss Homework: 7.5 #1, 3, 7, 9, 19",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 5"
+    ]
+  },
+  {
+    "objectID": "slides/09/09-linear-regression.html#linear_reg",
+    "href": "slides/09/09-linear-regression.html#linear_reg",
+    "title": "Linear Regression",
+    "section": "linear_reg",
+    "text": "linear_reg\n\n model_fit &lt;- linear_reg() |&gt;\n      fit(chirps_in_15s ~ temp_F, data = crickets)\n \ntidy(model_fit)\n\n# A tibble: 2 × 5\n  term        estimate std.error statistic  p.value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;\n1 (Intercept)   -0.372    3.23      -0.115 0.910   \n2 temp_F         0.212    0.0402     5.27  0.000151",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 5"
+    ]
   }
 ]
