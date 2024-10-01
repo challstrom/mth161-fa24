@@ -1,0 +1,17 @@
+{
+  "hash": "bccf005c38dd8ab93c376f8caf97a41d",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: Linear Regression, Cont.\nsubtitle: Chapter 7\nformat: html\nauto-stretch: false\nauthor: \"\"\n---\n\n::: {.cell}\n\n:::\n\n\n## In groups {visability=\"hidden\"}\n\n-   Discuss Homework: \\S\n\n## Penguins!\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](11-hypothesis-testing_files/figure-html/unnamed-chunk-2-1.png){width=672}\n:::\n:::\n",
+    "supporting": [
+      "11-hypothesis-testing_files/figure-html"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

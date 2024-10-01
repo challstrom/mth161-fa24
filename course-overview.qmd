@@ -8,7 +8,6 @@ This course will introduce you to the discipline of statistics as a science of u
 
 You will learn how to effectively make use of data in the face of uncertainty: how to collect data, how to analyze data, and how to use data to make inferences and conclusions about real world phenomena. You will acquire a conceptual understanding and proficiency in statistical and quantitative reasoning tools to help you critique and evaluate data-based claims and decisions.
 
-
 MTH 161, Elementary Statistics, provides students with an introduction to the methods and concepts involved in working with data and non-deterministic situations. In this class, you will:
 
 -   exposed to the conceptual structure of statistics and its underpinnings in discrete and continuous probability theory.

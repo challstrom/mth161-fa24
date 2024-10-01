@@ -204,13 +204,12 @@ b_0 = \bar{y} - b_1 \bar{x}
 $$
 
 ## Calculuate!
+
 ```{r}
 
 lm(chirps_in_15s ~ temp_F, data=crickets)
   
 ```
-
-
 
 ## Linear Model
 

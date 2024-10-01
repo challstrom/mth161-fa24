@@ -1,0 +1,33 @@
+---
+title: Linear Regression, Cont.
+subtitle: Chapter 7
+format: html
+auto-stretch: false
+author: ""
+---
+
+```{r}
+#| echo: false
+#| message: false
+library(tidyverse)
+library(openintro)
+library(tidymodels)
+library(palmerpenguins)
+```
+
+## In groups {visability="hidden"}
+
+-   Discuss Homework: \S
+
+## Penguins!
+
+```{r}
+#| echo: false
+#| warning: false
+
+ggplot(data = penguins, 
+       mapping = aes(body_mass_g)) +
+  geom_histogram(binwidth=200, col="white")
+```
+
+
