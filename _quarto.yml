@@ -55,6 +55,8 @@ website:
             text: "Tuesday, Week 5"
           - href: slides/10/10-linear-regression.qmd
             text: "Thursday, Week 5" 
+          - href: slides/11/11-hypothesis-testing.qmd
+            text: "Tuesday, Week 6" 
       
 format:
   html:

@@ -1,7 +1,7 @@
 ---
-title: Linear Regression, Cont.
-subtitle: Chapter 7
-format: html
+title: Hypothesis Testing
+subtitle: Chapter 11
+format: revealjs
 auto-stretch: false
 author: ""
 ---
@@ -13,21 +13,132 @@ library(tidyverse)
 library(openintro)
 library(tidymodels)
 library(palmerpenguins)
+library(ggridges)
 ```
 
-## In groups {visability="hidden"}
+## In groups
 
--   Discuss Homework: \S
+-   Discuss Homework: Chapter 11, #1, 2
 
-## Penguins!
+## Remember the Penguins!
 
 ```{r}
-#| echo: false
+#| echo: true
 #| warning: false
 
-ggplot(data = penguins, 
-       mapping = aes(body_mass_g)) +
-  geom_histogram(binwidth=200, col="white")
+ggplot(penguins, mapping = aes(x = body_mass_g)) +
+  geom_histogram(binwidth=200, col="white", fill = "seagreen")
 ```
 
+## Density plot (new)
 
+```{r}
+#| echo: true
+#| warning: false
+
+ggplot(penguins, mapping = aes(x = body_mass_g)) +
+  geom_density(fill = "seagreen")
+```
+
+## Box plot
+
+```{r}
+#| echo: true
+#| warning: false
+
+ggplot(penguins, mapping = aes(x = body_mass_g)) +
+  geom_boxplot(fill = "seagreen")
+```
+
+## Body mass *faceted* by `species`
+
+```{r}
+#| echo: true
+#| warning: false
+#| fig-width: 10
+#| fig-asp: 0.5
+#| fig-align: center
+
+ggplot(penguins, mapping = aes(x = body_mass_g)) +
+  geom_histogram(binwidth=200, col="white", fill = "seagreen") +
+  facet_wrap(~species)
+```
+
+## Mulitple boxplots
+
+```{r}
+#| echo: true
+#| warning: false
+
+ggplot(penguins, mapping = aes(x = body_mass_g, fill = species)) +
+  geom_boxplot()
+```
+
+## Overlay density plots (new!)
+
+```{r}
+#| warning: false
+#| echo: true
+
+ggplot(penguins, mapping = aes(x = body_mass_g, fill = species)) +
+  geom_density(alpha = 0.3)
+```
+
+## Ridge plot (new!)
+
+```{r}
+#| echo: true
+#| warning: false
+
+ggplot(penguins, aes(x = body_mass_g, y = species, fill = species)) +
+  geom_density_ridges(alpha = 0.3) 
+```
+
+## Summary Statistics
+
+```{r}
+#| echo: true
+
+penguins |>
+  group_by(species) |>
+  summarize( mean = mean(body_mass_g, na.rm = TRUE),
+             sd = sd(body_mass_g, na.rm = TRUE)
+  )
+    
+```
+
+\
+
+**Question:** Are the mean body weights of Adelie and Chinstraps *really* different? Or is the difference just due to random *variation*?
+
+## Sample vs Population
+
+-   Chapter 5: sample mean is (hopefully) an approxmiation of the population mean
+
+-   Clearly the **sample means** are different (3701 vs. 3733)
+
+-   But are the **population means** different?
+
+::: fragment
+### What do you think?
+:::
+
+## Hypothesis Testing
+
+-   $H_0$ -- Null Hypothesis (no difference)
+
+Mean body weight of Adelie and Chinstrap penguins are the same.
+
+-   $H_1$ -- Alternative Hypothesis (there is a difference)
+
+Mean body weight of Adelie and Chinstrap penguins are different.
+
+## Coin Flipping
+
+If you flip a fair coin 100 times, how many times will it come up **heads**?
+
+[Do a simulation](https://www.rossmanchance.com/applets/2021/oneprop/OneProp.htm)
+
+## Gender Discrimination Study
+
+Textbook [Section 11.1](https://openintro-ims.netlify.app/foundations-randomization#sec-caseStudySexDiscrimination)

@@ -3724,9 +3724,14 @@
   {
     "objectID": "slides/11/11-hypothesis-testing.html#in-groups",
     "href": "slides/11/11-hypothesis-testing.html#in-groups",
-    "title": "Linear Regression, Cont.",
-    "section": "",
-    "text": "Discuss Homework:"
+    "title": "Hypothesis Testing",
+    "section": "In groups",
+    "text": "In groups\n\nDiscuss Homework: Chapter 11, #1, 2",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 6"
+    ]
   },
   {
     "objectID": "slides/11/11-hypothesis-testing.html#penguins",
@@ -3741,5 +3746,149 @@
     "title": "Linear Regression, Cont.",
     "section": "",
     "text": "Discuss Homework:"
+  },
+  {
+    "objectID": "slides/11/11-hypothesis-testing.html#remember-the-penguins",
+    "href": "slides/11/11-hypothesis-testing.html#remember-the-penguins",
+    "title": "Hypothesis Testing",
+    "section": "Remember the Penguins!",
+    "text": "Remember the Penguins!\n\nggplot(penguins, mapping = aes(x = body_mass_g)) +\n  geom_histogram(binwidth=200, col=\"white\", fill = \"seagreen\")",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 6"
+    ]
+  },
+  {
+    "objectID": "slides/11/11-hypothesis-testing.html#density-plot-new",
+    "href": "slides/11/11-hypothesis-testing.html#density-plot-new",
+    "title": "Hypothesis Testing",
+    "section": "Density plot (new)",
+    "text": "Density plot (new)\n\nggplot(penguins, mapping = aes(x = body_mass_g)) +\n  geom_density(fill = \"seagreen\")",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 6"
+    ]
+  },
+  {
+    "objectID": "slides/11/11-hypothesis-testing.html#box-plot",
+    "href": "slides/11/11-hypothesis-testing.html#box-plot",
+    "title": "Hypothesis Testing",
+    "section": "Box plot",
+    "text": "Box plot\n\nggplot(penguins, mapping = aes(x = body_mass_g)) +\n  geom_boxplot(fill = \"seagreen\")",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 6"
+    ]
+  },
+  {
+    "objectID": "slides/11/11-hypothesis-testing.html#body-mass-faceted-by-species",
+    "href": "slides/11/11-hypothesis-testing.html#body-mass-faceted-by-species",
+    "title": "Hypothesis Testing",
+    "section": "Body mass faceted by species",
+    "text": "Body mass faceted by species\n\nggplot(penguins, mapping = aes(x = body_mass_g)) +\n  geom_histogram(binwidth=200, col=\"white\", fill = \"seagreen\") +\n  facet_wrap(~species)",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 6"
+    ]
+  },
+  {
+    "objectID": "slides/11/11-hypothesis-testing.html#mulitple-boxplots",
+    "href": "slides/11/11-hypothesis-testing.html#mulitple-boxplots",
+    "title": "Hypothesis Testing",
+    "section": "Mulitple boxplots",
+    "text": "Mulitple boxplots\n\nggplot(penguins, mapping = aes(x = body_mass_g, fill = species)) +\n  geom_boxplot()",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 6"
+    ]
+  },
+  {
+    "objectID": "slides/11/11-hypothesis-testing.html#overlay-density-plots-new",
+    "href": "slides/11/11-hypothesis-testing.html#overlay-density-plots-new",
+    "title": "Hypothesis Testing",
+    "section": "Overlay density plots (new!)",
+    "text": "Overlay density plots (new!)\n\nggplot(penguins, mapping = aes(x = body_mass_g, fill = species)) +\n  geom_density(alpha = 0.3)",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 6"
+    ]
+  },
+  {
+    "objectID": "slides/11/11-hypothesis-testing.html#ridge-plot-new",
+    "href": "slides/11/11-hypothesis-testing.html#ridge-plot-new",
+    "title": "Hypothesis Testing",
+    "section": "Ridge plot (new!)",
+    "text": "Ridge plot (new!)\n\nggplot(penguins, aes(x = body_mass_g, y = species, fill = species)) +\n  geom_density_ridges(alpha = 0.3)",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 6"
+    ]
+  },
+  {
+    "objectID": "slides/11/11-hypothesis-testing.html#summary-statistics",
+    "href": "slides/11/11-hypothesis-testing.html#summary-statistics",
+    "title": "Hypothesis Testing",
+    "section": "Summary Statistics",
+    "text": "Summary Statistics\n\npenguins |&gt;\n  group_by(species) |&gt;\n  summarize( mean = mean(body_mass_g, na.rm = TRUE),\n             sd = sd(body_mass_g, na.rm = TRUE)\n  )\n\n# A tibble: 3 × 3\n  species    mean    sd\n  &lt;fct&gt;     &lt;dbl&gt; &lt;dbl&gt;\n1 Adelie    3701.  459.\n2 Chinstrap 3733.  384.\n3 Gentoo    5076.  504.\n\n\n\n\nQuestion: Are the mean body weights of Adelie and Chinstraps really different? Or is the difference just due to random variation?",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 6"
+    ]
+  },
+  {
+    "objectID": "slides/11/11-hypothesis-testing.html#sample-vs-population",
+    "href": "slides/11/11-hypothesis-testing.html#sample-vs-population",
+    "title": "Hypothesis Testing",
+    "section": "Sample vs Population",
+    "text": "Sample vs Population\n\nChapter 5: sample mean is (hopefully) an approxmiation of the population mean\nClearly the sample means are different (3701 vs. 3733)\nBut are the population means different?\n\n\n\nWhat do you think?",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 6"
+    ]
+  },
+  {
+    "objectID": "slides/11/11-hypothesis-testing.html#hypothesis-testing",
+    "href": "slides/11/11-hypothesis-testing.html#hypothesis-testing",
+    "title": "Hypothesis Testing",
+    "section": "Hypothesis Testing",
+    "text": "Hypothesis Testing\n\n\\(H_0\\) – Null Hypothesis (no difference)\n\nMean body weight of Adelie and Chinstrap penguins are the same.\n\n\\(H_1\\) – Alternative Hypothesis (there is a difference)\n\nMean body weight of Adelie and Chinstrap penguins are different.",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 6"
+    ]
+  },
+  {
+    "objectID": "slides/11/11-hypothesis-testing.html#coin-flipping",
+    "href": "slides/11/11-hypothesis-testing.html#coin-flipping",
+    "title": "Hypothesis Testing",
+    "section": "Coin Flipping",
+    "text": "Coin Flipping\nIf you flip a fair coin 100 times, how many times will it come up heads?\nDo a simulation",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 6"
+    ]
+  },
+  {
+    "objectID": "slides/11/11-hypothesis-testing.html#gender-discrimination-study",
+    "href": "slides/11/11-hypothesis-testing.html#gender-discrimination-study",
+    "title": "Hypothesis Testing",
+    "section": "Gender Discrimination Study",
+    "text": "Gender Discrimination Study\nTextbook Section 11.1",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 6"
+    ]
   }
 ]
