@@ -40,7 +40,7 @@ Each week, I will ask you to complete a short one-page reflection on that week's
 
 ## Labs
 
-Approximately every two weeks, I will assign a lab. You can think of these as extended homework assignments that will combine concepts with practice. You will use [Posit Cloud](https://posit.cloud) to complete a lab report which you'll submit on Moodle. I will provide feedback after which you're welcome to resubmit any work within one week.
+Approximately every two weeks, I will assign a lab. You can think of these as extended homework assignments that will combine concepts with practice. You will use [Posit Cloud](https://posit.cloud) to work on a lab report which you'll submit on Moodle. I will provide feedback after which you're welcome to resubmit any work within one week. A lab is considered **complete** only when feedback has been addressed.
 
 ## Quizzes
 
