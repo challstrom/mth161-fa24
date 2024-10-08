@@ -4157,118 +4157,215 @@
     "href": "slides/13/13-confidence-intervals.html#in-groups",
     "title": "Confidence Intervals with Bootstrapping",
     "section": "In groups",
-    "text": "In groups\n\nDiscuss Homework: Chapter 12, #1, 3, 7"
+    "text": "In groups\n\nDiscuss Homework: Chapter 12, #1, 3, 7",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 7"
+    ]
   },
   {
     "objectID": "slides/13/13-confidence-intervals.html#confidence-intervals",
     "href": "slides/13/13-confidence-intervals.html#confidence-intervals",
     "title": "Confidence Intervals with Bootstrapping",
     "section": "Confidence Intervals",
-    "text": "Confidence Intervals\n\n\nGoal is to estimate a population parameter\n\\(p\\) – true value of a parameter (usually unknown)\n\\(\\hat {p}\\) – sample statistic\n\n\nHow confident can we be that the value of \\(\\hat {p}\\) is close to \\(p\\)?"
+    "text": "Confidence Intervals\n\n\nGoal is to estimate a population parameter\n\\(p\\) – true value of a parameter (usually unknown)\n\\(\\hat {p}\\) – sample statistic\n\n\nHow confident can we be that the value of \\(\\hat {p}\\) is close to \\(p\\)?",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 7"
+    ]
   },
   {
     "objectID": "slides/13/13-confidence-intervals.html#case-study",
     "href": "slides/13/13-confidence-intervals.html#case-study",
     "title": "Confidence Intervals with Bootstrapping",
     "section": "Case Study",
-    "text": "Case Study\nA medical consultant helps guide transplant patients through all the stages of surgery. Out of a total of 62 clients, only 3 had complications:\n\\[\n\\hat{p} = 3/62 = 0.048\n\\]\nConsultant claims that her rate is less than the national rate of 10%.\nQuestion – how confident can we be that \\(p\\) is less than the national rate of 0.1?"
+    "text": "Case Study\nA medical consultant helps guide transplant patients through all the stages of surgery. Out of a total of 62 clients, only 3 had complications:\n\\[\n\\hat{p} = 3/62 = 0.048\n\\]\nConsultant claims that her rate is less than the national rate of 10%.\nQuestion – how confident can we be that \\(p\\) is less than the national rate of 0.1?",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 7"
+    ]
   },
   {
     "objectID": "slides/13/13-confidence-intervals.html#distributions",
     "href": "slides/13/13-confidence-intervals.html#distributions",
     "title": "Confidence Intervals with Bootstrapping",
     "section": "Distributions",
-    "text": "Distributions\nWe know that there’s some variation in the data. But how much?\nIf this particular consultant had another 62 clients, how many of them might have complications?\n\n\nThis is similar to what we did last week.\nWe need to know the sampling distribution."
+    "text": "Distributions\nWe know that there’s some variation in the data. But how much?\nIf this particular consultant had another 62 clients, how many of them might have complications?\n\n\nThis is similar to what we did last week.\nWe need to know the sampling distribution.",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 7"
+    ]
   },
   {
     "objectID": "slides/13/13-confidence-intervals.html#two-steps",
     "href": "slides/13/13-confidence-intervals.html#two-steps",
     "title": "Confidence Intervals with Bootstrapping",
     "section": "Two Steps",
-    "text": "Two Steps\n\nFind the distribution\nUse the distribution to find confidence interval"
+    "text": "Two Steps\n\nFind the distribution\nUse the distribution to find confidence interval",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 7"
+    ]
   },
   {
     "objectID": "slides/13/13-confidence-intervals.html#step-1-find-sampling-distribution",
     "href": "slides/13/13-confidence-intervals.html#step-1-find-sampling-distribution",
     "title": "Confidence Intervals with Bootstrapping",
     "section": "Step 1 – Find Sampling Distribution",
-    "text": "Step 1 – Find Sampling Distribution\n\nDetermine with math!\nWe’ll come back to this in Chapter 13.\nBootstrapping!\nUse the observed proportion to construct a new population and resample from that.\nSomeone else gives this to us. (e.g. see Chapter 12 homework)"
+    "text": "Step 1 – Find Sampling Distribution\n\nDetermine with math!\nWe’ll come back to this in Chapter 13.\nBootstrapping!\nUse the observed proportion to construct a new population and resample from that.\nSomeone else gives this to us. (e.g. see Chapter 12 homework)",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 7"
+    ]
   },
   {
     "objectID": "slides/13/13-confidence-intervals.html#bootstrap",
     "href": "slides/13/13-confidence-intervals.html#bootstrap",
     "title": "Confidence Intervals with Bootstrapping",
     "section": "Bootstrap",
-    "text": "Bootstrap\nWant 62 new outcomes each with a 0.048 chance of having a complication. Put 62 marbles in a bag\n\n3 labeled “C”\n59 labeld “NC”\n\n\npick a marble\nnote outcome\nput back into bag (sample with replacement)\nrepeat"
+    "text": "Bootstrap\nWant 62 new outcomes each with a 0.048 chance of having a complication. Put 62 marbles in a bag\n\n3 labeled “C”\n59 labeld “NC”\n\n\npick a marble\nnote outcome\nput back into bag (sample with replacement)\nrepeat",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 7"
+    ]
   },
   {
     "objectID": "slides/13/13-confidence-intervals.html#resample-1",
     "href": "slides/13/13-confidence-intervals.html#resample-1",
     "title": "Confidence Intervals with Bootstrapping",
     "section": "Resample #1",
-    "text": "Resample #1\n“NC”, “NC”, “NC”, “NC”, “NC”, “C”, “NC”, “C”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “C”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “C”, “NC”, “NC”, “NC”, “C”, “NC”, “NC”\n\n\nComplications: 5/62 = 0.081"
+    "text": "Resample #1\n“NC”, “NC”, “NC”, “NC”, “NC”, “C”, “NC”, “C”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “C”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “NC”, “C”, “NC”, “NC”, “NC”, “C”, “NC”, “NC”\n\n\nComplications: 5/62 = 0.081",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 7"
+    ]
   },
   {
     "objectID": "slides/13/13-confidence-intervals.html#resample-many-times-to-get-sample-distribution",
     "href": "slides/13/13-confidence-intervals.html#resample-many-times-to-get-sample-distribution",
     "title": "Confidence Intervals with Bootstrapping",
     "section": "Resample many times to get sample distribution",
-    "text": "Resample many times to get sample distribution\n\nset.seed(25) \n\nboot_dist_donor &lt;- organ_donor |&gt;\n  specify(response = outcome, success = \"complication\") |&gt;\n  generate(reps = 1000, type = \"bootstrap\") |&gt;\n  calculate(stat = \"prop\")"
+    "text": "Resample many times to get sample distribution\n\nset.seed(25) \n\nboot_dist_donor &lt;- organ_donor |&gt;\n  specify(response = outcome, success = \"complication\") |&gt;\n  generate(reps = 1000, type = \"bootstrap\") |&gt;\n  calculate(stat = \"prop\")",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 7"
+    ]
   },
   {
     "objectID": "slides/13/13-confidence-intervals.html#visualize",
     "href": "slides/13/13-confidence-intervals.html#visualize",
     "title": "Confidence Intervals with Bootstrapping",
     "section": "Visualize",
-    "text": "Visualize\n\nboot_dist_donor |&gt;\n  ggplot( aes(x = stat)) +\n  geom_histogram(binwidth = 0.011, col=\"white\")"
+    "text": "Visualize\n\nboot_dist_donor |&gt;\n  ggplot( aes(x = stat)) +\n  geom_histogram(binwidth = 0.011, col=\"white\")",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 7"
+    ]
   },
   {
     "objectID": "slides/13/13-confidence-intervals.html#visualize-1",
     "href": "slides/13/13-confidence-intervals.html#visualize-1",
     "title": "Confidence Intervals with Bootstrapping",
     "section": "Visualize",
-    "text": "Visualize\n\nvisualize(boot_dist_donor)"
+    "text": "Visualize\n\nvisualize(boot_dist_donor)",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 7"
+    ]
   },
   {
     "objectID": "slides/13/13-confidence-intervals.html#step-2-use-sampling-distribution-to-get-confidence-interval",
     "href": "slides/13/13-confidence-intervals.html#step-2-use-sampling-distribution-to-get-confidence-interval",
     "title": "Confidence Intervals with Bootstrapping",
     "section": "Step 2 – Use Sampling Distribution to get confidence interval",
-    "text": "Step 2 – Use Sampling Distribution to get confidence interval\nEstimate 95% confidence interval from graph"
+    "text": "Step 2 – Use Sampling Distribution to get confidence interval\nEstimate 95% confidence interval from graph",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 7"
+    ]
   },
   {
     "objectID": "slides/13/13-confidence-intervals.html#confidence-interval-2",
     "href": "slides/13/13-confidence-intervals.html#confidence-interval-2",
     "title": "Confidence Intervals with Bootstrapping",
     "section": "Confidence Interval #2",
-    "text": "Confidence Interval #2\n\nboot_dist_donor |&gt;\n  summarize(\n    lower = quantile( stat, 0.025),\n    upper = quantile( stat, 0.975)\n  )\n\n# A tibble: 1 × 2\n  lower upper\n  &lt;dbl&gt; &lt;dbl&gt;\n1     0 0.113"
+    "text": "Confidence Interval #2\n\nboot_dist_donor |&gt;\n  summarize(\n    lower = quantile( stat, 0.025),\n    upper = quantile( stat, 0.975)\n  )\n\n# A tibble: 1 × 2\n  lower upper\n  &lt;dbl&gt; &lt;dbl&gt;\n1     0 0.113",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 7"
+    ]
   },
   {
     "objectID": "slides/13/13-confidence-intervals.html#confidence-interval-3",
     "href": "slides/13/13-confidence-intervals.html#confidence-interval-3",
     "title": "Confidence Intervals with Bootstrapping",
     "section": "Confidence Interval #3",
-    "text": "Confidence Interval #3\n\nci &lt;- boot_dist_donor |&gt;\n  get_confidence_interval(level = 0.95)\n\nci\n\n# A tibble: 1 × 2\n  lower_ci upper_ci\n     &lt;dbl&gt;    &lt;dbl&gt;\n1        0    0.113"
+    "text": "Confidence Interval #3\n\nci &lt;- boot_dist_donor |&gt;\n  get_confidence_interval(level = 0.95)\n\nci\n\n# A tibble: 1 × 2\n  lower_ci upper_ci\n     &lt;dbl&gt;    &lt;dbl&gt;\n1        0    0.113",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 7"
+    ]
   },
   {
     "objectID": "slides/13/13-confidence-intervals.html#visualize-2",
     "href": "slides/13/13-confidence-intervals.html#visualize-2",
     "title": "Confidence Intervals with Bootstrapping",
     "section": "visualize",
-    "text": "visualize\n\nvisualize(boot_dist_donor) +\n  shade_confidence_interval(ci)"
+    "text": "visualize\n\nvisualize(boot_dist_donor) +\n  shade_confidence_interval(ci)",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 7"
+    ]
   },
   {
     "objectID": "slides/13/13-confidence-intervals.html#interpretation",
     "href": "slides/13/13-confidence-intervals.html#interpretation",
     "title": "Confidence Intervals with Bootstrapping",
     "section": "Interpretation",
-    "text": "Interpretation\nWe are 95% confident that the true proportion is between 0.0 and 0.113.\nNotice that this interval contains the national rate of 0.1.\nTherefore we cannot be confident (at a 95% level) that true proportion is less than 10%!"
+    "text": "Interpretation\nWe are 95% confident that the true proportion is between 0.0 and 0.113.\nNotice that this interval contains the national rate of 0.1.\nTherefore we cannot be confident (at a 95% level) that true proportion is less than 10%!",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 7"
+    ]
   },
   {
     "objectID": "slides/13/13-confidence-intervals.html#confidence-interval",
     "href": "slides/13/13-confidence-intervals.html#confidence-interval",
     "title": "Confidence Intervals with Bootstrapping",
     "section": "95% confidence interval",
-    "text": "95% confidence interval"
+    "text": "95% confidence interval",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 7"
+    ]
+  },
+  {
+    "objectID": "slides/13/13-confidence-intervals.html",
+    "href": "slides/13/13-confidence-intervals.html",
+    "title": "Confidence Intervals with Bootstrapping",
+    "section": "",
+    "text": "Discuss Homework: Chapter 12, #1, 3, 7",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 7"
+    ]
   }
 ]

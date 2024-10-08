@@ -59,6 +59,8 @@ website:
             text: "Tuesday, Week 6" 
           - href: slides/12/12-hypothesis-testing.qmd
             text: "Thursday, Week 6" 
+          - href: slides/13/13-confidence-intervals.qmd
+            text: "Tuesday, Week 7"   
       
 format:
   html:
