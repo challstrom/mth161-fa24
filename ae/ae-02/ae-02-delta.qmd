@@ -1,0 +1,271 @@
+---
+title: "AE-02 COVID vaccine and deaths from Delta variant"
+categories: 
+  - Application exercise
+  - Suggested answers
+editor: visual
+editor_options: 
+  chunk_output_type: console
+---
+
+For this AE, we want to explore the question "How do deaths from COVID cases compare between people who are vaccinated and those unvaccinated?"
+
+::: {.callout-note title="Question 0" icon="false"}
+Before we jump into our analysis, what do you think we'll find?
+
+(write your response here)
+:::
+
+## Goals
+
+-   Create data visualizations and calculate summary statistics for comparing trends across groups
+
+-   Distinguishing observational studies and experiments
+
+-   Identifying confounding variables and understanding Simpson's paradox
+
+## R Goals
+
+In addition to using `ggplot` to produce graphs, some new R commands that we'll use in this AE are: `count`, `group_by`, `mutate`, `filter`, `select`.
+
+## Packages
+
+The `tidyverse` package contains many of the commands listed above which make working with data easier.
+
+```{r}
+#| label: load-packages
+#| message: false
+
+library(tidyverse)
+```
+
+## Data
+
+The data for this case study come from a technical briefing published by Public Health England in August 2021 on COVID cases, vaccinations, and deaths from the Delta variant. Each observation is a patient visiting emergency care. Rather than loading an R package that contains this data, we will import the data directly from a file.
+
+```{r}
+#| label: load-data
+
+delta <- read_csv("delta.csv")
+```
+
+::: {.callout-note title="Task" icon="false"}
+Use either `print` or `glimpse` in the code block below to take a quick look at the data set.
+:::
+
+```{r}
+# add code here
+```
+
+## Understanding the data
+
+::: {.callout-note title="Question 1" icon="false"}
+How many rows and columns are in this dataset? What do the rows represent? What are the variables and what type are they?
+
+(write your answer here)
+:::
+
+Notice that to answer this question, you had to first run the `print` or `glimpse` command. This might seem a bit clumsy, but turns out we can incorporate code to get the answers to these qestions directly into our narrative. This is done with **inline code**, shown here:
+
+> There are `r nrow(delta)` rows and `r ncol(delta)` columns in the dataset.
+
+When you render this document, the correct values will be inserted into the appropriate place!
+
+::: {.callout-note title="Question 2" icon="false"}
+Do these data come from an observational study or experiment? Why?
+
+(write your answer here)
+:::
+
+## Visualizing categorical data
+
+To start understanding this data, let's create a visualization of health outcome by vaccine status that will allow us to compare the proportion of deaths across those who are and are not vaccinated.
+
+```{r}
+#| label: plot-deaths-vaccine
+
+ggplot(delta, aes(x = vaccine, fill = outcome)) +
+  geom_bar(position = "fill")
+```
+
+::: {.callout-note title="Question 3" icon="false"}
+What can you say (if anything) about death rates in these two groups based on this visualization?
+
+(write your answer here)
+:::
+
+## Summarizing catagorical data
+
+You may have noticed that it's difficult to see any difference between the two groups from this bar graph. So instead, let's calculate the actual proportions. To do this, we need to know how many vaccinated patients died and how many unvaccinated patients died. Once we have those numbers, we can calculate proportions.
+
+```{r}
+#| label: count-deaths-vaccine
+
+delta |>
+  count(vaccine, outcome)
+```
+
+::: {.callout-note title="Question 4" icon="false"}
+Based on the output of this R code, what proportion the vaccinated group died? What proportion of the unvaccinated group died?
+
+(write your answer here)
+:::
+
+At heart, R is a fancy calculator, so there's no reason we can't ask it to do these calculations for us! The following code does this and adds a new column to the output with these values.
+
+```{r}
+#| label: prop-deaths-vaccine
+
+delta |>
+  count(vaccine, outcome) |>
+  group_by(vaccine) |>
+  mutate(prop = n / sum(n))
+```
+
+::: {.callout-note title="Question 5" icon="false"}
+Verify that the proportions you calculated in Question 4 are the same as the values shown on this table.
+:::
+
+## Improved Visualization and Summary
+
+Our next step is to investigate how controlling for an additional variable changes our understanding of the data. In particular, we want to control for age.
+
+First, a visualization. These are the same as before, except that we get two separate graphs where the data has been separated (*faceted*) by the `age` variable.
+
+```{r}
+#| label: deaths-vaccine-age
+
+ggplot(delta, aes(x = vaccine, fill = outcome)) +
+  geom_bar(position = "fill") +
+  facet_wrap(~age)
+```
+
+::: {.callout-note title="Question 6" icon="false"}
+What do you notice in these bar graphs?
+
+(write your response here)
+:::
+
+Next, we calculate the numerical proportions. This time, there's an additional variable we're using to group the population.
+
+```{r}
+delta |>
+  count(age, vaccine, outcome) |>
+  group_by(age, vaccine) |>
+  mutate(prop = n / sum(n))
+```
+
+::: {.callout-note title="Question 7" icon="false"}
+what do you notice?
+
+(write your responses here)
+:::
+
+::: {.callout-note title="Question 8" icon="false"}
+Based on your findings so far, fill in the blanks with *more*, *less*, or *equally*: Is there anything surprising about these statements? Speculate on what, if anything, the discrepancy might be due to.
+
+-   In 2021, among those in the UK who were COVID Delta cases, the unvaccinated were \_\_\_\_\_ likely to die than the vaccinated.
+
+-   For those under 50, those who were unvaccinated were \_\_\_\_ likely to die than those who were vaccinated.
+
+-   For those 50 and up, those who were unvaccinated were \_\_\_\_ likely to die than those who were vaccinated.
+:::
+
+## Simpson's Paradox
+
+**Simpson's paradox** is a phenomenon in which a trend appears in subsets of the data, but disappears or reverses when the subsets are combined. The paradox can be resolved when **confounding variables** and causal relations are appropriately addressed in the analysis.
+
+::: {.callout-note title="Question 9" icon="false"}
+Let's rephrase the previous question which asked you to speculate on why deaths among vaccinated cases overall is higher while deaths among unvaccinated cases are higher when we split the data into two groups (below 50 and 50 and up). What might be the confounding variable in the relationship between vaccination and deaths?
+
+(write your response here)
+:::
+
+## Summary
+
+To summarize our findings, let's begin by calculating the percentages of vaccinated/unvaccinated patients that died. This is essentially the same calculation that we did before, but we're converting the proportion into a percentage and also doing it all in one code chunk.
+
+```{r}
+#| label: vaccine-outcome-perc
+
+delta |>
+  count(vaccine, outcome) |>
+  group_by(vaccine) |>
+  mutate(perc = round(n / sum(n) * 100, 2)) |>
+  filter(outcome == "died") |>
+  select(-outcome, -n)
+
+```
+
+Here we do the same thing, but further break down the population by age. We are also asking R to assign the output of this code chunk to a variable called `vaccine_age_outcome_perc`. The reason for doing this is so that we can do something else with this output later on.
+
+```{r}
+#| label: vaccine-age-outcome-perc
+
+vaccine_age_outcome_perc <- delta |>
+  count(vaccine, age, outcome) |>
+  group_by(vaccine, age) |>
+  mutate(perc = round(n / sum(n) * 100, 2)) |>
+  filter(outcome == "died") |>
+  select(-outcome, -n)
+
+vaccine_age_outcome_perc
+```
+
+Lastly, we *pivot* these data for better display; this just means that we're reorganizing the output from the previous code into a form that easier to interpret. Notice how we're using the variable we defined previously in this new code chunk!
+
+```{r}
+#| label: vaccine-age-outcome-perc-table
+
+vaccine_age_outcome_perc |>
+  pivot_wider(names_from = age, values_from = perc)
+```
+
+### Weighting
+
+We now know that it's misleading to talk about a single death rate for an unvaccinated population since age is a confounding variable. However, one thing we **can** do is to combine the two rates for the two age groups in a way that accounts for the sizes of those two groups.
+
+First, calculate what proportion of the total population is in each of our two age categories.
+
+```{r}
+#| label: age-props
+
+age_props <- delta |>
+  count(age) |>
+  mutate(p = n / sum(n))
+
+age_props
+```
+
+::: {.callout-note title="Question 10" icon="false"}
+Summarize in 1-2 sentences the results of this calculation.
+
+(add your response here)
+:::
+
+Next, we combine our two death rates to account for age using these proportions.
+
+```{r}
+#| label: vaccine-age-outcome-perc-wt
+
+vaccine_age_outcome_perc |>
+  mutate(perc_wt = if_else(age == "50+", perc * 0.115, perc * 0.885)) |>
+  group_by(vaccine) |>
+  summarize(perc = sum(perc_wt))
+```
+
+::: {.callout-note title="Question 11" icon="false"}
+Summarize in 1-2 sentences the results shown in this table.
+
+(add your response here)
+:::
+
+::: {.callout-note title="Question 12" icon="false"}
+Revisiting the question we posed to start with: How do deaths from COVID cases compare between vaccinated and unvaccinated?
+
+(add your response here)
+:::
+
+# Acknowledgements
+
+This case study is inspired by [Statistical Literacy: Simpson's Paradox and Covid Deaths](http://www.statlit.org/pdf/2021-Schield-ASA-BOF.pdf) by Milo Schield.

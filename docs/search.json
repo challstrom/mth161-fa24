@@ -4852,5 +4852,185 @@
       "AE",
       "AE 04 Flights"
     ]
+  },
+  {
+    "objectID": "ae/ae-01/ae-01-penguins.html",
+    "href": "ae/ae-01/ae-01-penguins.html",
+    "title": "AE-01 Meet the Penguins",
+    "section": "",
+    "text": "In this activity, we will meet some penguins, start thinking about data and variables, and see some R code in action. The penguins data from the palmerpenguins R package contains size measurements for three species of penguins observed on three islands in the Palmer Archipelago in Antarctica.\nData were collected and made available by Dr. Kristen Gorman and the Palmer Station, Antarctica LTER, a member of the Long Term Ecological Research Network.\nIn order to access this data, we need to load the package into R. While we’re at it, we can load any other packages that we need.\nlibrary(tidyverse)\nlibrary(palmerpenguins)",
+    "crumbs": [
+      "Quick Links",
+      "AE",
+      "AE 01 Meet the Penguins"
+    ]
+  },
+  {
+    "objectID": "ae/ae-01/ae-01-penguins.html#a-first-look-at-the-data",
+    "href": "ae/ae-01/ae-01-penguins.html#a-first-look-at-the-data",
+    "title": "AE-01 Meet the Penguins",
+    "section": "A First Look at the Data",
+    "text": "A First Look at the Data\nLet’s take a peek at the data with the following R code:\n\nhead(penguins)\n\n# A tibble: 6 × 8\n  species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n  &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;\n1 Adelie  Torgersen           39.1          18.7               181        3750\n2 Adelie  Torgersen           39.5          17.4               186        3800\n3 Adelie  Torgersen           40.3          18                 195        3250\n4 Adelie  Torgersen           NA            NA                  NA          NA\n5 Adelie  Torgersen           36.7          19.3               193        3450\n6 Adelie  Torgersen           39.3          20.6               190        3650\n# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;\n\n\nThis command gives us a table (tibble) which shows us the first six rows of the data frame called penguins. When working with data, we typically want each row to be an individual observation (or case), each column to be a variable, and each entry (cell) to be a single value. Data that is in this format is called tidy. A significant part of the work involved in analyzing data is getting it tidy (a process often referred to as “cleaning the data”) or at least accounting for ways in which it isn’t tidy.\n\n\n\n\n\n\nQuestions\n\n\n\n\nWhat does each row in this data frame represent?\nIs this data tidy? Why or why not?\nWhat do you think the result of the R command head(penguins, 10) would be? Try it!\nWhat other questions do you have about this table?\n\n\n\n\nOther points of view\nHere are two other R commands we can use to view the data.\n\nprint(penguins)\n\n# A tibble: 344 × 8\n   species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n   &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;\n 1 Adelie  Torgersen           39.1          18.7               181        3750\n 2 Adelie  Torgersen           39.5          17.4               186        3800\n 3 Adelie  Torgersen           40.3          18                 195        3250\n 4 Adelie  Torgersen           NA            NA                  NA          NA\n 5 Adelie  Torgersen           36.7          19.3               193        3450\n 6 Adelie  Torgersen           39.3          20.6               190        3650\n 7 Adelie  Torgersen           38.9          17.8               181        3625\n 8 Adelie  Torgersen           39.2          19.6               195        4675\n 9 Adelie  Torgersen           34.1          18.1               193        3475\n10 Adelie  Torgersen           42            20.2               190        4250\n# ℹ 334 more rows\n# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;\n\n\n\nglimpse(penguins)\n\nRows: 344\nColumns: 8\n$ species           &lt;fct&gt; Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adel…\n$ island            &lt;fct&gt; Torgersen, Torgersen, Torgersen, Torgersen, Torgerse…\n$ bill_length_mm    &lt;dbl&gt; 39.1, 39.5, 40.3, NA, 36.7, 39.3, 38.9, 39.2, 34.1, …\n$ bill_depth_mm     &lt;dbl&gt; 18.7, 17.4, 18.0, NA, 19.3, 20.6, 17.8, 19.6, 18.1, …\n$ flipper_length_mm &lt;int&gt; 181, 186, 195, NA, 193, 190, 181, 195, 193, 190, 186…\n$ body_mass_g       &lt;int&gt; 3750, 3800, 3250, NA, 3450, 3650, 3625, 4675, 3475, …\n$ sex               &lt;fct&gt; male, female, female, NA, female, male, female, male…\n$ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007…\n\n\n\n\n\n\n\n\nQuestions\n\n\n\n\nWhat differences do you notice between these two R commands?\nHow many penguins are included in this dataset?\nHow many variables are there? Which are numerical? Which are categorical?",
+    "crumbs": [
+      "Quick Links",
+      "AE",
+      "AE 01 Meet the Penguins"
+    ]
+  },
+  {
+    "objectID": "ae/ae-01/ae-01-penguins.html#summary-statistics",
+    "href": "ae/ae-01/ae-01-penguins.html#summary-statistics",
+    "title": "AE-01 Meet the Penguins",
+    "section": "Summary Statistics",
+    "text": "Summary Statistics\nA summary statistic is a single number that summarizes our data in some meaningful way. For example, we might ask:\n\nWhat percentage of our Adelie penguins were found on Torgersen island?\nWhat is the average (mean) flipper length of our penguins?\n\nWe can use R to help us analyze the data to answer these questions. We might start by counting how many penguins of each species there are.\n\npenguins |&gt;\n  count(species)\n\n# A tibble: 3 × 2\n  species       n\n  &lt;fct&gt;     &lt;int&gt;\n1 Adelie      152\n2 Chinstrap    68\n3 Gentoo      124\n\n\nWe can do something similar to determine how many penguins are on each island.\n\n\n\n\n\n\nTry It!\n\n\n\nAdd a code chunk that determines how many penguins are on each island. Does this help us answer our question? Why or why not?\n\n\nTo answer our question, it seems we need to dig deeper. Here we produce what’s sometimes called a two-way, or contingency table. We’ll see these again in Chapter 5.\n\ntable(penguins$species, penguins$island)\n\n           \n            Biscoe Dream Torgersen\n  Adelie        44    56        52\n  Chinstrap      0    68         0\n  Gentoo       124     0         0\n\n\n\n\n\n\n\n\nTask\n\n\n\nDetermine what percentage of the Adelie penguins are on Torgenson island.",
+    "crumbs": [
+      "Quick Links",
+      "AE",
+      "AE 01 Meet the Penguins"
+    ]
+  },
+  {
+    "objectID": "ae/ae-01/ae-01-penguins.html#relationships-between-variables",
+    "href": "ae/ae-01/ae-01-penguins.html#relationships-between-variables",
+    "title": "AE-01 Meet the Penguins",
+    "section": "Relationships between Variables",
+    "text": "Relationships between Variables\nAn important tool in understanding and analyzing data is visualization. For example, we can use a scatterplot to help us understand relationships between variables. Let’s look at a scatterpolot that compares body mass and flipper length.\n\nggplot(data = penguins, \n       mapping = aes(x = flipper_length_mm, y = body_mass_g)) +\n  geom_point()\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuestions\n\n\n\n\nWhat does each point on the graph represent?\nBased on this scatterplot, how would you describe the relationship between these two variables?\nWhen we ran the code to make this graph, a warning message appeared. What do you think is going on? (hint: go back and look at the data frame.)\n\n\n\nR gives us the ability to modify and customize our visualizations a great deal – indeed this is one of the main strengths of R! Let’s add one more feature to our graph. As we know, there are three different species of penguins in our data set – but our scatter plot does not show this!\n\nggplot(\n  data = penguins,\n  mapping = aes(x = flipper_length_mm, y = body_mass_g)) +\n  geom_point(mapping = aes(color = species))\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuestions\n\n\n\n\nHow does the addition of coloring by species change your understanding of this graph?\nWhat additional questions about this data can you come up with?\n\n\n\nBecause people can perceive colors differently due to color blindness or other color vision differences and since different devices might display colors in unexpected ways, it’s good practice to not rely on color alone to distinguish points.\n\n\n\n\n\n\nTry it!\n\n\n\nModify your mapping of the points to include shape by adding shape = species to the aes mapping for the points. Don’t forget a comma!",
+    "crumbs": [
+      "Quick Links",
+      "AE",
+      "AE 01 Meet the Penguins"
+    ]
+  },
+  {
+    "objectID": "ae/ae-02/ae-02-delta.html",
+    "href": "ae/ae-02/ae-02-delta.html",
+    "title": "AE-02 COVID vaccine and deaths from Delta variant",
+    "section": "",
+    "text": "For this AE, we want to explore the question “How do deaths from COVID cases compare between people who are vaccinated and those unvaccinated?”",
+    "crumbs": [
+      "Quick Links",
+      "AE",
+      "AE 02 COVID"
+    ]
+  },
+  {
+    "objectID": "ae/ae-02/ae-02-delta.html#goals",
+    "href": "ae/ae-02/ae-02-delta.html#goals",
+    "title": "AE-02 COVID vaccine and deaths from Delta variant",
+    "section": "Goals",
+    "text": "Goals\n\nCreate data visualizations and calculate summary statistics for comparing trends across groups\nDistinguishing observational studies and experiments\nIdentifying confounding variables and understanding Simpson’s paradox",
+    "crumbs": [
+      "Quick Links",
+      "AE",
+      "AE 02 COVID"
+    ]
+  },
+  {
+    "objectID": "ae/ae-02/ae-02-delta.html#r-goals",
+    "href": "ae/ae-02/ae-02-delta.html#r-goals",
+    "title": "AE-02 COVID vaccine and deaths from Delta variant",
+    "section": "R Goals",
+    "text": "R Goals\nIn addition to using ggplot to produce graphs, some new R commands that we’ll use in this AE are: count, group_by, mutate, filter, select.",
+    "crumbs": [
+      "Quick Links",
+      "AE",
+      "AE 02 COVID"
+    ]
+  },
+  {
+    "objectID": "ae/ae-02/ae-02-delta.html#packages",
+    "href": "ae/ae-02/ae-02-delta.html#packages",
+    "title": "AE-02 COVID vaccine and deaths from Delta variant",
+    "section": "Packages",
+    "text": "Packages\nThe tidyverse package contains many of the commands listed above which make working with data easier.\n\nlibrary(tidyverse)",
+    "crumbs": [
+      "Quick Links",
+      "AE",
+      "AE 02 COVID"
+    ]
+  },
+  {
+    "objectID": "ae/ae-02/ae-02-delta.html#data",
+    "href": "ae/ae-02/ae-02-delta.html#data",
+    "title": "AE-02 COVID vaccine and deaths from Delta variant",
+    "section": "Data",
+    "text": "Data\nThe data for this case study come from a technical briefing published by Public Health England in August 2021 on COVID cases, vaccinations, and deaths from the Delta variant. Each observation is a patient visiting emergency care. Rather than loading an R package that contains this data, we will import the data directly from a file.\n\ndelta &lt;- read_csv(\"delta.csv\")\n\nRows: 268166 Columns: 3\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr (3): vaccine, age, outcome\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\n\n\n\n\n\n\n\nTask\n\n\n\nUse either print or glimpse in the code block below to take a quick look at the data set.\n\n\n\n# add code here",
+    "crumbs": [
+      "Quick Links",
+      "AE",
+      "AE 02 COVID"
+    ]
+  },
+  {
+    "objectID": "ae/ae-02/ae-02-delta.html#understanding-the-data",
+    "href": "ae/ae-02/ae-02-delta.html#understanding-the-data",
+    "title": "AE-02 COVID vaccine and deaths from Delta variant",
+    "section": "Understanding the data",
+    "text": "Understanding the data\n\n\n\n\n\n\nQuestion 1\n\n\n\nHow many rows and columns are in this dataset? What do the rows represent? What are the variables and what type are they?\n(write your answer here)\n\n\nNotice that to answer this question, you had to first run the print or glimpse command. This might seem a bit clumsy, but turns out we can incorporate code to get the answers to these qestions directly into our narrative. This is done with inline code, shown here:\n\nThere are 268166 rows and 3 columns in the dataset.\n\nWhen you render this document, the correct values will be inserted into the appropriate place!\n\n\n\n\n\n\nQuestion 2\n\n\n\nDo these data come from an observational study or experiment? Why?\n(write your answer here)",
+    "crumbs": [
+      "Quick Links",
+      "AE",
+      "AE 02 COVID"
+    ]
+  },
+  {
+    "objectID": "ae/ae-02/ae-02-delta.html#visualizing-categorical-data",
+    "href": "ae/ae-02/ae-02-delta.html#visualizing-categorical-data",
+    "title": "AE-02 COVID vaccine and deaths from Delta variant",
+    "section": "Visualizing categorical data",
+    "text": "Visualizing categorical data\nTo start understanding this data, let’s create a visualization of health outcome by vaccine status that will allow us to compare the proportion of deaths across those who are and are not vaccinated.\n\nggplot(delta, aes(x = vaccine, fill = outcome)) +\n  geom_bar(position = \"fill\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuestion 3\n\n\n\nWhat can you say (if anything) about death rates in these two groups based on this visualization?\n(write your answer here)",
+    "crumbs": [
+      "Quick Links",
+      "AE",
+      "AE 02 COVID"
+    ]
+  },
+  {
+    "objectID": "ae/ae-02/ae-02-delta.html#summarizing-catagorical-data",
+    "href": "ae/ae-02/ae-02-delta.html#summarizing-catagorical-data",
+    "title": "AE-02 COVID vaccine and deaths from Delta variant",
+    "section": "Summarizing catagorical data",
+    "text": "Summarizing catagorical data\nYou may have noticed that it’s difficult to see any difference between the two groups from this bar graph. So instead, let’s calculate the actual proportions. To do this, we need to know how many vaccinated patients died and how many unvaccinated patients died. Once we have those numbers, we can calculate proportions.\n\ndelta |&gt;\n  count(vaccine, outcome)\n\n# A tibble: 4 × 3\n  vaccine      outcome       n\n  &lt;chr&gt;        &lt;chr&gt;     &lt;int&gt;\n1 Unvaccinated died        250\n2 Unvaccinated survived 150802\n3 Vaccinated   died        477\n4 Vaccinated   survived 116637\n\n\n\n\n\n\n\n\nQuestion 4\n\n\n\nBased on the output of this R code, what proportion the vaccinated group died? What proportion of the unvaccinated group died?\n(write your answer here)\n\n\nAt heart, R is a fancy calculator, so there’s no reason we can’t ask it to do these calculations for us! The following code does this and adds a new column to the output with these values.\n\ndelta |&gt;\n  count(vaccine, outcome) |&gt;\n  group_by(vaccine) |&gt;\n  mutate(prop = n / sum(n))\n\n# A tibble: 4 × 4\n# Groups:   vaccine [2]\n  vaccine      outcome       n    prop\n  &lt;chr&gt;        &lt;chr&gt;     &lt;int&gt;   &lt;dbl&gt;\n1 Unvaccinated died        250 0.00166\n2 Unvaccinated survived 150802 0.998  \n3 Vaccinated   died        477 0.00407\n4 Vaccinated   survived 116637 0.996  \n\n\n\n\n\n\n\n\nQuestion 5\n\n\n\nVerify that the proportions you calculated in Question 4 are the same as the values shown on this table.",
+    "crumbs": [
+      "Quick Links",
+      "AE",
+      "AE 02 COVID"
+    ]
+  },
+  {
+    "objectID": "ae/ae-02/ae-02-delta.html#improved-visualization-and-summary",
+    "href": "ae/ae-02/ae-02-delta.html#improved-visualization-and-summary",
+    "title": "AE-02 COVID vaccine and deaths from Delta variant",
+    "section": "Improved Visualization and Summary",
+    "text": "Improved Visualization and Summary\nOur next step is to investigate how controlling for an additional variable changes our understanding of the data. In particular, we want to control for age.\nFirst, a visualization. These are the same as before, except that we get two separate graphs where the data has been separated (faceted) by the age variable.\n\nggplot(delta, aes(x = vaccine, fill = outcome)) +\n  geom_bar(position = \"fill\") +\n  facet_wrap(~age)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuestion 6\n\n\n\nWhat do you notice in these bar graphs?\n(write your response here)\n\n\nNext, we calculate the numerical proportions. This time, there’s an additional variable we’re using to group the population.\n\ndelta |&gt;\n  count(age, vaccine, outcome) |&gt;\n  group_by(age, vaccine) |&gt;\n  mutate(prop = n / sum(n))\n\n# A tibble: 8 × 5\n# Groups:   age, vaccine [4]\n  age   vaccine      outcome       n     prop\n  &lt;chr&gt; &lt;chr&gt;        &lt;chr&gt;     &lt;int&gt;    &lt;dbl&gt;\n1 50+   Unvaccinated died        205 0.0596  \n2 50+   Unvaccinated survived   3235 0.940   \n3 50+   Vaccinated   died        459 0.0168  \n4 50+   Vaccinated   survived  26848 0.983   \n5 &lt;50   Unvaccinated died         45 0.000305\n6 &lt;50   Unvaccinated survived 147567 1.00    \n7 &lt;50   Vaccinated   died         18 0.000200\n8 &lt;50   Vaccinated   survived  89789 1.00    \n\n\n\n\n\n\n\n\nQuestion 7\n\n\n\nwhat do you notice?\n(write your responses here)\n\n\n\n\n\n\n\n\nQuestion 8\n\n\n\nBased on your findings so far, fill in the blanks with more, less, or equally: Is there anything surprising about these statements? Speculate on what, if anything, the discrepancy might be due to.\n\nIn 2021, among those in the UK who were COVID Delta cases, the unvaccinated were _____ likely to die than the vaccinated.\nFor those under 50, those who were unvaccinated were ____ likely to die than those who were vaccinated.\nFor those 50 and up, those who were unvaccinated were ____ likely to die than those who were vaccinated.",
+    "crumbs": [
+      "Quick Links",
+      "AE",
+      "AE 02 COVID"
+    ]
+  },
+  {
+    "objectID": "ae/ae-02/ae-02-delta.html#simpsons-paradox",
+    "href": "ae/ae-02/ae-02-delta.html#simpsons-paradox",
+    "title": "AE-02 COVID vaccine and deaths from Delta variant",
+    "section": "Simpson’s Paradox",
+    "text": "Simpson’s Paradox\nSimpson’s paradox is a phenomenon in which a trend appears in subsets of the data, but disappears or reverses when the subsets are combined. The paradox can be resolved when confounding variables and causal relations are appropriately addressed in the analysis.\n\n\n\n\n\n\nQuestion 9\n\n\n\nLet’s rephrase the previous question which asked you to speculate on why deaths among vaccinated cases overall is higher while deaths among unvaccinated cases are higher when we split the data into two groups (below 50 and 50 and up). What might be the confounding variable in the relationship between vaccination and deaths?\n(write your response here)",
+    "crumbs": [
+      "Quick Links",
+      "AE",
+      "AE 02 COVID"
+    ]
+  },
+  {
+    "objectID": "ae/ae-02/ae-02-delta.html#summary",
+    "href": "ae/ae-02/ae-02-delta.html#summary",
+    "title": "AE-02 COVID vaccine and deaths from Delta variant",
+    "section": "Summary",
+    "text": "Summary\nTo summarize our findings, let’s begin by calculating the percentages of vaccinated/unvaccinated patients that died. This is essentially the same calculation that we did before, but we’re converting the proportion into a percentage and also doing it all in one code chunk.\n\ndelta |&gt;\n  count(vaccine, outcome) |&gt;\n  group_by(vaccine) |&gt;\n  mutate(perc = round(n / sum(n) * 100, 2)) |&gt;\n  filter(outcome == \"died\") |&gt;\n  select(-outcome, -n)\n\n# A tibble: 2 × 2\n# Groups:   vaccine [2]\n  vaccine       perc\n  &lt;chr&gt;        &lt;dbl&gt;\n1 Unvaccinated  0.17\n2 Vaccinated    0.41\n\n\nHere we do the same thing, but further break down the population by age. We are also asking R to assign the output of this code chunk to a variable called vaccine_age_outcome_perc. The reason for doing this is so that we can do something else with this output later on.\n\nvaccine_age_outcome_perc &lt;- delta |&gt;\n  count(vaccine, age, outcome) |&gt;\n  group_by(vaccine, age) |&gt;\n  mutate(perc = round(n / sum(n) * 100, 2)) |&gt;\n  filter(outcome == \"died\") |&gt;\n  select(-outcome, -n)\n\nvaccine_age_outcome_perc\n\n# A tibble: 4 × 3\n# Groups:   vaccine, age [4]\n  vaccine      age    perc\n  &lt;chr&gt;        &lt;chr&gt; &lt;dbl&gt;\n1 Unvaccinated 50+    5.96\n2 Unvaccinated &lt;50    0.03\n3 Vaccinated   50+    1.68\n4 Vaccinated   &lt;50    0.02\n\n\nLastly, we pivot these data for better display; this just means that we’re reorganizing the output from the previous code into a form that easier to interpret. Notice how we’re using the variable we defined previously in this new code chunk!\n\nvaccine_age_outcome_perc |&gt;\n  pivot_wider(names_from = age, values_from = perc)\n\n# A tibble: 2 × 3\n# Groups:   vaccine [2]\n  vaccine      `50+` `&lt;50`\n  &lt;chr&gt;        &lt;dbl&gt; &lt;dbl&gt;\n1 Unvaccinated  5.96  0.03\n2 Vaccinated    1.68  0.02\n\n\n\nWeighting\nWe now know that it’s misleading to talk about a single death rate for an unvaccinated population since age is a confounding variable. However, one thing we can do is to combine the two rates for the two age groups in a way that accounts for the sizes of those two groups.\nFirst, calculate what proportion of the total population is in each of our two age categories.\n\nage_props &lt;- delta |&gt;\n  count(age) |&gt;\n  mutate(p = n / sum(n))\n\nage_props\n\n# A tibble: 2 × 3\n  age        n     p\n  &lt;chr&gt;  &lt;int&gt; &lt;dbl&gt;\n1 50+    30747 0.115\n2 &lt;50   237419 0.885\n\n\n\n\n\n\n\n\nQuestion 10\n\n\n\nSummarize in 1-2 sentences the results of this calculation.\n(add your response here)\n\n\nNext, we combine our two death rates to account for age using these proportions.\n\nvaccine_age_outcome_perc |&gt;\n  mutate(perc_wt = if_else(age == \"50+\", perc * 0.115, perc * 0.885)) |&gt;\n  group_by(vaccine) |&gt;\n  summarize(perc = sum(perc_wt))\n\n# A tibble: 2 × 2\n  vaccine       perc\n  &lt;chr&gt;        &lt;dbl&gt;\n1 Unvaccinated 0.712\n2 Vaccinated   0.211\n\n\n\n\n\n\n\n\nQuestion 11\n\n\n\nSummarize in 1-2 sentences the results shown in this table.\n(add your response here)\n\n\n\n\n\n\n\n\nQuestion 12\n\n\n\nRevisiting the question we posed to start with: How do deaths from COVID cases compare between vaccinated and unvaccinated?\n(add your response here)",
+    "crumbs": [
+      "Quick Links",
+      "AE",
+      "AE 02 COVID"
+    ]
   }
 ]
