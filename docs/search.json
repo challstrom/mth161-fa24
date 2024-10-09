@@ -4367,5 +4367,490 @@
       "Slides",
       "Tuesday, Week 7"
     ]
+  },
+  {
+    "objectID": "ae/ae-07/ae-07-lemers.html",
+    "href": "ae/ae-07/ae-07-lemers.html",
+    "title": "AE 07 – Meet the Lemurs",
+    "section": "",
+    "text": "This week we’ll be working with data from the Duke Lemur Center, which houses over 200 lemurs across 14 species – the most diverse population of lemurs on Earth, outside their native Madagascar."
+  },
+  {
+    "objectID": "ae/ae-07/ae-07-lemers.html#packages-and-data",
+    "href": "ae/ae-07/ae-07-lemers.html#packages-and-data",
+    "title": "AE 07 – Meet the Lemurs",
+    "section": "Packages and Data",
+    "text": "Packages and Data\nFirst let’s load the packages we’ll need.\n\nlibrary(tidyverse)\nlibrary(infer)\n\nAnd then load the data.\n\nlemurs &lt;- read_csv(\"lemurs.csv\")\n\nAlthough our dataset contains 54 variables, we’ll only focus on the following 3:\n\n\n\n\n\n\n\n\n﻿variable\ntype\ndescription\n\n\n\n\ntaxon\nchar\nTaxonomic code: in most cases, comprised of the first letter of the genus and the first three letters of the species; if taxonomic designation is a subspecies, comprised of the first letter of genus, species, and subspecies, and hybrids are indicated by the first three letters of the genus.\n\n\nsex\nchar\nM=male. F=Female. ND=Not determined\n\n\nweight_g\ndouble\nAnimal weight, in grams. Weights under 500g generally to nearest 0.1-1g; Weights &gt;500g generally to the nearest 1-20g."
+  },
+  {
+    "objectID": "ae/ae-07/ae-07-lemers.html#count-the-lemurs",
+    "href": "ae/ae-07/ae-07-lemers.html#count-the-lemurs",
+    "title": "AE 07 – Meet the Lemurs",
+    "section": "Count the Lemurs",
+    "text": "Count the Lemurs\nOur dataset includes three species of lemur, shown in the taxon variable using the following taxonomic codes:\n\n\n\nTaxon\nLatin name\nCommon name\n\n\n\n\nEMON\nEulemur mongoz\nMongoose lemur\n\n\nERUB\nEulemur rubriventer\nRed-bellied lemur\n\n\nLCAT\nLemur catta\nRing-tailed lemur\n\n\n\n\nlemurs |&gt;\n  count(taxon)\n\n# A tibble: 3 × 2\n  taxon     n\n  &lt;chr&gt; &lt;int&gt;\n1 EMON     97\n2 ERUB     23\n3 LCAT    224\n\n\n\n\n\n\n\n\nQuestion 1\n\n\n\nSummarize the results of the code chunk above, using the table above to interpret the taxonomic code.\nAdd response here\n\n\n\nMean Lemur Weights\nLet’s investigate the weight of these lemurs. Since we know that our dataset includes three different species of lemur, we might suspect that different species will be different sizes. So lets separate our visualization using the taxon variable:\n\nlemurs |&gt;\n  ggplot( aes(x=weight_g, fill = taxon) ) +\n  geom_boxplot()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuestion 2\n\n\n\nSummarize your observations of these box plots.\nAdd response here"
+  },
+  {
+    "objectID": "ae/ae-07/ae-07-lemers.html#mean-weight",
+    "href": "ae/ae-07/ae-07-lemers.html#mean-weight",
+    "title": "AE 07 – Meet the Lemurs",
+    "section": "Mean Weight",
+    "text": "Mean Weight\nNow let’s calculuate the mean value of the variable weight_g. Notice that we are saving the result of this calculation in the variable called obs_stat_mean_rt so that we can refer to it later.\n\nobs_stat_mean_rt &lt;- lemurs_rt |&gt;\n  specify(response = weight_g) |&gt;\n  calculate(stat = \"mean\")\n\nobs_stat_mean_rt\n\nResponse: weight_g (numeric)\n# A tibble: 1 × 1\n   stat\n  &lt;dbl&gt;\n1  924.\n\n\n\n\n\n\n\n\nQuestion 3\n\n\n\nWrite a sentence or two summarizing and interpret the results.\nAdd response here"
+  },
+  {
+    "objectID": "ae/ae-07/ae-07-lemers.html#confidence-interval",
+    "href": "ae/ae-07/ae-07-lemers.html#confidence-interval",
+    "title": "AE 07 – Meet the Lemurs",
+    "section": "Confidence Interval",
+    "text": "Confidence Interval\nNow let’s calculate, visualize, and interpret a 95% bootstrap confidence interval.\n\nStep 1: Construct a bootstrap distribution. Since there is a generate() step, you should set a seed value before running. Add the line at the top set.seed(123) and change reps value to 1000 to create your bootstrap confidence interval.\n\n\nboot_dist_mean_rt &lt;- lemurs_rt |&gt;\n  specify(response = weight_g) |&gt;\n  generate(reps = 1000 , type = \"bootstrap\") |&gt;\n  calculate(stat = \"mean\")\n\n\nStep 2: Visualize your sample distribution.\n\n\nvisualize(boot_dist_mean_rt)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuestion 4\n\n\n\nBased on this histogram, what’s your estimate for the 95% confidence interval?\nAdd response here\n\n\n\nStep 3: Find the confidence interval precisely.\n\n\nci_95_mean_rt &lt;- boot_dist_mean_rt |&gt;\n  get_confidence_interval(\n    point_estimate = obs_stat_mean_rt, \n    level = 0.95\n  )\n\nci_95_mean_rt\n\n# A tibble: 1 × 2\n  lower_ci upper_ci\n     &lt;dbl&gt;    &lt;dbl&gt;\n1     792.    1052.\n\n\n\n\n\n\n\n\nQuestion 5\n\n\n\nHow does this precise interval compare to your estimate from above?\nAdd response here\n\n\n\nStep 4: Visualize the confidence interval, overlaying it on the bootstrap distribution.\n\n\nvisualize(boot_dist_mean_rt) +\n  shade_confidence_interval(endpoints = ci_95_mean_rt)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuestion 6\n\n\n\nSummarize and interpret your findings.\nAdd response here"
+  },
+  {
+    "objectID": "ae/ae-07/ae-07-lemers.html#mean-weight-1",
+    "href": "ae/ae-07/ae-07-lemers.html#mean-weight-1",
+    "title": "AE 07 – Meet the Lemurs",
+    "section": "Mean Weight",
+    "text": "Mean Weight\nCalculate the mean value of the variable weight_g and save the result of this calculation in the variable called obs_stat_mean_m so that we can refer to it later.\n\nobs_stat_mean_m &lt;- lemurs_m |&gt;\n  specify(response = weight_g) |&gt;\n  calculate(stat = \"mean\")\n\nobs_stat_mean_m\n\n\n\n\n\n\n\nQuestion 7\n\n\n\nRun the above code (by changing eval: false to eval: true. What is the mean weight of our sample of Mongoose lemurs?\nAdd response here"
+  },
+  {
+    "objectID": "ae/ae-07/ae-07-lemers.html#confidence-interval-1",
+    "href": "ae/ae-07/ae-07-lemers.html#confidence-interval-1",
+    "title": "AE 07 – Meet the Lemurs",
+    "section": "Confidence Interval",
+    "text": "Confidence Interval\nNow we want to calculate, visualize, and interpret a 95% bootstrap confidence interval.\n\n\n\n\n\n\nTo Do\n\n\n\nIn the code chunk below, add a set.seed() line and change the number of reps to something reasonable. Remember to change eval: false to eval: true before rendering.\n\n\n\nboot_dist_mean_m &lt;- lemurs_m |&gt;\n  specify(response = weight_g) |&gt;\n  generate(reps = 10 , type = \"bootstrap\") |&gt;\n  calculate(stat = \"mean\")\n\n\nVisualize your sample distribution.\n\n\nvisualize(boot_dist_mean_m)\n\n\nFind the confidence interval precisely.\n\n\n\n\n\n\n\nTo Do\n\n\n\nFill in the blank in the code chunk below to specify what confidence level you want.\n\n\n\nci_95_mean_m &lt;- boot_dist_mean_m |&gt;\n  get_confidence_interval(\n    point_estimate = obs_stat_mean_rt, \n    level = ---\n  )\n\nci_95_mean_m\n\n\nVisualize the confidence interval, overlaying it on the bootstrap distribution.\n\n\nvisualize(boot_dist_mean_m) +\n  shade_confidence_interval(endpoints = ci_95_mean_m)\n\n\n\n\n\n\n\nQuestion 8\n\n\n\nSummarize and interpret your findings.\nAdd your response here"
+  },
+  {
+    "objectID": "ae/ae-07/ae-07-lemurs.html",
+    "href": "ae/ae-07/ae-07-lemurs.html",
+    "title": "AE 07 – Meet the Lemurs",
+    "section": "",
+    "text": "This week we’ll be working with data from the Duke Lemur Center, which houses over 200 lemurs across 14 species – the most diverse population of lemurs on Earth, outside their native Madagascar.",
+    "crumbs": [
+      "Quick Links",
+      "AE",
+      "AE 07 Lemurs"
+    ]
+  },
+  {
+    "objectID": "ae/ae-07/ae-07-lemurs.html#packages-and-data",
+    "href": "ae/ae-07/ae-07-lemurs.html#packages-and-data",
+    "title": "AE 07 – Meet the Lemurs",
+    "section": "Packages and Data",
+    "text": "Packages and Data\nFirst let’s load the packages we’ll need.\n\nlibrary(tidyverse)\nlibrary(infer)\n\nAnd then load the data.\n\nlemurs &lt;- read_csv(\"lemurs.csv\")\n\nAlthough our dataset contains 54 variables, we’ll only focus on the following 3:\n\n\n\n\n\n\n\n\n﻿variable\ntype\ndescription\n\n\n\n\ntaxon\nchar\nTaxonomic code: in most cases, comprised of the first letter of the genus and the first three letters of the species; if taxonomic designation is a subspecies, comprised of the first letter of genus, species, and subspecies, and hybrids are indicated by the first three letters of the genus.\n\n\nsex\nchar\nM=male. F=Female. ND=Not determined\n\n\nweight_g\ndouble\nAnimal weight, in grams. Weights under 500g generally to nearest 0.1-1g; Weights &gt;500g generally to the nearest 1-20g.",
+    "crumbs": [
+      "Quick Links",
+      "AE",
+      "AE 07 Lemurs"
+    ]
+  },
+  {
+    "objectID": "ae/ae-07/ae-07-lemurs.html#count-the-lemurs",
+    "href": "ae/ae-07/ae-07-lemurs.html#count-the-lemurs",
+    "title": "AE 07 – Meet the Lemurs",
+    "section": "Count the Lemurs",
+    "text": "Count the Lemurs\nOur dataset includes three species of lemur, shown in the taxon variable using the following taxonomic codes:\n\n\n\nTaxon\nLatin name\nCommon name\n\n\n\n\nEMON\nEulemur mongoz\nMongoose lemur\n\n\nERUB\nEulemur rubriventer\nRed-bellied lemur\n\n\nLCAT\nLemur catta\nRing-tailed lemur\n\n\n\n\nlemurs |&gt;\n  count(taxon)\n\n# A tibble: 3 × 2\n  taxon     n\n  &lt;chr&gt; &lt;int&gt;\n1 EMON     97\n2 ERUB     23\n3 LCAT    224\n\n\n\n\n\n\n\n\nQuestion 1\n\n\n\nSummarize the results of the code chunk above, using the table above to interpret the taxonomic code.\nAdd response here\n\n\n\nMean Lemur Weights\nLet’s investigate the weight of these lemurs. Since we know that our dataset includes three different species of lemur, we might suspect that different species will be different sizes. So lets separate our visualization using the taxon variable:\n\nlemurs |&gt;\n  ggplot( aes(x=weight_g, fill = taxon) ) +\n  geom_boxplot()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuestion 2\n\n\n\nSummarize your observations of these box plots.\nAdd response here",
+    "crumbs": [
+      "Quick Links",
+      "AE",
+      "AE 07 Lemurs"
+    ]
+  },
+  {
+    "objectID": "ae/ae-07/ae-07-lemurs.html#mean-weight",
+    "href": "ae/ae-07/ae-07-lemurs.html#mean-weight",
+    "title": "AE 07 – Meet the Lemurs",
+    "section": "Mean Weight",
+    "text": "Mean Weight\nNow let’s calculuate the mean value of the variable weight_g. Notice that we are saving the result of this calculation in the variable called obs_stat_mean_rt so that we can refer to it later.\n\nobs_stat_mean_rt &lt;- lemurs_rt |&gt;\n  specify(response = weight_g) |&gt;\n  calculate(stat = \"mean\")\n\nobs_stat_mean_rt\n\nResponse: weight_g (numeric)\n# A tibble: 1 × 1\n   stat\n  &lt;dbl&gt;\n1  924.\n\n\n\n\n\n\n\n\nQuestion 3\n\n\n\nWrite a sentence or two summarizing and interpret the results.\nAdd response here",
+    "crumbs": [
+      "Quick Links",
+      "AE",
+      "AE 07 Lemurs"
+    ]
+  },
+  {
+    "objectID": "ae/ae-07/ae-07-lemurs.html#confidence-interval",
+    "href": "ae/ae-07/ae-07-lemurs.html#confidence-interval",
+    "title": "AE 07 – Meet the Lemurs",
+    "section": "Confidence Interval",
+    "text": "Confidence Interval\nNow let’s calculate, visualize, and interpret a 95% bootstrap confidence interval.\n\nStep 1: Construct a bootstrap distribution. Since there is a generate() step, you should set a seed value before running. Add the line at the top set.seed(123) and change reps value to 1000 to create your bootstrap confidence interval.\n\n\nboot_dist_mean_rt &lt;- lemurs_rt |&gt;\n  specify(response = weight_g) |&gt;\n  generate(reps = 1000 , type = \"bootstrap\") |&gt;\n  calculate(stat = \"mean\")\n\n\nStep 2: Visualize your sample distribution.\n\n\nvisualize(boot_dist_mean_rt)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuestion 4\n\n\n\nBased on this histogram, what’s your estimate for the 95% confidence interval?\nAdd response here\n\n\n\nStep 3: Find the confidence interval precisely.\n\n\nci_95_mean_rt &lt;- boot_dist_mean_rt |&gt;\n  get_confidence_interval(\n    point_estimate = obs_stat_mean_rt, \n    level = 0.95\n  )\n\nci_95_mean_rt\n\n# A tibble: 1 × 2\n  lower_ci upper_ci\n     &lt;dbl&gt;    &lt;dbl&gt;\n1     800.    1060.\n\n\n\n\n\n\n\n\nQuestion 5\n\n\n\nHow does this precise interval compare to your estimate from above?\nAdd response here\n\n\n\nStep 4: Visualize the confidence interval, overlaying it on the bootstrap distribution.\n\n\nvisualize(boot_dist_mean_rt) +\n  shade_confidence_interval(endpoints = ci_95_mean_rt)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuestion 6\n\n\n\nSummarize and interpret your findings.\nAdd response here",
+    "crumbs": [
+      "Quick Links",
+      "AE",
+      "AE 07 Lemurs"
+    ]
+  },
+  {
+    "objectID": "ae/ae-07/ae-07-lemurs.html#mean-weight-1",
+    "href": "ae/ae-07/ae-07-lemurs.html#mean-weight-1",
+    "title": "AE 07 – Meet the Lemurs",
+    "section": "Mean Weight",
+    "text": "Mean Weight\nCalculate the mean value of the variable weight_g and save the result of this calculation in the variable called obs_stat_mean_m so that we can refer to it later.\n\nobs_stat_mean_m &lt;- lemurs_m |&gt;\n  specify(response = weight_g) |&gt;\n  calculate(stat = \"mean\")\n\nobs_stat_mean_m\n\n\n\n\n\n\n\nQuestion 7\n\n\n\nRun the above code (by changing eval: false to eval: true. What is the mean weight of our sample of Mongoose lemurs?\nAdd response here",
+    "crumbs": [
+      "Quick Links",
+      "AE",
+      "AE 07 Lemurs"
+    ]
+  },
+  {
+    "objectID": "ae/ae-07/ae-07-lemurs.html#confidence-interval-1",
+    "href": "ae/ae-07/ae-07-lemurs.html#confidence-interval-1",
+    "title": "AE 07 – Meet the Lemurs",
+    "section": "Confidence Interval",
+    "text": "Confidence Interval\nNow we want to calculate, visualize, and interpret a 95% bootstrap confidence interval.\n\n\n\n\n\n\nTo Do\n\n\n\nIn the code chunk below, add a set.seed() line and change the number of reps to something reasonable. Remember to change eval: false to eval: true before rendering.\n\n\n\nboot_dist_mean_m &lt;- lemurs_m |&gt;\n  specify(response = weight_g) |&gt;\n  generate(reps = 10 , type = \"bootstrap\") |&gt;\n  calculate(stat = \"mean\")\n\n\nVisualize your sample distribution.\n\n\nvisualize(boot_dist_mean_m)\n\n\nFind the confidence interval precisely.\n\n\n\n\n\n\n\nTo Do\n\n\n\nFill in the blank in the code chunk below to specify what confidence level you want.\n\n\n\nci_95_mean_m &lt;- boot_dist_mean_m |&gt;\n  get_confidence_interval(\n    point_estimate = obs_stat_mean_rt, \n    level = ---\n  )\n\nci_95_mean_m\n\n\nVisualize the confidence interval, overlaying it on the bootstrap distribution.\n\n\nvisualize(boot_dist_mean_m) +\n  shade_confidence_interval(endpoints = ci_95_mean_m)\n\n\n\n\n\n\n\nQuestion 8\n\n\n\nSummarize and interpret your findings.\nAdd your response here",
+    "crumbs": [
+      "Quick Links",
+      "AE",
+      "AE 07 Lemurs"
+    ]
+  },
+  {
+    "objectID": "ae/ae-06/ae-06-Transplant.html",
+    "href": "ae/ae-06/ae-06-Transplant.html",
+    "title": "AE 06 – Heart Transplants",
+    "section": "",
+    "text": "The Stanford University Heart Transplant Study was conducted to determine whether an experimental heart transplant program increased lifespan. Each patient entering the program was designated an official heart transplant candidate, meaning that they were gravely ill and would most likely benefit from a new heart. Some patients got a transplant and some did not. The variable transplant indicates which group the patients were in; patients in the treatment group got a transplant and those in the control group did not. Of the 34 patients in the control group, 30 died. Of the 69 people in the treatment group, 45 died. Another variable called survived was used to indicate whether the patient was alive at the end of the study. (Turnbull, Brown, and Hu 1974)"
+  },
+  {
+    "objectID": "ae/ae-06/ae-06-Transplant.html#packages-and-data",
+    "href": "ae/ae-06/ae-06-Transplant.html#packages-and-data",
+    "title": "AE 06 – Heart Transplants",
+    "section": "Packages and Data",
+    "text": "Packages and Data\nFor our analysis, we’ll use the tidyverse and infer packages.\n\nlibrary(tidyverse)\nlibrary(infer)\n\nAnd then, let’s read the data and take a peak at it:\n\nheart_transplant &lt;- read_csv(\"heart-transplant.csv\")\nglimpse(heart_transplant)\n\nRows: 103\nColumns: 8\n$ id         &lt;dbl&gt; 15, 43, 61, 75, 6, 42, 54, 38, 85, 2, 103, 12, 48, 102, 35,…\n$ outcome    &lt;chr&gt; \"deceased\", \"deceased\", \"deceased\", \"deceased\", \"deceased\",…\n$ transplant &lt;chr&gt; \"control\", \"control\", \"control\", \"control\", \"control\", \"con…\n$ age        &lt;dbl&gt; 53, 43, 52, 52, 54, 36, 47, 41, 47, 51, 39, 53, 56, 40, 43,…\n$ survtime   &lt;dbl&gt; 1, 2, 2, 2, 3, 3, 3, 5, 5, 6, 6, 8, 9, 11, 12, 16, 16, 16, …\n$ acceptyear &lt;dbl&gt; 68, 70, 71, 72, 68, 70, 71, 70, 73, 68, 67, 68, 71, 74, 70,…\n$ prior      &lt;chr&gt; \"no\", \"no\", \"no\", \"no\", \"no\", \"no\", \"no\", \"no\", \"no\", \"no\",…\n$ wait       &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, 5, NA, NA, NA, NA, NA, NA, NA, …\n\n\nThe data dictionary is as follows:\n\n\n\n\n\n\n\nVariable\nDescription\n\n\n\n\nid\nID number of the patient\n\n\noutcome\nSurvival status with levels alive and deceased\n\n\ntransplant\nTransplant group with levels control (did not receive a transplant) and treatment (received a transplant)\n\n\nage\nAge of the patient at the beginning of the study\n\n\nsurvtime\nNumber of days patients were alive after the date they were determined to be a candidate for a heart transplant until the termination date of the study\n\n\nacceptyear\nYear of acceptance as a heart transplant candidate\n\n\nprior\nWhether or not the patient had prior surgery with levels yes and no\n\n\nwait\nWaiting time for transplant"
+  },
+  {
+    "objectID": "ae/ae-06/ae-06-Transplant.html#heart-transplants---outcome",
+    "href": "ae/ae-06/ae-06-Transplant.html#heart-transplants---outcome",
+    "title": "AE 06 – Heart Transplants",
+    "section": "Heart transplants - outcome",
+    "text": "Heart transplants - outcome\nLet’s start by visualizing a possible association between the variables transplant and outcome.\n\nheart_transplant |&gt;\n  ggplot( aes(x=transplant, fill = outcome)) +\n  geom_bar( position = \"fill\", color = \"white\") +\n  scale_fill_manual(values = c(\"#569BBD\", \"#114B5F\")) +\n  labs(\n    y = \"\"\n  )\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuestion 1\n\n\n\nWhat does this stacked bar plot tell you (if anything) about a possible association between survival and whether or not the patient got a transplant? Explain your reasoning.\nAdd your repsonse here\n\n\nNow let’s calculate the point estimate for the difference in proportions of patients who died between the treatment and control groups. We can express this as \\[\n\\hat{p}_{treatment} - \\hat{p}_{control}\n\\] where \\(\\hat{p}\\) is the observed probability of dying in each group.\n\n\n\n\n\n\nQuestion 2\n\n\n\nUse the frequency table of outcome by transplant below to calculate the proportions of patients in the treatment and control groups that died? What is the difference in proportions?\nReport your results here\n\n\n\nheart_transplant |&gt;\n  count(transplant, outcome)\n\n# A tibble: 4 × 3\n  transplant outcome      n\n  &lt;chr&gt;      &lt;chr&gt;    &lt;int&gt;\n1 control    alive        4\n2 control    deceased    30\n3 treatment  alive       24\n4 treatment  deceased    45\n\n\nAnother way to do this is to use specify() and calculate() as shown below.\n\nobs_diff_outcome &lt;- heart_transplant |&gt;\n  specify(response = outcome, explanatory = transplant, success = \"deceased\") |&gt;\n  calculate(stat = \"diff in props\", order = c(\"treatment\", \"control\"))\n\nobs_diff_outcome\n\nResponse: outcome (factor)\nExplanatory: transplant (factor)\n# A tibble: 1 × 1\n    stat\n   &lt;dbl&gt;\n1 -0.230\n\n\n\n\n\n\n\n\nQuestion 3\n\n\n\nAre the results of this code chunk the same as what you obtained in Question 2?\nAdd your repsonse here\n\n\n\n\n\n\n\n\nQuestion 4\n\n\n\nState a null hypothesis and an alternative hypothesis.\nAdd your repsonse here\n\n\nThe code chunk below generates a null distribution needed to test the hypothesis test you formulated in Question 4. For this simulation we use 100 resamples (reps).\n\nNote: the function set.seed() here is used so that the simulation, although random, is the same everytime it’s run. You can change the seed value to get a different simulation.\n\n\nset.seed(2024)\n\nnull_dist_outcome &lt;- heart_transplant |&gt;\n  specify(response = outcome, explanatory = transplant, success = \"deceased\") |&gt;\n  hypothesize(null = \"independence\") |&gt;\n  generate(reps = 100, type = \"permute\") |&gt;\n  calculate(stat = \"diff in props\", order = c(\"treatment\", \"control\"))\n\n\n\n\n\n\n\nQuestion 5\n\n\n\nInspect the object null_dist_outcome shown below. How many rows and how many columns does it have? What does each row represent? What does the variable replicate represent? What does stat represent?\nAdd your repsonse here\n\n\n\nprint(null_dist_outcome)\n\nResponse: outcome (factor)\nExplanatory: transplant (factor)\nNull Hypothesis: independence\n# A tibble: 100 × 2\n   replicate    stat\n       &lt;int&gt;   &lt;dbl&gt;\n 1         1 -0.0546\n 2         2 -0.0546\n 3         3 -0.0107\n 4         4  0.121 \n 5         5  0.0772\n 6         6 -0.0985\n 7         7 -0.0107\n 8         8 -0.0985\n 9         9 -0.0546\n10        10 -0.186 \n# ℹ 90 more rows\n\n\nNow let’s visualize the distribution of simulated differences in proportions of deceased between treatment and control groups.\n\nnull_dist_outcome |&gt;\n  visualize(bins=14) +\n  shade_p_value(obs_stat = obs_diff_outcome, direction = \"two-sided\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuestion 6\n\n\n\nWhat is the shape of this distribution? What is the center of this distribution? What does the red line represent? Are these results expected? Explain your reasoning.\nAdd your repsonse here"
+  },
+  {
+    "objectID": "ae/ae-06/ae-06-Transplant.html#p-value",
+    "href": "ae/ae-06/ae-06-Transplant.html#p-value",
+    "title": "AE 06 – Heart Transplants",
+    "section": "p-value",
+    "text": "p-value\nWe can calculate the p-value in two different ways.\n\nFilter null_dist_outcome for stat values that are at least as far away from the null value as the observed value you calculated in Exercise 4. Notice that we are considering both directions!\n\n\nnull_dist_outcome |&gt;\n  filter( stat &gt;= 0.23 | stat &lt;= -0.23)\n\nResponse: outcome (factor)\nExplanatory: transplant (factor)\nNull Hypothesis: independence\n# A tibble: 2 × 2\n  replicate   stat\n      &lt;int&gt;  &lt;dbl&gt;\n1        62 -0.230\n2        79  0.297\n\n\n\n\n\n\n\n\nQuestion 7\n\n\n\nNote how many such values there are (rows in the output) and then calculate a proportion using the total number of resamples (i.e. 100).\nAdd your repsonse here\n\n\n\nUse get_p_value():\n\n\np_value_outcome &lt;- null_dist_outcome |&gt;\n  get_p_value(obs_stat = obs_diff_outcome, direction = \"two-sided\")\n\np_value_outcome\n\n# A tibble: 1 × 1\n  p_value\n    &lt;dbl&gt;\n1    0.02\n\n\n\n\n\n\n\n\nQuestion 8\n\n\n\nConfirm that you obtained the same results with the two methods. Then interpret the p-value in context of the data and the research question and comment on the statistical discernability of this result using a discernability level of 0.05.\nAdd your repsonse here"
+  },
+  {
+    "objectID": "ae/ae-05/ae-05-Finnish-fish.html",
+    "href": "ae/ae-05/ae-05-Finnish-fish.html",
+    "title": "AE 05 – Modeling Finnish Fish",
+    "section": "",
+    "text": "For this application exercise, we will work with a data set that contains measurements of fish caught in lake Laengelmavesi in southwestern Finland.\nlibrary(tidyverse)\nlibrary(tidymodels)\n\nfish &lt;- read_csv(\"fish.csv\")\nThe data dictionary is below:",
+    "crumbs": [
+      "Quick Links",
+      "AE",
+      "AE 05 Finnish Fish"
+    ]
+  },
+  {
+    "objectID": "ae/ae-05/ae-05-Finnish-fish.html#model-fitting",
+    "href": "ae/ae-05/ae-05-Finnish-fish.html#model-fitting",
+    "title": "AE 05 – Modeling Finnish Fish",
+    "section": "Model fitting",
+    "text": "Model fitting\nNow lets make our linear model more precise by finding the actual equation for the line. As we saw in class, we can calculate the coefficients that we need to describe the line with the following summary statistics.\n\nfish |&gt;\n  summarize( mean_x = mean(height),\n             sd_x = sd(height),\n             mean_y = mean(weight),\n             sd_y = sd(weight),\n             r = cor(height, weight)\n  )\n\n# A tibble: 1 × 5\n  mean_x  sd_x mean_y  sd_y     r\n   &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1   12.1  4.47   448.  285. 0.954\n\n\n\n\n\n\n\n\nQuestion 3\n\n\n\nWhat is the correlation between weight and height? What does this value tell you?\nAdd your response here\n\n\nRecall from class that the equation for the linear model is \\[\n\\hat{y} = b_0 + b_1 \\hat{x}\n\\]\nwhere \\[\nb_1 = r \\left ( \\frac{ s_y}{s_x} \\right )\n\\] and\n\\[\nb_0 = \\bar{y} - b_1 \\bar{x}\n\\]\n\n\n\n\n\n\nQuestion 4\n\n\n\nCalculate \\(b_1\\) and \\(b_0\\) and then write down the equation of the linear model.\nAdd your response here\n\n\n\n\n\n\n\n\nQuestion 5\n\n\n\nInterpret the significance the slope \\(b_1\\) in a sentence.\nAdd your response here\n\n\n\n\n\n\n\n\nQuestion 6\n\n\n\nUse your model to make more precise predictions about the weights of fish that have heights of 8cm and 15cm.\nAdd your response here",
+    "crumbs": [
+      "Quick Links",
+      "AE",
+      "AE 05 Finnish Fish"
+    ]
+  },
+  {
+    "objectID": "ae/ae-05/ae-05-Finnish-fish.html#a-shortcut",
+    "href": "ae/ae-05/ae-05-Finnish-fish.html#a-shortcut",
+    "title": "AE 05 – Modeling Finnish Fish",
+    "section": "A Shortcut!",
+    "text": "A Shortcut!\nIt turns out that R can generate the linear model automatically. The following code chunk demonstrates how to do this. In case you’re curious parsnip refers to an R package designed to simplify model fitting.\n\nlinear_reg() |&gt;\n  fit(weight ~ height, data = fish)\n\nparsnip model object\n\n\nCall:\nstats::lm(formula = weight ~ height, data = data)\n\nCoefficients:\n(Intercept)       height  \n    -288.42        60.92  \n\n\n\n\n\n\n\n\nQuestion 7\n\n\n\nThe two numbers shown above should be the same as your \\(b_0\\) and \\(b_1\\). Are they? (If they’re close, but not exactly the same, that’s likely due to rounding errors.)\nAdd your response here",
+    "crumbs": [
+      "Quick Links",
+      "AE",
+      "AE 05 Finnish Fish"
+    ]
+  },
+  {
+    "objectID": "ae/ae-03/ae-03-durham.html",
+    "href": "ae/ae-03/ae-03-durham.html",
+    "title": "AE-03: 2020 Durham City and County Resident Survey",
+    "section": "",
+    "text": "This application exercise uses data from a survey administered by the city of Durham, N.C.\nThe main question we’ll explore today is “What are the demographics and priorities of City of Durham residents?”",
+    "crumbs": [
+      "Quick Links",
+      "AE",
+      "AE 03 Durham"
+    ]
+  },
+  {
+    "objectID": "ae/ae-03/ae-03-durham.html#goals",
+    "href": "ae/ae-03/ae-03-durham.html#goals",
+    "title": "AE-03: 2020 Durham City and County Resident Survey",
+    "section": "Goals",
+    "text": "Goals\n\nGetting familiar with survey data\nVisualizing and summarizing categorical data\nExploring relationships between categorical variables\nImproving visualizations for visual appeal and better communication\nUnderstand marginal distribution\nUnderstand conditional distribution",
+    "crumbs": [
+      "Quick Links",
+      "AE",
+      "AE 03 Durham"
+    ]
+  },
+  {
+    "objectID": "ae/ae-03/ae-03-durham.html#packages",
+    "href": "ae/ae-03/ae-03-durham.html#packages",
+    "title": "AE-03: 2020 Durham City and County Resident Survey",
+    "section": "Packages",
+    "text": "Packages\n\nlibrary(tidyverse)",
+    "crumbs": [
+      "Quick Links",
+      "AE",
+      "AE 03 Durham"
+    ]
+  },
+  {
+    "objectID": "ae/ae-03/ae-03-durham.html#data",
+    "href": "ae/ae-03/ae-03-durham.html#data",
+    "title": "AE-03: 2020 Durham City and County Resident Survey",
+    "section": "Data",
+    "text": "Data\nThe data for this case study come from the 2020 Durham City and County Resident Survey.\nFirst, let’s load the data and assign it a name:\n\ndurham &lt;- read_csv(\"durham-2020.csv\")",
+    "crumbs": [
+      "Quick Links",
+      "AE",
+      "AE 03 Durham"
+    ]
+  },
+  {
+    "objectID": "ae/ae-03/ae-03-durham.html#exercise-1",
+    "href": "ae/ae-03/ae-03-durham.html#exercise-1",
+    "title": "AE-03: 2020 Durham City and County Resident Survey",
+    "section": "Exercise 1",
+    "text": "Exercise 1\nHow many rows and columns are in this dataset? Answer in a full sentence using inline code. (Hint: we learned how to do this in last week’s AE). What does each row represent and what does each column represent?\n\n\n\n\n\n\nQuestion\n\n\n\n(write your response here)",
+    "crumbs": [
+      "Quick Links",
+      "AE",
+      "AE 03 Durham"
+    ]
+  },
+  {
+    "objectID": "ae/ae-03/ae-03-durham.html#exercise-2",
+    "href": "ae/ae-03/ae-03-durham.html#exercise-2",
+    "title": "AE-03: 2020 Durham City and County Resident Survey",
+    "section": "Exercise 2",
+    "text": "Exercise 2\nThere are lots of variables in this data set, but we’ll focus on the three listed below. Sometimes the variable names in the data frame are awkward to work with, so one thing we might want to do is rename the variables to something more manageable. In the table below, you’ll see the original variable name and a new updated name that we want to use.\n\n\n\nOriginal name\nUpdated name\n\n\n\n\nprimary_language\nprimary_language\n\n\ndo_you_own_or_rent_your_current_resi_31\nown_rent\n\n\nwould_you_say_your_total_annual_hous_35\nincome\n\n\n\nWe will need some R code to rename the variables. The code chunk below does this for second variable.\n\ndurham &lt;- durham |&gt;\n  rename(\n    own_rent = do_you_own_or_rent_your_current_resi_31\n  )\n\nYour turn! Add some code to this code chunk to rename the third variable.\n\n# add code here\n\ndurham &lt;- durham |&gt;\n  rename(\n    income = would_you_say_your_total_annual_hous_35\n  )",
+    "crumbs": [
+      "Quick Links",
+      "AE",
+      "AE 03 Durham"
+    ]
+  },
+  {
+    "objectID": "ae/ae-03/ae-03-durham.html#exercise-3",
+    "href": "ae/ae-03/ae-03-durham.html#exercise-3",
+    "title": "AE-03: 2020 Durham City and County Resident Survey",
+    "section": "Exercise 3",
+    "text": "Exercise 3\nThe variable primary_language shows how repondents to the survey answered the question:\n\nWhat is the primary language used in your household?\n\nAdd R code below to produce a bar graph which visualizes this variable.\n\n# replace the blank with the approprate variable name \n# then change eval: false to eval: true\n\nggplot(durham, aes(x = ___ )) +\n  geom_bar()\n\nBonus task: use the example I showed you in class on Tuesday to add color! Take a look at this Rcolor cheatsheet to pick new colors!",
+    "crumbs": [
+      "Quick Links",
+      "AE",
+      "AE 03 Durham"
+    ]
+  },
+  {
+    "objectID": "ae/ae-03/ae-03-durham.html#exercise-4",
+    "href": "ae/ae-03/ae-03-durham.html#exercise-4",
+    "title": "AE-03: 2020 Durham City and County Resident Survey",
+    "section": "Exercise 4",
+    "text": "Exercise 4\nMake similar bar plots of own_rent and income.\n\n# add code here\nggplot(durham, aes(x = income)) +\n  geom_bar()\n\nWarning: Removed 110 rows containing non-finite outside the scale range\n(`stat_count()`).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuestions\n\n\n\nComment on why the following questions might be difficult to answer based on your bar graph.\n\nWhich income bracket includes the most number of survey respondents?\n\nWhat proportion of respondents reported an income less than $60,000?\n\n(write your response here)",
+    "crumbs": [
+      "Quick Links",
+      "AE",
+      "AE 03 Durham"
+    ]
+  },
+  {
+    "objectID": "ae/ae-03/ae-03-durham.html#exercise-5",
+    "href": "ae/ae-03/ae-03-durham.html#exercise-5",
+    "title": "AE-03: 2020 Durham City and County Resident Survey",
+    "section": "Exercise 5",
+    "text": "Exercise 5\nAlthough the variables own_rent and income are both categorical, they’re stored as numbers in the data frame. It is fairly common practice to “code” responses as numbers because it makes data collection and storage easier. To make sense of these numbers, however, we need to be able to translate back to a more meaningful response. This is typically done through documentation that would accompany the data. It can also be helpful to see the actual survey tool used to collect the data.\nIn R, categorical data are called factors. Here we recode these variables as factors with the as_factor() function.\n\ndurham &lt;- durham |&gt;\n  mutate(\n    income = as_factor(income))\n\nNow add additional code here to do the same for the own_rent variable:\n\n# add code here\n\ndurham &lt;- durham |&gt;\n  mutate(\n    own_rent = as_factor(own_rent))\n\nThe values for these variables still look like they’re numbers, but now R knows to treat them as categorical variables.",
+    "crumbs": [
+      "Quick Links",
+      "AE",
+      "AE 03 Durham"
+    ]
+  },
+  {
+    "objectID": "ae/ae-03/ae-03-durham.html#exercise-6",
+    "href": "ae/ae-03/ae-03-durham.html#exercise-6",
+    "title": "AE-03: 2020 Durham City and County Resident Survey",
+    "section": "Exercise 6",
+    "text": "Exercise 6\nNow let’s recreate the barplot for income, but now we’ll add some details to make it both visually more appealing and more effective at communicating information.\nChallenge: take a look at this code chunk and make a guess about what each line is doing!\n\ndurham |&gt;\n  ggplot(aes(y = income, fill = income)) +\n  geom_bar(show.legend = FALSE) +\n  scale_fill_viridis_d(na.value = \"darkgray\") +\n  scale_y_discrete(\n    labels = c(\n      \"1\" = \"Under $30,000\",\n      \"2\" = \"$30,000-$59,999\",\n      \"3\" = \"$60,000-$99,999\",\n      \"4\" = \"$100,000 or more\"\n    )\n  ) +\n  labs(\n    x = \"Count\",\n    y = NULL,\n    title = \"Would you say your total annual household income is...\"\n  )\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuestion\n\n\n\nIdentify at least four differences between this bar graph and the one you produced in Exercise 4.\n(write your response here)",
+    "crumbs": [
+      "Quick Links",
+      "AE",
+      "AE 03 Durham"
+    ]
+  },
+  {
+    "objectID": "ae/ae-03/ae-03-durham.html#exercise-7",
+    "href": "ae/ae-03/ae-03-durham.html#exercise-7",
+    "title": "AE-03: 2020 Durham City and County Resident Survey",
+    "section": "Exercise 7",
+    "text": "Exercise 7\nAs we know, it’s often helpful to think about catagorical variables in terms of proportions (relative frequencies) rather than counts. In AE-03, for example, we used R to compute proportions and display those values in a table. We can do the same thing here:\n\ndurham |&gt;\n  count(income) |&gt;\n  mutate(prop = n / sum(n))\n\n# A tibble: 5 × 3\n  income     n  prop\n  &lt;fct&gt;  &lt;int&gt; &lt;dbl&gt;\n1 1        141 0.176\n2 2        186 0.232\n3 3        194 0.242\n4 4        172 0.214\n5 &lt;NA&gt;     110 0.137\n\n\nWe can also incorporate this code directly into our chunk that produces our bar chart!\nThe following code is the same as before, but we first calculate relative frequencies (proportions) of income (also known as the marginal distribution) and this is plotted instead.\n\ndurham |&gt;\n  count(income) |&gt;\n  mutate(prop = n / sum(n)) |&gt;\n  ggplot(aes(y = income, x = prop, fill = income)) +\n  geom_col(show.legend = FALSE) +\n  scale_fill_viridis_d(na.value = \"gray\") +\n  scale_y_discrete(\n    labels = c(\n      \"1\" = \"Under $30,000\",\n      \"2\" = \"$30,000-$59,999\",\n      \"3\" = \"$60,000-$99,999\",\n      \"4\" = \"$100,000 or more\"\n    )\n  ) +\n  labs(\n    x = \"Proportion\",\n    y = NULL,\n    title = \"Would you say your total annual household income is...\"\n  )\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuestions\n\n\n\nNow return to the questions we saw earlier and use this graph to answer them.\n\nWhich income bracket includes the most number of survey respondents?\n\nWhat proportion of respondents reported an income less than $60,000?\n\n(write your responses here)",
+    "crumbs": [
+      "Quick Links",
+      "AE",
+      "AE 03 Durham"
+    ]
+  },
+  {
+    "objectID": "ae/ae-03/ae-03-durham.html#exercise-8",
+    "href": "ae/ae-03/ae-03-durham.html#exercise-8",
+    "title": "AE-03: 2020 Durham City and County Resident Survey",
+    "section": "Exercise 8",
+    "text": "Exercise 8\nFrom Chapter 4 and in class, we saw that we can visualize multiple variables with a stacked bar chart. Here, we are looking for a possible relationship between income and home ownership of Durham residents.\n\ndurham |&gt;\n  select(income, own_rent) |&gt;\n  drop_na() |&gt;\n  ggplot(aes(y = income, fill = own_rent)) +\n  geom_bar(position = \"fill\") +\n  scale_y_discrete(\n    labels = c(\n      \"1\" = \"Under $30,000\",\n      \"2\" = \"$30,000-$59,999\",\n      \"3\" = \"$60,000-$99,999\",\n      \"4\" = \"$100,000 or more\"\n    )\n  ) +\n  scale_fill_manual(\n    values = c(\"1\" = \"cadetblue\", \"2\" = \"coral\"),\n    labels = c(\"1\" = \"Own\", \"2\" = \"Rent\")\n  ) +\n  labs(\n    x = \"Proportion\",\n    y = \"Would you say your total\\nannual household income is...\",\n    fill = \"Do you own\\n or rent\\n your current\\n residence?\",\n    title = \"Income vs. home ownership of Durham residents\"\n  )\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuestion\n\n\n\nBased on this stacked bar chart, describe the relationship (if any) between income and home ownership of residents of Durham.\nAdd your response here",
+    "crumbs": [
+      "Quick Links",
+      "AE",
+      "AE 03 Durham"
+    ]
+  },
+  {
+    "objectID": "ae/ae-03/ae-03-durham.html#exercise-9",
+    "href": "ae/ae-03/ae-03-durham.html#exercise-9",
+    "title": "AE-03: 2020 Durham City and County Resident Survey",
+    "section": "Exercise 9",
+    "text": "Exercise 9\nWhile the bar chart can help us visualize relationships, we might also want to calculuate the precise proportions of home owners for each category of Durham residents. We did something similar in last week’s AE – the only difference here is that we are dropping any NA entries from our variables.\nSince we are looking at proportions of a variable conditioned on the level of a different categorical variable, we call this a conditional distribution.\nFinally, notice that we are also recodeing the levels of our two variables to be more informatively labeled.\n\ndurham |&gt;\n  mutate(\n    income = case_when(\n      income == \"1\" ~ \"Under $30,000\",\n      income == \"2\" ~ \"$30,000-$59,999\",\n      income == \"3\" ~ \"$60,000-$99,999\",\n      income == \"4\" ~ \"$100,000 or more\"      \n    ),\n    own_rent = if_else(own_rent == 1, \"Own\", \"Rent\")\n  ) |&gt;\n  select(income, own_rent) |&gt;\n  drop_na() |&gt;\n  count(income, own_rent) |&gt;\n  group_by(income) |&gt;\n  mutate(prop = n / sum(n))\n\n# A tibble: 8 × 4\n# Groups:   income [4]\n  income           own_rent     n   prop\n  &lt;chr&gt;            &lt;chr&gt;    &lt;int&gt;  &lt;dbl&gt;\n1 $100,000 or more Own        160 0.930 \n2 $100,000 or more Rent        12 0.0698\n3 $30,000-$59,999  Own        105 0.565 \n4 $30,000-$59,999  Rent        81 0.435 \n5 $60,000-$99,999  Own        107 0.552 \n6 $60,000-$99,999  Rent        87 0.448 \n7 Under $30,000    Own         51 0.362 \n8 Under $30,000    Rent        90 0.638 \n\n\n\n\n\n\n\n\nQuestion\n\n\n\nDescribe the relationship between these two variables, this time with the actual values from the conditional distribution of home ownership based on income level.\nAdd your response here",
+    "crumbs": [
+      "Quick Links",
+      "AE",
+      "AE 03 Durham"
+    ]
+  },
+  {
+    "objectID": "ae/ae-03/ae-03-durham.html#r-code-used",
+    "href": "ae/ae-03/ae-03-durham.html#r-code-used",
+    "title": "AE-03: 2020 Durham City and County Resident Survey",
+    "section": "R code used",
+    "text": "R code used\nHere is list of R commands used in this application exercise:\n\n\nReviewed data imports, visualization, and wrangling functions encountered before:\n\nImport: read_csv(): Read data from a CSV (comma separated values) file\nVisualization:\n\nggplot(): Create a plot using the ggplot2 package\naes(): Map variables from the data to aesthetic elements of the plot, generally passed as an argument to ggplot() or to geom_*() functions (define only x or y aesthetic)\ngeom_bar(): Represent data with bars, after calculating heights of bars under the hood\nlabs(): Label x axis, y axis, legend for color of plot, title` of plot, etc.\n\nWrangling:\n\nmutate(): Mutate the data frame by creating a new column or overwriting one of the existing columns\ncount(): Count the number of observations for each level of a categorical variable (factor) or each distinct value of any other type of variable\ngroup_by(): Perform each subsequent action once per each group of the variable, where groups can be defined based on the levels of one or more variables\n\n\nIntroduced new data wrangling functions:\n\nrename(): Rename columns in a data frame\nas_factor(): Convert a variable to a factor\ndrop_na(): Drop rows that have NA in one ore more specified variables\nif_else(): Write logic for what happens if a condition is true and what happens if it’s not\ncase_when(): Write a generalized if_else() logic for more than one codition\n\nIntroduced new data visualization functions:\n\ngeom_col(): Represent data with bars (columns), for heights that have already been calculated (must define x and y aesthetics)\nscale_fill_viridis_d(): Customize the discrete fill scale, using a color-blind friendly, ordinal discrete color scale\nscale_y_discrete(): Customize the discrete y scale\nscale_fill_manual(): Customize the fill scale by manually adjusting values for colors",
+    "crumbs": [
+      "Quick Links",
+      "AE",
+      "AE 03 Durham"
+    ]
+  },
+  {
+    "objectID": "ae/ae-03/ae-03-durham.html#acknowledgements",
+    "href": "ae/ae-03/ae-03-durham.html#acknowledgements",
+    "title": "AE-03: 2020 Durham City and County Resident Survey",
+    "section": "Acknowledgements",
+    "text": "Acknowledgements\nThis AE is based on a similar activity written by Mine Çetinkaya-Rundel. The dataset was cleaned and prepared for analysis by Sam Rosen.",
+    "crumbs": [
+      "Quick Links",
+      "AE",
+      "AE 03 Durham"
+    ]
+  },
+  {
+    "objectID": "ae/ae-06/ae-06-transplants.html",
+    "href": "ae/ae-06/ae-06-transplants.html",
+    "title": "AE 06 – Heart Transplants",
+    "section": "",
+    "text": "The Stanford University Heart Transplant Study was conducted to determine whether an experimental heart transplant program increased lifespan. Each patient entering the program was designated an official heart transplant candidate, meaning that they were gravely ill and would most likely benefit from a new heart. Some patients got a transplant and some did not. The variable transplant indicates which group the patients were in; patients in the treatment group got a transplant and those in the control group did not. Of the 34 patients in the control group, 30 died. Of the 69 people in the treatment group, 45 died. Another variable called survived was used to indicate whether the patient was alive at the end of the study. (Turnbull, Brown, and Hu 1974)",
+    "crumbs": [
+      "Quick Links",
+      "AE",
+      "AE 06 Heart Transplants"
+    ]
+  },
+  {
+    "objectID": "ae/ae-06/ae-06-transplants.html#packages-and-data",
+    "href": "ae/ae-06/ae-06-transplants.html#packages-and-data",
+    "title": "AE 06 – Heart Transplants",
+    "section": "Packages and Data",
+    "text": "Packages and Data\nFor our analysis, we’ll use the tidyverse and infer packages.\n\nlibrary(tidyverse)\nlibrary(infer)\n\nAnd then, let’s read the data and take a peak at it:\n\nheart_transplant &lt;- read_csv(\"heart-transplant.csv\")\nglimpse(heart_transplant)\n\nRows: 103\nColumns: 8\n$ id         &lt;dbl&gt; 15, 43, 61, 75, 6, 42, 54, 38, 85, 2, 103, 12, 48, 102, 35,…\n$ outcome    &lt;chr&gt; \"deceased\", \"deceased\", \"deceased\", \"deceased\", \"deceased\",…\n$ transplant &lt;chr&gt; \"control\", \"control\", \"control\", \"control\", \"control\", \"con…\n$ age        &lt;dbl&gt; 53, 43, 52, 52, 54, 36, 47, 41, 47, 51, 39, 53, 56, 40, 43,…\n$ survtime   &lt;dbl&gt; 1, 2, 2, 2, 3, 3, 3, 5, 5, 6, 6, 8, 9, 11, 12, 16, 16, 16, …\n$ acceptyear &lt;dbl&gt; 68, 70, 71, 72, 68, 70, 71, 70, 73, 68, 67, 68, 71, 74, 70,…\n$ prior      &lt;chr&gt; \"no\", \"no\", \"no\", \"no\", \"no\", \"no\", \"no\", \"no\", \"no\", \"no\",…\n$ wait       &lt;dbl&gt; NA, NA, NA, NA, NA, NA, NA, 5, NA, NA, NA, NA, NA, NA, NA, …\n\n\nThe data dictionary is as follows:\n\n\n\n\n\n\n\nVariable\nDescription\n\n\n\n\nid\nID number of the patient\n\n\noutcome\nSurvival status with levels alive and deceased\n\n\ntransplant\nTransplant group with levels control (did not receive a transplant) and treatment (received a transplant)\n\n\nage\nAge of the patient at the beginning of the study\n\n\nsurvtime\nNumber of days patients were alive after the date they were determined to be a candidate for a heart transplant until the termination date of the study\n\n\nacceptyear\nYear of acceptance as a heart transplant candidate\n\n\nprior\nWhether or not the patient had prior surgery with levels yes and no\n\n\nwait\nWaiting time for transplant",
+    "crumbs": [
+      "Quick Links",
+      "AE",
+      "AE 06 Heart Transplants"
+    ]
+  },
+  {
+    "objectID": "ae/ae-06/ae-06-transplants.html#heart-transplants---outcome",
+    "href": "ae/ae-06/ae-06-transplants.html#heart-transplants---outcome",
+    "title": "AE 06 – Heart Transplants",
+    "section": "Heart transplants - outcome",
+    "text": "Heart transplants - outcome\nLet’s start by visualizing a possible association between the variables transplant and outcome.\n\nheart_transplant |&gt;\n  ggplot( aes(x=transplant, fill = outcome)) +\n  geom_bar( position = \"fill\", color = \"white\") +\n  scale_fill_manual(values = c(\"#569BBD\", \"#114B5F\")) +\n  labs(\n    y = \"\"\n  )\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuestion 1\n\n\n\nWhat does this stacked bar plot tell you (if anything) about a possible association between survival and whether or not the patient got a transplant? Explain your reasoning.\nAdd your repsonse here\n\n\nNow let’s calculate the point estimate for the difference in proportions of patients who died between the treatment and control groups. We can express this as \\[\n\\hat{p}_{treatment} - \\hat{p}_{control}\n\\] where \\(\\hat{p}\\) is the observed probability of dying in each group.\n\n\n\n\n\n\nQuestion 2\n\n\n\nUse the frequency table of outcome by transplant below to calculate the proportions of patients in the treatment and control groups that died? What is the difference in proportions?\nReport your results here\n\n\n\nheart_transplant |&gt;\n  count(transplant, outcome)\n\n# A tibble: 4 × 3\n  transplant outcome      n\n  &lt;chr&gt;      &lt;chr&gt;    &lt;int&gt;\n1 control    alive        4\n2 control    deceased    30\n3 treatment  alive       24\n4 treatment  deceased    45\n\n\nAnother way to do this is to use specify() and calculate() as shown below.\n\nobs_diff_outcome &lt;- heart_transplant |&gt;\n  specify(response = outcome, explanatory = transplant, success = \"deceased\") |&gt;\n  calculate(stat = \"diff in props\", order = c(\"treatment\", \"control\"))\n\nobs_diff_outcome\n\nResponse: outcome (factor)\nExplanatory: transplant (factor)\n# A tibble: 1 × 1\n    stat\n   &lt;dbl&gt;\n1 -0.230\n\n\n\n\n\n\n\n\nQuestion 3\n\n\n\nAre the results of this code chunk the same as what you obtained in Question 2?\nAdd your repsonse here\n\n\n\n\n\n\n\n\nQuestion 4\n\n\n\nState a null hypothesis and an alternative hypothesis.\nAdd your repsonse here\n\n\nThe code chunk below generates a null distribution needed to test the hypothesis test you formulated in Question 4. For this simulation we use 100 resamples (reps).\n\nNote: the function set.seed() here is used so that the simulation, although random, is the same everytime it’s run. You can change the seed value to get a different simulation.\n\n\nset.seed(2024)\n\nnull_dist_outcome &lt;- heart_transplant |&gt;\n  specify(response = outcome, explanatory = transplant, success = \"deceased\") |&gt;\n  hypothesize(null = \"independence\") |&gt;\n  generate(reps = 100, type = \"permute\") |&gt;\n  calculate(stat = \"diff in props\", order = c(\"treatment\", \"control\"))\n\n\n\n\n\n\n\nQuestion 5\n\n\n\nInspect the object null_dist_outcome shown below. How many rows and how many columns does it have? What does each row represent? What does the variable replicate represent? What does stat represent?\nAdd your repsonse here\n\n\n\nprint(null_dist_outcome)\n\nResponse: outcome (factor)\nExplanatory: transplant (factor)\nNull Hypothesis: independence\n# A tibble: 100 × 2\n   replicate    stat\n       &lt;int&gt;   &lt;dbl&gt;\n 1         1 -0.0546\n 2         2 -0.0546\n 3         3 -0.0107\n 4         4  0.121 \n 5         5  0.0772\n 6         6 -0.0985\n 7         7 -0.0107\n 8         8 -0.0985\n 9         9 -0.0546\n10        10 -0.186 \n# ℹ 90 more rows\n\n\nNow let’s visualize the distribution of simulated differences in proportions of deceased between treatment and control groups.\n\nnull_dist_outcome |&gt;\n  visualize(bins=14) +\n  shade_p_value(obs_stat = obs_diff_outcome, direction = \"two-sided\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuestion 6\n\n\n\nWhat is the shape of this distribution? What is the center of this distribution? What does the red line represent? Are these results expected? Explain your reasoning.\nAdd your repsonse here",
+    "crumbs": [
+      "Quick Links",
+      "AE",
+      "AE 06 Heart Transplants"
+    ]
+  },
+  {
+    "objectID": "ae/ae-06/ae-06-transplants.html#p-value",
+    "href": "ae/ae-06/ae-06-transplants.html#p-value",
+    "title": "AE 06 – Heart Transplants",
+    "section": "p-value",
+    "text": "p-value\nWe can calculate the p-value in two different ways.\n\nFilter null_dist_outcome for stat values that are at least as far away from the null value as the observed value you calculated in Exercise 4. Notice that we are considering both directions!\n\n\nnull_dist_outcome |&gt;\n  filter( stat &gt;= 0.23 | stat &lt;= -0.23)\n\nResponse: outcome (factor)\nExplanatory: transplant (factor)\nNull Hypothesis: independence\n# A tibble: 2 × 2\n  replicate   stat\n      &lt;int&gt;  &lt;dbl&gt;\n1        62 -0.230\n2        79  0.297\n\n\n\n\n\n\n\n\nQuestion 7\n\n\n\nNote how many such values there are (rows in the output) and then calculate a proportion using the total number of resamples (i.e. 100).\nAdd your repsonse here\n\n\n\nUse get_p_value():\n\n\np_value_outcome &lt;- null_dist_outcome |&gt;\n  get_p_value(obs_stat = obs_diff_outcome, direction = \"two-sided\")\n\np_value_outcome\n\n# A tibble: 1 × 1\n  p_value\n    &lt;dbl&gt;\n1    0.02\n\n\n\n\n\n\n\n\nQuestion 8\n\n\n\nConfirm that you obtained the same results with the two methods. Then interpret the p-value in context of the data and the research question and comment on the statistical discernability of this result using a discernability level of 0.05.\nAdd your repsonse here",
+    "crumbs": [
+      "Quick Links",
+      "AE",
+      "AE 06 Heart Transplants"
+    ]
+  },
+  {
+    "objectID": "ae/ae-04/ae-04-flights.html",
+    "href": "ae/ae-04/ae-04-flights.html",
+    "title": "AE-04: NYC Flights",
+    "section": "",
+    "text": "In this activity we explore a random sample of domestic flights that departed from the three major New York City airports in 2013. We will generate simple graphical and numerical summaries of data on these flights and explore delay times. Since this is a large data set, we’ll also use some techniques for filtering and grouping our data.",
+    "crumbs": [
+      "Quick Links",
+      "AE",
+      "AE 04 Flights"
+    ]
+  },
+  {
+    "objectID": "ae/ae-04/ae-04-flights.html#goals",
+    "href": "ae/ae-04/ae-04-flights.html#goals",
+    "title": "AE-04: NYC Flights",
+    "section": "Goals",
+    "text": "Goals\n\nVisualize and summarize numerical data\nLearn techniques for filtering and grouping data",
+    "crumbs": [
+      "Quick Links",
+      "AE",
+      "AE 04 Flights"
+    ]
+  },
+  {
+    "objectID": "ae/ae-04/ae-04-flights.html#packages-and-data",
+    "href": "ae/ae-04/ae-04-flights.html#packages-and-data",
+    "title": "AE-04: NYC Flights",
+    "section": "Packages and Data",
+    "text": "Packages and Data\nAs with all of our activities, we’ll need the tidyverse package for various useful R commands. The dataset we need is found in the companion package for our textbook, openintro.\n\nlibrary(tidyverse)\nlibrary(openintro)\n\n\nThe data\nThe Bureau of Transportation Statistics (BTS) is a statistical agency that is a part of the Research and Innovative Technology Administration (RITA). As its name implies, BTS collects and makes transportation data available, such as the flights data we will be working with in this activity\nFirst, let’s view the data frame to get a sense of what the variables are.\n\nglimpse(nycflights)\n\nRows: 32,735\nColumns: 16\n$ year      &lt;int&gt; 2013, 2013, 2013, 2013, 2013, 2013, 2013, 2013, 2013, 2013, …\n$ month     &lt;int&gt; 6, 5, 12, 5, 7, 1, 12, 8, 9, 4, 6, 11, 4, 3, 10, 1, 2, 8, 10…\n$ day       &lt;int&gt; 30, 7, 8, 14, 21, 1, 9, 13, 26, 30, 17, 22, 26, 25, 21, 23, …\n$ dep_time  &lt;int&gt; 940, 1657, 859, 1841, 1102, 1817, 1259, 1920, 725, 1323, 940…\n$ dep_delay &lt;dbl&gt; 15, -3, -1, -4, -3, -3, 14, 85, -10, 62, 5, 5, -2, 115, -4, …\n$ arr_time  &lt;int&gt; 1216, 2104, 1238, 2122, 1230, 2008, 1617, 2032, 1027, 1549, …\n$ arr_delay &lt;dbl&gt; -4, 10, 11, -34, -8, 3, 22, 71, -8, 60, -4, -2, 22, 91, -6, …\n$ carrier   &lt;chr&gt; \"VX\", \"DL\", \"DL\", \"DL\", \"9E\", \"AA\", \"WN\", \"B6\", \"AA\", \"EV\", …\n$ tailnum   &lt;chr&gt; \"N626VA\", \"N3760C\", \"N712TW\", \"N914DL\", \"N823AY\", \"N3AXAA\", …\n$ flight    &lt;int&gt; 407, 329, 422, 2391, 3652, 353, 1428, 1407, 2279, 4162, 20, …\n$ origin    &lt;chr&gt; \"JFK\", \"JFK\", \"JFK\", \"JFK\", \"LGA\", \"LGA\", \"EWR\", \"JFK\", \"LGA…\n$ dest      &lt;chr&gt; \"LAX\", \"SJU\", \"LAX\", \"TPA\", \"ORF\", \"ORD\", \"HOU\", \"IAD\", \"MIA…\n$ air_time  &lt;dbl&gt; 313, 216, 376, 135, 50, 138, 240, 48, 148, 110, 50, 161, 87,…\n$ distance  &lt;dbl&gt; 2475, 1598, 2475, 1005, 296, 733, 1411, 228, 1096, 820, 264,…\n$ hour      &lt;dbl&gt; 9, 16, 8, 18, 11, 18, 12, 19, 7, 13, 9, 13, 8, 20, 12, 20, 6…\n$ minute    &lt;dbl&gt; 40, 57, 59, 41, 2, 17, 59, 20, 25, 23, 40, 20, 9, 54, 17, 24…\n\n\nNote – to view just the names of the variables, we can also use the names command. Try it!\n\n\n\n\n\n\nTip\n\n\n\nTo get more information about these variables, we can consult the codebook – documentation that gives a description of the variables. You can do this by typing ??nycflights in the console window (lower left). Alternatively, find the packages tab in the lower right of your posit.cloud window. Click on it and then click on openintro. Then click on nycflights.\n\n\nOne of the variables is carrier (i.e. airline) of the flight, which is coded according to the following system.\n\ncarrier: Two letter carrier abbreviation.\n\n9E: Endeavor Air Inc.\nAA: American Airlines Inc.\nAS: Alaska Airlines Inc.\nB6: JetBlue Airways\nDL: Delta Air Lines Inc.\nEV: ExpressJet Airlines Inc.\nF9: Frontier Airlines Inc.\nFL: AirTran Airways Corporation\nHA: Hawaiian Airlines Inc.\nMQ: Envoy Air\nOO: SkyWest Airlines Inc.\nUA: United Air Lines Inc.\nUS: US Airways Inc.\nVX: Virgin America\nWN: Southwest Airlines Co.\nYV: Mesa Airlines Inc.",
+    "crumbs": [
+      "Quick Links",
+      "AE",
+      "AE 04 Flights"
+    ]
+  },
+  {
+    "objectID": "ae/ae-04/ae-04-flights.html#departure-delays",
+    "href": "ae/ae-04/ae-04-flights.html#departure-delays",
+    "title": "AE-04: NYC Flights",
+    "section": "Departure Delays",
+    "text": "Departure Delays\nLet’s start by examining the distribution of departure delays of all flights with a histogram using the variable dep_delay\n\nggplot(data = nycflights, aes(x = dep_delay)) +\n  geom_histogram(col=\"white\")\n\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.\n\n\n\n\n\n\n\n\n\nHistograms are generally a very good way to see the shape of a single distribution of numerical data, but that shape can change depending on how the data is split between the different bins. You can easily define the binwidth you want to use:\n\nggplot(data = nycflights, aes(x = dep_delay)) +\n  geom_histogram(binwidth = 15, col=\"white\")\n\n\n\n\n\n\n\nggplot(data = nycflights, aes(x = dep_delay)) +\n  geom_histogram(binwidth = 150, col=\"white\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nExercise 1\n\n\n\nLook carefully at these three histograms. How do they compare? Are there features revealed in one that are obscured in another? What can you learn about delays in departure time from these histograms?\n\n\n\nFiltering\nSuppose we’re only interested in flights headed to Portland, OR. We can filter the data for flights with that destination (dest == \"PDX\") and then make a histogram of the departure delays of only those flights.\n\npdx_flights &lt;- nycflights |&gt;\n  filter(dest == \"PDX\")\n\nggplot(data = pdx_flights, aes(x = dep_delay)) +\n  geom_histogram(binwidth = 10, col=\"white\")\n\n\n\n\n\n\n\n\nLet’s decipher these two commands (OK, so it might look like four lines, but the first two physical lines of code are actually part of the same command. It’s common to add a break to a new line after |&gt; to help readability).\n\nCommand 1: Take the nycflights data frame, filter for flights headed to PDX, and save the result as a new data frame called pdx_flights. By creating a new data frame, we can use it for further analysis later on.\n\n== means “if it’s equal to”.\nPDX is in quotation marks since it is a character string.\n\nCommand 2: Basically the same ggplot call from earlier for making a histogram, except that it uses the smaller data frame for flights headed to PDX instead of all flights.\n\n\n\n\n\n\n\nTip\n\n\n\nFiltering for certain observations (e.g. flights from a particular airport) is often of interest in data frames where we might want to examine observations with certain characteristics separately from the rest of the data. To do so, you can use the filter function and a series of logical operators. The most commonly used logical operators for data analysis are as follows:\n\n== means “equal to”\n!= means “not equal to”\n&gt; or &lt; means “greater than” or “less than”\n&gt;= or &lt;= means “greater than or equal to” or “less than or equal to”\n\n\n\n\n\nNumerical Summaries\nNow let’s look at some numerical summaries for these flights:\n\npdx_flights |&gt;\n  summarise(mean_dd   = mean(dep_delay), \n            median_dd = median(dep_delay), \n            n         = n())\n\n# A tibble: 1 × 3\n  mean_dd median_dd     n\n    &lt;dbl&gt;     &lt;dbl&gt; &lt;int&gt;\n1    10.8         0   136\n\n\n\n\n\n\n\n\nExercise 2\n\n\n\nIn your own words, explain the significance of the three numbers generated by the above R code.\n\n\nNote that with the summarise function we created a list of three different numerical summaries that we’re interested in. The names of these elements are user defined, like mean_dd, median_dd, n, and you can customize these names as you like (just don’t use spaces in your names). Calculating these summary statistics also requires that you know the function calls. Note that n() reports the sample size.\n\n\n\n\n\n\nTip\n\n\n\nSummary statistics: Some useful function calls for summary statistics for a single numerical variable are as follows:\n\nmean\nmedian\nsd\nvar\nIQR\nmin\nmax\n\nNote that each of these functions takes a single vector as an argument and returns a single value.\n\n\nWe can also filter based on multiple criteria. Suppose we’re interested in flights headed to Portland (PDX) in July:\n\npdx_jul_flights &lt;- nycflights |&gt;\n  filter(dest == \"PDX\", month == 7)\n\nNote that we can separate the conditions using commas if we want flights that are both headed to PDX and in July If we are interested in either flights headed to PDX or in July, we can use the | instead of the comma.\n\n\n\n\n\n\nExercise 3\n\n\n\nWe just created a new data frame called pdx_jul_flights that includes flights headed to PDX in July. How many flights meet these criteria?\n\n\n\n# add code here\n\n\n\n\n\n\n\nExercise 4\n\n\n\nDescribe the distribution of the arrival delays of these flights using a histogram and appropriate summary statistics.\n\n\n\n# add code here\n\n\n\nSummary statistics for groups\nAnother useful technique is to calculate summary statistics for various groups in your data frame. For example, we can modify the above command using the group_by function to get the same summary stats for each origin airport:\n\nnycflights |&gt;\n  group_by(origin) |&gt;\n  summarise(median_dd = median(dep_delay), mean_dd = mean(dep_delay), iqr_dd = IQR(dep_delay), n_flights = n())\n\n# A tibble: 3 × 5\n  origin median_dd mean_dd iqr_dd n_flights\n  &lt;chr&gt;      &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;     &lt;int&gt;\n1 EWR           -1    15.3     19     11771\n2 JFK           -1    12.3     15     10897\n3 LGA           -3    10.1     13     10067\n\n\nThis shows us that LaGuardia Airport (LGA) has the smallest average departure delay.\n\n\n\n\n\n\nExercise 5\n\n\n\nCalculate the median and interquartile range for dep_delay for flights in the pdx_flights data frame, grouped by carrier. Which carrier has the most variable departure delays?\n\n\n\n# add code here\n\n\n\nDeparture delays by carrier\nSuppose you really dislike departure delays and so you want to choose an airline that minimizes your potential departure delay leaving NYC.\n\n\n\n\n\n\nExercise 6\n\n\n\nTo answer this question, we can use code like the example above to:\n-   `group_by` `carrier`, then\n-   `summarise` mean departure delays.\nWhich carrier has the highest average delay departing from an NYC airport?\n\n\n\n# add code here\n\n\n\n\n\n\n\nExercise 7\n\n\n\nRather than choosing the carrier with the lowest mean departure delay, we could instead choose the carrier with the lowest median departure delay. What are the pros and cons of these two choices?",
+    "crumbs": [
+      "Quick Links",
+      "AE",
+      "AE 04 Flights"
+    ]
+  },
+  {
+    "objectID": "ae/ae-04/ae-04-flights.html#boxplots",
+    "href": "ae/ae-04/ae-04-flights.html#boxplots",
+    "title": "AE-04: NYC Flights",
+    "section": "Boxplots",
+    "text": "Boxplots\nFinally, let’s look at some boxplots. As we know, boxplots give us a different way to visualize a distribution. Here, we are looking at the arrival delay arr_delay.\n\nnycflights |&gt;\n  filter(dest == \"PDX\") |&gt;\n  ggplot(aes(dep_delay)) +\n  geom_boxplot()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nExercise 8\n\n\n\nBased on this boxplot, estimate the median, Q1, and Q3.\n\n\n\n\n\n\n\n\nExercise 9\n\n\n\nThe very first thing we did in this activity was to visualize the distribution of dep_delay for the entire nycflights data set with a histogram. Now use a boxplot to visualize the same distribution. What do you notice?",
+    "crumbs": [
+      "Quick Links",
+      "AE",
+      "AE 04 Flights"
+    ]
   }
 ]

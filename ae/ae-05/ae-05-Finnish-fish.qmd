@@ -1,0 +1,173 @@
+---
+title: "AE  05 -- Modeling Finnish Fish"
+categories: 
+  - Application exercise
+editor: visual
+---
+
+![](bream.jpg){fig-align="center" width="80%"}
+
+For this application exercise, we will work with a data set that contains measurements of fish caught in lake Laengelmavesi in southwestern Finland.
+
+```{r}
+#| label: load-packages-data
+#| message: false
+
+library(tidyverse)
+library(tidymodels)
+
+fish <- read_csv("fish.csv")
+```
+
+The data dictionary is below:
+
+| **variable**   | **description**                          |
+|----------------|------------------------------------------|
+| `species`      | Species name of fish                     |
+| `weight`       | Weight, in grams                         |
+| `length_body`  | Length from nose to start of tail, in cm |
+| `length_notch` | Length from nose to tail notch, in cm    |
+| `length_tail`  | Length to end of tail, in cm             |
+| `height`       | Height, in cm                            |
+| `width`        | Width, in cm                             |
+
+
+
+# Visualizing Weight and Height
+
+The question we want to investigate is whether there is relationship between the weights and heights of fish. We start by making a scatterplot to visualize the data.
+
+```{r}
+#| message: false
+
+ggplot(fish, aes(x = height, y = weight)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  labs(
+    title = "Weights vs. heights of fish",
+    x = "Height (cm)",
+    y = "Weight (gr)"
+  )
+```
+
+Note that in the code chunk above, the line with `geom_smooth` draws the linear regression line for us.
+
+::: {.callout-note title="Question 1" icon="false"}
+Using terminology from Chapter 7, how would you describe this association?
+
+*Add response here*
+:::
+
+One of the reasons why we want to see the linear regression line is that it can help us make predictions. Based on the graph alone, what do you predict would be the weight of a fish that has a height of 8cm? 15cm? 20cm?
+
+::: {.callout-note title="Question 2" icon="false"}
+*Add response here*
+:::
+
+## Model fitting
+
+Now lets make our linear model more precise by finding the actual equation for the line. As we saw in class, we can calculate the coefficients that we need to describe the line with the following summary statistics.
+
+```{r}
+fish |>
+  summarize( mean_x = mean(height),
+             sd_x = sd(height),
+             mean_y = mean(weight),
+             sd_y = sd(weight),
+             r = cor(height, weight)
+  )
+
+```
+
+::: {.callout-note title="Question 3" icon="false"}
+What is the correlation between weight and height? What does this value tell you?
+
+*Add your response here*
+:::
+
+Recall from class that the equation for the linear model is 
+$$
+\hat{y} = b_0 + b_1 \hat{x}
+$$
+
+where 
+$$
+b_1 = r \left ( \frac{ s_y}{s_x} \right )
+$$ and 
+
+$$
+b_0 = \bar{y} - b_1 \bar{x}
+$$
+
+::: {.callout-note title="Question 4" icon="false"}
+Calculate $b_1$ and $b_0$ and then write down the equation of the linear model.
+
+*Add your response here*
+:::
+
+::: {.callout-note title="Question 5" icon="false"}
+Interpret the significance the slope $b_1$ in a sentence.
+
+*Add your response here*
+:::
+
+::: {.callout-note title="Question 6" icon="false"}
+Use your model to make more precise predictions about the weights of fish that have heights of 8cm and 15cm.
+
+*Add your response here*
+:::
+
+
+## A Shortcut!
+
+It turns out that R can generate the linear model automatically. The following code chunk demonstrates how to do this.  In case you're curious `parsnip` refers to an R package designed to simplify model fitting.
+
+```{r}
+#| message: false
+
+linear_reg() |>
+  fit(weight ~ height, data = fish)
+
+```
+
+::: {.callout-note title="Question 7" icon="false"}
+The two numbers shown above should be the same as your $b_0$ and $b_1$. Are they? (If they're close, but not exactly the same, that's likely due to rounding errors.)
+
+*Add your response here*
+:::
+
+
+# Adding a third variable
+
+As we know from our pengiun friends, `species` can sometimes be a confounding variable. Does the relationship between heights and weights of fish change if we take into consideration species?
+
+::: {.callout-note title="Question 8" icon="false"}
+Make one change to the code chunk below to color the data points by `species`. Hint: this is exactly what you did with the penguins. What do you notice?
+
+*Add your response here*
+:::
+
+```{r}
+
+ggplot(fish, 
+       aes(x = height, y = weight)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  labs(
+    title = "Weights vs. heights of fish",
+    x = "Height (cm)",
+    y = "Weight (gr)"
+  )
+```
+
+# Challenge!
+
+Once you see that we really need two separate linear models for the two different species, we can reproduce our analysis above by first filtering by species. The two species in this data set are "Bream" and "Roach"
+
+::: {.callout-note title="Question 9" icon="false"}
+Use the `filter` command to generate a table of summary statistics for only the Bream. Hint: we used the `filter` command in last week's AE.
+:::
+
+::: {.callout-note title="Question 10" icon="false"}
+Use your new summary statistics to find a new linear model and use this to predict the weight of a fish with height of 15cm.
+:::

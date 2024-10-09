@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>MTH161 :: Elementary Statistics   Fall 2024 – mth161 :: Elementary Statistics</title>
+<title>AE 05 – Modeling Finnish Fish – mth161 :: Elementary Statistics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,24 +20,58 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -66,8 +100,37 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="style/mth161.scss">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../style/mth161.scss">
 </head>
 
 <body class="nav-sidebar docked nav-fixed">
@@ -77,7 +140,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">mth161 :: Elementary Statistics</span>
     </a>
   </div>
@@ -88,7 +151,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./course-links.html" aria-current="page"> 
+    <a class="nav-link active" href="../../course-links.html" aria-current="page"> 
 <span class="menu-text">Quick Links</span></a>
   </li>  
 </ul>
@@ -102,7 +165,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Welcome</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../ae/ae-03/ae-03-durham.html">AE</a></li><li class="breadcrumb-item"><a href="../../ae/ae-05/ae-05-Finnish-fish.html">AE 05 Finnish Fish</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -124,49 +187,49 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Welcome</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./general.html" class="sidebar-item-text sidebar-link">
+  <a href="../../general.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">General Info</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./support.html" class="sidebar-item-text sidebar-link">
+  <a href="../../support.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Student Support</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./content.html" class="sidebar-item-text sidebar-link">
+  <a href="../../content.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Course Content</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./structure.html" class="sidebar-item-text sidebar-link">
+  <a href="../../structure.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Class Structure</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./grades.html" class="sidebar-item-text sidebar-link">
+  <a href="../../grades.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Grades</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./UPElements.html" class="sidebar-item-text sidebar-link">
+  <a href="../../UPElements.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">University Policies</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./course-links.html" class="sidebar-item-text sidebar-link">
+  <a href="../../course-links.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Useful Links</span></a>
   </div>
 </li>
@@ -181,55 +244,55 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./slides/05/05-chapter4.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/05/05-chapter4.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Tuesday, Week 3</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./slides/06/06-explore-categorical.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/06/06-explore-categorical.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Thursday, Week 3</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./slides/07/07-explore-numerical.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/07/07-explore-numerical.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Tuesday, Week 4</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./slides/08/08-explore-numer-boxplotIQR.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/08/08-explore-numer-boxplotIQR.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Thursday, Week 4</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./slides/09/09-linear-regression.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/09/09-linear-regression.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Tuesday, Week 5</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./slides/10/10-linear-regression.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/10/10-linear-regression.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Thursday, Week 5</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./slides/11/11-hypothesis-testing.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/11/11-hypothesis-testing.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Tuesday, Week 6</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./slides/12/12-hypothesis-testing.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/12/12-hypothesis-testing.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Thursday, Week 6</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./slides/13/13-confidence-intervals.html" class="sidebar-item-text sidebar-link">
+  <a href="../../slides/13/13-confidence-intervals.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Tuesday, Week 7</span></a>
   </div>
 </li>
@@ -246,31 +309,31 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ae/ae-03/ae-03-durham.html" class="sidebar-item-text sidebar-link">
+  <a href="../../ae/ae-03/ae-03-durham.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">AE 03 Durham</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ae/ae-04/ae-04-flights.html" class="sidebar-item-text sidebar-link">
+  <a href="../../ae/ae-04/ae-04-flights.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">AE 04 Flights</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ae/ae-05/ae-05-Finnish-fish.html" class="sidebar-item-text sidebar-link">
+  <a href="../../ae/ae-05/ae-05-Finnish-fish.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">AE 05 Finnish Fish</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ae/ae-06/ae-06-transplants.html" class="sidebar-item-text sidebar-link">
+  <a href="../../ae/ae-06/ae-06-transplants.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">AE 06 Heart Transplants</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ae/ae-07/ae-07-lemurs.html" class="sidebar-item-text sidebar-link">
+  <a href="../../ae/ae-07/ae-07-lemurs.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">AE 07 Lemurs</span></a>
   </div>
 </li>
@@ -286,18 +349,26 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#welcome" id="toc-welcome" class="nav-link active" data-scroll-target="#welcome">Welcome!</a></li>
+  <li><a href="#visualizing-weight-and-height" id="toc-visualizing-weight-and-height" class="nav-link active" data-scroll-target="#visualizing-weight-and-height">Visualizing Weight and Height</a>
+  <ul class="collapse">
+  <li><a href="#model-fitting" id="toc-model-fitting" class="nav-link" data-scroll-target="#model-fitting">Model fitting</a></li>
+  <li><a href="#a-shortcut" id="toc-a-shortcut" class="nav-link" data-scroll-target="#a-shortcut">A Shortcut!</a></li>
+  </ul></li>
+  <li><a href="#adding-a-third-variable" id="toc-adding-a-third-variable" class="nav-link" data-scroll-target="#adding-a-third-variable">Adding a third variable</a></li>
+  <li><a href="#challenge" id="toc-challenge" class="nav-link" data-scroll-target="#challenge">Challenge!</a></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="index.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../ae/ae-03/ae-03-durham.html">AE</a></li><li class="breadcrumb-item"><a href="../../ae/ae-05/ae-05-Finnish-fish.html">AE 05 Finnish Fish</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">MTH161 :: Elementary Statistics <br> Fall 2024</h1>
-<p class="subtitle lead">Sections H, I</p>
-</div>
+<h1 class="title">AE 05 – Modeling Finnish Fish</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Application exercise</div>
+  </div>
+  </div>
 
 
 
@@ -313,14 +384,295 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="welcome" class="level1 unnumbered center">
-<h1 class="unnumbered">Welcome!</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="bream.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
+</figure>
+</div>
+<p>For this application exercise, we will work with a data set that contains measurements of fish caught in lake Laengelmavesi in southwestern Finland.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidymodels)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>fish <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"fish.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The data dictionary is below:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th><strong>variable</strong></th>
+<th><strong>description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>species</code></td>
+<td>Species name of fish</td>
+</tr>
+<tr class="even">
+<td><code>weight</code></td>
+<td>Weight, in grams</td>
+</tr>
+<tr class="odd">
+<td><code>length_body</code></td>
+<td>Length from nose to start of tail, in cm</td>
+</tr>
+<tr class="even">
+<td><code>length_notch</code></td>
+<td>Length from nose to tail notch, in cm</td>
+</tr>
+<tr class="odd">
+<td><code>length_tail</code></td>
+<td>Length to end of tail, in cm</td>
+</tr>
+<tr class="even">
+<td><code>height</code></td>
+<td>Height, in cm</td>
+</tr>
+<tr class="odd">
+<td><code>width</code></td>
+<td>Width, in cm</td>
+</tr>
+</tbody>
+</table>
+<section id="visualizing-weight-and-height" class="level1">
+<h1>Visualizing Weight and Height</h1>
+<p>The question we want to investigate is whether there is relationship between the weights and heights of fish. We start by making a scatterplot to visualize the data.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(fish, <span class="fu">aes</span>(<span class="at">x =</span> height, <span class="at">y =</span> weight)) <span class="sc">+</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Weights vs. heights of fish"</span>,</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Height (cm)"</span>,</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Weight (gr)"</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="ae-05-Finnish-fish_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Note that in the code chunk above, the line with <code>geom_smooth</code> draws the linear regression line for us.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Question 1">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Question 1
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Using terminology from Chapter 7, how would you describe this association?</p>
+<p><em>Add response here</em></p>
+</div>
+</div>
+<p>One of the reasons why we want to see the linear regression line is that it can help us make predictions. Based on the graph alone, what do you predict would be the weight of a fish that has a height of 8cm? 15cm? 20cm?</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Question 2">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Question 2
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><em>Add response here</em></p>
+</div>
+</div>
+<section id="model-fitting" class="level2">
+<h2 class="anchored" data-anchor-id="model-fitting">Model fitting</h2>
+<p>Now lets make our linear model more precise by finding the actual equation for the line. As we saw in class, we can calculate the coefficients that we need to describe the line with the following summary statistics.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>fish <span class="sc">|&gt;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>( <span class="at">mean_x =</span> <span class="fu">mean</span>(height),</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>             <span class="at">sd_x =</span> <span class="fu">sd</span>(height),</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>             <span class="at">mean_y =</span> <span class="fu">mean</span>(weight),</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>             <span class="at">sd_y =</span> <span class="fu">sd</span>(weight),</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>             <span class="at">r =</span> <span class="fu">cor</span>(height, weight)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 5
+  mean_x  sd_x mean_y  sd_y     r
+   &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+1   12.1  4.47   448.  285. 0.954</code></pre>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Question 3">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Question 3
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>What is the correlation between weight and height? What does this value tell you?</p>
+<p><em>Add your response here</em></p>
+</div>
+</div>
+<p>Recall from class that the equation for the linear model is <span class="math display">\[
+\hat{y} = b_0 + b_1 \hat{x}
+\]</span></p>
+<p>where <span class="math display">\[
+b_1 = r \left ( \frac{ s_y}{s_x} \right )
+\]</span> and</p>
+<p><span class="math display">\[
+b_0 = \bar{y} - b_1 \bar{x}
+\]</span></p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Question 4">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Question 4
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Calculate <span class="math inline">\(b_1\)</span> and <span class="math inline">\(b_0\)</span> and then write down the equation of the linear model.</p>
+<p><em>Add your response here</em></p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Question 5">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Question 5
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Interpret the significance the slope <span class="math inline">\(b_1\)</span> in a sentence.</p>
+<p><em>Add your response here</em></p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Question 6">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Question 6
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Use your model to make more precise predictions about the weights of fish that have heights of 8cm and 15cm.</p>
+<p><em>Add your response here</em></p>
+</div>
+</div>
 </section>
-<p>I am looking forward to working with each of you this semester! It is my top priority to support your growth as a learner and to make our time together both in class and out productive and engaging. I will strive to create an learning environment where all of our different perspectives and identities are valued and respected, where the contributions of every person are celebrated, and where you feel comfortable fully engaging in class.</p>
-<p>While I’ll do everything in my power to support you, your success in this course ultimately depends on you. I ask you to bring a readiness to work and a belief that you can learn. <strong>I absolutely believe this about each of you</strong>. I will also ask you to do tasks that are just at the edge of what you can handle because that is how the best learning happens, but if you are prepared to invest your time and energy, and to communicate with me about how you’re doing, I can and will support you.</p>
-<p>As we work together this semester, your suggestions are encouraged and appreciated. Please let me know ways to improve the effectiveness of the course for you personally, or for other students or student groups. In particular, if you ever feel like your experience in this class is being impacted by your experiences outside of class, please don’t hesitate to come and talk with me. If you prefer to speak with someone outside of the class, your academic deans are an excellent resource.</p>
+<section id="a-shortcut" class="level2">
+<h2 class="anchored" data-anchor-id="a-shortcut">A Shortcut!</h2>
+<p>It turns out that R can generate the linear model automatically. The following code chunk demonstrates how to do this. In case you’re curious <code>parsnip</code> refers to an R package designed to simplify model fitting.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fit</span>(weight <span class="sc">~</span> height, <span class="at">data =</span> fish)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>parsnip model object
 
 
+Call:
+stats::lm(formula = weight ~ height, data = data)
+
+Coefficients:
+(Intercept)       height  
+    -288.42        60.92  </code></pre>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Question 7">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Question 7
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The two numbers shown above should be the same as your <span class="math inline">\(b_0\)</span> and <span class="math inline">\(b_1\)</span>. Are they? (If they’re close, but not exactly the same, that’s likely due to rounding errors.)</p>
+<p><em>Add your response here</em></p>
+</div>
+</div>
+</section>
+</section>
+<section id="adding-a-third-variable" class="level1">
+<h1>Adding a third variable</h1>
+<p>As we know from our pengiun friends, <code>species</code> can sometimes be a confounding variable. Does the relationship between heights and weights of fish change if we take into consideration species?</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Question 8">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Question 8
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Make one change to the code chunk below to color the data points by <code>species</code>. Hint: this is exactly what you did with the penguins. What do you notice?</p>
+<p><em>Add your response here</em></p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(fish, </span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> height, <span class="at">y =</span> weight)) <span class="sc">+</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Weights vs. heights of fish"</span>,</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Height (cm)"</span>,</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Weight (gr)"</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="ae-05-Finnish-fish_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="challenge" class="level1">
+<h1>Challenge!</h1>
+<p>Once you see that we really need two separate linear models for the two different species, we can reproduce our analysis above by first filtering by species. The two species in this data set are “Bream” and “Roach”</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Question 9">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Question 9
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Use the <code>filter</code> command to generate a table of summary statistics for only the Bream. Hint: we used the <code>filter</code> command in last week’s AE.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Question 10">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Question 10
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Use your new summary statistics to find a new linear model and use this to predict the weight of a fish with height of 15cm.</p>
+</div>
+</div>
+
+
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

@@ -61,7 +61,18 @@ website:
             text: "Thursday, Week 6" 
           - href: slides/13/13-confidence-intervals.qmd
             text: "Tuesday, Week 7"   
-      
+      - section: "AE"
+        contents:
+          - href: ae/ae-03/ae-03-durham.qmd
+            text: "AE 03 Durham"
+          - href: ae/ae-04/ae-04-flights.qmd
+            text: "AE 04 Flights"
+          - href: ae/ae-05/ae-05-Finnish-fish.qmd
+            text: "AE 05 Finnish Fish"
+          - href: ae/ae-06/ae-06-transplants.qmd
+            text: "AE 06 Heart Transplants"
+          - href: ae/ae-07/ae-07-lemurs.qmd
+            text: "AE 07 Lemurs"
 format:
   html:
     #theme: cosmo

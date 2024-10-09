@@ -1,0 +1,170 @@
+---
+title: "AE  06 -- Heart Transplants"
+categories: 
+  - Application exercise
+editor: visual
+---
+
+The Stanford University Heart Transplant Study was conducted to determine whether an experimental heart transplant program increased lifespan. Each patient entering the program was designated an official heart transplant candidate, meaning that they were gravely ill and would most likely benefit from a new heart. Some patients got a transplant and some did not. The variable `transplant` indicates which group the patients were in; patients in the treatment group got a transplant and those in the control group did not. Of the 34 patients in the control group, 30 died. Of the 69 people in the treatment group, 45 died. Another variable called `survived` was used to indicate whether the patient was alive at the end of the study. (Turnbull, Brown, and Hu 1974)
+
+## Packages and Data
+
+For our analysis, we'll use the `tidyverse` and `infer` packages.
+
+```{r}
+#| message: false
+library(tidyverse)
+library(infer)
+```
+
+And then, let's read the data and take a peak at it:
+
+```{r}
+#| label: load-glimpse-data
+#| message: false
+
+heart_transplant <- read_csv("heart-transplant.csv")
+glimpse(heart_transplant)
+```
+
+The data dictionary is as follows:
+
+| Variable | Description |
+|----|----|
+| id | ID number of the patient |
+| outcome | Survival status with levels `alive` and `deceased` |
+| transplant | Transplant group with levels `control` (did not receive a transplant) and `treatment` (received a transplant) |
+| age | Age of the patient at the beginning of the study |
+| survtime | Number of days patients were alive after the date they were determined to be a candidate for a heart transplant until the termination date of the study |
+| acceptyear | Year of acceptance as a heart transplant candidate |
+| prior | Whether or not the patient had prior surgery with levels `yes` and `no` |
+| wait | Waiting time for transplant |
+
+## Heart transplants - `outcome`
+
+Let's start by visualizing a possible association between the variables `transplant` and `outcome`.
+
+```{r}
+#| echo: true
+
+heart_transplant |>
+  ggplot( aes(x=transplant, fill = outcome)) +
+  geom_bar( position = "fill", color = "white") +
+  scale_fill_manual(values = c("#569BBD", "#114B5F")) +
+  labs(
+    y = ""
+  )
+```
+
+::: {.callout-note title="Question 1" icon="false"}
+What does this stacked bar plot tell you (if anything) about a possible association between survival and whether or not the patient got a transplant? Explain your reasoning.
+
+*Add your repsonse here*
+:::
+
+Now let's calculate the point estimate for the difference in proportions of patients who died between the treatment and control groups. We can express this as $$
+\hat{p}_{treatment} - \hat{p}_{control}
+$$ where $\hat{p}$ is the observed probability of dying in each group.
+
+::: {.callout-note title="Question 2" icon="false"}
+Use the frequency table of `outcome` by `transplant` below to calculate the proportions of patients in the treatment and control groups that died? What is the difference in proportions?
+
+*Report your results here*
+:::
+
+```{r}
+heart_transplant |>
+  count(transplant, outcome)
+```
+
+Another way to do this is to use `specify()` and `calculate()` as shown below.
+
+```{r}
+obs_diff_outcome <- heart_transplant |>
+  specify(response = outcome, explanatory = transplant, success = "deceased") |>
+  calculate(stat = "diff in props", order = c("treatment", "control"))
+
+obs_diff_outcome
+```
+
+::: {.callout-note title="Question 3" icon="false"}
+Are the results of this code chunk the same as what you obtained in Question 2?
+
+*Add your repsonse here*
+:::
+
+::: {.callout-note title="Question 4" icon="false"}
+State a null hypothesis and an alternative hypothesis.
+
+*Add your repsonse here*
+:::
+
+The code chunk below generates a null distribution needed to test the hypothesis test you formulated in Question 4. For this simulation we use 100 resamples (`reps`).
+
+> Note: the function `set.seed()` here is used so that the simulation, although random, is the same everytime it's run. You can change the seed value to get a different simulation.
+
+```{r}
+set.seed(2024)
+
+null_dist_outcome <- heart_transplant |>
+  specify(response = outcome, explanatory = transplant, success = "deceased") |>
+  hypothesize(null = "independence") |>
+  generate(reps = 100, type = "permute") |>
+  calculate(stat = "diff in props", order = c("treatment", "control"))
+```
+
+::: {.callout-note title="Question 5" icon="false"}
+Inspect the object `null_dist_outcome` shown below. How many rows and how many columns does it have? What does each row represent? What does the variable `replicate` represent? What does `stat` represent?
+
+*Add your repsonse here*
+:::
+
+```{r}
+print(null_dist_outcome)
+```
+
+Now let's visualize the distribution of simulated differences in proportions of deceased between treatment and control groups.
+
+```{r}
+null_dist_outcome |>
+  visualize(bins=14) +
+  shade_p_value(obs_stat = obs_diff_outcome, direction = "two-sided")
+```
+
+::: {.callout-note title="Question 6" icon="false"}
+What is the shape of this distribution? What is the center of this distribution? What does the red line represent? Are these results expected? Explain your reasoning.
+
+*Add your repsonse here*
+:::
+
+## p-value
+
+We can calculate the **p-value** in two different ways.
+
+1.  Filter `null_dist_outcome` for `stat` values that are at least as far away from the null value as the observed value you calculated in Exercise 4. Notice that we are considering both directions!
+
+```{r}
+null_dist_outcome |>
+  filter( stat >= 0.23 | stat <= -0.23)
+```
+
+::: {.callout-note title="Question 7" icon="false"}
+Note how many such values there are (rows in the output) and then calculate a proportion using the total number of resamples (i.e. 100).
+
+*Add your repsonse here*
+:::
+
+2.  Use `get_p_value()`:
+
+```{r}
+p_value_outcome <- null_dist_outcome |>
+  get_p_value(obs_stat = obs_diff_outcome, direction = "two-sided")
+
+p_value_outcome
+```
+
+::: {.callout-note title="Question 8" icon="false"}
+Confirm that you obtained the same results with the two methods. Then interpret the p-value in context of the data and the research question and comment on the statistical discernability of this result using a discernability level of 0.05.
+
+*Add your repsonse here*
+:::
