@@ -4774,7 +4774,7 @@
     "href": "ae/ae-06/ae-06-transplants.html#heart-transplants---outcome",
     "title": "AE 06 – Heart Transplants",
     "section": "Heart transplants - outcome",
-    "text": "Heart transplants - outcome\nLet’s start by visualizing a possible association between the variables transplant and outcome.\n\nheart_transplant |&gt;\n  ggplot( aes(x=transplant, fill = outcome)) +\n  geom_bar( position = \"fill\", color = \"white\") +\n  scale_fill_manual(values = c(\"#569BBD\", \"#114B5F\")) +\n  labs(\n    y = \"\"\n  )\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuestion 1\n\n\n\nWhat does this stacked bar plot tell you (if anything) about a possible association between survival and whether or not the patient got a transplant? Explain your reasoning.\nAdd your repsonse here\n\n\nNow let’s calculate the point estimate for the difference in proportions of patients who died between the treatment and control groups. We can express this as \\[\n\\hat{p}_{treatment} - \\hat{p}_{control}\n\\] where \\(\\hat{p}\\) is the observed probability of dying in each group.\n\n\n\n\n\n\nQuestion 2\n\n\n\nUse the frequency table of outcome by transplant below to calculate the proportions of patients in the treatment and control groups that died? What is the difference in proportions?\nReport your results here\n\n\n\nheart_transplant |&gt;\n  count(transplant, outcome)\n\n# A tibble: 4 × 3\n  transplant outcome      n\n  &lt;chr&gt;      &lt;chr&gt;    &lt;int&gt;\n1 control    alive        4\n2 control    deceased    30\n3 treatment  alive       24\n4 treatment  deceased    45\n\n\nAnother way to do this is to use specify() and calculate() as shown below.\n\nobs_diff_outcome &lt;- heart_transplant |&gt;\n  specify(response = outcome, explanatory = transplant, success = \"deceased\") |&gt;\n  calculate(stat = \"diff in props\", order = c(\"treatment\", \"control\"))\n\nobs_diff_outcome\n\nResponse: outcome (factor)\nExplanatory: transplant (factor)\n# A tibble: 1 × 1\n    stat\n   &lt;dbl&gt;\n1 -0.230\n\n\n\n\n\n\n\n\nQuestion 3\n\n\n\nAre the results of this code chunk the same as what you obtained in Question 2?\nAdd your repsonse here\n\n\n\n\n\n\n\n\nQuestion 4\n\n\n\nState a null hypothesis and an alternative hypothesis.\nAdd your repsonse here\n\n\nThe code chunk below generates a null distribution needed to test the hypothesis test you formulated in Question 4. For this simulation we use 100 resamples (reps).\n\nNote: the function set.seed() here is used so that the simulation, although random, is the same everytime it’s run. You can change the seed value to get a different simulation.\n\n\nset.seed(2024)\n\nnull_dist_outcome &lt;- heart_transplant |&gt;\n  specify(response = outcome, explanatory = transplant, success = \"deceased\") |&gt;\n  hypothesize(null = \"independence\") |&gt;\n  generate(reps = 100, type = \"permute\") |&gt;\n  calculate(stat = \"diff in props\", order = c(\"treatment\", \"control\"))\n\n\n\n\n\n\n\nQuestion 5\n\n\n\nInspect the object null_dist_outcome shown below. How many rows and how many columns does it have? What does each row represent? What does the variable replicate represent? What does stat represent?\nAdd your repsonse here\n\n\n\nprint(null_dist_outcome)\n\nResponse: outcome (factor)\nExplanatory: transplant (factor)\nNull Hypothesis: independence\n# A tibble: 100 × 2\n   replicate    stat\n       &lt;int&gt;   &lt;dbl&gt;\n 1         1 -0.0546\n 2         2 -0.0546\n 3         3 -0.0107\n 4         4  0.121 \n 5         5  0.0772\n 6         6 -0.0985\n 7         7 -0.0107\n 8         8 -0.0985\n 9         9 -0.0546\n10        10 -0.186 \n# ℹ 90 more rows\n\n\nNow let’s visualize the distribution of simulated differences in proportions of deceased between treatment and control groups.\n\nnull_dist_outcome |&gt;\n  visualize(bins=14) +\n  shade_p_value(obs_stat = obs_diff_outcome, direction = \"two-sided\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuestion 6\n\n\n\nWhat is the shape of this distribution? What is the center of this distribution? What does the red line represent? Are these results expected? Explain your reasoning.\nAdd your repsonse here",
+    "text": "Heart transplants - outcome\nLet’s start by visualizing a possible association between the variables transplant and outcome.\n\nheart_transplant |&gt;\n  ggplot( aes(x=transplant, fill = outcome)) +\n  geom_bar( position = \"fill\", color = \"white\") +\n  scale_fill_manual(values = c(\"#569BBD\", \"#114B5F\")) +\n  labs(\n    y = \"\"\n  )\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuestion 1\n\n\n\nWhat does this stacked bar plot tell you (if anything) about a possible association between survival and whether or not the patient got a transplant? Explain your reasoning.\nAdd your repsonse here\n\n\nNow let’s calculate the point estimate for the difference in proportions of patients who died between the treatment and control groups. We can express this as \\[\n\\hat{p}_{treatment} - \\hat{p}_{control}\n\\] where \\(\\hat{p}\\) is the observed probability of dying in each group.\n\n\n\n\n\n\nQuestion 2\n\n\n\nUse the frequency table of outcome by transplant below to calculate the proportions of patients in the treatment and control groups that died? What is the difference in proportions?\nReport your results here\n\n\n\nheart_transplant |&gt;\n  count(transplant, outcome)\n\n# A tibble: 4 × 3\n  transplant outcome      n\n  &lt;chr&gt;      &lt;chr&gt;    &lt;int&gt;\n1 control    alive        4\n2 control    deceased    30\n3 treatment  alive       24\n4 treatment  deceased    45\n\n\nAnother way to do this is to use specify() and calculate() as shown below.\n\nobs_diff_outcome &lt;- heart_transplant |&gt;\n  specify(response = outcome, explanatory = transplant, success = \"deceased\") |&gt;\n  calculate(stat = \"diff in props\", order = c(\"treatment\", \"control\"))\n\nobs_diff_outcome\n\nResponse: outcome (factor)\nExplanatory: transplant (factor)\n# A tibble: 1 × 1\n    stat\n   &lt;dbl&gt;\n1 -0.230\n\n\n\n\n\n\n\n\nQuestion 3\n\n\n\nAre the results of this code chunk the same as what you obtained in Question 2?\nAdd your repsonse here\n\n\n\n\n\n\n\n\nQuestion 4\n\n\n\nState a null hypothesis and an alternative hypothesis.\nAdd your repsonse here\n\n\nThe code chunk below generates a null distribution needed to test the hypothesis test you formulated in Question 4. For this simulation we use 100 resamples (reps).\n\nNote: the function set.seed() here is used so that the simulation, although random, is the same everytime it’s run. You can change the seed value to get a different simulation.\n\n\n# set.seed(2024)\n\nnull_dist_outcome &lt;- heart_transplant |&gt;\n  specify(response = outcome, explanatory = transplant, success = \"deceased\") |&gt;\n  hypothesize(null = \"independence\") |&gt;\n  generate(reps = 1000, type = \"permute\") |&gt;\n  calculate(stat = \"diff in props\", order = c(\"treatment\", \"control\"))\n\n\n\n\n\n\n\nQuestion 5\n\n\n\nInspect the object null_dist_outcome shown below. How many rows and how many columns does it have? What does each row represent? What does the variable replicate represent? What does stat represent?\nAdd your repsonse here\n\n\n\nprint(null_dist_outcome)\n\nResponse: outcome (factor)\nExplanatory: transplant (factor)\nNull Hypothesis: independence\n# A tibble: 1,000 × 2\n   replicate    stat\n       &lt;int&gt;   &lt;dbl&gt;\n 1         1 -0.0107\n 2         2 -0.0546\n 3         3  0.121 \n 4         4 -0.0107\n 5         5 -0.0107\n 6         6 -0.0107\n 7         7 -0.0985\n 8         8  0.0772\n 9         9 -0.0107\n10        10  0.209 \n# ℹ 990 more rows\n\n\nNow let’s visualize the distribution of simulated differences in proportions of deceased between treatment and control groups.\n\nnull_dist_outcome |&gt;\n  visualize(bins=14) +\n  shade_p_value(obs_stat = obs_diff_outcome, direction = \"two-sided\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuestion 6\n\n\n\nWhat is the shape of this distribution? What is the center of this distribution? What does the red line represent? Are these results expected? Explain your reasoning.\nAdd your repsonse here",
     "crumbs": [
       "Quick Links",
       "AE",
@@ -4786,7 +4786,7 @@
     "href": "ae/ae-06/ae-06-transplants.html#p-value",
     "title": "AE 06 – Heart Transplants",
     "section": "p-value",
-    "text": "p-value\nWe can calculate the p-value in two different ways.\n\nFilter null_dist_outcome for stat values that are at least as far away from the null value as the observed value you calculated in Exercise 4. Notice that we are considering both directions!\n\n\nnull_dist_outcome |&gt;\n  filter( stat &gt;= 0.23 | stat &lt;= -0.23)\n\nResponse: outcome (factor)\nExplanatory: transplant (factor)\nNull Hypothesis: independence\n# A tibble: 2 × 2\n  replicate   stat\n      &lt;int&gt;  &lt;dbl&gt;\n1        62 -0.230\n2        79  0.297\n\n\n\n\n\n\n\n\nQuestion 7\n\n\n\nNote how many such values there are (rows in the output) and then calculate a proportion using the total number of resamples (i.e. 100).\nAdd your repsonse here\n\n\n\nUse get_p_value():\n\n\np_value_outcome &lt;- null_dist_outcome |&gt;\n  get_p_value(obs_stat = obs_diff_outcome, direction = \"two-sided\")\n\np_value_outcome\n\n# A tibble: 1 × 1\n  p_value\n    &lt;dbl&gt;\n1    0.02\n\n\n\n\n\n\n\n\nQuestion 8\n\n\n\nConfirm that you obtained the same results with the two methods. Then interpret the p-value in context of the data and the research question and comment on the statistical discernability of this result using a discernability level of 0.05.\nAdd your repsonse here",
+    "text": "p-value\nWe can calculate the p-value in two different ways.\n\nFilter null_dist_outcome for stat values that are at least as far away from the null value as the observed value you calculated in Exercise 4. Notice that we are considering both directions!\n\n\nnull_dist_outcome |&gt;\n  filter( stat &gt;= 0.23 | stat &lt;= -0.23)\n\nResponse: outcome (factor)\nExplanatory: transplant (factor)\nNull Hypothesis: independence\n# A tibble: 17 × 2\n   replicate   stat\n       &lt;int&gt;  &lt;dbl&gt;\n 1        64  0.253\n 2        91  0.253\n 3       114 -0.230\n 4       152 -0.230\n 5       326  0.297\n 6       451  0.253\n 7       462 -0.318\n 8       606  0.253\n 9       617 -0.230\n10       731 -0.274\n11       769 -0.230\n12       778  0.253\n13       781  0.253\n14       807  0.253\n15       859  0.297\n16       954 -0.230\n17       973 -0.274\n\n\n\n\n\n\n\n\nQuestion 7\n\n\n\nNote how many such values there are (rows in the output) and then calculate a proportion using the total number of resamples (i.e. 100).\nAdd your repsonse here\n\n\n\nUse get_p_value():\n\n\np_value_outcome &lt;- null_dist_outcome |&gt;\n  get_p_value(obs_stat = obs_diff_outcome, direction = \"two-sided\")\n\np_value_outcome\n\n# A tibble: 1 × 1\n  p_value\n    &lt;dbl&gt;\n1   0.016\n\n\n\n\n\n\n\n\nQuestion 8\n\n\n\nConfirm that you obtained the same results with the two methods. Then interpret the p-value in context of the data and the research question and comment on the statistical discernability of this result using a discernability level of 0.05.\nAdd your repsonse here",
     "crumbs": [
       "Quick Links",
       "AE",
@@ -5031,6 +5031,412 @@
       "Quick Links",
       "AE",
       "AE 02 COVID"
+    ]
+  },
+  {
+    "objectID": "slides/15/15-inference-mathematical-models.html#announcements",
+    "href": "slides/15/15-inference-mathematical-models.html#announcements",
+    "title": "Inference with mathematical models",
+    "section": "Announcements",
+    "text": "Announcements\n\nMy office hours by appointment this week.\nWednesday lecture on Zoom – can join from wherever, will send Zoom link by email and on Slack."
+  },
+  {
+    "objectID": "slides/15/15-inference-mathematical-models.html#packages",
+    "href": "slides/15/15-inference-mathematical-models.html#packages",
+    "title": "Inference with mathematical models",
+    "section": "Packages",
+    "text": "Packages\n\nlibrary(tidyverse)\nlibrary(tidymodels)\nlibrary(openintro)\nlibrary(latex2exp)"
+  },
+  {
+    "objectID": "slides/15/15-inference-mathematical-models.html#that-familiar-shape",
+    "href": "slides/15/15-inference-mathematical-models.html#that-familiar-shape",
+    "title": "Inference with mathematical models",
+    "section": "That familiar shape…",
+    "text": "That familiar shape…\n\nDescribe the shape of the distributions."
+  },
+  {
+    "objectID": "slides/15/15-inference-mathematical-models.html#its-not-happenstance",
+    "href": "slides/15/15-inference-mathematical-models.html#its-not-happenstance",
+    "title": "Inference with mathematical models",
+    "section": "It’s not happenstance!",
+    "text": "It’s not happenstance!\nIt’s the Central Limit Theorem, which says that the distribution of the sample statistic is normal, if certain conditions are met.\n\n\nTwo questions:\n\nWhat do we mean by the distribution of the sample statistic?\nWhat conditions need to be met?"
+  },
+  {
+    "objectID": "slides/15/15-inference-mathematical-models.html#the-distribution-of-the-sample-statistic",
+    "href": "slides/15/15-inference-mathematical-models.html#the-distribution-of-the-sample-statistic",
+    "title": "Inference with mathematical models",
+    "section": "The distribution of the sample statistic",
+    "text": "The distribution of the sample statistic\n\n\nYou can build the distribution of the sample statistic by repeatedly taking samples of size n (original sample size) from the population and calculating and recording the sample statistic for each of these samples.\nBut, you would never do this in reality!\nYou’d either use simulation (randomization, bootstrapping, stuff we’ve done so far!) or you would leverage mathematical theory to know what to expect if we had taken repeated samples."
+  },
+  {
+    "objectID": "slides/15/15-inference-mathematical-models.html#the-technical-conditions",
+    "href": "slides/15/15-inference-mathematical-models.html#the-technical-conditions",
+    "title": "Inference with mathematical models",
+    "section": "The (technical) conditions",
+    "text": "The (technical) conditions\n\nIndependent observations: Observations in the sample are independent. Independence is guaranteed when we take a random sample from a population. Independence can also be guaranteed if we randomly divide individuals into treatment and control groups.\nLarge enough sample: The sample size cannot be too small. What qualifies as “small” differs from one context (i.e., from sample statistic to sample statistic)."
+  },
+  {
+    "objectID": "slides/15/15-inference-mathematical-models.html#more-to-the-clt",
+    "href": "slides/15/15-inference-mathematical-models.html#more-to-the-clt",
+    "title": "Inference with mathematical models",
+    "section": "More to the CLT",
+    "text": "More to the CLT\n\nThere is more to the CLT than just the shape of the distribution – normal.\nThe CLT says that the center of the sampling distribution will be at the true population parameter.\nThe CLT also says something about the spread of the sampling distribution, measured by the standard error. For each sample statistic (\\(\\bar{x}\\) – the sample mean, \\(\\hat{p}\\) – the sample proportion, \\(\\bar{x}_1 - \\bar{x}_2\\) – the difference in sample means, etc.) the CLT provides a formula for its standard error.\n\nYou won’t be asked to memorize these formulas.\nIn fact, you’ll rarely use the CLT to calculate the variability of sample statistics, you’ll simulate their distributions directly."
+  },
+  {
+    "objectID": "slides/15/15-inference-mathematical-models.html#normal-distributions",
+    "href": "slides/15/15-inference-mathematical-models.html#normal-distributions",
+    "title": "Inference with mathematical models",
+    "section": "Normal distributions",
+    "text": "Normal distributions\n\nHow are these normal distributions similar? How are they different? Which one is \\(N(\\mu = 0, \\sigma = 1)\\) and which \\(N(\\mu = 19, \\sigma = 4)\\)?",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 8"
+    ]
+  },
+  {
+    "objectID": "slides/15/15-inference-mathematical-models.html#the-68-95-99.7-rule",
+    "href": "slides/15/15-inference-mathematical-models.html#the-68-95-99.7-rule",
+    "title": "Inference with mathematical models",
+    "section": "The 68-95-99.7 rule",
+    "text": "The 68-95-99.7 rule\nThe normal distribution is not just any unimodal and symmetric distribution, it follows the 68-95-99.7 rule."
+  },
+  {
+    "objectID": "slides/15/15-inference-mathematical-models.html#using-the-normal-distribution",
+    "href": "slides/15/15-inference-mathematical-models.html#using-the-normal-distribution",
+    "title": "Inference with mathematical models",
+    "section": "Using the normal distribution…",
+    "text": "Using the normal distribution…\n\nTo make decisions \\(\\rightarrow\\) hypothesis testing\n\nUse properties of the normal distribution to determine the probability of the observed sample statistic (or something more extreme, in the direction of the alternative hypothesis), i.e. the p-value\n\n\n\n\nTo make estimations \\(\\rightarrow\\) confidence intervals\n\nUse properties of the normal distribution to calculate the bounds of the confidence interval, adding and subtracting a margin of error to the observed sample statistic\n\n\n\n\nBut before then…"
+  },
+  {
+    "objectID": "slides/15/15-inference-mathematical-models.html#application-exercise",
+    "href": "slides/15/15-inference-mathematical-models.html#application-exercise",
+    "title": "Inference with mathematical models",
+    "section": "Application exercise",
+    "text": "Application exercise\nGo to Posit Cloud and continue the project titled ae-11-Bone density."
+  },
+  {
+    "objectID": "slides/15/15-inference-mathematical-models.html#new-groups",
+    "href": "slides/15/15-inference-mathematical-models.html#new-groups",
+    "title": "Inference with mathematical models",
+    "section": "New Groups",
+    "text": "New Groups\n\nIntroductions + check-in with everyone\nRemember to respect different ways of engaging with class!",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 8"
+    ]
+  },
+  {
+    "objectID": "slides/15/15-inference-mathematical-models.html#feedback-from-survey",
+    "href": "slides/15/15-inference-mathematical-models.html#feedback-from-survey",
+    "title": "Inference with mathematical models",
+    "section": "Feedback From Survey",
+    "text": "Feedback From Survey\n\nMore stats, less coding\nMore frequent check-ins?"
+  },
+  {
+    "objectID": "slides/15/15-inference-mathematical-models.html#feedback-from-mid-semester-survey",
+    "href": "slides/15/15-inference-mathematical-models.html#feedback-from-mid-semester-survey",
+    "title": "Inference with mathematical models",
+    "section": "Feedback from mid-semester survey",
+    "text": "Feedback from mid-semester survey\n\nMore stats, less coding?\nMore frequent check-ins?\nRemember that handing in the labs is only the first step – revise and resubmit!",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 8"
+    ]
+  },
+  {
+    "objectID": "slides/15/15-inference-mathematical-models.html#semester-at-a-glance",
+    "href": "slides/15/15-inference-mathematical-models.html#semester-at-a-glance",
+    "title": "Inference with mathematical models",
+    "section": "Semester at a glance",
+    "text": "Semester at a glance\nWeeks 1-7\n\nBasics of R and posit.cloud (a big lift – high five!!)\nGeneral concepts: variables, graphs, linear models, p-value, null/alternative hypothesis, confidence intervals\n\n\n\nWeeks 8-14\n\nStatistical Inference (review p-value, hypothesis tests, confidence interval)",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 8"
+    ]
+  },
+  {
+    "objectID": "slides/15/15-inference-mathematical-models.html#describe-the-shape-of-the-distribution",
+    "href": "slides/15/15-inference-mathematical-models.html#describe-the-shape-of-the-distribution",
+    "title": "Inference with mathematical models",
+    "section": "Describe the shape of the distribution…",
+    "text": "Describe the shape of the distribution…\nLemurs mean weight sampling distribution (AE 07)"
+  },
+  {
+    "objectID": "slides/15/15-inference-mathematical-models.html#describe-the-shape",
+    "href": "slides/15/15-inference-mathematical-models.html#describe-the-shape",
+    "title": "Inference with mathematical models",
+    "section": "Describe the shape …",
+    "text": "Describe the shape …\nLemurs mean weight sampling distribution (AE 07)",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 8"
+    ]
+  },
+  {
+    "objectID": "slides/15/15-inference-mathematical-models.html#describe-the-shape-1",
+    "href": "slides/15/15-inference-mathematical-models.html#describe-the-shape-1",
+    "title": "Inference with mathematical models",
+    "section": "Describe the shape …",
+    "text": "Describe the shape …\nTransplant sampling distribution (Ch. 12)",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 8"
+    ]
+  },
+  {
+    "objectID": "slides/15/15-inference-mathematical-models.html#describe-the-shape-2",
+    "href": "slides/15/15-inference-mathematical-models.html#describe-the-shape-2",
+    "title": "Inference with mathematical models",
+    "section": "Describe the shape …",
+    "text": "Describe the shape …\nnewborn birth weight",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 8"
+    ]
+  },
+  {
+    "objectID": "slides/15/15-inference-mathematical-models.html#not-a-coincidence",
+    "href": "slides/15/15-inference-mathematical-models.html#not-a-coincidence",
+    "title": "Inference with mathematical models",
+    "section": "Not a coincidence!",
+    "text": "Not a coincidence!\n\nThese are all similar to the Normal Distribution\n\n\naka Bell curve\n“normal” here has a technical meaning"
+  },
+  {
+    "objectID": "slides/15/15-inference-mathematical-models.html#normal-distribution",
+    "href": "slides/15/15-inference-mathematical-models.html#normal-distribution",
+    "title": "Inference with mathematical models",
+    "section": "Normal distribution",
+    "text": "Normal distribution\n\naka bell curve or Gaussian curve\n“normal” has a specific, technical meaning",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 8"
+    ]
+  },
+  {
+    "objectID": "slides/15/15-inference-mathematical-models.html#central-limit-theorem",
+    "href": "slides/15/15-inference-mathematical-models.html#central-limit-theorem",
+    "title": "Inference with mathematical models",
+    "section": "Central Limit Theorem",
+    "text": "Central Limit Theorem\nAdvanced math says that if certain conditions are met then the distribution of the sample statistic is normal.\n\n\n\nWhat do we mean by the distribution of the sample statistic?\nWhat conditions need to be met?"
+  },
+  {
+    "objectID": "slides/15/15-inference-mathematical-models.html#meet-the-normal-distribution",
+    "href": "slides/15/15-inference-mathematical-models.html#meet-the-normal-distribution",
+    "title": "Inference with mathematical models",
+    "section": "Meet the Normal distribution",
+    "text": "Meet the Normal distribution\n\naka Bell curve\n“normal” has a technical meaning\ncharacterized by mean and standard deviation"
+  },
+  {
+    "objectID": "slides/15/15-inference-mathematical-models.html#central-limit-theorem-clt",
+    "href": "slides/15/15-inference-mathematical-models.html#central-limit-theorem-clt",
+    "title": "Inference with mathematical models",
+    "section": "Central Limit Theorem (CLT)",
+    "text": "Central Limit Theorem (CLT)\nIf certain conditions are met then the distribution of any sample statistic is normal.\n\n\ntl;dr\nNormal distributions are very common - we should take a closer look!",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 8"
+    ]
+  },
+  {
+    "objectID": "slides/15/15-inference-mathematical-models.html#central-limit-theorem-clt-1",
+    "href": "slides/15/15-inference-mathematical-models.html#central-limit-theorem-clt-1",
+    "title": "Inference with mathematical models",
+    "section": "Central Limit Theorem (CLT)",
+    "text": "Central Limit Theorem (CLT)\nAdvanced math says that if certain conditions are met then the distribution of any sample statistic is normal.\n\n\n\nWhat do we mean by the distribution of the sample statistic?\nWhat conditions need to be met?"
+  },
+  {
+    "objectID": "slides/15/15-inference-mathematical-models.html#normal-distribution-1",
+    "href": "slides/15/15-inference-mathematical-models.html#normal-distribution-1",
+    "title": "Inference with mathematical models",
+    "section": "Normal distribution",
+    "text": "Normal distribution\n\ncentered at mean (\\(\\mu\\))\nwidth characterized by standard deviation (\\(\\sigma\\))"
+  },
+  {
+    "objectID": "slides/15/15-inference-mathematical-models.html#normal-distribution-nmu-sigma",
+    "href": "slides/15/15-inference-mathematical-models.html#normal-distribution-nmu-sigma",
+    "title": "Inference with mathematical models",
+    "section": "Normal distribution N(\\(\\mu\\), \\(\\sigma\\))",
+    "text": "Normal distribution N(\\(\\mu\\), \\(\\sigma\\))\n\ncentered at mean (\\(\\mu\\))\nwidth characterized by standard deviation (\\(\\sigma\\))",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 8"
+    ]
+  },
+  {
+    "objectID": "slides/15/15-inference-mathematical-models.html#comparing-by-standardizing",
+    "href": "slides/15/15-inference-mathematical-models.html#comparing-by-standardizing",
+    "title": "Inference with mathematical models",
+    "section": "Comparing by Standardizing",
+    "text": "Comparing by Standardizing\n\nSAT scores follow a nearly normal distribution with a mean of 1500 points and a standard deviation of 300 points. ACT scores also follow a nearly normal distribution with mean of 21 points and a standard deviation of 5 points.\n\n\nSuppose Nel scored 1800 points on their SAT and Sian scored 24 points on their ACT. Who performed better?"
+  },
+  {
+    "objectID": "slides/15/15-inference-mathematical-models.html#comparing-distributions",
+    "href": "slides/15/15-inference-mathematical-models.html#comparing-distributions",
+    "title": "Inference with mathematical models",
+    "section": "Comparing Distributions",
+    "text": "Comparing Distributions\n\nSAT scores follow a nearly normal distribution with a mean of 1500 points and a standard deviation of 300 points. ACT scores also follow a nearly normal distribution with mean of 21 points and a standard deviation of 5 points.\n\n\nSuppose Nel scored 1800 points on their SAT and Sian scored 24 points on their ACT. Who performed better?",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 8"
+    ]
+  },
+  {
+    "objectID": "slides/15/15-inference-mathematical-models.html#z-score",
+    "href": "slides/15/15-inference-mathematical-models.html#z-score",
+    "title": "Inference with mathematical models",
+    "section": "Z-Score",
+    "text": "Z-Score\nMeasures how many standard deviations from the mean an observation is\n\\[\nZ = \\frac{ x - \\mu}{\\sigma}\n\\]\n\nNel: \\(Z = 1\\)\nSian: \\(Z = 0.6\\)"
+  },
+  {
+    "objectID": "slides/15/15-inference-mathematical-models.html#compare-graphs",
+    "href": "slides/15/15-inference-mathematical-models.html#compare-graphs",
+    "title": "Inference with mathematical models",
+    "section": "Compare Graphs",
+    "text": "Compare Graphs\n\n\n\n\n\n\nNel is 1 sd from mean\nSian is less than 1 sd from mean",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 8"
+    ]
+  },
+  {
+    "objectID": "slides/15/15-inference-mathematical-models.html#compare-z-scores",
+    "href": "slides/15/15-inference-mathematical-models.html#compare-z-scores",
+    "title": "Inference with mathematical models",
+    "section": "Compare Z-Scores",
+    "text": "Compare Z-Scores\n\n\nZ-score measures how many standard deviations from the mean an observation is:\n\\[\nZ = \\frac{ x - \\mu}{\\sigma}\n\\]\n\nNel: \\(Z = \\frac{ 1800 - 1500}{300} = 1\\)\nSian: \\(Z = \\frac{ 24 - 21}{5} = 0.6\\)",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 8"
+    ]
+  },
+  {
+    "objectID": "slides/15/15-inference-mathematical-models.html#percentiles",
+    "href": "slides/15/15-inference-mathematical-models.html#percentiles",
+    "title": "Inference with mathematical models",
+    "section": "Percentiles",
+    "text": "Percentiles\nZ-scores also tell us about percentiles.\n\nNel had SAT score 1800 corresponding to \\(Z=1\\). What percentile are they in?"
+  },
+  {
+    "objectID": "slides/15/15-inference-mathematical-models.html#z-scores-from-table",
+    "href": "slides/15/15-inference-mathematical-models.html#z-scores-from-table",
+    "title": "Inference with mathematical models",
+    "section": "Z-scores from table",
+    "text": "Z-scores from table\n\n\n\n\n\nA z-score of 1 corresponds to 84th percentile."
+  },
+  {
+    "objectID": "slides/15/15-inference-mathematical-models.html#z-scores-with-technology",
+    "href": "slides/15/15-inference-mathematical-models.html#z-scores-with-technology",
+    "title": "Inference with mathematical models",
+    "section": "Z-scores with technology",
+    "text": "Z-scores with technology\naka Normal Cumulative Probability\n\npnorm(1, mean = 0, sd = 1)\n\n[1] 0.8413447\n\n\n\n\n\nopenintro::normTail(m = 0, s = 1, L = 1)"
+  },
+  {
+    "objectID": "slides/15/15-inference-mathematical-models.html#z-score-to-percentile-with-technology",
+    "href": "slides/15/15-inference-mathematical-models.html#z-score-to-percentile-with-technology",
+    "title": "Inference with mathematical models",
+    "section": "Z-score to percentile with technology",
+    "text": "Z-score to percentile with technology\naka Normal Cumulative Probability (CDF)\n\npnorm(1, mean = 0, sd = 1)\n\n[1] 0.8413447\n\n\n\n\n\nopenintro::normTail(m = 0, s = 1, L = 1)",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 8"
+    ]
+  },
+  {
+    "objectID": "slides/15/15-inference-mathematical-models.html#z-score-table",
+    "href": "slides/15/15-inference-mathematical-models.html#z-score-table",
+    "title": "Inference with mathematical models",
+    "section": "Z-score table",
+    "text": "Z-score table\n\n\n\n\n\nA z-score of 1 corresponds to 84th percentile.",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 8"
+    ]
+  },
+  {
+    "objectID": "slides/15/15-inference-mathematical-models.html#percentile-to-z-score",
+    "href": "slides/15/15-inference-mathematical-models.html#percentile-to-z-score",
+    "title": "Inference with mathematical models",
+    "section": "Percentile to Z-score",
+    "text": "Percentile to Z-score\n\nWhat z-score would correspond to 90th percentile?\n\n\nqnorm(0.90, mean = 0, sd = 1)\n\n[1] 1.281552\n\n\n\nopenintro::normTail(m = 0, s = 1, L = 1.282)",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 8"
+    ]
+  },
+  {
+    "objectID": "slides/15/15-inference-mathematical-models.html#percentile-to-z-score-with-table",
+    "href": "slides/15/15-inference-mathematical-models.html#percentile-to-z-score-with-table",
+    "title": "Inference with mathematical models",
+    "section": "Percentile to Z-score with table",
+    "text": "Percentile to Z-score with table\n\nWhat z-score would correspond to 90th percentile?",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 8"
+    ]
+  },
+  {
+    "objectID": "slides/15/15-inference-mathematical-models.html#find-the-shaded-area",
+    "href": "slides/15/15-inference-mathematical-models.html#find-the-shaded-area",
+    "title": "Inference with mathematical models",
+    "section": "Find the shaded area",
+    "text": "Find the shaded area\n\n\n\n\n\n\nUse a table (need z-score)\nUse technology (dont need z-score)",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 8"
+    ]
+  },
+  {
+    "objectID": "slides/15/15-inference-mathematical-models.html#technology-without-z-score",
+    "href": "slides/15/15-inference-mathematical-models.html#technology-without-z-score",
+    "title": "Inference with mathematical models",
+    "section": "Technology without Z-score",
+    "text": "Technology without Z-score\n\npnorm(1800, mean = 1500, sd = 300)\n\n[1] 0.8413447\n\n\n\n\n\nopenintro::normTail(m = 1500, s = 300, L = 1800)",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 8"
+    ]
+  },
+  {
+    "objectID": "slides/15/15-inference-mathematical-models.html#standard-normal-distribuion",
+    "href": "slides/15/15-inference-mathematical-models.html#standard-normal-distribuion",
+    "title": "Inference with mathematical models",
+    "section": "Standard Normal Distribuion",
+    "text": "Standard Normal Distribuion\n\nmean is 0\nstandard deviation is 1\narea under curve is 1",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 8"
+    ]
+  },
+  {
+    "objectID": "slides/15/15-inference-mathematical-models.html#other-tech-tools",
+    "href": "slides/15/15-inference-mathematical-models.html#other-tech-tools",
+    "title": "Inference with mathematical models",
+    "section": "Other tech tools",
+    "text": "Other tech tools\n\nDesmos\nShinyapp\nCalculator",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 8"
     ]
   }
 ]

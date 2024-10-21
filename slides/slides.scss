@@ -4,11 +4,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-
-$font-family-sans-serif: "Atkinson Hyperlegible", sans-serif;
+$font-family-sans-serif: "Roboto", sans-serif;
 $font-family-monospace: "Source Code Pro", monospace;
-$presentation-heading-color: #798b93;
+/* $presentation-heading-color: #798b93; */
+$presentation-heading-color: #384B70;
 $link-color: #798b93;
 $code-color: #798b93;
 $code-block-font-size: 0.7em;
@@ -36,7 +37,7 @@ details>summary {
 
 #title-slide .title {
   text-align: left;
-  color: #798b93;
+  color: #384B70;
 }
 
 #title-slide .institute {
@@ -65,8 +66,10 @@ details>summary {
 }
 
 .reveal h3 {
-  color: #93798b;
+  color: #507687;
 }
+
+
 
 .reveal .hand {
   font-family: 'Gochi Hand', cursive;
@@ -78,6 +81,7 @@ details>summary {
   font-size: 1.2em;
   color: #93798b;
 }
+
 
 .reveal .slide .task {
   padding-right: 10px;

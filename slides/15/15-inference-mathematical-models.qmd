@@ -1,112 +1,245 @@
 ---
 title: Inference with mathematical models
-subtitle: Lecture 15
+subtitle: Chapter 13
+author: ""
 format: revealjs
 auto-stretch: false
 ---
 
-# Warm up
+# Welcome Back!
 
-## Announcements
-
--   My office hours by appointment this week.
--   Wednesday lecture on Zoom -- can join from wherever, will send Zoom link by email and on Slack.
-
-## Packages
+-   New Groups
+-   Feedback
+-   Big Picture
+-   Chapter 13
 
 ```{r}
-#| label: load-packages
+#| message: false
+#| echo: false
 
 library(tidyverse)
 library(tidymodels)
 library(openintro)
+library(latex2exp)
 ```
 
-# **Inference with mathematical models**
+```{css, echo = FALSE}
+.red {
+  color: #B8001F;
+}
+```
 
-## That familiar shape...
+## New Groups
 
-::: task
-Describe the shape of the distributions.
-:::
+-   Introductions + check-in with everyone
+-   Remember to respect different ways of engaging with class!
 
-![](images/FourCaseStudies.png){fig-align="center" width="700"}
+## Feedback from mid-semester survey
 
-## It's not happenstance!
+-   More stats, less coding?
+-   More frequent check-ins?
+-   Remember that handing in the labs is only the first step -- **revise and resubmit**!
 
-It's the **Central Limit Theorem**, which says that the distribution of the sample statistic is normal, if certain conditions are met.
+## Semester at a glance
 
-. . .
+### Weeks 1-7
 
-::: task
-Two questions:
+-   Basics of R and posit.cloud (a **big** lift -- high five!!)
+-   General concepts: variables, graphs, linear models, p-value, null/alternative hypothesis, confidence intervals
 
-1.  What do we mean by the distribution of the sample statistic?
-2.  What conditions need to be met?
-:::
+\
 
-## The distribution of the sample statistic
+### Weeks 8-14
 
-::: incremental
--   You can build the distribution of the sample statistic by repeatedly taking samples of size n (original sample size) from the population and calculating and recording the sample statistic for each of these samples.
+-   Statistical Inference (review p-value, hypothesis tests, confidence interval)
 
--   But, you would never do this in reality!
+# Inference with mathematical models
 
--   You'd either use simulation (randomization, bootstrapping, stuff we've done so far!) or you would leverage mathematical theory to know what to expect if we *had* taken repeated samples.
-:::
+## Describe the shape ...
 
-## The (technical) conditions
+### Lemurs mean weight sampling distribution (AE 07)
 
-1.  **Independent observations:** Observations in the sample are independent. Independence is guaranteed when we take a random sample from a population. Independence can also be guaranteed if we randomly divide individuals into treatment and control groups.
+![](images/lemurs_mean_weight.png){fig-align="center" width="700"}
 
-2.  **Large enough sample:** The sample size cannot be too small. What qualifies as "small" differs from one context (i.e., from sample statistic to sample statistic).
+## Describe the shape ...
 
-## More to the CLT
+### Transplant sampling distribution (Ch. 12)
 
--   There is more to the CLT than just the **shape** of the distribution -- normal.
+![](images/transplant_sampling_distribution.png){fig-align="center" width="700"}
 
--   The CLT says that the **center** of the sampling distribution will be at the true population parameter.
+## Describe the shape ...
 
--   The CLT also says something about the **spread** of the sampling distribution, measured by the **standard error**. For each sample statistic ($\bar{x}$ -- the sample mean, $\hat{p}$ -- the sample proportion, $\bar{x}_1 - \bar{x}_2$ -- the difference in sample means, etc.) the CLT provides a formula for its standard error.
+### newborn birth weight
 
-    -   You won't be asked to memorize these formulas.
+![](images/newborn_birth_weight.png){fig-align="center" width="700"}
 
-    -   In fact, you'll rarely use the CLT to calculate the variability of sample statistics, you'll simulate their distributions directly.
+## Normal distribution
 
-# Normal distribution
+-   aka *bell curve* or *Gaussian* curve
+-   "normal" has a specific, technical meaning
+
+```{r out.width="80%"}
+#| echo: false
+
+curve(dnorm, -3, 3, lwd=2, axes = FALSE, xlab = "", ylab = "")
+axis(1, at = -3:3 )
+```
+
+## Central Limit Theorem (CLT)
+
+If certain conditions are met then the distribution of any sample statistic is [normal]{.red}.
+
+\
+
+### tl;dr
+
+Normal distributions are very common - we should take a closer look!
+
+## Normal distribution N($\mu$, $\sigma$)
+
+-   centered at [mean]{.red} ($\mu$)
+-   width characterized by [standard deviation]{.red} ($\sigma$)
+
+```{r out.width="80%"}
+#| echo: false
+
+curve(dnorm, -3, 3, lwd=2, axes = FALSE, xlab = "", ylab = "")
+axis(1, at = -3:3, labels = c(TeX("\\mu - 3\\sigma"), TeX("\\mu - 2\\sigma"), TeX("\\mu - \\sigma"), TeX("\\mu"), TeX("\\mu + \\sigma"), TeX("\\mu + 2\\sigma"), TeX("\\mu + 3\\sigma")))
+```
 
 ## Normal distributions
 
 ::: task
-How are these normal distributions similar? How are they different? Which one is $N(\mu = 0, \sigma. 1)$ and which $N(\mu = 19, \sigma = 4)$?
+How are these normal distributions similar? How are they different? Which one is $N(\mu = 0, \sigma = 1)$ and which $N(\mu = 19, \sigma = 4)$?
 :::
 
 ![](images/twoSampleNormals.png){fig-align="center" width="600"}
 
 ![](images/twoSampleNormalsStacked.png){fig-align="center" width="599"}
 
-## **The 68-95-99.7 rule**
+## Comparing Distributions
 
-The normal distribution is not just *any* unimodal and symmetric distribution, it follows the **68-95-99.7 rule**.
+> SAT scores follow a nearly normal distribution with a mean of 1500 points and a standard deviation of 300 points. ACT scores also follow a nearly normal distribution with mean of 21 points and a standard deviation of 5 points.
 
-![](images/er6895997.png){fig-align="center"}
+> Suppose Nel scored 1800 points on their SAT and Sian scored 24 points on their ACT. Who performed better?
 
-## Using the normal distribution...
+## Compare Graphs
 
--   To make decisions $\rightarrow$ hypothesis testing
+![](images/sat_act.png){fig-align="center" width="80%"}
 
-    -   Use properties of the normal distribution to determine the probability of the observed sample statistic (or something more extreme, in the direction of the alternative hypothesis), i.e. the p-value
+-   Nel is 1 sd from mean
+-   Sian is **less than** 1 sd from mean
 
-. . .
+## Compare Z-Scores
 
--   To make estimations $\rightarrow$ confidence intervals
+\
 
-    -   Use properties of the normal distribution to calculate the bounds of the confidence interval, adding and subtracting a margin of error to the observed sample statistic
+[Z-score]{.red} measures how many standard deviations from the mean an observation is:
 
-. . .
+$$
+Z = \frac{ x - \mu}{\sigma}
+$$
 
-But before then...
+-   Nel: $Z = \frac{ 1800 - 1500}{300} = 1$
+-   Sian: $Z = \frac{ 24 - 21}{5} = 0.6$
 
-## Application exercise
+## Standard Normal Distribuion
 
-Go to Posit Cloud and continue the project titled `ae-11-Bone density`.
+-   mean is 0
+-   standard deviation is 1
+-   area under curve is 1
+
+```{r out.width="80%"}
+#| echo: false
+
+openintro::normTail(m = 0, s = 1)
+```
+
+------------------------------------------------------------------------
+
+Z-scores also tell us about [percentiles]{.red}.
+
+> Nel had SAT score 1800 corresponding to $Z=1$. What percentile are they in?
+
+```{r out.width="60%"}
+#| echo: false
+
+openintro::normTail(m = 0, s = 1, L = 1)
+```
+
+What percentage of scores are less than 1800? Same as shaded area!
+
+## Find the shaded area
+
+![](images/sat_percentile.png){fig-align="center" width="80%"}
+
+1.  Use a table (need z-score)
+2.  Use technology (dont need z-score)
+
+## Z-score table
+
+![](images/z_table.png){fig-align="center" width="70%"}
+
+A z-score of 1 corresponds to 84th percentile.
+
+## Z-score to percentile with technology
+
+aka Normal Cumulative Probability (CDF)
+
+```{r}
+#| echo: true
+
+pnorm(1, mean = 0, sd = 1)
+```
+
+\
+
+```{r out.width="60%"}
+#| echo: true
+
+openintro::normTail(m = 0, s = 1, L = 1)
+```
+
+## Other tech tools
+
+-   [Desmos](https://www.desmos.com/calculator/oaeabg61zf)
+-   [Shinyapp](https://openintro.shinyapps.io/dist_calc/)
+-   Calculator
+
+## Technology without Z-score
+
+```{r}
+#| echo: true
+
+pnorm(1800, mean = 1500, sd = 300)
+```
+
+\
+
+```{r out.width="60%"}
+#| echo: true
+
+openintro::normTail(m = 1500, s = 300, L = 1800)
+```
+
+## Percentile to Z-score
+
+> What z-score would correspond to 90th percentile?
+
+```{r}
+#| echo: true
+
+qnorm(0.90, mean = 0, sd = 1)
+```
+
+```{r out.width="60%"}
+#| echo: true
+
+openintro::normTail(m = 0, s = 1, L = 1.282)
+```
+
+## Percentile to Z-score with table
+
+> What z-score would correspond to 90th percentile?
+
+![](images/z_table.png){fig-align="center" width="80%"}

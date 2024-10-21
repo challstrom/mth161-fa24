@@ -30,7 +30,7 @@ glimpse(heart_transplant)
 The data dictionary is as follows:
 
 | Variable | Description |
-|----|----|
+|------------------------------------|------------------------------------|
 | id | ID number of the patient |
 | outcome | Survival status with levels `alive` and `deceased` |
 | transplant | Transplant group with levels `control` (did not receive a transplant) and `treatment` (received a transplant) |
@@ -104,12 +104,12 @@ The code chunk below generates a null distribution needed to test the hypothesis
 > Note: the function `set.seed()` here is used so that the simulation, although random, is the same everytime it's run. You can change the seed value to get a different simulation.
 
 ```{r}
-set.seed(2024)
+# set.seed(2024)
 
 null_dist_outcome <- heart_transplant |>
   specify(response = outcome, explanatory = transplant, success = "deceased") |>
   hypothesize(null = "independence") |>
-  generate(reps = 100, type = "permute") |>
+  generate(reps = 1000, type = "permute") |>
   calculate(stat = "diff in props", order = c("treatment", "control"))
 ```
 
