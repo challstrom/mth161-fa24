@@ -63,6 +63,8 @@ website:
             text: "Tuesday, Week 7"   
           - href: slides/15/15-inference-mathematical-models.qmd
             text: "Tuesday, Week 8" 
+          - href: slides/16/16-inference.qmd
+            text: "Thursday, Week 8" 
       - section: "AE"
         contents:
           - href: ae/ae-01/ae-01-penguins.qmd

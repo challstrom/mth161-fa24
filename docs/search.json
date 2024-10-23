@@ -5438,5 +5438,207 @@
       "Slides",
       "Tuesday, Week 8"
     ]
+  },
+  {
+    "objectID": "slides/16/16-inference.html#the-68-95-99.7-rule",
+    "href": "slides/16/16-inference.html#the-68-95-99.7-rule",
+    "title": "More mathematical models",
+    "section": "The 68-95-99.7 rule",
+    "text": "The 68-95-99.7 rule\nThe normal distribution is not just any unimodal and symmetric distribution, it follows the 68-95-99.7 rule."
+  },
+  {
+    "objectID": "slides/16/16-inference.html#using-the-normal-distribution",
+    "href": "slides/16/16-inference.html#using-the-normal-distribution",
+    "title": "Normal Distrubtion (continued)",
+    "section": "Using the normal distribution…",
+    "text": "Using the normal distribution…\nTo make decisions \\(\\rightarrow\\) hypothesis testing\n- determine the probability of the observed sample statistic (or something more extreme, in the direction of the alternative hypothesis), i.e. the p-value\n. . .\n\nTo make estimations \\(\\rightarrow\\) confidence intervals\n\nUse properties of the normal distribution to calculate the bounds of the confidence interval, adding and subtracting a margin of error to the observed sample statistic"
+  },
+  {
+    "objectID": "slides/16/16-inference.html#empirical-rule",
+    "href": "slides/16/16-inference.html#empirical-rule",
+    "title": "Normal Distrubtion (continued)",
+    "section": "Empirical Rule",
+    "text": "Empirical Rule\nThe normal distribution is not just any unimodal and symmetric distribution, it follows the 68-95-99.7 rule.",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Thursday, Week 8"
+    ]
+  },
+  {
+    "objectID": "slides/16/16-inference.html#use-the-normal-distribution",
+    "href": "slides/16/16-inference.html#use-the-normal-distribution",
+    "title": "Normal Distrubtion (continued)",
+    "section": "Use the normal distribution…",
+    "text": "Use the normal distribution…\n\n\nTo make decisions – hypothesis testing\n\ndetermine the probability of the observed sample statistic (or something more extreme, in the direction of the alternative hypothesis), i.e. the p-value",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Thursday, Week 8"
+    ]
+  },
+  {
+    "objectID": "slides/16/16-inference.html#use-the-normal-distribution-1",
+    "href": "slides/16/16-inference.html#use-the-normal-distribution-1",
+    "title": "Normal Distrubtion (continued)",
+    "section": "Use the normal distribution…",
+    "text": "Use the normal distribution…\n\n\nTo make estimations – confidence intervals\n\ncalculate the bounds of the confidence interval, adding and subtracting a margin of error to the observed sample statistic",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Thursday, Week 8"
+    ]
+  },
+  {
+    "objectID": "slides/16/16-inference.html#its-not-happenstance",
+    "href": "slides/16/16-inference.html#its-not-happenstance",
+    "title": "Normal Distrubtion (continued)",
+    "section": "It’s not happenstance!",
+    "text": "It’s not happenstance!\nIt’s the Central Limit Theorem, which says that the distribution of the sample statistic is normal, if certain conditions are met.\n\n\nTwo questions:\n\nWhat do we mean by the distribution of the sample statistic?\nWhat conditions need to be met?"
+  },
+  {
+    "objectID": "slides/16/16-inference.html#the-distribution-of-the-sample-statistic",
+    "href": "slides/16/16-inference.html#the-distribution-of-the-sample-statistic",
+    "title": "Normal Distrubtion (continued)",
+    "section": "The distribution of the sample statistic",
+    "text": "The distribution of the sample statistic\n\nIn a sample of 224 ring-tailed lemurs, the average weight was 924 grams.\n\nBut if you looked at a different sample you would not expect to get the same number!\n\ntake another sample of size \\(n\\) (original sample size) from the population\ncalculate and record the sample statistic for this new sample\nrepeat this hundreds (thousands?) of times\nnot at all practical!"
+  },
+  {
+    "objectID": "slides/16/16-inference.html#the-technical-conditions",
+    "href": "slides/16/16-inference.html#the-technical-conditions",
+    "title": "Normal Distrubtion (continued)",
+    "section": "The (technical) conditions",
+    "text": "The (technical) conditions\n\nIndependent observations\n\nObservations in the sample are independent. Guaranteed when we take a random sample or randomly divide individuals into treatment and control groups.\n\nLarge enough sample\n\nWhat qualifies as “large enough” differs by context (i.e., from sample statistic to sample statistic)."
+  },
+  {
+    "objectID": "slides/16/16-inference.html#more-to-the-clt",
+    "href": "slides/16/16-inference.html#more-to-the-clt",
+    "title": "Normal Distrubtion (continued)",
+    "section": "More to the CLT",
+    "text": "More to the CLT\n\nThere is more to the CLT than just the shape of the distribution – normal.\nThe CLT says that the center of the sampling distribution will be at the true population parameter.\nThe CLT also says something about the spread of the sampling distribution, measured by the standard error. For each sample statistic (\\(\\bar{x}\\) – the sample mean, \\(\\hat{p}\\) – the sample proportion, \\(\\bar{x}_1 - \\bar{x}_2\\) – the difference in sample means, etc.) the CLT provides a formula for its standard error.\n\nYou won’t be asked to memorize these formulas.\nIn fact, you’ll rarely use the CLT to calculate the variability of sample statistics, you’ll simulate their distributions directly."
+  },
+  {
+    "objectID": "slides/16/16-inference.html#central-limit-theorem",
+    "href": "slides/16/16-inference.html#central-limit-theorem",
+    "title": "Normal Distrubtion (continued)",
+    "section": "Central Limit Theorem",
+    "text": "Central Limit Theorem\n\n\n\nThe distribution of the sample statistic is normal if certain conditions are met.\n\n\nWhat do we mean by the distribution of the sample statistic?\nWhat conditions need to be met?"
+  },
+  {
+    "objectID": "slides/16/16-inference.html#new-slide",
+    "href": "slides/16/16-inference.html#new-slide",
+    "title": "Normal Distrubtion (continued)",
+    "section": "new slide",
+    "text": "new slide\n\nBut, you would never do this in reality!\nYou’d either use simulation (randomization, bootstrapping, stuff we’ve done so far!) or you would leverage mathematical theory to know what to expect if we had taken repeated samples. :::"
+  },
+  {
+    "objectID": "slides/16/16-inference.html#instead",
+    "href": "slides/16/16-inference.html#instead",
+    "title": "Normal Distrubtion (continued)",
+    "section": "Instead…",
+    "text": "Instead…\n\nEither use simulation (randomization, bootstrapping, etc!)\nOr use mathematical theory to know what to expect if we had taken repeated samples (central limit theorem)",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Thursday, Week 8"
+    ]
+  },
+  {
+    "objectID": "slides/16/16-inference.html#sample-distribution",
+    "href": "slides/16/16-inference.html#sample-distribution",
+    "title": "Normal Distrubtion (continued)",
+    "section": "Sample distribution",
+    "text": "Sample distribution\n\nExample: In a sample of 224 ring-tailed lemurs, the average weight was 924 grams.\n\n\nWe expect the sample statistic to approximate the population parameter\nBut if you looked at a different sample you would not expect to get the same number!",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Thursday, Week 8"
+    ]
+  },
+  {
+    "objectID": "slides/16/16-inference.html#sample-distribution-1",
+    "href": "slides/16/16-inference.html#sample-distribution-1",
+    "title": "Normal Distrubtion (continued)",
+    "section": "Sample distribution",
+    "text": "Sample distribution\n\ntake another sample of size \\(n\\) (original sample size) from the population\ncalculate and record the sample statistic for this new sample\nrepeat this hundreds (thousands?) of times\nnot at all practical!",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Thursday, Week 8"
+    ]
+  },
+  {
+    "objectID": "slides/16/16-inference.html#quantifying-variability",
+    "href": "slides/16/16-inference.html#quantifying-variability",
+    "title": "Normal Distrubtion (continued)",
+    "section": "Quantifying Variability",
+    "text": "Quantifying Variability\nThe normal distribution is not just any unimodal and symmetric distribution, it follows the 68-95-99.7 rule."
+  },
+  {
+    "objectID": "slides/16/16-inference.html#conditions-required-by-clt",
+    "href": "slides/16/16-inference.html#conditions-required-by-clt",
+    "title": "Normal Distrubtion (continued)",
+    "section": "Conditions required by CLT",
+    "text": "Conditions required by CLT\n\nIndependent observations\n\n\nGuaranteed when we take a random sample.\n\n\nLarge enough sample\n\n\nWhat qualifies as “large enough” differs by context (i.e., from sample statistic to sample statistic).\nE.g. for proportions, need at least 10 expected successes and 10 expected failures.",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Thursday, Week 8"
+    ]
+  },
+  {
+    "objectID": "slides/16/16-inference.html#more-to-clt",
+    "href": "slides/16/16-inference.html#more-to-clt",
+    "title": "Normal Distrubtion (continued)",
+    "section": "More to CLT",
+    "text": "More to CLT\n\nThe center of the sampling distribution will be at the true population parameter.\nThe spread of the sampling distribution is measured by the standard error. Each sample statistic has own formula\n\n\\(\\bar{x}\\) – sample mean\n\\(\\hat{p}\\) – sample proportion\n\\(\\bar{x}_1 - \\bar{x}_2\\) – difference of sample means\n\\(\\hat{p}_1 - \\hat{p}_2\\) – difference of sample proportions"
+  },
+  {
+    "objectID": "slides/16/16-inference.html#from-tuesday",
+    "href": "slides/16/16-inference.html#from-tuesday",
+    "title": "Normal Distrubtion (continued)",
+    "section": "from Tuesday…",
+    "text": "from Tuesday…\n\n\nCentral Limit Theorem\n\n\n\nThe distribution of the sample statistic is normal if certain conditions are met.\n\n\nWhat do we mean by the distribution of the sample statistic?\nWhat conditions need to be met?",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Thursday, Week 8"
+    ]
+  },
+  {
+    "objectID": "slides/16/16-inference.html#standard-error",
+    "href": "slides/16/16-inference.html#standard-error",
+    "title": "Normal Distrubtion (continued)",
+    "section": "Standard Error",
+    "text": "Standard Error\n\nThe center of the sampling distribution will be at the true population parameter.\nThe spread of the sampling distribution is measured by the standard error (like the spread of a single sample is measured by the standard deviation)",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Thursday, Week 8"
+    ]
+  },
+  {
+    "objectID": "slides/16/16-inference.html#margin-of-error",
+    "href": "slides/16/16-inference.html#margin-of-error",
+    "title": "Normal Distrubtion (continued)",
+    "section": "Margin of Error",
+    "text": "Margin of Error\n\nMeasures how far away observations are from population parameter.\nClosely related to standard error: e.g. 95% of observations are within 2 SE of the mean.",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Thursday, Week 8"
+    ]
+  },
+  {
+    "objectID": "slides/16/16-inference.html#standard-error-formulas",
+    "href": "slides/16/16-inference.html#standard-error-formulas",
+    "title": "Normal Distrubtion (continued)",
+    "section": "Standard Error Formulas",
+    "text": "Standard Error Formulas\nEach sample statistic has own formula for standard error\n\n\\(\\bar{x}\\) – sample mean\n\\(\\hat{p}\\) – sample proportion\n\\(\\bar{x}_1 - \\bar{x}_2\\) – difference of sample means\n\\(\\hat{p}_1 - \\hat{p}_2\\) – difference of sample proportions\n\nWe’ll see these in later chapters…",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Thursday, Week 8"
+    ]
   }
 ]
