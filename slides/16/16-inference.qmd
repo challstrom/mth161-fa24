@@ -11,12 +11,12 @@ auto-stretch: false
 \
 
 ### Central Limit Theorem
+
 ```{css, echo = FALSE}
 .red {
   color: #B8001F;
 }
 ```
-
 
 The distribution of the sample statistic is [normal]{.red} if certain conditions are met.
 
@@ -25,42 +25,38 @@ The distribution of the sample statistic is [normal]{.red} if certain conditions
 2.  What conditions need to be met?
 :::
 
+## Sample distribution
+
+> Example: In a sample of 224 ring-tailed lemurs, the average weight was 924 grams.
+
+-   We expect the *sample statistic* to approximate the *population parameter*
+
+-   But if you looked at a *different sample* you would not expect to get the same number!
 
 ## Sample distribution
 
-> Example:  In a sample of 224 ring-tailed lemurs, the average weight was 924 grams.
-
-
-- We expect the *sample statistic* to approximate the *population parameter*
-
-- But if you looked at a *different sample* you would not expect to get the same number!
-
-## Sample distribution
-
-- take *another* sample of size $n$ (original sample size) from the population
-- calculate and record the sample statistic for this new sample
-- repeat this hundreds (thousands?) of times
-- not at all practical!
-
+-   take *another* sample of size $n$ (original sample size) from the population
+-   calculate and record the sample statistic for this new sample
+-   repeat this hundreds (thousands?) of times
+-   not at all practical!
 
 ## Instead...
 
-- Either use simulation (randomization, bootstrapping, etc!) 
+-   Either use simulation (randomization, bootstrapping, etc!)
 
-- Or use mathematical theory to know what to expect if we *had* taken repeated samples (central limit theorem)
+-   Or use mathematical theory to know what to expect if we *had* taken repeated samples (central limit theorem)
 
 ## Conditions required by CLT
 
-  1.  [Independent observations]{.red} 
-  
-  - Guaranteed when we take a random sample.
+1.  [Independent observations]{.red}
 
-  2.  [Large enough sample]{.red} 
-  
-  - What qualifies as "large enough" differs by context (i.e., from sample statistic to sample statistic). 
+-   Guaranteed when we take a random sample.
 
-  - E.g. for proportions, need at least 10 expected successes and 10 expected failures.
+2.  [Large enough sample]{.red}
 
+-   What qualifies as "large enough" differs by context (i.e., from sample statistic to sample statistic).
+
+-   E.g. for proportions, need at least 10 expected successes and 10 expected failures.
 
 ```{r}
 #| message: false
@@ -72,15 +68,13 @@ library(openintro)
 library(latex2exp)
 ```
 
-
-
 ## Use the normal distribution...
 
 \
 
 ### To make decisions -- [hypothesis testing]{.red}
 
-  - determine the probability of the observed sample statistic (or something more extreme, in the direction of the alternative hypothesis), i.e. the [p-value]{.red}
+-   determine the probability of the observed sample statistic (or something more extreme, in the direction of the alternative hypothesis), i.e. the [p-value]{.red}
 
 ## Use the normal distribution...
 
@@ -88,42 +82,42 @@ library(latex2exp)
 
 ### To make estimations -- [confidence intervals]{.red}
 
-  - calculate the bounds of the confidence interval, adding and subtracting a 
-  [margin of error]{.red} to the observed sample statistic
-    
-
+-   calculate the bounds of the confidence interval, adding and subtracting a [margin of error]{.red} to the observed sample statistic
 
 ## Empirical Rule
-
 
 The normal distribution is not just *any* unimodal and symmetric distribution, it follows the **68-95-99.7 rule**.
 
 ![](images/er6895997.png){fig-align="center"}
 
----
+------------------------------------------------------------------------
 
-> The mean height of female identifying adults in the U.S. is 64.5'' with a standard deviation of 2.5''.  
+> The mean height of female identifying adults in the U.S. is 64.5'' with a standard deviation of 2.5''.
 
->Based on the empirical rule, about 95% of the adult female population is in what range of heights?
-    
-## Standard Error 
+> Based on the empirical rule, about 95% of the adult female population is in what range of heights?
 
-+  The [center]{.red} of the sampling distribution will be at the true population parameter.
+## Standard Error
 
-+ The **spread** of the sampling distribution is measured by the [standard error]{.red} (like the spread of a single sample is measured by the standard deviation)
+-   The [center]{.red} of the sampling distribution will be at the true population parameter.
+
+-   The **spread** of the sampling distribution is measured by the [standard error]{.red} (like the spread of a single sample is measured by the standard deviation)
 
 ## Standard Error Formulas
 
-Each sample statistic has own formula for standard error 
+Each sample statistic has own formula for standard error
 
-  + $\bar{x}$ -- sample mean
-  + $\hat{p}$ -- sample proportion
-  + $\bar{x}_1 - \bar{x}_2$ -- difference of sample means
-  + $\hat{p}_1 - \hat{p}_2$ -- difference of sample proportions 
+-   $\bar{x}$ -- sample mean
+-   $\hat{p}$ -- sample proportion
+-   $\bar{x}_1 - \bar{x}_2$ -- difference of sample means
+-   $\hat{p}_1 - \hat{p}_2$ -- difference of sample proportions
 
 We'll see these in later chapters...
 
 ## Margin of Error
 
-- Measures how far away observations are from population parameter. 
-- Closely related to standard error:  e.g. 95% of observations are within 2 SE of the mean. 
+-   Measures how far away observations are from population parameter.
+-   Closely related to standard error: e.g. 95% of observations are within 2 SE of the mean.
+
+------------------------------------------------------------------------
+
+![](images/wapo_graph_Oct23.png){fig-align="center"}
