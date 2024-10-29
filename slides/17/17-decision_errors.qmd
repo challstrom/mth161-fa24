@@ -1,0 +1,136 @@
+---
+title: Decision Errors
+subtitle: Chapter 14
+author: ""
+format: revealjs
+auto-stretch: false
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+## Hypothesis Testing Framework
+
+```{css, echo = FALSE}
+.red {
+  color: #B8001F;
+}
+```
+
+1.  State the [null hypothesis]{.red} and the [alternative
+    hypothesis]{.red}
+
+::: fragment
+2.  Choose a [sample]{.red}, collect and analyze the data
+:::
+
+::: fragment
+3.  How [likely]{.red} is it to see data like what we observed, [if the
+    null hypothesis were true]{.red}?
+:::
+
+::: fragment
+4.  If very unlikely, we [reject]{.red} the null hypothesis. Otherwise,
+    we [cannot reject]{.red} the null claim.
+:::
+
+## Making a decision
+
+If the conditional probability of obtaining our test statistic, [or more
+extreme]{.red}, is very small: $$
+p < \alpha
+$$ We have evidence to [reject]{.red} the null hypothesis.
+
+This probability is the [p-value]{.red} and the [discernment level
+($\alpha$)]{.red} (or significance level) is our threshold for "very
+small".
+
+## Making a decision
+
+On the other hand, if the p-value is greater (or equal to) $\alpha$, we
+say the results are not statistically significant and we [fail to
+reject]{.red}.
+
+\
+
+Note: we [don't]{.red} say $H_0$ is true -- just that we don't have
+evidence to say it's not!
+
+## Choosing a discernability level
+
+This should always be done [before]{.red} seeing the data!
+
+\
+What are the consequences of making an incorrect decision?
+
+## Type I Error
+
+### Suppose that the null hypothesis is actually [true]{.red}
+
+\
+
+-   we might correcly fail to reject (good decision)
+
+-   we might [incorrectly]{.red} reject the null hypothesis
+
+## Type II Error
+
+### Suppose that the null hypothesis is actually [not true]{.red}
+
+\
+
+-   we might correcly reject (good decision)
+
+-   we might [incorrectly]{.red} fail to reject the null hypothesis
+
+## Decision Errors
+
+\
+
+Suppose the null hypothesis is $H_0$
+
+-   [Type I Error]{.red}: rejecting $H_0$ when it is actually true
+-   [Type II Error]{.red}: not rejecting $H_0$ when it is actually false
+
+How likely these errors are depends on [discernment level]{.red}.
+
+What are the consequences for making each type of error?
+
+Choose [$\alpha$]{.red} accordingly!
+
+## Example
+
+::: small
+> A researcher believes that the mean number of pesticides is higher in
+> the Willamette river than compared to a 1996 report that cited 36
+> different pesticides. The researcher collects samples from the river
+> over a year’s time and found a significant increase in the mean number
+> of pesticides.
+:::
+
+::: incremental
+-   State the null and alternative hypotheses.
+-   What has happened if a type I error occurs -- what are the potential
+    consequences?
+-   What has happened if a type II error occurs -- what are the
+    potential consequences?
+:::
+
+## Controlling for Errors
+
+-   To avoid Type I errors, make it [harder]{.red} to reject $H_0$ -- make
+    discernment level [smaller]{.red}
+
+-   To avoid Type II errors, make it [easier]{.red} to reject $H_0$ --
+    make discernment level [bigger]{.red}
+
+## For Thursday...
+
+-  Read about one-sided and two-side tests
+
+\
+
+-  Homework:  Section 14.6, #2, 10 -- plus any problems from today that weren't completed (or still have questions about)
+
+```{r}
+```

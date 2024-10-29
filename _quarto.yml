@@ -65,6 +65,8 @@ website:
             text: "Tuesday, Week 8" 
           - href: slides/16/16-inference.qmd
             text: "Thursday, Week 8" 
+          - href: slides/17/17-decision_errors.qmd
+            text: "Tuesday, Week 9" 
       - section: "AE"
         contents:
           - href: ae/ae-01/ae-01-penguins.qmd
