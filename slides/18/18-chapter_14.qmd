@@ -1,0 +1,113 @@
+---
+title: Two Sided Tests
+subtitle: Chapter 14
+author: ""
+format: revealjs
+auto-stretch: false
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+## Case Study: opportunity cost
+
+```{css, echo = FALSE}
+.red {
+color: #B8001F;
+}
+```
+
+Will a prompt about saving money for future purchases would lead
+students to spend less?
+
+-   $H_0$ [Null hypothesis]{.red} Reminding students that they can save
+    money for later purchases will [not have any impact]{.red} on
+    spending decisions.
+
+-   $H_A$ [Alternatve hypothesis]{.red} Reminding students that they can
+    save money for later purchases [will reduce]{.red} the chance they
+    will continue w/ purchase.
+
+------------------------------------------------------------------------
+
+::::: columns
+::: {.column width="60%"}
+![](images/one_sided.png){width="90%"}
+
+![](images/one_sided_Z.png){width="90%"}
+:::
+
+::: {.column width="40%"}
+### p-value
+
+probability of observing difference of 0.2 [or larger]{.red} (more
+extreme)
+:::
+:::::
+
+## Alternative Alternatives
+
+$H_A$ [Alternatve hypothesis]{.red} Reminding students that they can
+save money for later purchases [will reduce]{.red} the chance they will
+continue w/ purchase.
+
+\
+
+But why is this the alternative hypothesis? Couldn't we also imagine
+that the prompt would [increase]{.red} the chance that students buy the
+item?
+
+-   Probably not
+-   And that's not the research question!
+
+## Danger of One-Sided Hypotheses
+
+1.  Framing $H_A$ to match the data elevates risk of [Type I
+    error]{.red}.
+2.  Framing $H_A$ to match what we think elevates risk of [confirmation
+    bias]{.red}
+
+## Two-Sided Test
+
+Research question: does administering blood thinning medication have an
+impact on survival rate of patients that have undergone CPR?
+
+-   $H_0$ [Null hypothesis]{.red} Blood thinners do not have an effect
+    on survival rates.
+
+-   $H_A$ [Alternatve hypothesis]{.red} Blood thinners do have an impact
+    on survival rates.
+
+## Data
+
+![](images/table.png){width="100%"}
+
+Difference in proportions: 
+$$
+\hat{p_T} - \hat{p_C} = \frac{14}{40} - \frac{11}{50} =  0.13
+$$
+
+## Randomized null distribution
+
+![](images/graph1.png){width="80%"} Observations that are at least as
+large as 0.13
+
+## Randomized null distribution
+
+![](images/graph2.png){width="80%"} Observations that are at least as
+[extreme]{.red} as $\pm 0.13$, in either direction!
+
+## Two-sided tests
+
+### p-value for two-sided test
+
+First find p-value for one tail and then double it!
+
+\
+
+### Default to two-sided test
+
+Only use a one-sided hypothesis test if you have a reason to focus on one direction in the alternative
+
+```{r}
+```

@@ -452,5 +452,122 @@
       "Slides",
       "Tuesday, Week 9"
     ]
+  },
+  {
+    "objectID": "slides/18/18-chapter_14.html#one-sided-hypothesis-test",
+    "href": "slides/18/18-chapter_14.html#one-sided-hypothesis-test",
+    "title": "Two Sided Tests",
+    "section": "One-Sided Hypothesis Test",
+    "text": "One-Sided Hypothesis Test\n\n\n\nLast week we looked at study about whether a prompt about saving money for future purchases would lead students to spend less.\n\n\\(H_0\\) Null hypothesis Reminding students that they can save money for later purchases will not have any impact on spending decisions.\n\\(H_A\\) Alternatve hypothesis Reminding students that they can save money for later purchases will reduce the chance they will continue w/ purchase."
+  },
+  {
+    "objectID": "slides/18/18-chapter_14.html#case-study-opportunity-cost",
+    "href": "slides/18/18-chapter_14.html#case-study-opportunity-cost",
+    "title": "Two Sided Tests",
+    "section": "Case Study: opportunity cost",
+    "text": "Case Study: opportunity cost\n\n\n\nWill a prompt about saving money for future purchases would lead students to spend less?\n\n\\(H_0\\) Null hypothesis Reminding students that they can save money for later purchases will not have any impact on spending decisions.\n\\(H_A\\) Alternatve hypothesis Reminding students that they can save money for later purchases will reduce the chance they will continue w/ purchase.",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Thursday, Week 9"
+    ]
+  },
+  {
+    "objectID": "slides/18/18-chapter_14.html#danger-of-one-sided-hypotheses",
+    "href": "slides/18/18-chapter_14.html#danger-of-one-sided-hypotheses",
+    "title": "Two Sided Tests",
+    "section": "Danger of One-Sided Hypotheses",
+    "text": "Danger of One-Sided Hypotheses\n\nFraming \\(H_A\\) to match the data elevates risk of Type I error.\nFraming \\(H_A\\) to match what we think elevates risk of confirmation bias",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Thursday, Week 9"
+    ]
+  },
+  {
+    "objectID": "slides/18/18-chapter_14.html#two-sided-test",
+    "href": "slides/18/18-chapter_14.html#two-sided-test",
+    "title": "Two Sided Tests",
+    "section": "Two-Sided Test",
+    "text": "Two-Sided Test\nResearch question: does administering blood thinning medication have an impact on survival rate of patients that have undergone CPR?\n\n\\(H_0\\) Null hypothesis Blood thinners do not have an effect on survival rates.\n\\(H_A\\) Alternatve hypothesis Blood thinners do have an impact on survival rates.",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Thursday, Week 9"
+    ]
+  },
+  {
+    "objectID": "slides/18/18-chapter_14.html#data",
+    "href": "slides/18/18-chapter_14.html#data",
+    "title": "Two Sided Tests",
+    "section": "Data",
+    "text": "Data\n\nDifference in proportions: \\[\n\\hat{p_T} - \\hat{p_C} = \\frac{14}{40} - \\frac{11}{50} =  0.13\n\\]",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Thursday, Week 9"
+    ]
+  },
+  {
+    "objectID": "slides/18/18-chapter_14.html#randomized-null-distribution",
+    "href": "slides/18/18-chapter_14.html#randomized-null-distribution",
+    "title": "Two Sided Tests",
+    "section": "Randomized null distribution",
+    "text": "Randomized null distribution\n Observations that are at least as large as 0.13",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Thursday, Week 9"
+    ]
+  },
+  {
+    "objectID": "slides/18/18-chapter_14.html#randomized-null-distribution-1",
+    "href": "slides/18/18-chapter_14.html#randomized-null-distribution-1",
+    "title": "Two Sided Tests",
+    "section": "Randomized null distribution",
+    "text": "Randomized null distribution\n Observations that are at least as extreme as \\(\\pm 0.13\\), in either direction!",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Thursday, Week 9"
+    ]
+  },
+  {
+    "objectID": "slides/18/18-chapter_14.html#p-value-for-two-sided-test",
+    "href": "slides/18/18-chapter_14.html#p-value-for-two-sided-test",
+    "title": "Two Sided Tests",
+    "section": "p-value for two-sided test",
+    "text": "p-value for two-sided test\nFirst find p-value for one tail and then double it!"
+  },
+  {
+    "objectID": "slides/18/18-chapter_14.html#default-to-two-sided-test",
+    "href": "slides/18/18-chapter_14.html#default-to-two-sided-test",
+    "title": "Two Sided Tests",
+    "section": "Default to two-sided test",
+    "text": "Default to two-sided test\nOne use a one-sided hypothesis test if you have a good reason to only care about one direction in the alternative"
+  },
+  {
+    "objectID": "slides/18/18-chapter_14.html#two-sided-tests",
+    "href": "slides/18/18-chapter_14.html#two-sided-tests",
+    "title": "Two Sided Tests",
+    "section": "Two-sided tests",
+    "text": "Two-sided tests\np-value for two-sided test\nFirst find p-value for one tail and then double it!\n\n\nDefault to two-sided test\nOnly use a one-sided hypothesis test if you have a reason to focus on one direction in the alternative",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Thursday, Week 9"
+    ]
+  },
+  {
+    "objectID": "slides/18/18-chapter_14.html#alternative-alternatives",
+    "href": "slides/18/18-chapter_14.html#alternative-alternatives",
+    "title": "Two Sided Tests",
+    "section": "Alternative Alternatives",
+    "text": "Alternative Alternatives\n\\(H_A\\) Alternatve hypothesis Reminding students that they can save money for later purchases will reduce the chance they will continue w/ purchase.\n\n\nBut why is this the alternative hypothesis? Couldn’t we also imagine that the prompt would increase the chance that students buy the item?\n\nProbably not\nAnd that’s not the research question!",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Thursday, Week 9"
+    ]
   }
 ]
