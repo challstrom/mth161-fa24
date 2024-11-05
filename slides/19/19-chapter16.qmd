@@ -158,12 +158,12 @@ $$
 
 ## Example:  hypotheses
 
-Null hypothesis:  there is no support 
+Null hypothesis:  voters are indifferent (neither support nor oppose) 
 $$
 p_0 = 0.5
 $$
 
-Alternative hypothesis:  there is support
+Alternative hypothesis:  voters support
 $$
 p_0 \geq 0.5
 $$

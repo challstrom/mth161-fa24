@@ -1048,7 +1048,7 @@
     "href": "slides/19/19-chapter16.html#example-hypotheses",
     "title": "Inference for Single Proportion",
     "section": "Example: hypotheses",
-    "text": "Example: hypotheses\nNull hypothesis: there is no support \\[\np_0 = 0.5\n\\]\nAlternative hypothesis: there is support \\[\np_0 \\geq 0.5\n\\]",
+    "text": "Example: hypotheses\nNull hypothesis: voters are indifferent (neither support nor oppose) \\[\np_0 = 0.5\n\\]\nAlternative hypothesis: voters support \\[\np_0 \\geq 0.5\n\\]",
     "crumbs": [
       "Quick Links",
       "Slides",
