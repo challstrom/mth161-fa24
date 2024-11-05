@@ -1,7 +1,6 @@
 ---
 title: Exploring numerical data
 subtitle: Chapter 5
-format: html
 auto-stretch: false
 ---
 
