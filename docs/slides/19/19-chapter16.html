@@ -477,7 +477,7 @@ SE = \sqrt{ \frac{p(1- p)}{n}}
 <h2>Example: confidence interval</h2>
 <div class="small">
 <blockquote>
-<p>In survey of 826 Portland residents, 48.3% of respondents say that homelessness is Portland’s greatest challenge.</p>
+<p>In survey of 3290 Portland residents, 48.3% of respondents say that homelessness is Portland’s greatest challenge.</p>
 </blockquote>
 </div>
 <ul>
@@ -487,7 +487,7 @@ SE = \sqrt{ \frac{p(1- p)}{n}}
 <li>Success/failure? Yes
 <ul>
 <li><span class="math inline">\(np = 3290*0.483 = 1589 \geq 10\)</span></li>
-<li><span class="math inline">\(n(1-p) = 3290 * (1 - 0.483) = 1700 \geq 10\)</span></li>
+<li><span class="math inline">\(n(1-p) = 3290 * (1 - 0.483) = 1701 \geq 10\)</span></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -499,10 +499,10 @@ SE = \sqrt{ \frac{p(1- p)}{n}}
 <p>In survey of 3290 Portland residents, 48.3% of respondents say that homelessness is Portland’s greatest challenge.</p>
 </blockquote>
 </div>
-<p><br>
-</p>
-<p>Standard error? <span class="math display">\[
+<p><span class="math display">\[
     SE = \sqrt{ \frac{p(1- p)}{n}} = \sqrt{ \frac{ 0.483(1-0.483)}{3290}} = 0.009
+\]</span> Margin of error <span class="math display">\[
+p^\ast \times SE = 1.96\times 0.009 = 0.018
 \]</span></p>
 </section>
 <section id="example-confidence-interval-2" class="slide level2">
@@ -514,7 +514,7 @@ SE = \sqrt{ \frac{p(1- p)}{n}}
 </div>
 <p>We are 95% confident that the true proportion of Portlanders who agree that homelessness is the city’s greatest challenge</p>
 <p><span class="math display">\[
-48.3 \pm 0.9\%
+0.483 \pm 0.018
 \]</span></p>
 </section>
 <section id="hypothesis-test-for-single-proportion" class="slide level2">
@@ -536,7 +536,7 @@ Z = \frac{ \hat{p} - p_0}{SE} = \frac{ \hat{p} - p_0}{\sqrt{p_0(1-p_0)/n}}
 p_0 = 0.5
 \]</span></p>
 <p>Alternative hypothesis: voters support <span class="math display">\[
-p_0 \geq 0.5
+p_0 &gt; 0.5
 \]</span></p>
 </section>
 <section id="example-conditions" class="slide level2">

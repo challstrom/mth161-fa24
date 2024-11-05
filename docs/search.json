@@ -988,7 +988,7 @@
     "href": "slides/19/19-chapter16.html#example-confidence-interval",
     "title": "Inference for Single Proportion",
     "section": "Example: confidence interval",
-    "text": "Example: confidence interval\n\n\nIn survey of 826 Portland residents, 48.3% of respondents say that homelessness is Portland’s greatest challenge.\n\n\n\nAre CLT conditions met?\n\nAre observations independent? Yes - random sample\nSuccess/failure? Yes\n\n\\(np = 3290*0.483 = 1589 \\geq 10\\)\n\\(n(1-p) = 3290 * (1 - 0.483) = 1700 \\geq 10\\)",
+    "text": "Example: confidence interval\n\n\nIn survey of 3290 Portland residents, 48.3% of respondents say that homelessness is Portland’s greatest challenge.\n\n\n\nAre CLT conditions met?\n\nAre observations independent? Yes - random sample\nSuccess/failure? Yes\n\n\\(np = 3290*0.483 = 1589 \\geq 10\\)\n\\(n(1-p) = 3290 * (1 - 0.483) = 1701 \\geq 10\\)",
     "crumbs": [
       "Quick Links",
       "Slides",
@@ -1000,7 +1000,7 @@
     "href": "slides/19/19-chapter16.html#example-confidence-interval-1",
     "title": "Inference for Single Proportion",
     "section": "Example: confidence interval",
-    "text": "Example: confidence interval\n\n\nIn survey of 3290 Portland residents, 48.3% of respondents say that homelessness is Portland’s greatest challenge.\n\n\n\n\nStandard error? \\[\n    SE = \\sqrt{ \\frac{p(1- p)}{n}} = \\sqrt{ \\frac{ 0.483(1-0.483)}{3290}} = 0.009\n\\]",
+    "text": "Example: confidence interval\n\n\nIn survey of 3290 Portland residents, 48.3% of respondents say that homelessness is Portland’s greatest challenge.\n\n\n\\[\n    SE = \\sqrt{ \\frac{p(1- p)}{n}} = \\sqrt{ \\frac{ 0.483(1-0.483)}{3290}} = 0.009\n\\] Margin of error \\[\np^\\ast \\times SE = 1.96\\times 0.009 = 0.018\n\\]",
     "crumbs": [
       "Quick Links",
       "Slides",
@@ -1012,7 +1012,7 @@
     "href": "slides/19/19-chapter16.html#example-confidence-interval-2",
     "title": "Inference for Single Proportion",
     "section": "Example: confidence interval",
-    "text": "Example: confidence interval\n\n\nIn survey of 3290 Portland residents, 48.3% of respondents say that homelessness is Portland’s greatest challenge.\n\n\nWe are 95% confident that the true proportion of Portlanders who agree that homelessness is the city’s greatest challenge\n\\[\n48.3 \\pm 0.9\\%\n\\]",
+    "text": "Example: confidence interval\n\n\nIn survey of 3290 Portland residents, 48.3% of respondents say that homelessness is Portland’s greatest challenge.\n\n\nWe are 95% confident that the true proportion of Portlanders who agree that homelessness is the city’s greatest challenge\n\\[\n0.483 \\pm 0.018\n\\]",
     "crumbs": [
       "Quick Links",
       "Slides",
@@ -1048,7 +1048,7 @@
     "href": "slides/19/19-chapter16.html#example-hypotheses",
     "title": "Inference for Single Proportion",
     "section": "Example: hypotheses",
-    "text": "Example: hypotheses\nNull hypothesis: voters are indifferent (neither support nor oppose) \\[\np_0 = 0.5\n\\]\nAlternative hypothesis: voters support \\[\np_0 \\geq 0.5\n\\]",
+    "text": "Example: hypotheses\nNull hypothesis: voters are indifferent (neither support nor oppose) \\[\np_0 = 0.5\n\\]\nAlternative hypothesis: voters support \\[\np_0 &gt; 0.5\n\\]",
     "crumbs": [
       "Quick Links",
       "Slides",

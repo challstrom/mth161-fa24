@@ -107,7 +107,7 @@ $z^\ast$ is determined by the desired confidence level.
 ## Example: confidence interval
 
 ::: small
-> In survey of 826 Portland residents, 48.3% of respondents say that
+> In survey of 3290 Portland residents, 48.3% of respondents say that
 > homelessness is Portland's greatest challenge.
 :::
 
@@ -115,7 +115,7 @@ $z^\ast$ is determined by the desired confidence level.
     -   Are observations independent? Yes - random sample
     -   Success/failure? Yes
         -   $np = 3290*0.483 = 1589 \geq 10$
-        -   $n(1-p) = 3290 * (1 - 0.483) = 1700 \geq 10$
+        -   $n(1-p) = 3290 * (1 - 0.483) = 1701 \geq 10$
 
 ## Example: confidence interval
 
@@ -124,11 +124,12 @@ $z^\ast$ is determined by the desired confidence level.
 > homelessness is Portland's greatest challenge.
 :::
 
-\
-
-Standard error? 
 $$
     SE = \sqrt{ \frac{p(1- p)}{n}} = \sqrt{ \frac{ 0.483(1-0.483)}{3290}} = 0.009
+$$
+Margin of error
+$$
+p^\ast \times SE = 1.96\times 0.009 = 0.018
 $$
 
 ## Example: confidence interval
@@ -141,7 +142,7 @@ $$
 We are 95% confident that the true proportion of Portlanders who agree that homelessness is the city's greatest challenge
 
 $$
-48.3 \pm 0.9\%
+0.483 \pm 0.018
 $$
 
 ## Hypothesis Test for single proportion
@@ -165,7 +166,7 @@ $$
 
 Alternative hypothesis:  voters support
 $$
-p_0 \geq 0.5
+p_0 > 0.5
 $$
 
 ## Example: conditions
