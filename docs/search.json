@@ -3720,5 +3720,222 @@
       "Quick Links",
       "University Policies"
     ]
+  },
+  {
+    "objectID": "slides/20/20-chapter16_simulation.html#medical-consultant-example",
+    "href": "slides/20/20-chapter16_simulation.html#medical-consultant-example",
+    "title": "Inference for Single Proportion - part 2",
+    "section": "Medical consultant example…",
+    "text": "Medical consultant example…\n\n\n\nA consultant tried to attract patients by noting the average complication rate for liver donor surgeries in the US is about 10%, but her clients have had only 3 complications in the 62 liver donor surgeries she has facilitated. She claims this is strong evidence that her work meaningfully contributes to reducing complications (and therefore she should be hired!).\n\\[\n\\hat{p} = \\frac{3}{62} = 0.048\n\\]"
+  },
+  {
+    "objectID": "slides/20/20-chapter16_simulation.html#recall-our-hypothesis-testing-framework",
+    "href": "slides/20/20-chapter16_simulation.html#recall-our-hypothesis-testing-framework",
+    "title": "Inference for Single Proportion - part 2",
+    "section": "Recall our Hypothesis Testing Framework",
+    "text": "Recall our Hypothesis Testing Framework\n\n\n\n\nState the null and the alternative hypotheses\nChoose a sample, collect and analyze the data\nHow likely is it to see data like what we observed, if the null hypothesis were true?\nIf very unlikely, we reject the null hypothesis. Otherwise, we cannot reject."
+  },
+  {
+    "objectID": "slides/20/20-chapter16_simulation.html#p-value",
+    "href": "slides/20/20-chapter16_simulation.html#p-value",
+    "title": "Inference for Single Proportion - part 2",
+    "section": "p-value",
+    "text": "p-value\n\np-value is a probability – how likely is it to see our observation if the null hypothesis is true?"
+  },
+  {
+    "objectID": "slides/20/20-chapter16_simulation.html#mathematical-model",
+    "href": "slides/20/20-chapter16_simulation.html#mathematical-model",
+    "title": "Inference for Single Proportion - part 2",
+    "section": "Mathematical Model",
+    "text": "Mathematical Model\nNeeded Conditions\nThe sampling distribution \\(\\hat{p}\\) based on a sample size \\(n\\) from a population with a true proportion \\(p\\) is nearly normal if:\n\nSample’s observations are independent - roughly: observations do not impact another observations\nSuccess-failure condition – we expect to see at least 10 successes and 10 failures.\n\n\\(np \\geq 10\\) and \\(n(1-p) \\geq 10\\)"
+  },
+  {
+    "objectID": "slides/20/20-chapter16_simulation.html#standard-error-formula-new",
+    "href": "slides/20/20-chapter16_simulation.html#standard-error-formula-new",
+    "title": "Inference for Single Proportion - part 2",
+    "section": "Standard Error Formula (new)",
+    "text": "Standard Error Formula (new)\nIf conditions are met then distribution of \\(\\hat{p}\\) is nearly normal with variability given by the standard error\n\\[\nSE = \\sqrt{ \\frac{p(1- p)}{n}}\n\\] Note we (usually) don’t know \\(p\\) (it’s the population parameter) so we use our best guess for \\(p\\) intead:\n\nFor hypothesis testing, use \\(p_0\\) (null hypothesis)\nFor confidence intervals, use \\(\\hat{p}\\)"
+  },
+  {
+    "objectID": "slides/20/20-chapter16_simulation.html#confidence-interval",
+    "href": "slides/20/20-chapter16_simulation.html#confidence-interval",
+    "title": "Inference for Single Proportion - part 2",
+    "section": "Confidence Interval",
+    "text": "Confidence Interval\n\\[\n\\mbox{point estimate} \\pm z^\\ast * SE\n\\]\n\\(z^\\ast * SE\\) is the margin of error\n\\(z^\\ast\\) is determined by the desired confidence level."
+  },
+  {
+    "objectID": "slides/20/20-chapter16_simulation.html#confidence-level",
+    "href": "slides/20/20-chapter16_simulation.html#confidence-level",
+    "title": "Inference for Single Proportion - part 2",
+    "section": "Confidence Level",
+    "text": "Confidence Level\n\n95% confidence level means \\(z^\\ast = 1.96\\)"
+  },
+  {
+    "objectID": "slides/20/20-chapter16_simulation.html#example-confidence-interval",
+    "href": "slides/20/20-chapter16_simulation.html#example-confidence-interval",
+    "title": "Inference for Single Proportion - part 2",
+    "section": "Example: confidence interval",
+    "text": "Example: confidence interval\n\n\nIn survey of 3290 Portland residents, 48.3% of respondents say that homelessness is Portland’s greatest challenge.\n\n\n\nAre CLT conditions met?\n\nAre observations independent? Yes - random sample\nSuccess/failure? Yes\n\n\\(np = 3290*0.483 = 1589 \\geq 10\\)\n\\(n(1-p) = 3290 * (1 - 0.483) = 1701 \\geq 10\\)"
+  },
+  {
+    "objectID": "slides/20/20-chapter16_simulation.html#example-confidence-interval-1",
+    "href": "slides/20/20-chapter16_simulation.html#example-confidence-interval-1",
+    "title": "Inference for Single Proportion - part 2",
+    "section": "Example: confidence interval",
+    "text": "Example: confidence interval\n\n\nIn survey of 3290 Portland residents, 48.3% of respondents say that homelessness is Portland’s greatest challenge.\n\n\n\\[\n    SE = \\sqrt{ \\frac{p(1- p)}{n}} = \\sqrt{ \\frac{ 0.483(1-0.483)}{3290}} = 0.009\n\\] Margin of error \\[\np^\\ast \\times SE = 1.96\\times 0.009 = 0.018\n\\]"
+  },
+  {
+    "objectID": "slides/20/20-chapter16_simulation.html#example-confidence-interval-2",
+    "href": "slides/20/20-chapter16_simulation.html#example-confidence-interval-2",
+    "title": "Inference for Single Proportion - part 2",
+    "section": "Example: confidence interval",
+    "text": "Example: confidence interval\n\n\nIn survey of 3290 Portland residents, 48.3% of respondents say that homelessness is Portland’s greatest challenge.\n\n\nWe are 95% confident that the true proportion of Portlanders who agree that homelessness is the city’s greatest challenge\n\\[\n0.483 \\pm 0.018\n\\]"
+  },
+  {
+    "objectID": "slides/20/20-chapter16_simulation.html#hypothesis-test-for-single-proportion",
+    "href": "slides/20/20-chapter16_simulation.html#hypothesis-test-for-single-proportion",
+    "title": "Inference for Single Proportion - part 2",
+    "section": "Hypothesis Test for single proportion",
+    "text": "Hypothesis Test for single proportion\nZ-score tells us how the sample proportion (\\(\\hat{p}\\)) differs from the hypothesized proportion (\\(p_0\\))\n\\[\nZ = \\frac{ \\hat{p} - p_0}{SE} = \\frac{ \\hat{p} - p_0}{\\sqrt{p_0(1-p_0)/n}}\n\\]"
+  },
+  {
+    "objectID": "slides/20/20-chapter16_simulation.html#example",
+    "href": "slides/20/20-chapter16_simulation.html#example",
+    "title": "Inference for Single Proportion - part 2",
+    "section": "Example",
+    "text": "Example\n\nSupporters of ballot measure that would impose stricter regulations on payday lenders commissioned a survey that asked 826 random voters if they supported such a measure. The survey found that 51% of respondents said they did support it. Is there convincing evidence to say that voters support this measure?"
+  },
+  {
+    "objectID": "slides/20/20-chapter16_simulation.html#example-hypotheses",
+    "href": "slides/20/20-chapter16_simulation.html#example-hypotheses",
+    "title": "Inference for Single Proportion - part 2",
+    "section": "Example: hypotheses",
+    "text": "Example: hypotheses\nNull hypothesis: voters are indifferent (neither support nor oppose) \\[\np_0 = 0.5\n\\]\nAlternative hypothesis: voters support \\[\np_0 &gt; 0.5\n\\]"
+  },
+  {
+    "objectID": "slides/20/20-chapter16_simulation.html#example-conditions",
+    "href": "slides/20/20-chapter16_simulation.html#example-conditions",
+    "title": "Inference for Single Proportion - part 2",
+    "section": "Example: conditions",
+    "text": "Example: conditions\n\nindependent\nsuccess/failure\n\n\\(np = 825*0.5 = 413 \\geq 10\\)\n\\(n(1-p) = 825*0.5 = 413 \\geq 10\\)"
+  },
+  {
+    "objectID": "slides/20/20-chapter16_simulation.html#example-standard-error",
+    "href": "slides/20/20-chapter16_simulation.html#example-standard-error",
+    "title": "Inference for Single Proportion - part 2",
+    "section": "Example: standard error",
+    "text": "Example: standard error\n\\[\nSE = \\sqrt{ \\frac{ p_0(1-p_0)}{n}} = \\sqrt{ \\frac{0.5(1-0.5)}{826}} = 0.017\n\\]"
+  },
+  {
+    "objectID": "slides/20/20-chapter16_simulation.html#example-z-score",
+    "href": "slides/20/20-chapter16_simulation.html#example-z-score",
+    "title": "Inference for Single Proportion - part 2",
+    "section": "Example: Z-score",
+    "text": "Example: Z-score\n\\[\nZ = \\frac{ \\hat{p} - p_0}{SE}  = \\frac{ 0.51 - 0.50}{0.017} = 0.59\n\\]"
+  },
+  {
+    "objectID": "slides/20/20-chapter16_simulation.html#example-find-p-value",
+    "href": "slides/20/20-chapter16_simulation.html#example-find-p-value",
+    "title": "Inference for Single Proportion - part 2",
+    "section": "Example: find p-value",
+    "text": "Example: find p-value\n\n\n\n\n\n\n\n\n\n\n1 - pnorm(0.59, mean = 0, sd = 1 )\n\n[1] 0.2775953\n\n\nBecause p-value is larger than 0.05, we do not reject \\(H_0\\). There is not convincing evidence that there is support for this measure."
+  },
+  {
+    "objectID": "slides/20/20-chapter16_simulation.html#what-if-conditions-for-clt-are-not-met",
+    "href": "slides/20/20-chapter16_simulation.html#what-if-conditions-for-clt-are-not-met",
+    "title": "Inference for Single Proportion - part 2",
+    "section": "What if conditions for CLT are not met?",
+    "text": "What if conditions for CLT are not met?\n\nIndependence?\nneed more advanced methods (beyond scope of our class)\nSmall sample size?\nUse simulations – next time!"
+  },
+  {
+    "objectID": "slides/20/20-chapter16_simulation.html#new-slide",
+    "href": "slides/20/20-chapter16_simulation.html#new-slide",
+    "title": "Inference for Single Proportion - part 2",
+    "section": "new slide",
+    "text": "new slide\nWe will take a closer look at inference methods in different contexts:\n\nCh 16: Single Proportion\nCh 17: Two Proportions\nCh 18: Two-way tables (multiple proportions)\nCh 19: Single Mean"
+  },
+  {
+    "objectID": "slides/20/20-chapter16_simulation.html#state-the-null-hypothesis",
+    "href": "slides/20/20-chapter16_simulation.html#state-the-null-hypothesis",
+    "title": "Inference for Single Proportion - part 2",
+    "section": "State the null hypothesis",
+    "text": "State the null hypothesis\nClaim is that \\(\\hat{p}\\) is less than then national average of 0.1\n\n\\(H_0: p = 0.1\\)\n\\(H_A: p &lt; 0.1\\)"
+  },
+  {
+    "objectID": "slides/20/20-chapter16_simulation.html#check-conditions-for-clt",
+    "href": "slides/20/20-chapter16_simulation.html#check-conditions-for-clt",
+    "title": "Inference for Single Proportion - part 2",
+    "section": "Check conditions for CLT",
+    "text": "Check conditions for CLT\n\nIndependent? yes\nLarge enough sample size? no!\n\\(n p_0 = 62 \\cdot 0.1 = 6.2\\)\n\\(n (1-p_0) = 62 \\cdot 0.9 = 55.8\\)\n\n\n\nWhat happens if we ignore this?"
+  },
+  {
+    "objectID": "slides/20/20-chapter16_simulation.html#calculate-z",
+    "href": "slides/20/20-chapter16_simulation.html#calculate-z",
+    "title": "Inference for Single Proportion - part 2",
+    "section": "Calculate Z",
+    "text": "Calculate Z\n\\[\nSE = \\sqrt{ \\frac{p_0 (1-p_0)}{n}} =  \\sqrt{\\frac{0.1 \\cdot 0.9}{62}} = 0.038\n\\] \\[\nZ = \\frac{\\hat{p} - p_0}{SE} = \\frac{ 0.048 - 0.1}{0.038} = -1.37\n\\]"
+  },
+  {
+    "objectID": "slides/20/20-chapter16_simulation.html#find-p-value",
+    "href": "slides/20/20-chapter16_simulation.html#find-p-value",
+    "title": "Inference for Single Proportion - part 2",
+    "section": "Find p-value",
+    "text": "Find p-value\n\n\n\n\n\n\n\n\n\n\npnorm(-1.37)\n\n[1] 0.08534345"
+  },
+  {
+    "objectID": "slides/20/20-chapter16_simulation.html#find-p-value-for-z--1.37",
+    "href": "slides/20/20-chapter16_simulation.html#find-p-value-for-z--1.37",
+    "title": "Inference for Single Proportion - part 2",
+    "section": "Find p-value for Z = -1.37",
+    "text": "Find p-value for Z = -1.37\n\n\n\n\n\n\n\n\n\n\npnorm(-1.37)\n\n[1] 0.08534345"
+  },
+  {
+    "objectID": "slides/20/20-chapter16_simulation.html#compare-to-discernment-level-alpha-0.05",
+    "href": "slides/20/20-chapter16_simulation.html#compare-to-discernment-level-alpha-0.05",
+    "title": "Inference for Single Proportion - part 2",
+    "section": "Compare to discernment level \\(\\alpha = 0.05\\)",
+    "text": "Compare to discernment level \\(\\alpha = 0.05\\)\nSince p-value (0.085) is larger than \\(\\alpha\\), we do not have evidence to reject the null hypothesis.\n\n\nWe do not have evidence to conclude that our consultant’s complication rate is significantly below the nationa average.\n\nBUT WAIT!"
+  },
+  {
+    "objectID": "slides/20/20-chapter16_simulation.html#compare-to-discernment-level",
+    "href": "slides/20/20-chapter16_simulation.html#compare-to-discernment-level",
+    "title": "Inference for Single Proportion - part 2",
+    "section": "Compare to discernment level",
+    "text": "Compare to discernment level\nSuppose \\(\\alpha = 0.1\\) (trying to avoid Type II errors)\n\n\nSince p-value (0.085) is less than \\(\\alpha\\), we do have evidence to reject the null hypothesis.\n\n\nWe think that our consultant’s complication rate is significantly below the national average.\n\nBUT WAIT!\nCLT isn’t valid!!"
+  },
+  {
+    "objectID": "slides/20/20-chapter16_simulation.html#we-know-that-clt-should-not-be-used",
+    "href": "slides/20/20-chapter16_simulation.html#we-know-that-clt-should-not-be-used",
+    "title": "Inference for Single Proportion - part 2",
+    "section": "We know that CLT should not be used!",
+    "text": "We know that CLT should not be used!\nWhat is the actual p-value?? Do a simulation!!\n\n\n\n\n\n\n\n\n\n# A tibble: 1 × 1\n  p_value\n    &lt;dbl&gt;\n1   0.123"
+  },
+  {
+    "objectID": "slides/20/20-chapter16_simulation.html#what-is-the-actual-p-value",
+    "href": "slides/20/20-chapter16_simulation.html#what-is-the-actual-p-value",
+    "title": "Inference for Single Proportion - part 2",
+    "section": "What is the actual p-value??",
+    "text": "What is the actual p-value??\n\nvisualize(null_dist) +\n  shade_p_value(obs_stat = 0.0484, direction = \"less\")\n\n\n\n\n\n\n\n\n\nget_p_value(null_dist, obs_stat = 0.0484, direction = \"less\")\n\n# A tibble: 1 × 1\n  p_value\n    &lt;dbl&gt;\n1   0.123"
+  },
+  {
+    "objectID": "slides/20/20-chapter16_simulation.html#simulated-null-distribution",
+    "href": "slides/20/20-chapter16_simulation.html#simulated-null-distribution",
+    "title": "Inference for Single Proportion - part 2",
+    "section": "Simulated Null-Distribution",
+    "text": "Simulated Null-Distribution\n\nvisualize(null_dist) +\n  shade_p_value(obs_stat = 0.0484, direction = \"less\")"
+  },
+  {
+    "objectID": "slides/20/20-chapter16_simulation.html#actual-p-value",
+    "href": "slides/20/20-chapter16_simulation.html#actual-p-value",
+    "title": "Inference for Single Proportion - part 2",
+    "section": "Actual p-value?",
+    "text": "Actual p-value?\n\nget_p_value(null_dist, obs_stat = 0.0484, direction = \"less\")\n\n# A tibble: 1 × 1\n  p_value\n    &lt;dbl&gt;\n1   0.121\n\n\n\n\n\nNot less than \\(\\alpha = 0.1\\)\nPreviously had found \\(p = 0.085\\)\nconclusion depends on discernment level as well as how we found p-value"
+  },
+  {
+    "objectID": "slides/20/20-chapter16_simulation.html#discernment-level",
+    "href": "slides/20/20-chapter16_simulation.html#discernment-level",
+    "title": "Inference for Single Proportion - part 2",
+    "section": "Discernment level?",
+    "text": "Discernment level?\n\nType I error: mistakenly reject \\(H_0\\) when it’s true\n\nMisled by false advertising!\nMake \\(\\alpha\\) smaller to avoid\n\nType II error: mistakenly fail to reject \\(H_0\\) when it’s false\n\nBeing cautious leads to missing out on above average care.\nMake \\(\\alpha\\) larger to avoid"
   }
 ]
