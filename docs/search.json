@@ -3726,7 +3726,12 @@
     "href": "slides/20/20-chapter16_simulation.html#medical-consultant-example",
     "title": "Inference for Single Proportion - part 2",
     "section": "Medical consultant example…",
-    "text": "Medical consultant example…\n\n\n\nA consultant tried to attract patients by noting the average complication rate for liver donor surgeries in the US is about 10%, but her clients have had only 3 complications in the 62 liver donor surgeries she has facilitated. She claims this is strong evidence that her work meaningfully contributes to reducing complications (and therefore she should be hired!).\n\\[\n\\hat{p} = \\frac{3}{62} = 0.048\n\\]"
+    "text": "Medical consultant example…\n\n\n\nA consultant tried to attract patients by noting the average complication rate for liver donor surgeries in the US is about 10%, but her clients have had only 3 complications in the 62 liver donor surgeries she has facilitated. She claims this is strong evidence that her work meaningfully contributes to reducing complications (and therefore she should be hired!).\n\\[\n\\hat{p} = \\frac{3}{62} = 0.048\n\\]",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Thursday, Week 10"
+    ]
   },
   {
     "objectID": "slides/20/20-chapter16_simulation.html#recall-our-hypothesis-testing-framework",
@@ -3859,21 +3864,36 @@
     "href": "slides/20/20-chapter16_simulation.html#state-the-null-hypothesis",
     "title": "Inference for Single Proportion - part 2",
     "section": "State the null hypothesis",
-    "text": "State the null hypothesis\nClaim is that \\(\\hat{p}\\) is less than then national average of 0.1\n\n\\(H_0: p = 0.1\\)\n\\(H_A: p &lt; 0.1\\)"
+    "text": "State the null hypothesis\nClaim is that \\(\\hat{p}\\) is less than then national average of 0.1\n\n\\(H_0: p = 0.1\\)\n\\(H_A: p &lt; 0.1\\)",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Thursday, Week 10"
+    ]
   },
   {
     "objectID": "slides/20/20-chapter16_simulation.html#check-conditions-for-clt",
     "href": "slides/20/20-chapter16_simulation.html#check-conditions-for-clt",
     "title": "Inference for Single Proportion - part 2",
     "section": "Check conditions for CLT",
-    "text": "Check conditions for CLT\n\nIndependent? yes\nLarge enough sample size? no!\n\\(n p_0 = 62 \\cdot 0.1 = 6.2\\)\n\\(n (1-p_0) = 62 \\cdot 0.9 = 55.8\\)\n\n\n\nWhat happens if we ignore this?"
+    "text": "Check conditions for CLT\n\nIndependent? yes\nLarge enough sample size? no!\n\\(n p_0 = 62 \\cdot 0.1 = 6.2\\)\n\\(n (1-p_0) = 62 \\cdot 0.9 = 55.8\\)\n\n\n\nWhat happens if we ignore this?",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Thursday, Week 10"
+    ]
   },
   {
     "objectID": "slides/20/20-chapter16_simulation.html#calculate-z",
     "href": "slides/20/20-chapter16_simulation.html#calculate-z",
     "title": "Inference for Single Proportion - part 2",
     "section": "Calculate Z",
-    "text": "Calculate Z\n\\[\nSE = \\sqrt{ \\frac{p_0 (1-p_0)}{n}} =  \\sqrt{\\frac{0.1 \\cdot 0.9}{62}} = 0.038\n\\] \\[\nZ = \\frac{\\hat{p} - p_0}{SE} = \\frac{ 0.048 - 0.1}{0.038} = -1.37\n\\]"
+    "text": "Calculate Z\n\\[\nSE = \\sqrt{ \\frac{p_0 (1-p_0)}{n}} =  \\sqrt{\\frac{0.1 \\cdot 0.9}{62}} = 0.038\n\\] \\[\nZ = \\frac{\\hat{p} - p_0}{SE} = \\frac{ 0.048 - 0.1}{0.038} = -1.37\n\\]",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Thursday, Week 10"
+    ]
   },
   {
     "objectID": "slides/20/20-chapter16_simulation.html#find-p-value",
@@ -3887,7 +3907,12 @@
     "href": "slides/20/20-chapter16_simulation.html#find-p-value-for-z--1.37",
     "title": "Inference for Single Proportion - part 2",
     "section": "Find p-value for Z = -1.37",
-    "text": "Find p-value for Z = -1.37\n\n\n\n\n\n\n\n\n\n\npnorm(-1.37)\n\n[1] 0.08534345"
+    "text": "Find p-value for Z = -1.37\n\n\n\n\n\n\n\n\n\n\npnorm(-1.37)\n\n[1] 0.08534345",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Thursday, Week 10"
+    ]
   },
   {
     "objectID": "slides/20/20-chapter16_simulation.html#compare-to-discernment-level-alpha-0.05",
@@ -3901,7 +3926,12 @@
     "href": "slides/20/20-chapter16_simulation.html#compare-to-discernment-level",
     "title": "Inference for Single Proportion - part 2",
     "section": "Compare to discernment level",
-    "text": "Compare to discernment level\nSuppose \\(\\alpha = 0.1\\) (trying to avoid Type II errors)\n\n\nSince p-value (0.085) is less than \\(\\alpha\\), we do have evidence to reject the null hypothesis.\n\n\nWe think that our consultant’s complication rate is significantly below the national average.\n\nBUT WAIT!\nCLT isn’t valid!!"
+    "text": "Compare to discernment level\nSuppose \\(\\alpha = 0.1\\) (trying to avoid Type II errors)\n\n\nSince p-value (0.085) is less than \\(\\alpha\\), we do have evidence to reject the null hypothesis.\n\n\nWe think that our consultant’s complication rate is significantly below the national average.\n\nBUT WAIT!\nCLT isn’t valid!!",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Thursday, Week 10"
+    ]
   },
   {
     "objectID": "slides/20/20-chapter16_simulation.html#we-know-that-clt-should-not-be-used",
@@ -3922,20 +3952,35 @@
     "href": "slides/20/20-chapter16_simulation.html#simulated-null-distribution",
     "title": "Inference for Single Proportion - part 2",
     "section": "Simulated Null-Distribution",
-    "text": "Simulated Null-Distribution\n\nvisualize(null_dist) +\n  shade_p_value(obs_stat = 0.0484, direction = \"less\")"
+    "text": "Simulated Null-Distribution\n\nvisualize(null_dist) +\n  shade_p_value(obs_stat = 0.0484, direction = \"less\")",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Thursday, Week 10"
+    ]
   },
   {
     "objectID": "slides/20/20-chapter16_simulation.html#actual-p-value",
     "href": "slides/20/20-chapter16_simulation.html#actual-p-value",
     "title": "Inference for Single Proportion - part 2",
     "section": "Actual p-value?",
-    "text": "Actual p-value?\n\nget_p_value(null_dist, obs_stat = 0.0484, direction = \"less\")\n\n# A tibble: 1 × 1\n  p_value\n    &lt;dbl&gt;\n1   0.121\n\n\n\n\n\nNot less than \\(\\alpha = 0.1\\)\nPreviously had found \\(p = 0.085\\)\nconclusion depends on discernment level as well as how we found p-value"
+    "text": "Actual p-value?\n\nget_p_value(null_dist, obs_stat = 0.0484, direction = \"less\")\n\n# A tibble: 1 × 1\n  p_value\n    &lt;dbl&gt;\n1   0.121\n\n\n\n\n\nNot less than \\(\\alpha = 0.1\\)\nPreviously had found \\(p = 0.085\\)\nconclusion depends on discernment level as well as how we found p-value",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Thursday, Week 10"
+    ]
   },
   {
     "objectID": "slides/20/20-chapter16_simulation.html#discernment-level",
     "href": "slides/20/20-chapter16_simulation.html#discernment-level",
     "title": "Inference for Single Proportion - part 2",
     "section": "Discernment level?",
-    "text": "Discernment level?\n\nType I error: mistakenly reject \\(H_0\\) when it’s true\n\nMisled by false advertising!\nMake \\(\\alpha\\) smaller to avoid\n\nType II error: mistakenly fail to reject \\(H_0\\) when it’s false\n\nBeing cautious leads to missing out on above average care.\nMake \\(\\alpha\\) larger to avoid"
+    "text": "Discernment level?\n\nType I error: mistakenly reject \\(H_0\\) when it’s true\n\nMisled by false advertising!\nMake \\(\\alpha\\) smaller to avoid\n\nType II error: mistakenly fail to reject \\(H_0\\) when it’s false\n\nBeing cautious leads to missing out on above average care.\nMake \\(\\alpha\\) larger to avoid",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Thursday, Week 10"
+    ]
   }
 ]
