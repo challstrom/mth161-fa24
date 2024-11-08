@@ -3982,5 +3982,29 @@
       "Slides",
       "Thursday, Week 10"
     ]
+  },
+  {
+    "objectID": "projects/project-2_part1.html",
+    "href": "projects/project-2_part1.html",
+    "title": "Project 2",
+    "section": "",
+    "text": "Your final project will consist of analysis on a research question about a dataset of your own choosing. The goal is for you to demonstrate proficiency in the techniques we have covered in this class and apply them to a novel dataset in a meaningful way.\nPart 1 - due Nov. 15th\nFind a dataset and choose a research question.\nPart 2 - due Dec. 6\n\nIf you get me your report by Nov. 27th, I will give you feedback and you will be able to make corrections and resubmit by Dec. 6th.\n\nNote that Dec. 6th is a hard deadline – I will not accept any reports after this.\n\nYou do not need to do an exhaustive data analysis, i.e. do not calculate every statistic and procedure you have learned for every variable, but rather show me that you are proficient at asking meaningful questions and answering them with results of data analysis, that you are proficient in using R, and that you are proficient at interpreting and presenting the results. Focus on methods that help you begin to answer your research questions. You should critique your own methods and provide suggestions for improving your analysis. Issues pertaining to the reliability and validity of your data, and appropriateness of the statistical analysis should be discussed where appropriate.\n\n\n\n\n\n\nNote\n\n\n\nWhile this project is very open ended, you should, at a minimum\n\ncreate some kind of compelling visualization(s) of this data, and\nperform statistical inference and/or fit a model for descriptive or predictive purposes\n\n\n\nYou should stick with R packages and techniques that we have seen in class. (If you want to use content that goes beyond what we’ve discussed in class, you should be prepared to justify how and why it works.) Your report should be clearly written and have meaningful visualizations. A single high-quality visualization is generally better than a large number of poor-quality visualizations. All analyses must be done in RStudio (posit.cloud) and all components of the project must be reproducible.",
+    "crumbs": [
+      "Quick Links",
+      "Projects",
+      "Project 2 -- part 1"
+    ]
+  },
+  {
+    "objectID": "projects/project-2_part1.html#part-1-choose-a-dataset-and-propose-a-question",
+    "href": "projects/project-2_part1.html#part-1-choose-a-dataset-and-propose-a-question",
+    "title": "Project 2",
+    "section": "Part 1: choose a dataset and propose a question",
+    "text": "Part 1: choose a dataset and propose a question\nThe first step is to think about and choose a potential question or topic that you’re interested in and then find a dataset that will help you investigate your question.\nThe dataset you choose should\n\nHave at least 100 observations\nHave at least 5 columns (variables)\n\nYou must credit a source for your data and provide a link to the source.\nAfter you identify a dataset to examine, provide enough background on the dataset for your reader to understand the context for your research question. This might include a snippet of data (using your favorite code), a codebook explaining what the variables are, and/or a calculation that has pointed you to a question about the data that you find compelling: whatever you feel is needed to help frame your research question. Finally, make sure your research question is articulated precisely with clear reference to the variable(s) or parameter(s) of interest. Past AEs, labs, and the first project all contain examples of carefully stated research questions.\nThere is a blank template in Posit Cloud for you to use. Please submit a PDF of Part I on Moodle by Nov 15th.\n\nResources for datasets\nYou are welcome to use a dataset that we’ve seen in class, as long as your research question is a new one and your dataset meets the above requirements. Many of the datasets featured in our textbook can be found here:\n\nOpenintro (datasets featured in the textbook)\n\nHere is a short list of sources for interesting datasets in easy-to-access formats. This is a good place to start if you don’t have a particular topic in mind, but just want to browse for an interesting dataset.\n\nAwesome public datasets\nCORGIS: The Collection of Really Great, Interesting, Situated Datasets\nTidyTuesday\n\nFinally, here are some other sources. Warning - many of these sites can be challenging to navigate! If you want help finding or downloading a particular dataset, just let me know.\n\nCDC\nData.gov\nData is Plural\nDurham Open Data Portal\nElection Studies\nEuropean Statistics\nGeneral Social Survey\nGoogle Dataset Search\nHarvard Dataverse\nInternational Monetary Fund\nIPUMS survey data from around the world\nLos Angeles Open Data\nNational Crime Victimization Survey\nNHS Scotland Open Data\nNYC OpenData\nOpen access to Scotland’s official statistics\nOur World In Data\nPew Research\nStatistics Canada\nThe National Bureau of Economic Research\nUCI Machine Learning Repository\nUK Government Data\nUNICEF Data\nUnited Nations Data\nUnited Nations Statistics Division\nUS Census Data\nUS Government Data\nWorld Bank Data\nYouth Risk Behavior Surveillance System (YRBSS)",
+    "crumbs": [
+      "Quick Links",
+      "Projects",
+      "Project 2 -- part 1"
+    ]
   }
 ]

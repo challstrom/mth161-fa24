@@ -89,6 +89,10 @@ website:
             text: "AE 06 Heart Transplants"
           - href: ae/ae-07/ae-07-lemurs.qmd
             text: "AE 07 Lemurs"
+      - section: "Projects"
+        contents:
+          - href: projects/project-2_part1.qmd
+            text: Project 2 -- part 1
 format:
   html:
     #theme: cosmo
