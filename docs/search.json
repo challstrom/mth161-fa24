@@ -4006,5 +4006,227 @@
       "Projects",
       "Project 2 -- part 1"
     ]
+  },
+  {
+    "objectID": "slides/21/21-Chapter17.html#fish-oils",
+    "href": "slides/21/21-Chapter17.html#fish-oils",
+    "title": "Inference for Two Proportion",
+    "section": "Fish Oils",
+    "text": "Fish Oils\n\nA five year study was conducted to evaluate the effectiveness of fish oils on reducing heart attacks.\n\n\n\n\n\nheart attack\nno event\nTotal\n\n\n\n\nfish oil\n145\n12788\n12933\n\n\nplacebo\n200\n12738\n12938"
+  },
+  {
+    "objectID": "slides/21/21-Chapter17.html#new-slide",
+    "href": "slides/21/21-Chapter17.html#new-slide",
+    "title": "Inference for Two Proportions",
+    "section": "New Slide",
+    "text": "New Slide"
+  },
+  {
+    "objectID": "slides/21/21-Chapter17.html#fish-oil-benefits",
+    "href": "slides/21/21-Chapter17.html#fish-oil-benefits",
+    "title": "Inference for Two Proportions",
+    "section": "Fish Oil Benefits",
+    "text": "Fish Oil Benefits\n\nA five-year experiment was conducted to evaluate the effectiveness of n-3 fatty acid supplements (fish oils) on reducing heart attacks.\n\n\n\n\n\nheart attack\nno event\nTotal\n\n\n\n\nfish oil\n145\n12788\n12933\n\n\nplacebo\n200\n12738\n12938",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 11"
+    ]
+  },
+  {
+    "objectID": "slides/21/21-Chapter17.html#what-is-the-test-statistic",
+    "href": "slides/21/21-Chapter17.html#what-is-the-test-statistic",
+    "title": "Inference for Two Proportion",
+    "section": "What is the test statistic?",
+    "text": "What is the test statistic?\nWere interested in the difference of two proportions\n\\[\\hat{p}_f = \\frac{145}{12933} = 0.0112\\] \\[\\hat{p}_p = \\frac{200}{12938} = 0.0155\\]"
+  },
+  {
+    "objectID": "slides/21/21-Chapter17.html#test-statistic",
+    "href": "slides/21/21-Chapter17.html#test-statistic",
+    "title": "Inference for Two Proportions",
+    "section": "Test statistic",
+    "text": "Test statistic\nWe’re interested in the difference of two proportions\n\\[\\hat{p}_{1} = \\frac{145}{12933} = 0.0112\\] \\[\\hat{p}_{2} = \\frac{200}{12938} = 0.0155\\] \\[\n\\hat{p}_{1} - \\hat{p}_{2} = 0.0112-0.0155 = -0.0043\n\\] Is this observed difference significant? Or is it the result of random variation?",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 11"
+    ]
+  },
+  {
+    "objectID": "slides/21/21-Chapter17.html#hypothesis-test",
+    "href": "slides/21/21-Chapter17.html#hypothesis-test",
+    "title": "Inference for Two Proportions",
+    "section": "Hypothesis Test",
+    "text": "Hypothesis Test\n\nNull hypothesis: there is no difference between the two groups \\[\nH_0:  p_1 - p_2 = 0\n\\]\nAlternative hypothesis: patients that took the fish oil supplement had a reduced rate of heart attack \\[\nH_A:  p_1 - p_2 &lt; 0\n\\]\nSpecial case: when \\(H_0\\) is that the proportions are equal, we use a pooled proportion to check conditions and find SE.",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 11"
+    ]
+  },
+  {
+    "objectID": "slides/21/21-Chapter17.html#verify-conditions-for-the-model",
+    "href": "slides/21/21-Chapter17.html#verify-conditions-for-the-model",
+    "title": "Inference for Two Proportions",
+    "section": "Verify conditions for the model",
+    "text": "Verify conditions for the model\n\nIndependent? Yes, this was a randomized study\nLarge enough sample size? Use pooled proportion.\n\n\\[\n\\begin{align}\n\\hat{p}_{\\mbox{pool}} = \\frac{ \\mbox{number of successes}}{\\mbox{number of cases}}\n&=\\frac{\\hat{p}_1 n_1 + \\hat{p}_2 n_2}{n_1 + n_2}\\\\\n&= \\frac{145 + 200}{25871}\n\\end{align}\n\\]\n\\[\n\\hat{p}_{\\mbox{pool}} = 0.0133\n\\]",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 11"
+    ]
+  },
+  {
+    "objectID": "slides/21/21-Chapter17.html#sample-size-continued",
+    "href": "slides/21/21-Chapter17.html#sample-size-continued",
+    "title": "Inference for Two Proportions",
+    "section": "Sample Size, continued",
+    "text": "Sample Size, continued\nUse pooled proportion \\(\\hat{p}_\\mbox{pool}\\) written simply as \\(\\hat{p}\\)\n\n\\(n_1 \\hat{p} \\geq 10\\) and \\(n_1 (1 - \\hat{p}) \\geq 10\\)\n\\(n_2 \\hat{p} \\geq 10\\) and \\(n_2 (1 - \\hat{p}) \\geq 10\\)\n\nIn this example,\n\n\\(12933 * 0.0133 = 172\\)\n\\(12933 * (1-0.0133)\\)\n\\(12938 * 0.0133\\)\n\\(12938 * (1-0.0133)\\)",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 11"
+    ]
+  },
+  {
+    "objectID": "slides/21/21-Chapter17.html#standard-error",
+    "href": "slides/21/21-Chapter17.html#standard-error",
+    "title": "Inference for Two Proportion",
+    "section": "Standard Error",
+    "text": "Standard Error\nFor difference of two proportions, new formula using pooled proportion\n\\[\nSE = \\sqrt{ \\hat{p}(1- \\hat{p}) \\left ( \\frac{1}{n_1} + \\frac{1}{n_2} \\right ) }\n\\] ## Test Statistic \\[\nZ = \\frac{ (\\hat{p}_1 - \\hat{p}_2)}{ SE}\n\\]"
+  },
+  {
+    "objectID": "slides/21/21-Chapter17.html#standard-error-and-z-score",
+    "href": "slides/21/21-Chapter17.html#standard-error-and-z-score",
+    "title": "Inference for Two Proportions",
+    "section": "Standard Error and Z-score",
+    "text": "Standard Error and Z-score\nFor difference of two proportions, we use our new formula with the pooled proportion for both groups\n\\[\nSE = \\sqrt{ \\frac{\\hat{p}_1(1-\\hat{p}_1)}{n_1} + \\frac{\\hat{p}_2(1-\\hat{p}_2)}{n_2}  }\\\\\n= \\sqrt{ \\hat{p}(1- \\hat{p}) \\left ( \\frac{1}{n_1} + \\frac{1}{n_2} \\right ) }\n\\] \\[\n\\begin{align}\nSE &=\n\\sqrt{ 0.0133(1-0.0133)\\left ( \\frac{1}{12933} + \\frac{1}{12938} \\right )} \\\\\n&= 0.0014\n\\end{align}\n\\]",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 11"
+    ]
+  },
+  {
+    "objectID": "slides/21/21-Chapter17.html#calculate-z-score",
+    "href": "slides/21/21-Chapter17.html#calculate-z-score",
+    "title": "Inference for Two Proportions",
+    "section": "Calculate Z-score",
+    "text": "Calculate Z-score\n\\[\n\\begin{align}\nZ = \\frac{ (\\hat{p}_1 - \\hat{p}_2)}{ SE} &= \\frac{ (\\hat{p}_1 - \\hat{p}_2)}{ \\sqrt{ \\hat{p}(1- \\hat{p}) \\left ( \\frac{1}{n_1} + \\frac{1}{n_2} \\right ) }} \\\\\n&= \\frac{ -0.0043}{0.0014} \\\\\n&= -3.071\n\\end{align}\n\\]",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 11"
+    ]
+  },
+  {
+    "objectID": "slides/21/21-Chapter17.html#z-score",
+    "href": "slides/21/21-Chapter17.html#z-score",
+    "title": "Inference for Two Proportion",
+    "section": "Z-Score",
+    "text": "Z-Score\nZ-score\n\\[\nZ = \\frac{ (\\hat{p}_1 - \\hat{p}_2)}{ SE}\n\\]"
+  },
+  {
+    "objectID": "slides/21/21-Chapter17.html#p-value",
+    "href": "slides/21/21-Chapter17.html#p-value",
+    "title": "Inference for Two Proportions",
+    "section": "p-value",
+    "text": "p-value\nHow unlikely is it to observe a Z-score of -3.071, or more extreme?\n\n\n\n\n\n\n\n\n\n\npnorm(-3.07)\n\n[1] 0.001070294",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 11"
+    ]
+  },
+  {
+    "objectID": "slides/21/21-Chapter17.html#state-conclusion",
+    "href": "slides/21/21-Chapter17.html#state-conclusion",
+    "title": "Inference for Two Proportion",
+    "section": "State conclusion",
+    "text": "State conclusion\nSince the p-value of 0.001 is less than discernment level \\(\\alpha = 0.05\\), we conclude that we have evidence to reject the null hypothesis. It appears that the observed difference is significant suggesting that fish oil supplements do decrease incidents of heart attacks."
+  },
+  {
+    "objectID": "slides/21/21-Chapter17.html#conclusion",
+    "href": "slides/21/21-Chapter17.html#conclusion",
+    "title": "Inference for Two Proportions",
+    "section": "Conclusion",
+    "text": "Conclusion\nSince the p-value of 0.001 is less than discernment level \\(\\alpha = 0.05\\), we conclude that we have evidence to reject the null hypothesis. It appears that the observed difference is significant suggesting that fish oil supplements do decrease incidents of heart attacks.",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 11"
+    ]
+  },
+  {
+    "objectID": "slides/21/21-Chapter17.html#cpr-blood-thinner-survival-rates",
+    "href": "slides/21/21-Chapter17.html#cpr-blood-thinner-survival-rates",
+    "title": "Inference for Two Proportions",
+    "section": "CPR + blood thinner survival rates",
+    "text": "CPR + blood thinner survival rates\n\nPatients who received CPR (cardiopulmonary resuscitation) after a heart attack were randomly divided into two groups. The treatment group was given a blood thinner, the control group was given none. Did the blood thinner meaningfully impact survival rates (over 24 hours)?\n\n \nCan we use a normal distribution to model this situation? We must check CLT conditions for both groups: treatment and control.",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 11"
+    ]
+  },
+  {
+    "objectID": "slides/21/21-Chapter17.html#cpr-blood-thinner-survival-rates-1",
+    "href": "slides/21/21-Chapter17.html#cpr-blood-thinner-survival-rates-1",
+    "title": "Inference for Two Proportions",
+    "section": "CPR + blood thinner survival rates",
+    "text": "CPR + blood thinner survival rates\n\n\nIndependence? Patients assigned randomly. \\(\\checkmark\\)\nSuccess/failure condition? In both groups (treatment and control) we see at least 10 successes (e.g. survival) and 10 failures. \\(\\checkmark\\)",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 11"
+    ]
+  },
+  {
+    "objectID": "slides/21/21-Chapter17.html#cpr-confidence-interval",
+    "href": "slides/21/21-Chapter17.html#cpr-confidence-interval",
+    "title": "Inference for Two Proportions",
+    "section": "CPR confidence interval",
+    "text": "CPR confidence interval\n\nBuild a 95% confidence interval for the survival rate difference between these two groups.\n\\[\n\\hat{p}_T - \\hat{p}_C = \\frac{14}{40} - \\frac{11}{50} = .35 - .22 = .13\n\\] What does it mean that the difference in proportions is positive?",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 11"
+    ]
+  },
+  {
+    "objectID": "slides/21/21-Chapter17.html#cpr-confidence-interval-1",
+    "href": "slides/21/21-Chapter17.html#cpr-confidence-interval-1",
+    "title": "Inference for Two Proportions",
+    "section": "CPR confidence interval",
+    "text": "CPR confidence interval\nNEW! Standard error calculation now also involves both groups: \\[\n\\begin{align}\nSE &= \\sqrt{ \\frac{\\hat{p}_1(1-\\hat{p}_1)}{n_1} + \\frac{\\hat{p}_2(1-\\hat{p}_2)}{n_2}  }\\\\\n{~~~~~~~} &= \\sqrt{ \\frac{.35(1-.35)}{40} + \\frac{.22(1-.22)}{50}  } \\\\\n&= .095496\n\\end{align}\n\\]",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 11"
+    ]
+  },
+  {
+    "objectID": "slides/21/21-Chapter17.html#building-the-confidence-interval",
+    "href": "slides/21/21-Chapter17.html#building-the-confidence-interval",
+    "title": "Inference for Two Proportions",
+    "section": "Building the confidence interval",
+    "text": "Building the confidence interval\nWe found \\(\\hat{p}_T - \\hat{p}_C = .13\\) and SE = .095\n\n\\[\n\\begin{align}\n\\textrm{CI} &= \\textrm{point estimate} \\pm \\textrm{margin of error}\\\\\n&= \\textrm{point estimate} \\pm \\, z^* \\cdot SE \\\\\n&= .13 \\pm 1.96(.095) \\\\\n&= .13 \\pm .1862 \\\\\n&= (-.0562, .3162)\n\\end{align}\n\\] Where did this \\(z^*\\) come from?\nInterpret what this interval tells us.",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 11"
+    ]
+  },
+  {
+    "objectID": "slides/21/21-Chapter17.html#visualizing-the-confidence-interval",
+    "href": "slides/21/21-Chapter17.html#visualizing-the-confidence-interval",
+    "title": "Inference for Two Proportions",
+    "section": "Visualizing the confidence interval",
+    "text": "Visualizing the confidence interval\n\nopenintro::normTail(m=.13, s=.095, M= c(-.056, .316))",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 11"
+    ]
   }
 ]
