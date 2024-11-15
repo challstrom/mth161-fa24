@@ -93,8 +93,8 @@ website:
             text: "AE 07 Lemurs"
       - section: "Projects"
         contents:
-          - href: projects/project-2_part1.qmd
-            text: Project 2 -- part 1
+          - href: projects/project-2.qmd
+            text: Project 2
 format:
   html:
     #theme: cosmo
