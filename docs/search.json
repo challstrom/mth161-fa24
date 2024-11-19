@@ -4161,8 +4161,8 @@
     "objectID": "slides/21/21-Chapter17.html#cpr-blood-thinner-survival-rates",
     "href": "slides/21/21-Chapter17.html#cpr-blood-thinner-survival-rates",
     "title": "Inference for Two Proportions",
-    "section": "CPR + blood thinner survival rates",
-    "text": "CPR + blood thinner survival rates\n\nPatients who received CPR (cardiopulmonary resuscitation) after a heart attack were randomly divided into two groups. The treatment group was given a blood thinner, the control group was given none. Did the blood thinner meaningfully impact survival rates (over 24 hours)?\n\n \nCan we use a normal distribution to model this situation? We must check CLT conditions for both groups: treatment and control.",
+    "section": "",
+    "text": "Patients who received CPR (cardiopulmonary resuscitation) after a heart attack were randomly divided into two groups. The treatment group was given a blood thinner, the control group was given none. Did the blood thinner meaningfully impact survival rates (over 24 hours)?\n\n \nCan we use a normal distribution to model this situation? We must check CLT conditions for both groups: treatment and control.",
     "crumbs": [
       "Quick Links",
       "Slides",
@@ -4263,6 +4263,294 @@
       "Quick Links",
       "Projects",
       "Project 2"
+    ]
+  },
+  {
+    "objectID": "slides/23/23-Chapter18.html#two-way-tables",
+    "href": "slides/23/23-Chapter18.html#two-way-tables",
+    "title": "Inference for two-way tables",
+    "section": "Two-Way Tables",
+    "text": "Two-Way Tables\nIn Chapters 16 and 17, we looked at proportions measured across two groups - i.e. success and failure\nNow, consider variables that have more than two possible options. This means that there is not a single population parameter to look at.",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 12"
+    ]
+  },
+  {
+    "objectID": "slides/23/23-Chapter18.html#selling-used-ipod",
+    "href": "slides/23/23-Chapter18.html#selling-used-ipod",
+    "title": "Inference for two-way tables",
+    "section": "Selling used iPod",
+    "text": "Selling used iPod\n\nSeller has a used iPad that is known to have a potential issue (e.g it crashes occationally)\nBuyer provides a prompt: “I’m interested in buying this iPad…”\n\nGeneral: what can you tell me about it?\nPositive Assumption: it doesn’t have any problems, does it?\nNegative Assuumption: What problems does it have?"
+  },
+  {
+    "objectID": "slides/23/23-Chapter18.html#new-slide",
+    "href": "slides/23/23-Chapter18.html#new-slide",
+    "title": "Inference for two-way tables",
+    "section": "New slide",
+    "text": "New slide\n\nIndependence? Patients assigned randomly. \\(\\checkmark\\)\nSuccess/failure condition? In both groups (treatment and control) we see at least 10 successes (e.g. survival) and 10 failures. \\(\\checkmark\\)"
+  },
+  {
+    "objectID": "slides/23/23-Chapter18.html#cpr-confidence-interval",
+    "href": "slides/23/23-Chapter18.html#cpr-confidence-interval",
+    "title": "Inference for two-way tables",
+    "section": "CPR confidence interval",
+    "text": "CPR confidence interval\nBuild a 95% confidence interval for the survival rate difference between these two groups.\n\\[\n\\hat{p}_T - \\hat{p}_C = \\frac{14}{40} - \\frac{11}{50} = .35 - .22 = .13\n\\] What does it mean that the difference in proportions is positive?"
+  },
+  {
+    "objectID": "slides/23/23-Chapter18.html#cpr-confidence-interval-1",
+    "href": "slides/23/23-Chapter18.html#cpr-confidence-interval-1",
+    "title": "Inference for two-way tables",
+    "section": "CPR confidence interval",
+    "text": "CPR confidence interval\nNEW! Standard error calculation now also involves both groups: \\[\n\\begin{align}\nSE &= \\sqrt{ \\frac{\\hat{p}_1(1-\\hat{p}_1)}{n_1} + \\frac{\\hat{p}_2(1-\\hat{p}_2)}{n_2}  }\\\\\n{~~~~~~~} &= \\sqrt{ \\frac{.35(1-.35)}{40} + \\frac{.22(1-.22)}{50}  } \\\\\n&= .095496\n\\end{align}\n\\]"
+  },
+  {
+    "objectID": "slides/23/23-Chapter18.html#building-the-confidence-interval",
+    "href": "slides/23/23-Chapter18.html#building-the-confidence-interval",
+    "title": "Inference for two-way tables",
+    "section": "Building the confidence interval",
+    "text": "Building the confidence interval\nWe found \\(\\hat{p}_T - \\hat{p}_C = .13\\) and SE = .095\n\n\\[\n\\begin{align}\n\\textrm{CI} &= \\textrm{point estimate} \\pm \\textrm{margin of error}\\\\\n&= \\textrm{point estimate} \\pm \\, z^* \\cdot SE \\\\\n&= .13 \\pm 1.96(.095) \\\\\n&= .13 \\pm .1862 \\\\\n&= (-.0562, .3162)\n\\end{align}\n\\] Where did this \\(z^*\\) come from?\nInterpret what this interval tells us."
+  },
+  {
+    "objectID": "slides/23/23-Chapter18.html#visualizing-the-confidence-interval",
+    "href": "slides/23/23-Chapter18.html#visualizing-the-confidence-interval",
+    "title": "Inference for two-way tables",
+    "section": "Visualizing the confidence interval",
+    "text": "Visualizing the confidence interval\n\nopenintro::normTail(m=.13, s=.095, M= c(-.056, .316))"
+  },
+  {
+    "objectID": "slides/23/23-Chapter18.html#fish-oil-benefits",
+    "href": "slides/23/23-Chapter18.html#fish-oil-benefits",
+    "title": "Inference for two-way tables",
+    "section": "Fish Oil Benefits",
+    "text": "Fish Oil Benefits\n\nA five-year experiment was conducted to evaluate the effectiveness of n-3 fatty acid supplements (fish oils) on reducing heart attacks.\n\n\n\n\n\nheart attack\nno event\nTotal\n\n\n\n\nfish oil\n145\n12788\n12933\n\n\nplacebo\n200\n12738\n12938"
+  },
+  {
+    "objectID": "slides/23/23-Chapter18.html#test-statistic",
+    "href": "slides/23/23-Chapter18.html#test-statistic",
+    "title": "Inference for two-way tables",
+    "section": "Test statistic",
+    "text": "Test statistic\nWe’re interested in the difference of two proportions\n\\[\\hat{p}_{1} = \\frac{145}{12933} = 0.0112\\] \\[\\hat{p}_{2} = \\frac{200}{12938} = 0.0155\\] \\[\n\\hat{p}_{1} - \\hat{p}_{2} = 0.0112-0.0155 = -0.0043\n\\] Is this observed difference significant? Or is it the result of random variation?"
+  },
+  {
+    "objectID": "slides/23/23-Chapter18.html#hypothesis-test",
+    "href": "slides/23/23-Chapter18.html#hypothesis-test",
+    "title": "Inference for two-way tables",
+    "section": "Hypothesis Test",
+    "text": "Hypothesis Test\n\nNull hypothesis: there is no difference between the two groups \\[\nH_0:  p_1 - p_2 = 0\n\\]\nAlternative hypothesis: patients that took the fish oil supplement had a reduced rate of heart attack \\[\nH_A:  p_1 - p_2 &lt; 0\n\\]\nSpecial case: when \\(H_0\\) is that the proportions are equal, we use a pooled proportion to check conditions and find SE."
+  },
+  {
+    "objectID": "slides/23/23-Chapter18.html#verify-conditions-for-the-model",
+    "href": "slides/23/23-Chapter18.html#verify-conditions-for-the-model",
+    "title": "Inference for two-way tables",
+    "section": "Verify conditions for the model",
+    "text": "Verify conditions for the model\n\nIndependent? Yes, this was a randomized study\nLarge enough sample size? Use pooled proportion.\n\n\\[\n\\begin{align}\n\\hat{p}_{\\mbox{pool}} = \\frac{ \\mbox{number of successes}}{\\mbox{number of cases}}\n&=\\frac{\\hat{p}_1 n_1 + \\hat{p}_2 n_2}{n_1 + n_2}\\\\\n&= \\frac{145 + 200}{25871}\n\\end{align}\n\\]\n\\[\n\\hat{p}_{\\mbox{pool}} = 0.0133\n\\]"
+  },
+  {
+    "objectID": "slides/23/23-Chapter18.html#sample-size-continued",
+    "href": "slides/23/23-Chapter18.html#sample-size-continued",
+    "title": "Inference for two-way tables",
+    "section": "Sample Size, continued",
+    "text": "Sample Size, continued\nUse pooled proportion \\(\\hat{p}_\\mbox{pool}\\) written simply as \\(\\hat{p}\\)\n\n\\(n_1 \\hat{p} \\geq 10\\) and \\(n_1 (1 - \\hat{p}) \\geq 10\\)\n\\(n_2 \\hat{p} \\geq 10\\) and \\(n_2 (1 - \\hat{p}) \\geq 10\\)\n\nIn this example,\n\n\\(12933 * 0.0133 = 172\\)\n\\(12933 * (1-0.0133)\\)\n\\(12938 * 0.0133\\)\n\\(12938 * (1-0.0133)\\)"
+  },
+  {
+    "objectID": "slides/23/23-Chapter18.html#standard-error-and-z-score",
+    "href": "slides/23/23-Chapter18.html#standard-error-and-z-score",
+    "title": "Inference for two-way tables",
+    "section": "Standard Error and Z-score",
+    "text": "Standard Error and Z-score\nFor difference of two proportions, we use our new formula with the pooled proportion for both groups\n\\[\nSE = \\sqrt{ \\frac{\\hat{p}_1(1-\\hat{p}_1)}{n_1} + \\frac{\\hat{p}_2(1-\\hat{p}_2)}{n_2}  }\\\\\n= \\sqrt{ \\hat{p}(1- \\hat{p}) \\left ( \\frac{1}{n_1} + \\frac{1}{n_2} \\right ) }\n\\] \\[\n\\begin{align}\nSE &=\n\\sqrt{ 0.0133(1-0.0133)\\left ( \\frac{1}{12933} + \\frac{1}{12938} \\right )} \\\\\n&= 0.0014\n\\end{align}\n\\]"
+  },
+  {
+    "objectID": "slides/23/23-Chapter18.html#calculate-z-score",
+    "href": "slides/23/23-Chapter18.html#calculate-z-score",
+    "title": "Inference for two-way tables",
+    "section": "Calculate Z-score",
+    "text": "Calculate Z-score\n\\[\n\\begin{align}\nZ = \\frac{ (\\hat{p}_1 - \\hat{p}_2)}{ SE} &= \\frac{ (\\hat{p}_1 - \\hat{p}_2)}{ \\sqrt{ \\hat{p}(1- \\hat{p}) \\left ( \\frac{1}{n_1} + \\frac{1}{n_2} \\right ) }} \\\\\n&= \\frac{ -0.0043}{0.0014} \\\\\n&= -3.071\n\\end{align}\n\\]"
+  },
+  {
+    "objectID": "slides/23/23-Chapter18.html#p-value",
+    "href": "slides/23/23-Chapter18.html#p-value",
+    "title": "Inference for two-way tables",
+    "section": "p-value",
+    "text": "p-value\nHow unlikely is it to observe a Z-score of -3.071, or more extreme?\n\n\n\n\n\n\n\n\n\n\npnorm(-3.07)\n\n[1] 0.001070294"
+  },
+  {
+    "objectID": "slides/23/23-Chapter18.html#conclusion",
+    "href": "slides/23/23-Chapter18.html#conclusion",
+    "title": "Inference for two-way tables",
+    "section": "Conclusion",
+    "text": "Conclusion\nThis p-value is very very small! \\[\n\\mbox{p-value} = 0.000000000193\n\\] Much smaller than our discernment level \\(\\alpha = 0.05\\). We have evidence to reject the null hypothesis.\n\nThe data provides convincing evidence that the question asked did affect a seller’s likelihood to tell the truth about problems with the iPad.",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 12"
+    ]
+  },
+  {
+    "objectID": "slides/23/23-Chapter18.html#example-selling-used-ipad",
+    "href": "slides/23/23-Chapter18.html#example-selling-used-ipad",
+    "title": "Inference for two-way tables",
+    "section": "Example: selling used iPad",
+    "text": "Example: selling used iPad\n\nSeller has a used iPad that is known to have a potential issue (e.g it crashes occasionally)\nBuyer provides a prompt: “I’m interested in buying this iPad…”\n\nGeneral: … what can you tell me about it?\nPositive Assumption: … it doesn’t have any problems, does it?\nNegative Assumption: … what problems does it have?",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 12"
+    ]
+  },
+  {
+    "objectID": "slides/23/23-Chapter18.html#results",
+    "href": "slides/23/23-Chapter18.html#results",
+    "title": "Inference for two-way tables",
+    "section": "results",
+    "text": "results"
+  },
+  {
+    "objectID": "slides/23/23-Chapter18.html#responses",
+    "href": "slides/23/23-Chapter18.html#responses",
+    "title": "Inference for two-way tables",
+    "section": "Responses",
+    "text": "Responses\nIn response to buyer’s prompt, seller either discloses the known issue or does not.\n\nIs there evidence that there the different prompts lead to a difference in disclosure rate?\nIs the buyer’s question independent of whether the seller disclosed the problem?"
+  },
+  {
+    "objectID": "slides/23/23-Chapter18.html#expected-counts",
+    "href": "slides/23/23-Chapter18.html#expected-counts",
+    "title": "Inference for two-way tables",
+    "section": "Expected Counts",
+    "text": "Expected Counts\nTo help us answer this question, we look at expected counts.\nIf the questions had no impact on what the seller disclosed, we should be able to just look at total number of disclosures out of the total number of cases.\n\\[\n\\frac{61}{219} = 0.2785\n\\]",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 12"
+    ]
+  },
+  {
+    "objectID": "slides/23/23-Chapter18.html#chi-squared",
+    "href": "slides/23/23-Chapter18.html#chi-squared",
+    "title": "Inference for two-way tables",
+    "section": "Chi-squared",
+    "text": "Chi-squared\nFor each group we now calculate \\[\n\\frac{( \\mbox{observed count} - \\mbox{expected count})^2}{\\mbox{expected count}}\n\\] and add them together. This is called the chi-squared test statistic \\(\\chi^2\\).\n\\[\n\\chi^2 = \\sum\\frac{( \\mbox{observed count} - \\mbox{expected count})^2}{\\mbox{expected count}}\n\\]",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 12"
+    ]
+  },
+  {
+    "objectID": "slides/23/23-Chapter18.html#example",
+    "href": "slides/23/23-Chapter18.html#example",
+    "title": "Inference for two-way tables",
+    "section": "Example",
+    "text": "Example\n\n\\[\n\\frac{(2 - 20.33)^2}{20.33} + \\frac{(23-20.33)^2}{20.33}+ \\ldots +\n\\frac{(37-52.67)^2}{52.67}\n\\]\nCheck that this calculation give \\(\\chi^2 = 40.13\\)"
+  },
+  {
+    "objectID": "slides/23/23-Chapter18.html#quiz",
+    "href": "slides/23/23-Chapter18.html#quiz",
+    "title": "Inference for two-way tables",
+    "section": "Quiz",
+    "text": "Quiz\nWhat sound does the “ch” make in the word Christmas?\n\n\nWhy is that?"
+  },
+  {
+    "objectID": "slides/23/23-Chapter18.html#variability-of-chi2",
+    "href": "slides/23/23-Chapter18.html#variability-of-chi2",
+    "title": "Inference for two-way tables",
+    "section": "Variability of \\(\\chi^2\\)",
+    "text": "Variability of \\(\\chi^2\\)\nTo decide if our value of \\(\\chi^2\\) is unusual, we look at its distribution – which is different from the normal distribution we used before.\nLike with the normal distribution, we will use technology (or a table)\nThe exact shape is determined by the degree of freedom of our two-way table."
+  },
+  {
+    "objectID": "slides/23/23-Chapter18.html#degree-of-freedom",
+    "href": "slides/23/23-Chapter18.html#degree-of-freedom",
+    "title": "Inference for two-way tables",
+    "section": "Degree of Freedom",
+    "text": "Degree of Freedom\n\\[\ndf = (\\mbox{\\# of rows} - 1) \\times (\\mbox{\\# of columns} - 1)\n\\]\nIn our example, \\[\ndf = (R - 1)\\times (C-1) = 2*1 = 2\n\\]",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 12"
+    ]
+  },
+  {
+    "objectID": "slides/23/23-Chapter18.html",
+    "href": "slides/23/23-Chapter18.html",
+    "title": "Inference for two-way tables",
+    "section": "",
+    "text": "In Chapters 16 and 17, we looked at proportions measured across two groups - i.e. success and failure\nNow, consider variables that have more than two possible options. This means that there is not a single population parameter to look at."
+  },
+  {
+    "objectID": "slides/23/23-Chapter18.html#section",
+    "href": "slides/23/23-Chapter18.html#section",
+    "title": "Inference for two-way tables",
+    "section": "",
+    "text": "Merry Christmas!\nWhat sound does the “ch” make in the word Christmas?\n\n\nWhy is that?"
+  },
+  {
+    "objectID": "slides/23/23-Chapter18.html#merry-christmas",
+    "href": "slides/23/23-Chapter18.html#merry-christmas",
+    "title": "Inference for two-way tables",
+    "section": "Merry Christmas!",
+    "text": "Merry Christmas!\nWhat sound does the “ch” make in the word Christmas?\n\n\nWhy is that?"
+  },
+  {
+    "objectID": "slides/23/23-Chapter18.html#conditions",
+    "href": "slides/23/23-Chapter18.html#conditions",
+    "title": "Inference for two-way tables",
+    "section": "Conditions",
+    "text": "Conditions\n\nObservations are independent\nSample size is large enough\n\nat least 5 expected counts in each group",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 12"
+    ]
+  },
+  {
+    "objectID": "slides/23/23-Chapter18.html#conclusion-1",
+    "href": "slides/23/23-Chapter18.html#conclusion-1",
+    "title": "Inference for two-way tables",
+    "section": "Conclusion",
+    "text": "Conclusion\nSince the p-value of 0.001 is less than discernment level \\(\\alpha = 0.05\\), we conclude that we have evidence to reject the null hypothesis. It appears that the observed difference is significant suggesting that fish oil supplements do decrease incidents of heart attacks."
+  },
+  {
+    "objectID": "slides/23/23-Chapter18.html#chi-squared-distribution",
+    "href": "slides/23/23-Chapter18.html#chi-squared-distribution",
+    "title": "Inference for two-way tables",
+    "section": "Chi-squared distribution",
+    "text": "Chi-squared distribution\nThe larger the degree of freedom, the longer the right tail extends. The smaller the degrees of freedom, the more peaked the mode on the left becomes.",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 12"
+    ]
+  },
+  {
+    "objectID": "slides/23/23-Chapter18.html#calculate-p-value",
+    "href": "slides/23/23-Chapter18.html#calculate-p-value",
+    "title": "Inference for two-way tables",
+    "section": "Calculate p-value",
+    "text": "Calculate p-value\n\nUse Desmos\nUse R\n\n\n1 - pchisq(40.13, df = 2)\n\n[1] 1.93144e-09\n\n\n\nUse tables"
+  },
+  {
+    "objectID": "slides/23/23-Chapter18.html#tools-to-calculate-p-value-from-a-chi2-distribution",
+    "href": "slides/23/23-Chapter18.html#tools-to-calculate-p-value-from-a-chi2-distribution",
+    "title": "Inference for two-way tables",
+    "section": "Tools to calculate p-value from a \\(\\chi^2\\) distribution",
+    "text": "Tools to calculate p-value from a \\(\\chi^2\\) distribution\n\nUse Desmos\nUse R\n\n\n1 - pchisq(40.13, df = 2)\n\n[1] 1.93144e-09\n\n\n\nUse tables",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 12"
+    ]
+  },
+  {
+    "objectID": "slides/21/21-Chapter17.html",
+    "href": "slides/21/21-Chapter17.html",
+    "title": "Inference for Two Proportions",
+    "section": "",
+    "text": "Patients who received CPR (cardiopulmonary resuscitation) after a heart attack were randomly divided into two groups. The treatment group was given a blood thinner, the control group was given none. Did the blood thinner meaningfully impact survival rates (over 24 hours)?\n\n \nCan we use a normal distribution to model this situation? We must check CLT conditions for both groups: treatment and control.",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 11"
     ]
   }
 ]

@@ -75,6 +75,8 @@ website:
             text: "Thursday, Week 10"
           - href: slides/21/21-Chapter17.qmd
             text: "Tuesday, Week 11" 
+          - href: slides/23/23-Chapter18.qmd
+            text: "Tuesday, Week 12"
       - section: "AE"
         contents:
           - href: ae/ae-01/ae-01-penguins.qmd

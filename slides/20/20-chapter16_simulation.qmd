@@ -9,7 +9,6 @@ editor:
     wrap: 72
 ---
 
-
 ## Medical consultant example...
 
 ```{css, echo = FALSE}
@@ -18,7 +17,12 @@ color: #B8001F;
 }
 ```
 
-A consultant tried to attract patients by noting the average complication rate for liver donor surgeries in the US is about 10%, but her clients have had only 3 complications in the 62 liver donor surgeries she has facilitated. She claims this is strong evidence that her work meaningfully contributes to reducing complications (and therefore she should be hired!).
+A consultant tried to attract patients by noting the average
+complication rate for liver donor surgeries in the US is about 10%, but
+her clients have had only 3 complications in the 62 liver donor
+surgeries she has facilitated. She claims this is strong evidence that
+her work meaningfully contributes to reducing complications (and
+therefore she should be hired!).
 
 $$
 \hat{p} = \frac{3}{62} = 0.048
@@ -26,36 +30,34 @@ $$
 
 ## State the null hypothesis
 
-Claim is that $\hat{p}$ is [less]{.red} than then national average of 0.1
+Claim is that $\hat{p}$ is [less]{.red} than then national average of
+0.1
 
-- $H_0: p = 0.1$
-- $H_A: p < 0.1$
+-   $H_0: p = 0.1$
+-   $H_A: p < 0.1$
 
 ## Discernment level?
 
-- Type I error:  mistakenly reject $H_0$ when it's true
+-   Type I error: mistakenly reject $H_0$ when it's true
 
-  + Misled by false advertising!
-  + Make $\alpha$ smaller to avoid
+    -   Misled by false advertising!
+    -   Make $\alpha$ smaller to avoid
 
-- Type II error:  mistakenly fail to reject $H_0$ when it's false
+-   Type II error: mistakenly fail to reject $H_0$ when it's false
 
-  + Being cautious leads to missing out on above average care.
-  + Make $\alpha$ larger to avoid
-
-
-
+    -   Being cautious leads to missing out on above average care.
+    -   Make $\alpha$ larger to avoid
 
 ## Check conditions for CLT
 
-- Independent? yes
+-   Independent? yes
 
-- Large enough sample size? [no!]{.red}
+-   Large enough sample size? [no!]{.red}
 
     $n p_0 = 62 \cdot 0.1 = 6.2$
-    
+
     $n (1-p_0) = 62 \cdot 0.9 = 55.8$
-    
+
 \
 
 [What happens if we ignore this?]{.red}
@@ -64,8 +66,7 @@ Claim is that $\hat{p}$ is [less]{.red} than then national average of 0.1
 
 $$
 SE = \sqrt{ \frac{p_0 (1-p_0)}{n}} =  \sqrt{\frac{0.1 \cdot 0.9}{62}} = 0.038
-$$
-$$
+$$ $$
 Z = \frac{\hat{p} - p_0}{SE} = \frac{ 0.048 - 0.1}{0.038} = -1.37
 $$
 
@@ -75,6 +76,7 @@ $$
 #| echo: false
 openintro::normTail(m=0, s=1, L=-1.37)
 ```
+
 ```{r}
 pnorm(-1.37)
 ```
@@ -85,20 +87,22 @@ Suppose $\alpha = 0.1$ (trying to avoid Type II errors)
 
 \
 
-Since p-value (0.085) is [less]{.red} than $\alpha$, we [do]{.red} have evidence to reject the null hypothesis.
+Since p-value (0.085) is [less]{.red} than $\alpha$, we [do]{.red} have
+evidence to reject the null hypothesis.
 
 \
 
-We think that our consultant's complication rate is significantly below the national average.
+We think that our consultant's complication rate is significantly below
+the national average.
 
-
-:::{.fragment .center-align}
+::: {.fragment .center-align}
 [BUT WAIT!]{.red}
 
 [CLT isn't valid!!]{.red}
 :::
 
----
+------------------------------------------------------------------------
+
 ### Do a simulation!!
 
 ```{r}
@@ -136,7 +140,7 @@ get_p_value(null_dist, obs_stat = 0.0484, direction = "less")
 
 \
 
-- [Not]{.red} less than $\alpha = 0.1$
-- Previously had found $p = 0.085$ 
-- conclusion depends on discernment level as well as how we found p-value
-
+-   [Not]{.red} less than $\alpha = 0.1$
+-   Previously had found $p = 0.085$
+-   conclusion depends on discernment level as well as how we found
+    p-value

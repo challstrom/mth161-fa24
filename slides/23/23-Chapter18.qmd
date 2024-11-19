@@ -1,0 +1,196 @@
+---
+title: Inference for two-way tables
+subtitle: Chapter 18
+author: ""
+format: revealjs
+auto-stretch: false
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+## Two-Way Tables
+
+In Chapters 16 and 17, we looked at [proportions]{.red} measured across
+[two groups]{.red} - i.e. success and failure
+
+Now, consider variables that have more than two possible options. This
+means that there is not a single population parameter to look at.
+
+## Example: selling used iPad
+
+-   Seller has a used iPad that is known to have a potential issue (e.g
+    it crashes occasionally)
+
+-   Buyer provides a prompt: "I'm interested in buying this iPad..."
+
+    -   [General:]{.red} ... what can you tell me about it?
+    -   [Positive Assumption:]{.red} ... it doesn't have any problems, does
+        it?
+    -   [Negative Assumption:]{.red} ... what problems does it have?
+
+------------------------------------------------------------------------
+
+In response to buyer's prompt, seller either [discloses]{.red} the known
+issue or [does not]{.red}.
+
+![](images/ipad.png){width="100%"}
+
+Is there evidence that there the different prompts lead to a difference
+in disclosure rate?
+
+Is the buyer's question [independent]{.red} of whether the seller
+disclosed the problem?
+
+## Expected Counts
+
+To help us answer this question, we look at [expected counts.]{.red}
+
+If the questions had no impact on what the seller disclosed, we should
+be able to just look at [total]{.red} number of disclosures out of the
+[total]{.red} number of cases.
+
+$$
+\frac{61}{219} = 0.2785
+$$
+
+------------------------------------------------------------------------
+
+Then, using this disclosure rate, what would be the [expected]{.red} number of
+counts in each group?
+
+$$
+73 ( 0.2785) = 20.33
+$$
+
+$$
+73 (1-0.2785) = 52.67
+$$
+
+![](images/ipad_expected.png){width="90%"}
+
+# Merry Christmas!
+
+\
+
+:::{.fragment}
+What sound does the "ch" make in the word [Christmas]{.red}?
+
+Why is that?
+:::
+
+## Chi-squared
+
+For [each group]{.red} we now calculate $$
+\frac{( \mbox{observed count} - \mbox{expected count})^2}{\mbox{expected count}}
+$$ and [add]{.red} them together. This is called the [chi-squared]{.red}
+test statistic $\chi^2$.
+
+$$
+\chi^2 = \sum\frac{( \mbox{observed count} - \mbox{expected count})^2}{\mbox{expected count}}
+$$
+
+## Conditions
+
+-   Observations are independent
+-   Sample size is large enough 
+    - at least 5 expected counts in each
+    group
+
+------------------------------------------------------------------------
+
+![](images/ipad_expected.png){width="100%"}
+
+\begin{multline}
+\chi^2 = \frac{(2 - 20.33)^2}{20.33} + \frac{(23-20.33)^2}{20.33}+ \ldots \\
++ 
+\frac{(37-52.67)^2}{52.67} 
+\end{multline}
+
+------------------------------------------------------------------------
+
+### Did you get $\chi^2 = 40.13$?
+
+\
+
+:::{.fragment}
+Is this value unusual?
+:::
+
+:::{.fragment}
+To decide we look at the [chi-squared distribution]{.red} -- same idea as with normal distribution, but different shape.
+:::
+
+:::{.fragment}
+Use technology (or a table)
+:::
+
+::: fragment
+The exact shape is determined by the [degree of freedom]{.red} of our
+two-way table.
+:::
+
+## Degree of Freedom
+
+$$
+df = (\mbox{\# of rows} - 1) \times (\mbox{\# of columns} - 1)
+$$
+
+In our example, 
+$$
+df = (R - 1)\times (C-1) = 2*1 = 2
+$$
+
+
+------------------------------------------------------------------------
+
+```{r}
+curve(dchisq(x, df = 2), from =0, to = 30)
+```
+
+```{r}
+#| echo: TRUE
+
+1 - pchisq(40.13, df = 2)
+```
+
+## Conclusion
+
+This p-value is very very small! $$
+\mbox{p-value} = 0.000000000193
+$$ Much smaller than our discernment level $\alpha = 0.05$. We have
+evidence to [reject]{.red} the null hypothesis.
+
+:::{.fragment}
+The data provides convincing evidence that the question asked
+[did]{.red} affect a seller’s likelihood to tell the truth about
+problems with the iPad.
+:::
+
+## Chi-squared distribution
+
+The larger the degree of freedom, the longer the right tail extends. The
+smaller the degrees of freedom, the more peaked the mode on the left
+becomes.
+
+![](images/chisquared.png){width="100%"}
+
+## Tools to calculate p-value from a $\chi^2$ distribution
+
+-   [Use Desmos](https://www.desmos.com/calculator/qqyht18fxn)
+
+-   Use R
+
+```{r}
+#| echo: TRUE
+
+1 - pchisq(40.13, df = 2)
+```
+
+-   Use tables
+
+```{css, echo = FALSE}
+.red {
+color: #B8001F;
+}
+```
