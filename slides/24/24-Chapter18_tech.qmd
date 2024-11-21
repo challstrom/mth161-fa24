@@ -13,11 +13,11 @@ editor:
 
 ```{r}
 #| echo: false
+#| message: false
 
 library(tidyverse)
 library(openintro)
 ```
-
 
 In response to buyer's prompt, seller either [discloses]{.red} the known
 issue or [does not]{.red}.
@@ -51,25 +51,23 @@ $$
 
 # How can we make this calculation easier?
 
-## Option 1:  Desmos
-
-
+## Option 1: Desmos
 
 ![](images/desmos1.png){width="90%"}
 
-
 [Link to Desmos Example](https://www.desmos.com/calculator/m9ycqget8k)
-
 
 ## Option 2: Spreadsheet
 
 ![](images/spreadsheet.png){width="60%"}
 
-[Link to Google Sheets](https://docs.google.com/spreadsheets/d/1jmOxUN1RCDDOz_zQYs1MK7PD-I9RWp7lY0rPRV1AVzA/edit?usp=sharing)
+[Link to Google
+Sheets](https://docs.google.com/spreadsheets/d/1jmOxUN1RCDDOz_zQYs1MK7PD-I9RWp7lY0rPRV1AVzA/edit?usp=sharing)
 
 ## Option 3: simple R
 
 ### Make a two-way table
+
 ```{r}
 #| warning: false
 observed <- c(2, 23, 36, 71, 50, 37)
@@ -80,24 +78,29 @@ two_way <- matrix(c(observed, expected), 3, 2)
 two_way
 ```
 
+------------------------------------------------------------------------
 
----
 ### Chi-squared test
 
 ```{r}
 chisq.test(two_way)
 ```
 
-
 ## Larger datasets
 
 For larger datasets, it's not practical to enter numbers by hand!
 
-
-___
+------------------------------------------------------------------------
 
 ### Example
->An experiment was run to evaluate three treatments for Type 2 Diabetes in patients aged 10-17 who were being treated with metformin. The three treatments considered were continued treatment with metformin (met), treatment with metformin combined with rosiglitazone (rosi), or a lifestyle intervention program. Each patient had a primary outcome, which was either lacked glycemic control (failure) or did not lack that control (success). 
+
+> An experiment was run to evaluate three treatments for Type 2 Diabetes
+> in patients aged 10-17 who were being treated with metformin. The
+> three treatments considered were continued treatment with metformin
+> (met), treatment with metformin combined with rosiglitazone (rosi), or
+> a lifestyle intervention program. Each patient had a primary outcome,
+> which was either lacked glycemic control (failure) or did not lack
+> that control (success).
 
 ## two-way (contingency) table
 
@@ -116,7 +119,6 @@ print(diabetes2)
 
 ## Option 4
 
-
 ```{r}
 cont_table <- table(diabetes2$treatment, diabetes2$outcome)
 ```
@@ -132,8 +134,7 @@ cont_table
 chisq.test(cont_table)
 ```
 
-
-## Option 5:  use `infer` package
+## Option 5: use `infer` package
 
 ```{r}
 library(infer)
@@ -141,9 +142,6 @@ library(infer)
 chisq_test(diabetes2, treatment ~ outcome)
 
 ```
-
-
-
 
 ```{css, echo = FALSE}
 .red {
