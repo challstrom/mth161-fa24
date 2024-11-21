@@ -1,0 +1,152 @@
+---
+title: chi-squared tests with technology
+subtitle: Chapter 18
+author: ""
+format: revealjs
+auto-stretch: false
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+## Last time...
+
+```{r}
+#| echo: false
+
+library(tidyverse)
+library(openintro)
+```
+
+
+In response to buyer's prompt, seller either [discloses]{.red} the known
+issue or [does not]{.red}.
+
+![](images/ipad.png){width="100%"}
+
+Is the buyer's question [independent]{.red} of whether the seller
+disclosed the problem?
+
+------------------------------------------------------------------------
+
+We found expected counts for each group...
+
+![](images/ipad_expected.png){width="90%"}
+
+Then calculated $\chi^2$
+
+$$
+\chi^2 = \sum\frac{( O - E)^2}{E}
+$$
+
+## Chi-squared
+
+\begin{multline}
+\chi^2 = \frac{(2 - 20.33)^2}{20.33} + \frac{(23-20.33)^2}{20.33} + \\
+\frac{(36-20.33)^2}{20.33} + 
+\frac{(71 -52.67)^2}{52.67} + \\
+\frac{(50-52.67)^2}{52.67} + \frac{(37-52.67)^2}{52.67} \\
+= 40.13
+\end{multline}
+
+# How can we make this calculation easier?
+
+## Option 1:  Desmos
+
+
+
+![](images/desmos1.png){width="90%"}
+
+
+[Link to Desmos Example](https://www.desmos.com/calculator/m9ycqget8k)
+
+
+## Option 2: Spreadsheet
+
+![](images/spreadsheet.png){width="60%"}
+
+[Link to Google Sheets](https://docs.google.com/spreadsheets/d/1jmOxUN1RCDDOz_zQYs1MK7PD-I9RWp7lY0rPRV1AVzA/edit?usp=sharing)
+
+## Option 3: simple R
+
+### Make a two-way table
+```{r}
+#| warning: false
+observed <- c(2, 23, 36, 71, 50, 37)
+expected <- c(20.33, 20.33, 20.33, 52.67, 52.67, 52.67)
+
+two_way <- matrix(c(observed, expected), 3, 2)
+
+two_way
+```
+
+
+---
+### Chi-squared test
+
+```{r}
+chisq.test(two_way)
+```
+
+
+## Larger datasets
+
+For larger datasets, it's not practical to enter numbers by hand!
+
+
+___
+
+### Example
+>An experiment was run to evaluate three treatments for Type 2 Diabetes in patients aged 10-17 who were being treated with metformin. The three treatments considered were continued treatment with metformin (met), treatment with metformin combined with rosiglitazone (rosi), or a lifestyle intervention program. Each patient had a primary outcome, which was either lacked glycemic control (failure) or did not lack that control (success). 
+
+## two-way (contingency) table
+
+![](images/diabetes.png){width="95%"}
+
+$H_0$: treatment and outcome are independent
+
+$H_A$: there is a difference in outcomes between the treatments
+
+## Load dataset
+
+```{r}
+library(openintro)
+print(diabetes2)
+```
+
+## Option 4
+
+
+```{r}
+cont_table <- table(diabetes2$treatment, diabetes2$outcome)
+```
+
+```{r}
+#| echo: false
+cont_table
+```
+
+\
+
+```{r}
+chisq.test(cont_table)
+```
+
+
+## Option 5:  use `infer` package
+
+```{r}
+library(infer)
+
+chisq_test(diabetes2, treatment ~ outcome)
+
+```
+
+
+
+
+```{css, echo = FALSE}
+.red {
+color: #B8001F;
+}
+```

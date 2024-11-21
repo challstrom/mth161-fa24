@@ -4552,5 +4552,237 @@
       "Slides",
       "Tuesday, Week 11"
     ]
+  },
+  {
+    "objectID": "slides/24/24-Chapter18_tech.html#last-time",
+    "href": "slides/24/24-Chapter18_tech.html#last-time",
+    "title": "chi-squared tests with technology",
+    "section": "Last time…",
+    "text": "Last time…\n\n\n── Attaching core tidyverse packages ────────────────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ──────────────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\nLoading required package: airports\n\nLoading required package: cherryblossom\n\nLoading required package: usdata\n\n\nIn response to buyer’s prompt, seller either discloses the known issue or does not.\n\nIs the buyer’s question independent of whether the seller disclosed the problem?",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Thursday, Week 12"
+    ]
+  },
+  {
+    "objectID": "slides/24/24-Chapter18_tech.html#expected-counts",
+    "href": "slides/24/24-Chapter18_tech.html#expected-counts",
+    "title": "Tech for chi-squared tests",
+    "section": "Expected Counts",
+    "text": "Expected Counts\nWe found expected counts for each group…"
+  },
+  {
+    "objectID": "slides/24/24-Chapter18_tech.html#chi-squared",
+    "href": "slides/24/24-Chapter18_tech.html#chi-squared",
+    "title": "chi-squared tests with technology",
+    "section": "Chi-squared",
+    "text": "Chi-squared\n\\[\\begin{multline}\n\\chi^2 = \\frac{(2 - 20.33)^2}{20.33} + \\frac{(23-20.33)^2}{20.33} + \\\\\n\\frac{(36-20.33)^2}{20.33} +\n\\frac{(71 -52.67)^2}{52.67} + \\\\\n\\frac{(50-52.67)^2}{52.67} + \\frac{(37-52.67)^2}{52.67} \\\\\n= 40.13\n\\end{multline}\\]",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Thursday, Week 12"
+    ]
+  },
+  {
+    "objectID": "slides/24/24-Chapter18_tech.html#conditions",
+    "href": "slides/24/24-Chapter18_tech.html#conditions",
+    "title": "Tech for chi-squared tests",
+    "section": "Conditions",
+    "text": "Conditions\n\nObservations are independent\nSample size is large enough\n\nat least 5 expected counts in each group"
+  },
+  {
+    "objectID": "slides/24/24-Chapter18_tech.html#degree-of-freedom",
+    "href": "slides/24/24-Chapter18_tech.html#degree-of-freedom",
+    "title": "Tech for chi-squared tests",
+    "section": "Degree of Freedom",
+    "text": "Degree of Freedom\n\\[\ndf = (\\mbox{\\# of rows} - 1) \\times (\\mbox{\\# of columns} - 1)\n\\]\nIn our example, \\[\ndf = (R - 1)\\times (C-1) = 2*1 = 2\n\\]"
+  },
+  {
+    "objectID": "slides/24/24-Chapter18_tech.html#conclusion",
+    "href": "slides/24/24-Chapter18_tech.html#conclusion",
+    "title": "Tech for chi-squared tests",
+    "section": "Conclusion",
+    "text": "Conclusion\nThis p-value is very very small! \\[\n\\mbox{p-value} = 0.000000000193\n\\] Much smaller than our discernment level \\(\\alpha = 0.05\\). We have evidence to reject the null hypothesis.\n\nThe data provides convincing evidence that the question asked did affect a seller’s likelihood to tell the truth about problems with the iPad."
+  },
+  {
+    "objectID": "slides/24/24-Chapter18_tech.html#chi-squared-distribution",
+    "href": "slides/24/24-Chapter18_tech.html#chi-squared-distribution",
+    "title": "Tech for chi-squared tests",
+    "section": "Chi-squared distribution",
+    "text": "Chi-squared distribution\nThe larger the degree of freedom, the longer the right tail extends. The smaller the degrees of freedom, the more peaked the mode on the left becomes."
+  },
+  {
+    "objectID": "slides/24/24-Chapter18_tech.html#tools-to-calculate-p-value-from-a-chi2-distribution",
+    "href": "slides/24/24-Chapter18_tech.html#tools-to-calculate-p-value-from-a-chi2-distribution",
+    "title": "Tech for chi-squared tests",
+    "section": "Tools to calculate p-value from a \\(\\chi^2\\) distribution",
+    "text": "Tools to calculate p-value from a \\(\\chi^2\\) distribution\n\nUse Desmos\nUse R\n\n\n1 - pchisq(40.13, df = 2)\n\n[1] 1.93144e-09\n\n\n\nUse tables"
+  },
+  {
+    "objectID": "slides/24/24-Chapter18_tech.html#desmos",
+    "href": "slides/24/24-Chapter18_tech.html#desmos",
+    "title": "chi-squared tests with technology",
+    "section": "Desmos",
+    "text": "Desmos\n\nLink to Desmos Example"
+  },
+  {
+    "objectID": "slides/24/24-Chapter18_tech.html#spreadsheet",
+    "href": "slides/24/24-Chapter18_tech.html#spreadsheet",
+    "title": "chi-squared tests with technology",
+    "section": "Spreadsheet",
+    "text": "Spreadsheet\n\nLink to Google Sheets"
+  },
+  {
+    "objectID": "slides/24/24-Chapter18_tech.html#simple-r",
+    "href": "slides/24/24-Chapter18_tech.html#simple-r",
+    "title": "chi-squared tests with technology",
+    "section": "Simple R",
+    "text": "Simple R\nChi-squared test\n\nchisq.test(dt)\n\n\n    Pearson's Chi-squared test\n\ndata:  dt\nX-squared = 40.128, df = 2, p-value = 1.933e-09"
+  },
+  {
+    "objectID": "slides/24/24-Chapter18_tech.html#chi-squared-test",
+    "href": "slides/24/24-Chapter18_tech.html#chi-squared-test",
+    "title": "Tech for chi-squared tests",
+    "section": "Chi-squared test",
+    "text": "Chi-squared test\n\nchisq.test( dt)\n\n\n    Pearson's Chi-squared test\n\ndata:  dt\nX-squared = 40.128, df = 2, p-value = 1.933e-09"
+  },
+  {
+    "objectID": "slides/24/24-Chapter18_tech.html#simple-r-1",
+    "href": "slides/24/24-Chapter18_tech.html#simple-r-1",
+    "title": "chi-squared tests with technology",
+    "section": "Simple R",
+    "text": "Simple R\nChi-squared test\n\nchisq.test(dt)\n\n\n    Pearson's Chi-squared test\n\ndata:  dt\nX-squared = 40.128, df = 2, p-value = 1.933e-09"
+  },
+  {
+    "objectID": "slides/24/24-Chapter18_tech.html#larger-data-sets",
+    "href": "slides/24/24-Chapter18_tech.html#larger-data-sets",
+    "title": "chi-squared tests with technology",
+    "section": "Larger Data-sets",
+    "text": "Larger Data-sets\nFor larger data sets, it’s not practical to enter numbers by hand!"
+  },
+  {
+    "objectID": "slides/24/24-Chapter18_tech.html#larger-datasets",
+    "href": "slides/24/24-Chapter18_tech.html#larger-datasets",
+    "title": "chi-squared tests with technology",
+    "section": "Larger datasets",
+    "text": "Larger datasets\nFor larger datasets, it’s not practical to enter numbers by hand!",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Thursday, Week 12"
+    ]
+  },
+  {
+    "objectID": "slides/24/24-Chapter18_tech.html#example",
+    "href": "slides/24/24-Chapter18_tech.html#example",
+    "title": "chi-squared tests with technology",
+    "section": "Example",
+    "text": "Example\nAn experiment was run to evaluate three treatments for Type 2 Diabetes in patients aged 10-17 who were being treated with metformin. The three treatments considered were continued treatment with metformin (met), treatment with metformin combined with rosiglitazone (rosi), or a lifestyle intervention program. Each patient had a primary outcome, which was either lacked glycemic control (failure) or did not lack that control (success)."
+  },
+  {
+    "objectID": "slides/24/24-Chapter18_tech.html#two-way-contingency-table",
+    "href": "slides/24/24-Chapter18_tech.html#two-way-contingency-table",
+    "title": "chi-squared tests with technology",
+    "section": "two-way (contingency) table",
+    "text": "two-way (contingency) table\n\n\\(H_0\\): treatment and outcome are independent\n\\(H_A\\): there is a difference in outcomes between the treatments",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Thursday, Week 12"
+    ]
+  },
+  {
+    "objectID": "slides/24/24-Chapter18_tech.html#load-dataset",
+    "href": "slides/24/24-Chapter18_tech.html#load-dataset",
+    "title": "chi-squared tests with technology",
+    "section": "Load dataset",
+    "text": "Load dataset\n\nlibrary(openintro)\nprint(diabetes2)\n\n# A tibble: 699 × 2\n   treatment outcome\n * &lt;fct&gt;     &lt;fct&gt;  \n 1 met       success\n 2 rosi      failure\n 3 rosi      success\n 4 lifestyle success\n 5 met       success\n 6 lifestyle success\n 7 lifestyle success\n 8 rosi      success\n 9 rosi      success\n10 met       failure\n# ℹ 689 more rows",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Thursday, Week 12"
+    ]
+  },
+  {
+    "objectID": "slides/24/24-Chapter18_tech.html#make-a-two-way-table-1",
+    "href": "slides/24/24-Chapter18_tech.html#make-a-two-way-table-1",
+    "title": "chi-squared tests with technology",
+    "section": "Make a two-way table",
+    "text": "Make a two-way table\n\ncont_table &lt;- table(diabetes2$treatment, diabetes2$outcome)\ncont_table\n\n           \n            failure success\n  lifestyle     109     125\n  met           120     112\n  rosi           90     143"
+  },
+  {
+    "objectID": "slides/24/24-Chapter18_tech.html#do-a-chi-squared-test",
+    "href": "slides/24/24-Chapter18_tech.html#do-a-chi-squared-test",
+    "title": "chi-squared tests with technology",
+    "section": "Do a chi-squared test",
+    "text": "Do a chi-squared test\n\nchisq.test(cont_table)\n\n\n    Pearson's Chi-squared test\n\ndata:  cont_table\nX-squared = 8.1645, df = 2, p-value = 0.01687"
+  },
+  {
+    "objectID": "slides/24/24-Chapter18_tech.html#use-infer-package",
+    "href": "slides/24/24-Chapter18_tech.html#use-infer-package",
+    "title": "chi-squared tests with technology",
+    "section": "Use infer package",
+    "text": "Use infer package\n\nlibrary(infer)\n\nchisq_test(diabetes2, treatment ~ outcome)\n\n# A tibble: 1 × 3\n  statistic chisq_df p_value\n      &lt;dbl&gt;    &lt;int&gt;   &lt;dbl&gt;\n1      8.16        2  0.0169"
+  },
+  {
+    "objectID": "slides/24/24-Chapter18_tech.html#option-1-desmos",
+    "href": "slides/24/24-Chapter18_tech.html#option-1-desmos",
+    "title": "chi-squared tests with technology",
+    "section": "Option 1: Desmos",
+    "text": "Option 1: Desmos\n\nLink to Desmos Example",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Thursday, Week 12"
+    ]
+  },
+  {
+    "objectID": "slides/24/24-Chapter18_tech.html#option-2-spreadsheet",
+    "href": "slides/24/24-Chapter18_tech.html#option-2-spreadsheet",
+    "title": "chi-squared tests with technology",
+    "section": "Option 2: Spreadsheet",
+    "text": "Option 2: Spreadsheet\n\nLink to Google Sheets",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Thursday, Week 12"
+    ]
+  },
+  {
+    "objectID": "slides/24/24-Chapter18_tech.html#option-3-simple-r",
+    "href": "slides/24/24-Chapter18_tech.html#option-3-simple-r",
+    "title": "chi-squared tests with technology",
+    "section": "Option 3: simple R",
+    "text": "Option 3: simple R\nMake a two-way table\n\nobserved &lt;- c(2, 23, 36, 71, 50, 37)\nexpected &lt;- c(20.33, 20.33, 20.33, 52.67, 52.67, 52.67)\n\ntwo_way &lt;- matrix(c(observed, expected), 3, 2)\n\ntwo_way\n\n     [,1] [,2]\n[1,]    2   71\n[2,]   23   50\n[3,]   36   37",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Thursday, Week 12"
+    ]
+  },
+  {
+    "objectID": "slides/24/24-Chapter18_tech.html#option-4",
+    "href": "slides/24/24-Chapter18_tech.html#option-4",
+    "title": "chi-squared tests with technology",
+    "section": "Option 4",
+    "text": "Option 4\n\ncont_table &lt;- table(diabetes2$treatment, diabetes2$outcome)\n\n\n\n           \n            failure success\n  lifestyle     109     125\n  met           120     112\n  rosi           90     143\n\n\n\n\n\nchisq.test(cont_table)\n\n\n    Pearson's Chi-squared test\n\ndata:  cont_table\nX-squared = 8.1645, df = 2, p-value = 0.01687",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Thursday, Week 12"
+    ]
+  },
+  {
+    "objectID": "slides/24/24-Chapter18_tech.html#option-5-use-infer-package",
+    "href": "slides/24/24-Chapter18_tech.html#option-5-use-infer-package",
+    "title": "chi-squared tests with technology",
+    "section": "Option 5: use infer package",
+    "text": "Option 5: use infer package\n\nlibrary(infer)\n\nchisq_test(diabetes2, treatment ~ outcome)\n\n# A tibble: 1 × 3\n  statistic chisq_df p_value\n      &lt;dbl&gt;    &lt;int&gt;   &lt;dbl&gt;\n1      8.16        2  0.0169",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Thursday, Week 12"
+    ]
   }
 ]
