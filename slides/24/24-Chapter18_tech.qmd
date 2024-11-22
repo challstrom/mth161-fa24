@@ -71,9 +71,8 @@ Sheets](https://docs.google.com/spreadsheets/d/1jmOxUN1RCDDOz_zQYs1MK7PD-I9RWp7l
 ```{r}
 #| warning: false
 observed <- c(2, 23, 36, 71, 50, 37)
-expected <- c(20.33, 20.33, 20.33, 52.67, 52.67, 52.67)
 
-two_way <- matrix(c(observed, expected), 3, 2)
+two_way <- matrix(observed, 3, 2)
 
 two_way
 ```

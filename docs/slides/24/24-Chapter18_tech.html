@@ -445,11 +445,10 @@
 <h3 id="make-a-two-way-table">Make a two-way table</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>observed <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">23</span>, <span class="dv">36</span>, <span class="dv">71</span>, <span class="dv">50</span>, <span class="dv">37</span>)</span>
-<span id="cb1-2"><a></a>expected <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">20.33</span>, <span class="fl">20.33</span>, <span class="fl">20.33</span>, <span class="fl">52.67</span>, <span class="fl">52.67</span>, <span class="fl">52.67</span>)</span>
-<span id="cb1-3"><a></a></span>
-<span id="cb1-4"><a></a>two_way <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(observed, expected), <span class="dv">3</span>, <span class="dv">2</span>)</span>
-<span id="cb1-5"><a></a></span>
-<span id="cb1-6"><a></a>two_way</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-2"><a></a></span>
+<span id="cb1-3"><a></a>two_way <span class="ot">&lt;-</span> <span class="fu">matrix</span>(observed, <span class="dv">3</span>, <span class="dv">2</span>)</span>
+<span id="cb1-4"><a></a></span>
+<span id="cb1-5"><a></a>two_way</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     [,1] [,2]
 [1,]    2   71

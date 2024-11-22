@@ -4754,7 +4754,7 @@
     "href": "slides/24/24-Chapter18_tech.html#option-3-simple-r",
     "title": "chi-squared tests with technology",
     "section": "Option 3: simple R",
-    "text": "Option 3: simple R\nMake a two-way table\n\nobserved &lt;- c(2, 23, 36, 71, 50, 37)\nexpected &lt;- c(20.33, 20.33, 20.33, 52.67, 52.67, 52.67)\n\ntwo_way &lt;- matrix(c(observed, expected), 3, 2)\n\ntwo_way\n\n     [,1] [,2]\n[1,]    2   71\n[2,]   23   50\n[3,]   36   37",
+    "text": "Option 3: simple R\nMake a two-way table\n\nobserved &lt;- c(2, 23, 36, 71, 50, 37)\n\ntwo_way &lt;- matrix(observed, 3, 2)\n\ntwo_way\n\n     [,1] [,2]\n[1,]    2   71\n[2,]   23   50\n[3,]   36   37",
     "crumbs": [
       "Quick Links",
       "Slides",
