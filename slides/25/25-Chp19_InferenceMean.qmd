@@ -1,0 +1,136 @@
+---
+title: Inference for a single mean
+subtitle: Chapter 19
+author: ""
+format:
+  revealjs:
+    html-math-method: mathjax
+    transition: fade
+    slide-number: true
+    chalkboard: true
+editor: visual
+execute:
+  freeze: auto
+  echo: true
+  warning: false
+---
+
+## Inference with [*numerical*]{.red} variables
+
+```{r}
+#| echo: false
+
+library(tidyverse)
+library(openintro)
+```
+
+Which of the following scenarios involves a [**mean**]{.red}? Which involves a [**proportion**]{.red}?
+
+-   Researchers want to know whether more Oregonians than Californians report being sleep-deprived.
+-   A city council member wants to know how likely it is that a proposed tax bill passes in an upcoming election.
+-   Scientists want to know the typical amount of mercury contained in the muscle tissue of dolphins.
+-   Researchers conduct a study to examine the effects of coffee consumption on depression.
+
+------------------------------------------------------------------------
+
+## Dolphins
+
+Mercury is a heavy metal that lasts a long time in the bodies of animals that consume it; ingesting too much can be harmful.
+
+Scientists want to predict the typical amount of mercury contained in the muscle tissue of dolphins from the Taiji area of Japan, so they sample 19 dolphins for mercury content ($\mu$ g/wet g).
+
+![](images/dolphins.png){width="90%"}
+
+## Dolphins: confidence interval
+
+The mean (average) amount of mercury in our sample is $4.4$ g/ wet g. What can this tell us about the **population parameter**?
+
+\
+
+We want to find a [confidence interval]{.red} for the average amount of mercury in the entire population of local dolphins ($\mu$)
+
+---
+
+Previously... $$
+\mbox{CI} = \mbox{point estimate} \pm z^\ast * SE
+$$ where $z^*$ was determined using our [normal distribution]{.red} based on our particular confidence level (eg, 95%).
+
+------------------------------------------------------------------------
+
+[EXCEPT]{.red} we now have two problems:
+
+(1) We don't know the **population** standard deviation, $\sigma$, which is needed for calculating SE
+(2) Although we can use the **sample** standard deviation $s$ as an approximation, this is less accurate and so we will no longer have a **normal** distribution -- especially if sample size is not very large.
+
+## A new model: t-distribution
+
+Because the *sample* standard deviation can vary a lot between samples, we have a [**t-distribution**]{.red} curve rather than a normal curve.
+
+![](images/t-vs-normal.png){fig-align="center" width="90%"}
+
+Exact shape depends on sample size via [degrees of freedom]{.red}: $\mbox{df} = n-1$.
+
+## Desmos
+
+[Desmos t-distribution example](https://www.desmos.com/calculator/ygrpsomkkt)
+
+![](images/desmos-graph.png){fig-align="center" width="70%"}
+
+## Example: find p-value
+
+![](images/t-dist.png){fig-align="center" width="70%"}
+
+### R code
+
+```{r}
+pt(-2.10, df = 18)
+```
+
+### Desmos
+
+[Desmos t-distribution tool](https://www.desmos.com/calculator/xmarhrxybp)
+
+## Back to Confidence Intervals
+
+$$
+\mbox{CI} = \mbox{point estimate} \pm t_{df}^\ast * SE
+$$ where $t^*$ is determined based on our particular confidence level (eg, 95%) **and** degree of freedom
+
+$$
+SE = \frac{ s}{\sqrt{n}}
+$$
+
+## Example
+
+When $n=19$, what is $t^\ast_{df}$ for a 95% confidence interval?
+
+-   If $n=19$ then $df = 19 -1 = 18$.
+
+-   Use R code:
+
+```{r}
+qt(0.975, df = 18)
+
+```
+
+[Question:]{.red} where did 0.975 come from?
+
+-   Use Desmos to find $t^\ast_{18}$
+
+## Example
+
+Compute and interpret the 95% confidence interval for the average mercury content in Risso’s dolphins.
+
+::: fragment
+\begin{align}
+\bar{x} &\pm t^\ast_{18} \times SE \\
+4.4 &\pm 2.10 \times 0.528 \\
+&(3.29, 5.51)
+\end{align}
+:::
+
+```{css, echo = FALSE}
+.red {
+color: #B8001F;
+}
+```

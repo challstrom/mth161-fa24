@@ -4784,5 +4784,113 @@
       "Slides",
       "Thursday, Week 12"
     ]
+  },
+  {
+    "objectID": "slides/25/25-Chp19_InferenceMean.html#inference-with-numerical-variables",
+    "href": "slides/25/25-Chp19_InferenceMean.html#inference-with-numerical-variables",
+    "title": "Inference for a single mean",
+    "section": "Inference with numerical variables",
+    "text": "Inference with numerical variables\nWhich of the following scenarios involves a mean? Which involves a proportion?\n\nResearchers want to know whether more Oregonians than Californians report being sleep-deprived.\nA city council member wants to know how likely it is that a proposed tax bill passes in an upcoming election.\nScientists want to know the typical amount of mercury contained in the muscle tissue of dolphins.\nResearchers conduct a study to examine the effects of coffee consumption on depression.",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 14"
+    ]
+  },
+  {
+    "objectID": "slides/25/25-Chp19_InferenceMean.html#dolphins",
+    "href": "slides/25/25-Chp19_InferenceMean.html#dolphins",
+    "title": "Inference for a single mean",
+    "section": "Dolphins",
+    "text": "Dolphins\nMercury is a heavy metal that lasts a long time in the bodies of animals that consume it; ingesting too much can be harmful.\nScientists want to predict the typical amount of mercury contained in the muscle tissue of dolphins from the Taiji area of Japan, so they sample 19 dolphins for mercury content (\\(\\mu\\) g/wet g).",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 14"
+    ]
+  },
+  {
+    "objectID": "slides/25/25-Chp19_InferenceMean.html#dolphins-confidence-interval",
+    "href": "slides/25/25-Chp19_InferenceMean.html#dolphins-confidence-interval",
+    "title": "Inference for a single mean",
+    "section": "Dolphins: confidence interval",
+    "text": "Dolphins: confidence interval\nThe mean (average) amount of mercury in our sample is \\(4.4\\) g/ wet g. What can this tell us about the population parameter?\n\n\nWe want to find a confidence interval for the average amount of mercury in the entire population of local dolphins (\\(\\mu\\))",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 14"
+    ]
+  },
+  {
+    "objectID": "slides/25/25-Chp19_InferenceMean.html#a-new-model-t-distribution",
+    "href": "slides/25/25-Chp19_InferenceMean.html#a-new-model-t-distribution",
+    "title": "Inference for a single mean",
+    "section": "A new model: t-distribution",
+    "text": "A new model: t-distribution\nBecause the sample standard deviation can vary a lot between samples, we have a t-distribution curve rather than a normal curve.\n\nExact shape depends on sample size via degrees of freedom: \\(\\mbox{df} = n-1\\).",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 14"
+    ]
+  },
+  {
+    "objectID": "slides/25/25-Chp19_InferenceMean.html#desmos",
+    "href": "slides/25/25-Chp19_InferenceMean.html#desmos",
+    "title": "Inference for a single mean",
+    "section": "Desmos",
+    "text": "Desmos\nDesmos t-distribution example",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 14"
+    ]
+  },
+  {
+    "objectID": "slides/25/25-Chp19_InferenceMean.html#example-find-p-value",
+    "href": "slides/25/25-Chp19_InferenceMean.html#example-find-p-value",
+    "title": "Inference for a single mean",
+    "section": "Example: find p-value",
+    "text": "Example: find p-value\n\nR code\n\npt(-2.10, df = 18)\n\n[1] 0.0250452\n\n\nDesmos\nDesmos t-distribution tool",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 14"
+    ]
+  },
+  {
+    "objectID": "slides/25/25-Chp19_InferenceMean.html#back-to-confidence-intervals",
+    "href": "slides/25/25-Chp19_InferenceMean.html#back-to-confidence-intervals",
+    "title": "Inference for a single mean",
+    "section": "Back to Confidence Intervals",
+    "text": "Back to Confidence Intervals\n\\[\n\\mbox{CI} = \\mbox{point estimate} \\pm t_{df}^\\ast * SE\n\\] where \\(t^*\\) is determined based on our particular confidence level (eg, 95%) and degree of freedom\n\\[\nSE = \\frac{ s}{\\sqrt{n}}\n\\]",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 14"
+    ]
+  },
+  {
+    "objectID": "slides/25/25-Chp19_InferenceMean.html#example",
+    "href": "slides/25/25-Chp19_InferenceMean.html#example",
+    "title": "Inference for a single mean",
+    "section": "Example",
+    "text": "Example\nWhen \\(n=19\\), what is \\(t^\\ast_{df}\\) for a 95% confidence interval?\n\nIf \\(n=19\\) then \\(df = 19 -1 = 18\\).\nUse R code:\n\n\nqt(0.975, df = 18)\n\n[1] 2.100922\n\n\nQuestion: where did 0.975 come from?\n\nUse Desmos to find \\(t^\\ast_{18}\\)",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 14"
+    ]
+  },
+  {
+    "objectID": "slides/25/25-Chp19_InferenceMean.html#example-1",
+    "href": "slides/25/25-Chp19_InferenceMean.html#example-1",
+    "title": "Inference for a single mean",
+    "section": "Example",
+    "text": "Example\nCompute and interpret the 95% confidence interval for the average mercury content in Risso’s dolphins.\n\n\\[\\begin{align}\n\\bar{x} &\\pm t^\\ast_{18} \\times SE \\\\\n4.4 &\\pm 2.10 \\times 0.528 \\\\\n&(3.29, 5.51)\n\\end{align}\\]",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Tuesday, Week 14"
+    ]
   }
 ]

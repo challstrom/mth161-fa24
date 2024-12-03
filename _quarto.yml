@@ -79,6 +79,8 @@ website:
             text: "Tuesday, Week 12"
           - href: slides/24/24-Chapter18_tech.qmd
             text: "Thursday, Week 12"
+          - href: slides/25/25-Chp19_InferenceMean.qmd
+            text: "Tuesday, Week 14"  
       - section: "AE"
         contents:
           - href: ae/ae-01/ae-01-penguins.qmd
