@@ -4892,5 +4892,163 @@
       "Slides",
       "Tuesday, Week 14"
     ]
+  },
+  {
+    "objectID": "slides/26/26-Chp19_InferenceMean_part2.html#inference-with-numerical-variables",
+    "href": "slides/26/26-Chp19_InferenceMean_part2.html#inference-with-numerical-variables",
+    "title": "Inference for a single mean – part 2",
+    "section": "Inference with numerical variables",
+    "text": "Inference with numerical variables\n\nSample mean \\(\\bar{x}\\)\nStandard error \\[\nSE = \\frac{\\sigma}{\\sqrt{n}} \\approx \\frac{s}{\\sqrt{n}}\n\\] Because we almost never know \\(\\sigma\\), we use \\(s\\) to approximate – then use t-distribution to compensate.\nAlso known as Student’s t-distribution. Developed by W. Gosset, Head Experimental Brewer, Guinness Brewing.",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Thursday, Week 14"
+    ]
+  },
+  {
+    "objectID": "slides/26/26-Chp19_InferenceMean_part2.html#dolphins",
+    "href": "slides/26/26-Chp19_InferenceMean_part2.html#dolphins",
+    "title": "Inference for a single mean",
+    "section": "Dolphins",
+    "text": "Dolphins\nMercury is a heavy metal that lasts a long time in the bodies of animals that consume it; ingesting too much can be harmful.\nScientists want to predict the typical amount of mercury contained in the muscle tissue of dolphins from the Taiji area of Japan, so they sample 19 dolphins for mercury content (\\(\\mu\\) g/wet g)."
+  },
+  {
+    "objectID": "slides/26/26-Chp19_InferenceMean_part2.html#dolphins-confidence-interval",
+    "href": "slides/26/26-Chp19_InferenceMean_part2.html#dolphins-confidence-interval",
+    "title": "Inference for a single mean – part 2",
+    "section": "Dolphins: confidence interval",
+    "text": "Dolphins: confidence interval\nThe mean (average) amount of mercury in our sample is \\(4.4\\) g/ wet g. What can this tell us about the population parameter?\n\n\nWe want to find a confidence interval for the average amount of mercury in the entire population of local dolphins (\\(\\mu\\))"
+  },
+  {
+    "objectID": "slides/26/26-Chp19_InferenceMean_part2.html#a-new-model-t-distribution",
+    "href": "slides/26/26-Chp19_InferenceMean_part2.html#a-new-model-t-distribution",
+    "title": "Inference for a single mean – part 2",
+    "section": "A new model: t-distribution",
+    "text": "A new model: t-distribution\nBecause the sample standard deviation can vary a lot between samples, we have a t-distribution curve rather than a normal curve.\n\nExact shape depends on sample size via degrees of freedom: \\(\\mbox{df} = n-1\\)."
+  },
+  {
+    "objectID": "slides/26/26-Chp19_InferenceMean_part2.html#desmos",
+    "href": "slides/26/26-Chp19_InferenceMean_part2.html#desmos",
+    "title": "Inference for a single mean – part 2",
+    "section": "Desmos",
+    "text": "Desmos\nDesmos t-distribution example"
+  },
+  {
+    "objectID": "slides/26/26-Chp19_InferenceMean_part2.html#example-find-p-value",
+    "href": "slides/26/26-Chp19_InferenceMean_part2.html#example-find-p-value",
+    "title": "Inference for a single mean – part 2",
+    "section": "Example: find p-value",
+    "text": "Example: find p-value\n\nR code\n\npt(-2.10, df = 18)\n\n[1] 0.0250452\n\n\nDesmos\nDesmos t-distribution tool"
+  },
+  {
+    "objectID": "slides/26/26-Chp19_InferenceMean_part2.html#back-to-confidence-intervals",
+    "href": "slides/26/26-Chp19_InferenceMean_part2.html#back-to-confidence-intervals",
+    "title": "Inference for a single mean – part 2",
+    "section": "Back to Confidence Intervals",
+    "text": "Back to Confidence Intervals\n\\[\n\\mbox{CI} = \\mbox{point estimate} \\pm t_{df}^\\ast * SE\n\\] where \\(t^*\\) is determined based on our particular confidence level (eg, 95%) and degree of freedom\n\\[\nSE = \\frac{ s}{\\sqrt{n}}\n\\]"
+  },
+  {
+    "objectID": "slides/26/26-Chp19_InferenceMean_part2.html#example",
+    "href": "slides/26/26-Chp19_InferenceMean_part2.html#example",
+    "title": "Inference for a single mean – part 2",
+    "section": "Example",
+    "text": "Example\nWhen \\(n=19\\), what is \\(t^\\ast_{df}\\) for a 95% confidence interval?\n\nIf \\(n=19\\) then \\(df = 19 -1 = 18\\).\nUse R code:\n\n\nqt(0.975, df = 18)\n\n[1] 2.100922\n\n\nQuestion: where did 0.975 come from?\n\nUse Desmos to find \\(t^\\ast_{18}\\)"
+  },
+  {
+    "objectID": "slides/26/26-Chp19_InferenceMean_part2.html#example-1",
+    "href": "slides/26/26-Chp19_InferenceMean_part2.html#example-1",
+    "title": "Inference for a single mean – part 2",
+    "section": "Example",
+    "text": "Example\nCompute and interpret the 95% confidence interval for the average mercury content in Risso’s dolphins.\n\n\\[\\begin{align}\n\\bar{x} &\\pm t^\\ast_{18} \\times SE \\\\\n4.4 &\\pm 2.10 \\times 0.528 \\\\\n&(3.29, 5.51)\n\\end{align}\\]"
+  },
+  {
+    "objectID": "slides/26/26-Chp19_InferenceMean_part2.html#conditions-for-clt",
+    "href": "slides/26/26-Chp19_InferenceMean_part2.html#conditions-for-clt",
+    "title": "Inference for a single mean – part 2",
+    "section": "Conditions for CLT",
+    "text": "Conditions for CLT\nWe still need to verify certain conditions to justify our model.\n\nIndependence (e.g. from a random sample)\nNormality\n\nif sample is small then population should be normally distributed\nif sample is large then conditions on population can be relaxed\nPopulation should be much larger than sample (10x)",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Thursday, Week 14"
+    ]
+  },
+  {
+    "objectID": "slides/26/26-Chp19_InferenceMean_part2.html#normality",
+    "href": "slides/26/26-Chp19_InferenceMean_part2.html#normality",
+    "title": "Inference for a single mean – part 2",
+    "section": "Normality",
+    "text": "Normality\nMercury is a heavy metal that lasts a long time in the bodies of animals that consume it; ingesting too much can be harmful.\nScientists want to predict the typical amount of mercury contained in the muscle tissue of dolphins from the Taiji area of Japan, so they sample 19 dolphins for mercury content (\\(\\mu\\) g/wet g)."
+  },
+  {
+    "objectID": "slides/26/26-Chp19_InferenceMean_part2.html#normality-continued",
+    "href": "slides/26/26-Chp19_InferenceMean_part2.html#normality-continued",
+    "title": "Inference for a single mean – part 2",
+    "section": "Normality, continued",
+    "text": "Normality, continued\nIf sample is large then conditions on population can be relaxed\n\nno extreme outliers\nslight or no skew \\(n\\geq 15\\)\nmedium skew \\(n \\geq 30\\)\nstrong skew \\(n \\geq 60\\)",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Thursday, Week 14"
+    ]
+  },
+  {
+    "objectID": "slides/26/26-Chp19_InferenceMean_part2.html#new-slide",
+    "href": "slides/26/26-Chp19_InferenceMean_part2.html#new-slide",
+    "title": "Inference for a single mean – part 2",
+    "section": "new slide",
+    "text": "new slide\nMercury is a heavy metal that lasts a long time in the bodies of animals that consume it; ingesting too much can be harmful.\nScientists want to predict the typical amount of mercury contained in the muscle tissue of dolphins from the Taiji area of Japan, so they sample 19 dolphins for mercury content (\\(\\mu\\) g/wet g)."
+  },
+  {
+    "objectID": "slides/26/26-Chp19_InferenceMean_part2.html#hypothesis-test",
+    "href": "slides/26/26-Chp19_InferenceMean_part2.html#hypothesis-test",
+    "title": "Inference for a single mean – part 2",
+    "section": "Hypothesis Test",
+    "text": "Hypothesis Test\nTest statistic is now \\(T\\) (instead of \\(Z\\))\n\\[\nT = \\frac{ \\bar{x} - \\mbox{null value}}{SE}\n\\]\n\\[\nSE = \\frac{s}{\\sqrt{n}}\n\\]\nOnce you have T score, find corresponding p-value ( using technology or table)",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Thursday, Week 14"
+    ]
+  },
+  {
+    "objectID": "slides/26/26-Chp19_InferenceMean_part2.html#confidence-test",
+    "href": "slides/26/26-Chp19_InferenceMean_part2.html#confidence-test",
+    "title": "Inference for a single mean – part 2",
+    "section": "Confidence Test",
+    "text": "Confidence Test\n\\[\n\\mbox{CI} = \\mbox{point estimate} \\pm t_{df}^\\ast * SE\n\\]\n\\(t_{df}^*\\) is determined from confidence level and degree of freedom\n\nDesmos tool: https://www.desmos.com/calculator/ynsjqyz41q\nTable: Wikipedia t-distribution"
+  },
+  {
+    "objectID": "slides/26/26-Chp19_InferenceMean_part2.html#t-distribution-table",
+    "href": "slides/26/26-Chp19_InferenceMean_part2.html#t-distribution-table",
+    "title": "Inference for a single mean – part 2",
+    "section": "t-distribution table",
+    "text": "t-distribution table\nWikipedia t-distribution"
+  },
+  {
+    "objectID": "slides/26/26-Chp19_InferenceMean_part2.html#t-distribution",
+    "href": "slides/26/26-Chp19_InferenceMean_part2.html#t-distribution",
+    "title": "Inference for a single mean – part 2",
+    "section": "t-distribution",
+    "text": "t-distribution\n\nDesmos tool: https://www.desmos.com/calculator/ynsjqyz41q\nTable: Wikipedia t-distribution"
+  },
+  {
+    "objectID": "slides/26/26-Chp19_InferenceMean_part2.html#section",
+    "href": "slides/26/26-Chp19_InferenceMean_part2.html#section",
+    "title": "Inference for a single mean – part 2",
+    "section": "",
+    "text": "Mercury is a heavy metal that lasts a long time in the bodies of animals that consume it; ingesting too much can be harmful.\nScientists want to predict the typical amount of mercury contained in the muscle tissue of dolphins from the Taiji area of Japan, so they sample 19 dolphins for mercury content (\\(\\mu\\) g/wet g)."
+  },
+  {
+    "objectID": "slides/26/26-Chp19_InferenceMean_part2.html#confidence-interval",
+    "href": "slides/26/26-Chp19_InferenceMean_part2.html#confidence-interval",
+    "title": "Inference for a single mean – part 2",
+    "section": "Confidence Interval",
+    "text": "Confidence Interval\n\\[\n\\mbox{CI} = \\mbox{point estimate} \\pm t_{df}^\\ast * SE\n\\]\n\\(t_{df}^*\\) is determined from confidence level and degree of freedom\n\nDesmos tool: https://www.desmos.com/calculator/ynsjqyz41q\nTable: Wikipedia t-distribution",
+    "crumbs": [
+      "Quick Links",
+      "Slides",
+      "Thursday, Week 14"
+    ]
   }
 ]

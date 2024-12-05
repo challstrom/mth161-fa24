@@ -81,6 +81,8 @@ website:
             text: "Thursday, Week 12"
           - href: slides/25/25-Chp19_InferenceMean.qmd
             text: "Tuesday, Week 14"  
+          - href: slides/26/26-Chp19_InferenceMean_part2.qmd
+            text: "Thursday, Week 14"  
       - section: "AE"
         contents:
           - href: ae/ae-01/ae-01-penguins.qmd

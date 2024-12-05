@@ -1,0 +1,19 @@
+{
+  "hash": "0c45ba59e767deb78d162f08a63f008f",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: Inference for a single mean -- [part 2]{.red}\nsubtitle: Chapter 19\nauthor: \"\"\nformat:\n  revealjs:\n    html-math-method: mathjax\n    transition: fade\n    slide-number: true\n    chalkboard: true\neditor: visual\nexecute:\n  freeze: auto\n  echo: true\n  warning: false\n---\n\n\n\n## Inference with [*numerical*]{.red} variables\n\n\n\n::: {.cell}\n\n:::\n\n\n\n-   Sample [mean]{.red} $\\bar{x}$\n\n-   Standard error $$\n    SE = \\frac{\\sigma}{\\sqrt{n}} \\approx \\frac{s}{\\sqrt{n}}\n    $$ Because we almost never know $\\sigma$, we use $s$ to approximate -- then use [t-distribution]{.red} to compensate.\n\n    Also known as [Student's t-distribution]{.red}. Developed by W. Gosset, Head Experimental Brewer, Guinness Brewing.\n\n## Conditions for CLT\n\nWe still need to verify certain conditions to justify our model.\n\n-   [Independence]{.red} (e.g. from a random sample)\n\n-   [Normality]{.red}\n\n    -   if **sample** is [small]{.red} then [population]{.red} should be normally distributed\n    -   if **sample** is [large]{.red} then conditions on population can be relaxed\n    -   Population should be much larger than sample (10x)\n\n## Normality, continued\n\nIf **sample** is [large]{.red} then conditions on population can be relaxed\n\n-   no [extreme]{.red} outliers\n-   slight or no skew $n\\geq 15$\n-   medium skew $n \\geq 30$\n-   strong skew $n \\geq 60$\n\n## Confidence Interval\n\n$$\n\\mbox{CI} = \\mbox{point estimate} \\pm t_{df}^\\ast * SE\n$$\n\n$t_{df}^*$ is determined from confidence level **and** degree of freedom\n\n-   Desmos tool: <https://www.desmos.com/calculator/ynsjqyz41q>\n\n-   Table: [Wikipedia t-distribution](https://en.wikipedia.org/wiki/Student%27s_t-distribution)\n\n## Hypothesis Test\n\nTest statistic is now $T$ (instead of $Z$)\n\n$$\nT = \\frac{ \\bar{x} - \\mbox{null value}}{SE}\n$$\n\n$$\nSE = \\frac{s}{\\sqrt{n}}\n$$\n\nOnce you have [T score]{.red}, find corresponding [p-value]{.red} ( using technology or table)\n\n\n\n::: {.cell}\n<style type=\"text/css\">\n.red {\ncolor: #B8001F;\n}\n</style>\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-after-body": [
+        "\n<script>\n  // htmlwidgets need to know to resize themselves when slides are shown/hidden.\n  // Fire the \"slideenter\" event (handled by htmlwidgets.js) when the current\n  // slide changes (different for each slide format).\n  (function () {\n    // dispatch for htmlwidgets\n    function fireSlideEnter() {\n      const event = window.document.createEvent(\"Event\");\n      event.initEvent(\"slideenter\", true, true);\n      window.document.dispatchEvent(event);\n    }\n\n    function fireSlideChanged(previousSlide, currentSlide) {\n      fireSlideEnter();\n\n      // dispatch for shiny\n      if (window.jQuery) {\n        if (previousSlide) {\n          window.jQuery(previousSlide).trigger(\"hidden\");\n        }\n        if (currentSlide) {\n          window.jQuery(currentSlide).trigger(\"shown\");\n        }\n      }\n    }\n\n    // hookup for slidy\n    if (window.w3c_slidy) {\n      window.w3c_slidy.add_observer(function (slide_num) {\n        // slide_num starts at position 1\n        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);\n      });\n    }\n\n  })();\n</script>\n\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -1,0 +1,86 @@
+---
+title: Inference for a single mean -- [part 2]{.red}
+subtitle: Chapter 19
+author: ""
+format:
+  revealjs:
+    html-math-method: mathjax
+    transition: fade
+    slide-number: true
+    chalkboard: true
+editor: visual
+execute:
+  freeze: auto
+  echo: true
+  warning: false
+---
+
+## Inference with [*numerical*]{.red} variables
+
+```{r}
+#| echo: false
+
+library(tidyverse)
+library(openintro)
+```
+
+-   Sample [mean]{.red} $\bar{x}$
+
+-   Standard error $$
+    SE = \frac{\sigma}{\sqrt{n}} \approx \frac{s}{\sqrt{n}}
+    $$ Because we almost never know $\sigma$, we use $s$ to approximate -- then use [t-distribution]{.red} to compensate.
+
+    Also known as [Student's t-distribution]{.red}. Developed by W. Gosset, Head Experimental Brewer, Guinness Brewing.
+
+## Conditions for CLT
+
+We still need to verify certain conditions to justify our model.
+
+-   [Independence]{.red} (e.g. from a random sample)
+
+-   [Normality]{.red}
+
+    -   if **sample** is [small]{.red} then [population]{.red} should be normally distributed
+    -   if **sample** is [large]{.red} then conditions on population can be relaxed
+    -   Population should be much larger than sample (10x)
+
+## Normality, continued
+
+If **sample** is [large]{.red} then conditions on population can be relaxed
+
+-   no [extreme]{.red} outliers
+-   slight or no skew $n\geq 15$
+-   medium skew $n \geq 30$
+-   strong skew $n \geq 60$
+
+## Confidence Interval
+
+$$
+\mbox{CI} = \mbox{point estimate} \pm t_{df}^\ast * SE
+$$
+
+$t_{df}^*$ is determined from confidence level **and** degree of freedom
+
+-   Desmos tool: <https://www.desmos.com/calculator/ynsjqyz41q>
+
+-   Table: [Wikipedia t-distribution](https://en.wikipedia.org/wiki/Student%27s_t-distribution)
+
+## Hypothesis Test
+
+Test statistic is now $T$ (instead of $Z$)
+
+$$
+T = \frac{ \bar{x} - \mbox{null value}}{SE}
+$$
+
+$$
+SE = \frac{s}{\sqrt{n}}
+$$
+
+Once you have [T score]{.red}, find corresponding [p-value]{.red} ( using technology or table)
+
+```{css, echo = FALSE}
+.red {
+color: #B8001F;
+}
+```
