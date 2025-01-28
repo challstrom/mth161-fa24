@@ -1,0 +1,62 @@
+---
+title: "Project 2"
+subtitle: "MTH 161 -- Section H, I -- Fall 2024"
+categories: 
+  - Project
+
+number-sections: true
+number-depth: 1
+
+
+---
+
+### Ask a question you’re curious about and answer it with a dataset of your choice. This is your project in a nutshell.
+
+
+Your final project will consist of analysis on a research question of your own choosing. The goal is for you to demonstrate proficiency in the techniques we have covered in this class and apply them to a novel dataset in a meaningful way.
+
+## Part 1 -- find a dataset
+
+The first step is to think about and choose a potential question or topic that you're interested in and then find a dataset that will help you investigate your question.  
+
+The dataset you choose should
+
+- Have at least 100 observations
+- Have at least 5 columns (variables)
+
+
+**What to submit:** Use the template in posit.cloud to successfully load your data and use `glimpse` or `print` to show the variables.
+
+You should add a few sentences to tell me something about why you chose this particular dataset and what your research question is.
+
+Thats it!
+
+**Due Nov. 15th**
+
+Note - if you need a little more time to find data, that's fine, but you need to let me know and reach out for assistance if needed.
+
+
+
+## Part 2 -- do something interesting
+
+Now that you have a question and/or data set, do something with it!  The goal here is to say something interesting and meaningful about your topic while showing me that you learned something this semester.  You don't have to cover every single technique or concept from the class -- instead, focus on methods that help you begin to answer your research questions. 
+
+While this project is very open ended, you should probably:
+
+- create some kind of compelling visualization(s) of this data, and
+- perform statistical inference and/or fit a model or descriptive or predictive purposes
+
+You should stick with R packages and techniques that we have seen in class. Your report should be clearly written and have meaningful visualizations.  A single high-quality visualization is generally better than a  large number of poor-quality visualizations. All analyses must be done in RStudio (posit.cloud) and all components of the project must be reproducible.
+
+**What to submit:** using the same template in posit.cloud that you used for part 1, add your analysis and discussion.  Your report should be organized into sections such as introduction, preliminary analysis, summary/conclusions, etc.  Take a look at previous labs and project 1 for examples.  
+
+Save your report as a pdf file and submit to Moodle.  
+
+**Part 2 is due Dec. 6**
+
+  - If you get me your report by **Nov. 27th**, I will give you feedback and you will be able to make corrections and resubmit by Dec. 6th.  
+  - Note that **Dec. 6th** is a hard deadline -- I cannot not accept any reports after this.
+  
+
+
+

@@ -1,0 +1,156 @@
+---
+title: "Project 1 - Linear Regression"
+subtitle: "MTH 161 -- Section H, I -- Fall 2024"
+categories: 
+  - Project
+
+number-sections: true
+number-depth: 1
+
+format: pdf 
+---
+
+
+# Introduction
+
+For this project you will investigate a dataset containing a sample of observations from 2020 of US birth data originally sourced from [the Centers for Disease Control (CDC)](https://www.cdc.gov/nchs/data_access/vitalstatsonline.htm).
+
+The goals are to demonstrate your understanding of concepts and techniques covered in the first half of the semester in the context of this dataset.  These concepts include
+
+- Visualizing and interpreting variables
+- Visualizing associations between variables
+- Formulating research questions, including the role of explanatory and response variables
+- Constructing and interpreting linear models 
+- Drawing appropriate conclusions from analysis and communicating them clearly and accurately 
+
+
+## Data
+
+You will use the data set `us_births.csv` to fit your model. You can load it using the code below.
+
+```{r}
+#| label: load-data
+#| message: false
+
+library(tidyverse)
+births <- read_csv("us_births.csv")
+```
+
+This data set contains `r nrow(births)` observations of `r ncol(births)` variables. The variables are described in the codebook below.
+
+### Codebook
+
+-   `newborn_birth_weight`: newborn birth weight in grams
+-   `month`: birth month (1: January, ..., 12: December)
+-   `mother_age`: age of the mother in years
+-   `prenatal_care_starting_month`: month in which prenatal care began; if 0, there was no prenatal care
+-   `daily_cigarette_prepregnancy`: daily number of cigarettes smoked before the pregnancy
+-   `daily_cigarette_trimester_1`: daily number of cigarettes smoked during the 1st trimester of the pregnancy
+-   `daily_cigarette_trimester_2`: daily number of cigarettes smoked during the 2nd trimester of the pregnancy
+-   `daily_cigarette_trimester_3`: daily number of cigarettes smoked during the 3rd trimester of the pregnancy
+-   `mother_height`: height of the mother in inches
+-   `mother_bmi`: body mass index of the mother
+-   `mother_weight_prepregnancy`: weight of the mother before the pregnancy in pounds
+-   `mother_weight_delivery`: weight of the mother at delivery in pounds
+-   `mother_diabetes_gestational`: whether the mother had diabetes during the pregnancy
+-   `newborn_sex`: sex of the newborn
+-   `gestation_week`: number of gestational weeks
+-   `mother_risk_factors`: whether the mother had any risk factor (diabetes, hypertension, previous preterm birth, previous cesarean, infertility treatment used, etc)
+
+
+
+
+# Preliminary investigations
+
+The purpose of this project is to investigate possible associations between `newborn_birth_weight` and other variables in the dataset.  In this section, you will perform some prelimary investigations to help you formulate a research question.
+
+
+::: {.callout-important title="Instructions" icon=false}
+Insert your responses (code chunks and written text) below each of the following task statements.
+:::
+
+
+::: {.callout-note title="Task" icon=false}
+Begin by thinking about the variable `newborn_birth_weight`.  What type of variable is it?  Use an appropriate visualization to plot this data.  How would you describe the distribution?
+:::
+
+::: {.callout-note title="Task" icon=false}
+To further investigate `newborn_birth_weight`, create a *different* kind of plot that would also be appropriate for visualizing this variable.  Does your new visualization reinforce anything you noticed in the first plot?  Does it illuminate any new aspects of the distribution?  Comment specifically on what *variance* you observe in the distribution based on your plots.
+:::
+
+::: {.callout-note title="Task" icon=false}
+Next, examine the codebook above.  Select **two numerical variables** that you are curious about in terms of their potential relationship with `newborn_birth_weight`.  Separately describe the association you expect each of these variables to have with `newborn_birth_weight` and provide brief rationale for your expectations.  
+
+Then, select **one categorical variable** and do the same: what association do you expect this variable has with `newborn_birth_weight` and why? 
+:::
+
+::: {.callout-note title="Task" icon=false}
+Narrow your focus to one of the variables you picked above and create a plot that will help you investigate a possible association between `newborn_birth_weight` (the response variable) and your chosen (explanatory) variable.    Choose your visualization according to the types of variables involved.
+\
+
+*Note: visualizing several possible relationships here might be a good way to pick which one you'd like to report on.  Feel free to experiment!*
+:::
+
+
+# Main report
+
+The remainder of your report will focus on an investigation of the variable you selected above (as it relates to birth weight).  Your job is to carry out an analysis of any potential association and summarize your findings below.   
+
+
+
+## Research question
+
+As a researcher, your investigation should begin with a clearly-formulated, measurable research question. What are you hoping to discern with this analysis and why should the reader be interested in the results?  Having an initial hypothesis can help shape your specific research question and guide the study design overall.  In this section, you will demonstrate proficiency in asking meaningful questions (that you later answer using data).
+
+>Example research question and hypotheses (if we were predicting penguin weights instead of baby weights): 
+>
+> *Can penguin bill depth be used to predict body mass? Having an answer to this question could help inform the design of future studies of wild penguins and provide useful data for those who work with captive penguin populations.  Many other variables (e.g., calories needed) and interventions (e.g., amount of antibiotic to administer) relate directly to body mass.  We hypothesize that penguins with deeper bills will also have more mass.*
+
+
+::: {.callout-note title="Task" icon=false}
+Formulate a clear and concise research question.  State your hypotheses and provide rationale for the investigation, including motivation as to why the research question is interesting or useful.
+:::
+
+
+## Methodology
+
+In this section, you will explain the methods used to investigate the association between variables.  You will also demonstrate proficiency in using *R* to perform and visualize linear regression.
+
+::: {.callout-note title="Task" icon=false}
+Find a linear model that predicts birth weight based on the variable you selected.  Include a table of the summary statistics needed to find your regression line.  Be sure to include the **entire model equation**.
+:::
+
+::: {.callout-note title="Task" icon=false}
+Create a visualization of your linear model that shows its relationship to your variables.
+:::
+
+
+## Results
+
+In this section you will analyze and interpret the results of your linear regression, demonstrating that you are proficient at answering research questions using data.
+
+::: {.callout-note title="Task" icon=false}
+Analyze the linear model you found, discussing the type and strength of the association between variables.  What specific data are you using to substantiate your claims about strength ($r$, $R^2$, something else) and why?  For what range of values does this model have reasonable predictive power?  What does the slope of your line tell you? 
+:::
+
+
+
+## Discussion
+
+In this concluding section, you will summarize your findings and provide a brief discussion of your analysis.
+
+::: {.callout-note title="Task" icon=false}
+Summarize your main finding in a sentence or two.  Discuss your finding and why it is useful (connect this to the motivation you provided in framing yur research question).
+:::
+
+::: {.callout-note title="Task" icon=false}
+Offer a critique your own analysis -- what are the limitations of your findings?
+:::  
+
+::: {.callout-note title="Task" icon=false}
+Finally, offer a few thoughts about ways you might extend this research, or other research questions you might be interested in after completing this project.
+::: 
+
+
+
+

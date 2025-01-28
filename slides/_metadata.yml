@@ -1,7 +1,6 @@
 institute: "University of Portland"
 author: "Chris Hallstrom"
 
-# footer: "[🔗 sta199-s24.github.io](https://sta199-s24.github.io/)"
 # logo: "images/logo.png"
 format:
   revealjs:

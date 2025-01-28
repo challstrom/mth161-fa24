@@ -1,0 +1,95 @@
+---
+title: "Project 2"
+subtitle: "MTH 161 -- Section H, I -- Fall 2024"
+categories: 
+  - Project
+
+number-sections: true
+number-depth: 1
+
+
+---
+
+### Ask a question you’re curious about and answer it with a dataset of your choice. This is your project in a nutshell.
+
+
+Your final project will consist of analysis on a research question of your own choosing. The goal is for you to demonstrate proficiency in the techniques we have covered in this class and apply them to a novel dataset in a meaningful way.
+
+**Part 1 - due Nov. 15th**
+
+Find a dataset and choose a research question.
+
+**Part 2 - due Dec. 6**
+
+  - If you get me your report by **Nov. 27th**, I will give you feedback and you will be able to make corrections and resubmit by Dec. 6th.  
+  - Note that **Dec. 6th** is a hard deadline -- I will not accept any reports after this.
+  
+  
+You do not need to do an exhaustive data analysis, i.e. do not calculate every statistic and procedure you have learned for every variable, but rather show me that you are proficient at asking meaningful questions and answering them with results of data analysis, that you are proficient in using R, and that you are proficient at interpreting and presenting the results. Focus on methods that help you begin to answer your research questions. You should critique your own methods and provide suggestions for improving your analysis.  Issues pertaining to the reliability and validity of your data, and appropriateness of the statistical analysis should be discussed where appropriate.
+
+While this project is very open ended, you should, at a minimum
+
+- create some kind of compelling visualization(s) of this data, and
+- perform statistical inference and/or fit a model or descriptive or predictive purposes
+
+You should stick with R packages and techniques that we have seen in class. Your report should be clearly written and have meaningful visualizations.  A single high-quality visualization is generally better than a  large number of poor-quality visualizations. All analyses must be done in RStudio (posit.cloud) and all components of the project must be reproducible.
+
+## Part 1:  choose a dataset and propose a question
+
+The first step is to think about and choose a potential question or topic that you're interested in and then find a dataset that will help you investigate your question.  
+
+The dataset you choose should
+
+- Have at least 100 observations
+- Have at least 5 columns (variables)
+
+
+
+
+### Resources for datasets {#resources}
+
+You are welcome to use a dataset that we've seen in class, as long as your research question is a new one and your dataset meets the above requirements.  Many of the datasets featured in our textbook can be found here:
+
+-   [Openintro (datasets featured in the textbook)](https://www.openintro.org/data/)
+
+
+Here is a short list of sources for interesting datasets in easy-to-access formats.  This is a good place to start if you don't have a particular topic in mind, but just want to browse for an interesting dataset.
+
+-   [Awesome public datasets](https://github.com/awesomedata/awesome-public-datasets)
+-   [CORGIS: The Collection of Really Great, Interesting, Situated Datasets](https://corgis-edu.github.io/corgis/csv/)
+-   [TidyTuesday](https://github.com/rfordatascience/tidytuesday)
+
+
+Finally, here are some other sources.  Warning - many of these sites can be challenging to navigate! If you want help finding or downloading a particular dataset, just let me know. 
+
+-   [CDC](https://open.cdc.gov/data.html)
+-   [Data.gov](https://www.data.gov/)
+-   [Data is Plural](https://docs.google.com/spreadsheets/d/1wZhPLMCHKJvwOkP4juclhjFgqIY8fQFMemwKL2c64vk/edit#gid=0)
+-   [Durham Open Data Portal](https://live-durhamnc.opendata.arcgis.com/)
+-   [Election Studies](https://electionstudies.org//)
+-   [European Statistics](https://ec.europa.eu/eurostat/)
+-   [General Social Survey](https://gss.norc.org/)
+-   [Google Dataset Search](https://datasetsearch.research.google.com/)
+-   [Harvard Dataverse](https://dataverse.harvard.edu/)
+-   [International Monetary Fund](https://data.imf.org/?sk=388DFA60-1D26-4ADE-B505-A05A558D9A42&sId=1479329328660)
+-   [IPUMS survey data from around the world](https://ipums.org/)
+-   [Los Angeles Open Data](https://data.lacity.org/browse)
+-   [National Crime Victimization Survey](https://www.icpsr.umich.edu/web/NACJD/studies/38090/summary)
+-   [NHS Scotland Open Data](https://www.opendata.nhs.scot/)
+-   [NYC OpenData](https://opendata.cityofnewyork.us/)
+-   [Open access to Scotland's official statistics](https://statistics.gov.scot/home)
+-   [Pew Research](https://www.pewresearch.org/download-datasets/)
+-   [Statistics Canada](https://www.statcan.gc.ca/en/start)
+-   [The National Bureau of Economic Research](https://www.nber.org/research/data?page=1&perPage=50)
+-   [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/index.php)
+-   [UK Government Data](https://data.gov.uk/)
+-   [UNICEF Data](https://data.unicef.org/)
+-   [United Nations Data](http://data.un.org/)
+-   [United Nations Statistics Division](https://unstats.un.org/UNSDWebsite/)
+-   [US Census Data](https://www.census.gov/data.html)
+-   [US Government Data](https://sctyner.github.io/static/presentations/Misc/GraphicsGroupISU/2018-11-16-us-govt-data.html)
+-   [World Bank Data](https://datacatalog.worldbank.org/home)
+-   [Youth Risk Behavior Surveillance System (YRBSS)](https://chronicdata.cdc.gov/Youth-Risk-Behaviors/DASH-Youth-Risk-Behavior-Surveillance-System-YRBSS/q6p7-56au)
+
+
+

@@ -4237,7 +4237,7 @@
     "text": "Your final project will consist of analysis on a research question of your own choosing. The goal is for you to demonstrate proficiency in the techniques we have covered in this class and apply them to a novel dataset in a meaningful way.",
     "crumbs": [
       "Quick Links",
-      "Projects",
+      "Labs and Projects",
       "Project 2"
     ]
   },
@@ -4249,7 +4249,7 @@
     "text": "Part 1 – find a dataset\nThe first step is to think about and choose a potential question or topic that you’re interested in and then find a dataset that will help you investigate your question.\nThe dataset you choose should\n\nHave at least 100 observations\nHave at least 5 columns (variables)\n\nWhat to submit: Use the template in posit.cloud to successfully load your data and use glimpse or print to show the variables.\nYou should add a few sentences to tell me something about why you chose this particular dataset and what your research question is.\nThats it!\nDue Nov. 15th\nNote - if you need a little more time to find data, that’s fine, but you need to let me know and reach out for assistance if needed.",
     "crumbs": [
       "Quick Links",
-      "Projects",
+      "Labs and Projects",
       "Project 2"
     ]
   },
@@ -4261,7 +4261,7 @@
     "text": "Part 2 – do something interesting\nNow that you have a question and/or data set, do something with it! The goal here is to say something interesting and meaningful about your topic while showing me that you learned something this semester. You don’t have to cover every single technique or concept from the class – instead, focus on methods that help you begin to answer your research questions.\nWhile this project is very open ended, you should probably:\n\ncreate some kind of compelling visualization(s) of this data, and\nperform statistical inference and/or fit a model or descriptive or predictive purposes\n\nYou should stick with R packages and techniques that we have seen in class. Your report should be clearly written and have meaningful visualizations. A single high-quality visualization is generally better than a large number of poor-quality visualizations. All analyses must be done in RStudio (posit.cloud) and all components of the project must be reproducible.\nWhat to submit: using the same template in posit.cloud that you used for part 1, add your analysis and discussion. Your report should be organized into sections such as introduction, preliminary analysis, summary/conclusions, etc. Take a look at previous labs and project 1 for examples.\nSave your report as a pdf file and submit to Moodle.\nPart 2 is due Dec. 6\n\nIf you get me your report by Nov. 27th, I will give you feedback and you will be able to make corrections and resubmit by Dec. 6th.\n\nNote that Dec. 6th is a hard deadline – I cannot not accept any reports after this.",
     "crumbs": [
       "Quick Links",
-      "Projects",
+      "Labs and Projects",
       "Project 2"
     ]
   },
@@ -5050,5 +5050,222 @@
       "Slides",
       "Thursday, Week 14"
     ]
+  },
+  {
+    "objectID": "projects/project02/project-2_part2.html",
+    "href": "projects/project02/project-2_part2.html",
+    "title": "Project 2",
+    "section": "",
+    "text": "Your final project will consist of analysis on a research question of your own choosing. The goal is for you to demonstrate proficiency in the techniques we have covered in this class and apply them to a novel dataset in a meaningful way."
+  },
+  {
+    "objectID": "projects/project02/project-2_part2.html#part-1-find-a-dataset",
+    "href": "projects/project02/project-2_part2.html#part-1-find-a-dataset",
+    "title": "Project 2",
+    "section": "Part 1 – find a dataset",
+    "text": "Part 1 – find a dataset\nThe first step is to think about and choose a potential question or topic that you’re interested in and then find a dataset that will help you investigate your question.\nThe dataset you choose should\n\nHave at least 100 observations\nHave at least 5 columns (variables)\n\nWhat to submit: Use the template in posit.cloud to successfully load your data and use glimpse or print to show the variables.\nYou should add a few sentences to tell me something about why you chose this particular dataset and what your research question is.\nThats it!\nDue Nov. 15th\nNote - if you need a little more time to find data, that’s fine, but you need to let me know and reach out for assistance if needed."
+  },
+  {
+    "objectID": "projects/project02/project-2_part2.html#part-2-do-something-interesting",
+    "href": "projects/project02/project-2_part2.html#part-2-do-something-interesting",
+    "title": "Project 2",
+    "section": "Part 2 – do something interesting",
+    "text": "Part 2 – do something interesting\nNow that you have a question and/or data set, do something with it! The goal here is to say something interesting and meaningful about your topic while showing me that you learned something this semester. You don’t have to cover every single technique or concept from the class – instead, focus on methods that help you begin to answer your research questions.\nWhile this project is very open ended, you should probably:\n\ncreate some kind of compelling visualization(s) of this data, and\nperform statistical inference and/or fit a model or descriptive or predictive purposes\n\nYou should stick with R packages and techniques that we have seen in class. Your report should be clearly written and have meaningful visualizations. A single high-quality visualization is generally better than a large number of poor-quality visualizations. All analyses must be done in RStudio (posit.cloud) and all components of the project must be reproducible.\nWhat to submit: using the same template in posit.cloud that you used for part 1, add your analysis and discussion. Your report should be organized into sections such as introduction, preliminary analysis, summary/conclusions, etc. Take a look at previous labs and project 1 for examples.\nSave your report as a pdf file and submit to Moodle.\nPart 2 is due Dec. 6\n\nIf you get me your report by Nov. 27th, I will give you feedback and you will be able to make corrections and resubmit by Dec. 6th.\n\nNote that Dec. 6th is a hard deadline – I cannot not accept any reports after this.\n\n\n\n\n\n\n\nthis is a callout block"
+  },
+  {
+    "objectID": "projects/project02/project-2.html",
+    "href": "projects/project02/project-2.html",
+    "title": "Project 2",
+    "section": "",
+    "text": "Your final project will consist of analysis on a research question of your own choosing. The goal is for you to demonstrate proficiency in the techniques we have covered in this class and apply them to a novel dataset in a meaningful way."
+  },
+  {
+    "objectID": "projects/project02/project-2.html#part-1-find-a-dataset",
+    "href": "projects/project02/project-2.html#part-1-find-a-dataset",
+    "title": "Project 2",
+    "section": "Part 1 – find a dataset",
+    "text": "Part 1 – find a dataset\nThe first step is to think about and choose a potential question or topic that you’re interested in and then find a dataset that will help you investigate your question.\nThe dataset you choose should\n\nHave at least 100 observations\nHave at least 5 columns (variables)\n\nWhat to submit: Use the template in posit.cloud to successfully load your data and use glimpse or print to show the variables.\nYou should add a few sentences to tell me something about why you chose this particular dataset and what your research question is.\nThats it!\nDue Nov. 15th\nNote - if you need a little more time to find data, that’s fine, but you need to let me know and reach out for assistance if needed."
+  },
+  {
+    "objectID": "projects/project02/project-2.html#part-2-do-something-interesting",
+    "href": "projects/project02/project-2.html#part-2-do-something-interesting",
+    "title": "Project 2",
+    "section": "Part 2 – do something interesting",
+    "text": "Part 2 – do something interesting\nNow that you have a question and/or data set, do something with it! The goal here is to say something interesting and meaningful about your topic while showing me that you learned something this semester. You don’t have to cover every single technique or concept from the class – instead, focus on methods that help you begin to answer your research questions.\nWhile this project is very open ended, you should probably:\n\ncreate some kind of compelling visualization(s) of this data, and\nperform statistical inference and/or fit a model or descriptive or predictive purposes\n\nYou should stick with R packages and techniques that we have seen in class. Your report should be clearly written and have meaningful visualizations. A single high-quality visualization is generally better than a large number of poor-quality visualizations. All analyses must be done in RStudio (posit.cloud) and all components of the project must be reproducible.\nWhat to submit: using the same template in posit.cloud that you used for part 1, add your analysis and discussion. Your report should be organized into sections such as introduction, preliminary analysis, summary/conclusions, etc. Take a look at previous labs and project 1 for examples.\nSave your report as a pdf file and submit to Moodle.\nPart 2 is due Dec. 6\n\nIf you get me your report by Nov. 27th, I will give you feedback and you will be able to make corrections and resubmit by Dec. 6th.\n\nNote that Dec. 6th is a hard deadline – I cannot not accept any reports after this."
+  },
+  {
+    "objectID": "projects/project01/project-1-sandbox.html",
+    "href": "projects/project01/project-1-sandbox.html",
+    "title": "Project 1 - Linear Regression",
+    "section": "",
+    "text": "For this project you will investigate a dataset containing a sample of observations from 2020 of US birth data originally sourced from the Centers for Disease Control (CDC).\nThe goals are to demonstrate your understanding of concepts and techniques covered in the first half of the semester in the context of this dataset. These concepts include\n\nVisualizing and interpreting variables\nVisualizing associations between variables\nFormulating research questions, including the role of explanatory and response variables\nConstructing and interpreting linear models\nDrawing appropriate conclusions from analysis and communicating them clearly and accurately\n\n\nYou will use the data set us_births.csv to fit your model. You can load it using the code below.\n\nlibrary(tidyverse)\nbirths &lt;- read_csv(\"us_births.csv\")\n\nThis data set contains 3000 observations of 16 variables. The variables are described in the codebook below.\n\n\n\nnewborn_birth_weight: newborn birth weight in grams\n\nmonth: birth month (1: January, …, 12: December)\n\nmother_age: age of the mother in years\n\nprenatal_care_starting_month: month in which prenatal care began; if 0, there was no prenatal care\n\ndaily_cigarette_prepregnancy: daily number of cigarettes smoked before the pregnancy\n\ndaily_cigarette_trimester_1: daily number of cigarettes smoked during the 1st trimester of the pregnancy\n\ndaily_cigarette_trimester_2: daily number of cigarettes smoked during the 2nd trimester of the pregnancy\n\ndaily_cigarette_trimester_3: daily number of cigarettes smoked during the 3rd trimester of the pregnancy\n\nmother_height: height of the mother in inches\n\nmother_bmi: body mass index of the mother\n\nmother_weight_prepregnancy: weight of the mother before the pregnancy in pounds\n\nmother_weight_delivery: weight of the mother at delivery in pounds\n\nmother_diabetes_gestational: whether the mother had diabetes during the pregnancy\n\nnewborn_sex: sex of the newborn\n\ngestation_week: number of gestational weeks\n\nmother_risk_factors: whether the mother had any risk factor (diabetes, hypertension, previous preterm birth, previous cesarean, infertility treatment used, etc)"
+  },
+  {
+    "objectID": "projects/project01/project-1-sandbox.html#data",
+    "href": "projects/project01/project-1-sandbox.html#data",
+    "title": "Project 1 - Linear Regression",
+    "section": "",
+    "text": "You will use the data set us_births.csv to fit your model. You can load it using the code below.\n\nlibrary(tidyverse)\nbirths &lt;- read_csv(\"us_births.csv\")\n\nThis data set contains 3000 observations of 16 variables. The variables are described in the codebook below.\n\n\n\nnewborn_birth_weight: newborn birth weight in grams\n\nmonth: birth month (1: January, …, 12: December)\n\nmother_age: age of the mother in years\n\nprenatal_care_starting_month: month in which prenatal care began; if 0, there was no prenatal care\n\ndaily_cigarette_prepregnancy: daily number of cigarettes smoked before the pregnancy\n\ndaily_cigarette_trimester_1: daily number of cigarettes smoked during the 1st trimester of the pregnancy\n\ndaily_cigarette_trimester_2: daily number of cigarettes smoked during the 2nd trimester of the pregnancy\n\ndaily_cigarette_trimester_3: daily number of cigarettes smoked during the 3rd trimester of the pregnancy\n\nmother_height: height of the mother in inches\n\nmother_bmi: body mass index of the mother\n\nmother_weight_prepregnancy: weight of the mother before the pregnancy in pounds\n\nmother_weight_delivery: weight of the mother at delivery in pounds\n\nmother_diabetes_gestational: whether the mother had diabetes during the pregnancy\n\nnewborn_sex: sex of the newborn\n\ngestation_week: number of gestational weeks\n\nmother_risk_factors: whether the mother had any risk factor (diabetes, hypertension, previous preterm birth, previous cesarean, infertility treatment used, etc)"
+  },
+  {
+    "objectID": "projects/project01/project-1-sandbox.html#research-question",
+    "href": "projects/project01/project-1-sandbox.html#research-question",
+    "title": "Project 1 - Linear Regression",
+    "section": "Research question",
+    "text": "Research question\nAs a researcher, your investigation should begin with a clearly-formulated, measurable research question. What are you hoping to discern with this analysis and why should the reader be interested in the results? Having an initial hypothesis can help shape your specific research question and guide the study design overall. In this section, you will demonstrate proficiency in asking meaningful questions (that you later answer using data).\n\nExample research question and hypotheses (if we were predicting penguin weights instead of baby weights):\nCan penguin bill depth be used to predict body mass? Having an answer to this question could help inform the design of future studies of wild penguins and provide useful data for those who work with captive penguin populations. Many other variables (e.g., calories needed) and interventions (e.g., amount of antibiotic to administer) relate directly to body mass. We hypothesize that penguins with deeper bills will also have more mass.\n\n\n\n\n\n\n\nTask\n\n\n\nFormulate a clear and concise research question using the language of Chapter 7. State your hypotheses and provide rationale for the investigation, including motivation as to why the research question is interesting or useful."
+  },
+  {
+    "objectID": "projects/project01/project-1-sandbox.html#methodology",
+    "href": "projects/project01/project-1-sandbox.html#methodology",
+    "title": "Project 1 - Linear Regression",
+    "section": "Methodology",
+    "text": "Methodology\nIn this section, you will explain the methods used to investigate the association between variables. You will also demonstrate proficiency in using R to perform and visualize linear regression.\n\n\n\n\n\n\nTask\n\n\n\nFind a linear model that predicts birth weight based on the variable you selected. Include a table of the summary statistics needed to find your regression line. Be sure to include the entire model equation.\n\n\n\n\n\n\n\n\nTask\n\n\n\nCreate a visualization of your linear model that shows its relationship to your variables."
+  },
+  {
+    "objectID": "projects/project01/project-1-sandbox.html#results",
+    "href": "projects/project01/project-1-sandbox.html#results",
+    "title": "Project 1 - Linear Regression",
+    "section": "Results",
+    "text": "Results\nIn this section you will analyze and interpret the results of your linear regression, demonstrating that you are proficient at answering research questions using data.\n\n\n\n\n\n\nTask\n\n\n\nAnalyze the linear model you found, discussing the type and strength of the association between variables. What specific data are you using to substantiate your claims about strength (r, R^2, something else) and why? For what range of values does this model have reasonable predictive power? What does the slope of your line tell you?"
+  },
+  {
+    "objectID": "projects/project01/project-1-sandbox.html#discussion",
+    "href": "projects/project01/project-1-sandbox.html#discussion",
+    "title": "Project 1 - Linear Regression",
+    "section": "Discussion",
+    "text": "Discussion\nIn this concluding section, you will summarize your findings and provide a brief discussion of your analysis.\n\n\n\n\n\n\nTask\n\n\n\nSummarize your main finding in a sentence or two. Discuss your finding and why it is useful (connect this to the motivation you provided in framing yur research question).\n\n\n\n\n\n\n\n\nTask\n\n\n\nOffer a critique your own analysis – what are the limitations of your findings?\n\n\n\n\n\n\n\n\nTask\n\n\n\nFinally, offer a few thoughts about ways you might extend this research, or other research questions you might be interested in after completing this project."
+  },
+  {
+    "objectID": "projects/project01/project-1-sandbox.html#sandbox",
+    "href": "projects/project01/project-1-sandbox.html#sandbox",
+    "title": "Project 1 - Linear Regression",
+    "section": "Sandbox",
+    "text": "Sandbox\n\nbirths &lt;- births |&gt;\n  mutate(mother_weight_delta = mother_weight_delivery - mother_weight_prepregnancy)\n\nglimpse(births)\n\nRows: 3,000\nColumns: 17\n$ newborn_birth_weight         &lt;dbl&gt; 3572, 3290, 3459, 3685, 2405, 3946, 3433,…\n$ month                        &lt;dbl&gt; 2, 3, 3, 12, 8, 2, 4, 5, 6, 5, 6, 4, 1, 7…\n$ mother_age                   &lt;dbl&gt; 29, 32, 33, 36, 22, 27, 28, 38, 29, 38, 3…\n$ prenatal_care_starting_month &lt;dbl&gt; 2, 4, 3, 2, 2, 2, 3, 2, 4, 3, 3, 2, 3, 2,…\n$ daily_cigarette_prepregnancy &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 20, 0, 0…\n$ daily_cigarette_trimester_1  &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0,…\n$ daily_cigarette_trimester_2  &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…\n$ daily_cigarette_trimester_3  &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…\n$ mother_height                &lt;dbl&gt; 69, 65, 62, 69, 66, 68, 66, 64, 61, 66, 6…\n$ mother_bmi                   &lt;dbl&gt; 36.2, 30.8, 23.4, 22.7, 22.6, 38.0, 26.6,…\n$ mother_weight_prepregnancy   &lt;dbl&gt; 245, 185, 128, 154, 140, 250, 165, 180, 1…\n$ mother_weight_delivery       &lt;dbl&gt; 290, 190, 153, 195, 168, 289, 197, 205, 1…\n$ mother_diabetes_gestational  &lt;chr&gt; \"Y\", \"N\", \"N\", \"N\", \"N\", \"N\", \"N\", \"N\", \"…\n$ newborn_sex                  &lt;chr&gt; \"M\", \"F\", \"M\", \"M\", \"F\", \"F\", \"M\", \"F\", \"…\n$ gestation_week               &lt;dbl&gt; 37, 38, 39, 38, 37, 39, 39, 34, 43, 39, 3…\n$ mother_risk_factor           &lt;lgl&gt; TRUE, FALSE, FALSE, FALSE, FALSE, FALSE, …\n$ mother_weight_delta          &lt;dbl&gt; 45, 5, 25, 41, 28, 39, 32, 25, 21, 16, 19…\n\n\n\nbirths |&gt;\n  ggplot( aes( x = newborn_birth_weight)) +\n  geom_histogram(binwidth = 100, fill = \"seagreen\", color=\"white\")\n\n\n\n\n\n\n\n\nbirths |&gt;\n ggplot(aes(x = newborn_birth_weight)) +\n    geom_boxplot()\n\n\n\n\n\n\n\n\nbirths |&gt;\n  ggplot( aes( x = gestation_week, y = newborn_birth_weight)) +\n  geom_point()\n\n\n\n\n\n\n\n\nbirths &lt;- births |&gt;\n  mutate(prenatal = if_else(prenatal_care_starting_month == 0, \"no\", \"yes\"))\n\n\nbirths |&gt;\n  ggplot( aes( x = newborn_birth_weight, fill=prenatal)) +\n  geom_density(alpha=0.3) +\n  labs(\n    fill=\"prenatal care\"\n  )\n\n\n\n\n\n\n\n\nbirths |&gt;\n  ggplot( aes( x = prenatal_care_starting_month, y = newborn_birth_weight)) +\n  geom_point()\n\n\n\n\n\n\n\n\nbirths |&gt;\n  ggplot( aes( x = gestation_week)) +\n  geom_density(alpha=0.3, adjust=2, fill=\"darkseagreen\") \n\n\n\n\n\n\n\n\nbirths |&gt;\n  summarize(N = n(), \n            mean = mean(gestation_week),\n            sd_x = sd(gestation_week)\n  )\n\n# A tibble: 1 × 3\n      N  mean  sd_x\n  &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt;\n1  3000  38.9  1.98\n\n\nPlots of various explanatory variables (to see if there is actually any linear association)\n\nbirths |&gt;\n  ggplot( aes( x = mother_age, y = newborn_birth_weight)) +\n  geom_point()\n\n\n\n\n\n\n\n\nbirths |&gt;\n  ggplot( aes( x = daily_cigarette_prepregnancy, y = newborn_birth_weight)) +\n  geom_point()\n\n\n\n\n\n\n\n\nbirths |&gt;\n  ggplot( aes( x = daily_cigarette_trimester_1, y = newborn_birth_weight)) +\n  geom_point()\n\n\n\n\n\n\n\n\nbirths |&gt;\n  ggplot( aes( x = mother_height, y = newborn_birth_weight)) +\n  geom_point()\n\n\n\n\n\n\n\n\nbirths |&gt;\n  ggplot( aes( x = mother_bmi, y = newborn_birth_weight)) +\n  geom_point()\n\n\n\n\n\n\n\n\nbirths |&gt;\n  ggplot( aes( x = mother_weight_prepregnancy, y = newborn_birth_weight)) +\n  geom_point()\n\n\n\n\n\n\n\n\nbirths |&gt;\n  ggplot( aes( x = mother_weight_delivery, y = newborn_birth_weight)) +\n  geom_point()\n\n\n\n\n\n\n\nCategorical variables\n\nbirths |&gt;\n  ggplot( aes( x = mother_diabetes_gestational, y = newborn_birth_weight)) +\n  geom_point()\n\n\n\n\n\n\n\n\nbirths |&gt;\n  ggplot( aes( x = newborn_sex, y = newborn_birth_weight)) +\n  geom_point()\n\n\n\n\n\n\n\n\n# births |&gt;\n#  ggplot( aes( x = mother_risk_factors, y = newborn_birth_weight)) +\n#  geom_point()"
+  },
+  {
+    "objectID": "labs/lab-03/lab-03-sa.html",
+    "href": "labs/lab-03/lab-03-sa.html",
+    "title": "Lab 03 – Voter Turnout",
+    "section": "",
+    "text": "The goal of this lab is to demonstrate understanding of material from Chapters 11-13. In particular, we will do an inference on a single population proportion and"
+  },
+  {
+    "objectID": "labs/lab-03/lab-03-sa.html#packages-and-data",
+    "href": "labs/lab-03/lab-03-sa.html#packages-and-data",
+    "title": "Lab 03 – Voter Turnout",
+    "section": "Packages and Data",
+    "text": "Packages and Data\nFor this analysis, we’ll use the tidyverse and tidymodels packages.\n\nlibrary(tidyverse)\nlibrary(tidymodels)\n\nThe data from this survey is in the file voting-survey.csv saved in your posit.cloud workspace.\n\nvoting_survey &lt;- read_csv(\"voting-survey.csv\")"
+  },
+  {
+    "objectID": "labs/lab-03/lab-03-sa.html#estimation-with-confidence-interval",
+    "href": "labs/lab-03/lab-03-sa.html#estimation-with-confidence-interval",
+    "title": "Lab 03 – Voter Turnout",
+    "section": "Estimation with Confidence Interval",
+    "text": "Estimation with Confidence Interval\nOur goal in this section is to estimate the true proportion of registered US voters who are certain to vote in the next presidential election, based on these data.\n\n\n\n\n\n\nTask 2\n\n\n\nWhat is the parameter of interest?\n\n\n\n\n\n\n\n\nTask 2 Solution\n\n\n\nProportion of all registered voters, \\(p\\), who are certain to vote in the next presidential election\n\n\nWe can use the bootstrap technique of Chapter 12 (and which we used in AE 07) to estimate a 95% confidence interval. Below is a histogram of the sample distribution, along with the confidence interval shaded in.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTask 3\n\n\n\nSuppose the bounds of this confidence interval are L = 0.678 and U = 0.714. Your friend offers the following interpretation:\n\n95% of the time, the true proportion of registered US voters who are certain to vote in the next presidential election is between L and U.\n\nComment on this interpretation. Is it correct? If not, how would you fix it?\n\n\n\n\n\n\n\n\nTask 3 Solution\n\n\n\nNot correct. We are 95% confident that 68.1% to 71.3% of all registered voters are certain to vote in the next presidential election."
+  },
+  {
+    "objectID": "labs/lab-02/lab02-thorns-complete.html",
+    "href": "labs/lab-02/lab02-thorns-complete.html",
+    "title": "Lab 02 - Portland Thorns",
+    "section": "",
+    "text": "In this lab we will be working with data from 2016-23 of the Portland Thorns, a highly successful National Women’s Soccer League (NWSL) team located in Portland, OR. Our goals include\nWe will also see some new ways of working with data with R."
+  },
+  {
+    "objectID": "labs/lab-02/lab02-thorns-complete.html#task-1",
+    "href": "labs/lab-02/lab02-thorns-complete.html#task-1",
+    "title": "Lab 02 - Portland Thorns",
+    "section": "Task 1",
+    "text": "Task 1\nCreate a bar plot for the variable result. Additionally, calculate the numbers of wins, losses, and ties. Hint: in previous activities, we have used the count() function to do this kind of calculation.\n\n ggplot(thorns, aes(x=result)) + \n   geom_bar(fill = \"#99242B\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nResponse\n\n\n\nThorns win more than they lose or tie"
+  },
+  {
+    "objectID": "labs/lab-02/lab02-thorns-complete.html#task-2",
+    "href": "labs/lab-02/lab02-thorns-complete.html#task-2",
+    "title": "Lab 02 - Portland Thorns",
+    "section": "Task 2",
+    "text": "Task 2\nOne question we might ask about the Thorns is whether there’s a difference in how often they win if we control for whether they’re playing at home or away.\n\n\n\n\n\n\nResponse\n\n\n\nDo you have a guess about what we might find when we look for an association between these two variables?\n\n\nTo help us investigate this question, we will create a new variable that captures whether the game was played at home or away. We will call this variable home_thorns and give it the value “home” if Thorns are the home team and “away” if Thorns are the away team. Here is the code that does this:\n\nthorns &lt;- thorns |&gt;\n  mutate(home_thorns = if_else(home_team == \"POR\", \"home\", \"away\"))\n\nThere are two things to notice here:\n\nThe use of the assignment operator (&lt;-) to assign the resulting data frame to thorns, thus overwriting the thorns dataset to contain this new column. We do this because we will use this new variable, home_thorns, in a subsequent exercise.\nThe use of a new function, if_else() to determine whether the game is played at home or away.\n\nhome_team == \"POR\" finds all rows where the home team is Portland.\nIf the home team is Portland, then we set the value of home_thorns to “home”.\nOtherwise (else) Thorns must be the away team and we set the value of home_thorns to \"away\".\n\n\n\n\n\n\n\n\nSummary\n\n\n\nFill in the blank in the code chunk below with your new variable to calculate the number of home and away games and write a one sentence narrative for your findings. Remember to change eval:false to eval:true.\nadd your response here\n\n\n\nthorns |&gt; \n  count(home_thorns)\n\n# A tibble: 2 × 2\n  home_thorns     n\n  &lt;chr&gt;       &lt;int&gt;\n1 away           97\n2 home          100"
+  },
+  {
+    "objectID": "labs/lab-02/lab02-thorns-complete.html#task-3",
+    "href": "labs/lab-02/lab02-thorns-complete.html#task-3",
+    "title": "Lab 02 - Portland Thorns",
+    "section": "Task 3",
+    "text": "Task 3\nNow let’s create a visualization that displays the relationship between home_thorns and result. Since we’re now looking at two categorical variables, we now want a stacked bar graph.\n\nggplot(thorns, aes(x=home_thorns, fill = result) ) +\n  geom_bar(position = \"fill\") +\n  scale_fill_manual(values = wes_palette(\"Zissou1\", n=5))\n\n\n\n\n\n\n\n# scale_fill_manual(values = c(\"black\", \"#EE202F\", \"#99242b\"))\n\nThen, let’s calculate the proportions of home and away games that the Thorns won.\n\nthorns |&gt;\n  count(home_thorns, result)\n\n# A tibble: 6 × 3\n  home_thorns result     n\n  &lt;chr&gt;       &lt;chr&gt;  &lt;int&gt;\n1 away        loss      30\n2 away        tie       31\n3 away        win       36\n4 home        loss      18\n5 home        tie       19\n6 home        win       63\n\n\n\nthorns |&gt;\n  count(result, home_thorns) |&gt;\n  group_by(home_thorns) |&gt;\n  mutate( pct = n / sum(n)) |&gt;\n  pivot_wider(id_cols = home_thorns, names_from = result , values_from = pct )\n\n# A tibble: 2 × 4\n# Groups:   home_thorns [2]\n  home_thorns  loss   tie   win\n  &lt;chr&gt;       &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1 away        0.309 0.320 0.371\n2 home        0.18  0.19  0.63 \n\n\n\n\n\n\n\n\nTask 3 Response\n\n\n\nBased on your findings, do you think that results and home_thorns are associatated? Does this suggest the Thorns have a home-field advantage? Why or why not?\nThorns win more at home than they do when they’re away. These variables do seem to have an association."
+  },
+  {
+    "objectID": "labs/lab-02/lab02-thorns-complete.html#task-5",
+    "href": "labs/lab-02/lab02-thorns-complete.html#task-5",
+    "title": "Lab 02 - Portland Thorns",
+    "section": "Task 5",
+    "text": "Task 5\n\n\n\n\n\n\nExercise 5\n\n\n\nExamine the following code block and its output and in your own words, summarize the results.\nthorns score an average of about 2 goals per game at home. in away games, they score an average of 1.25 goals.\n\n\n\nthorns |&gt;\n  group_by(home_thorns) |&gt;\n  summarize(mean = mean(thorns_pts))\n\n# A tibble: 2 × 2\n  home_thorns  mean\n  &lt;chr&gt;       &lt;dbl&gt;\n1 away         1.25\n2 home         2.05\n\n\n\n\n\n\n\n\nExercise 6\n\n\n\nIn the code block below, fill in the blank to determine the average number of goals the Thorns score in games they win.\n\n\n\nthorns |&gt;\n  group_by(result) |&gt;\n  summarize(mean = mean(thorns_pts))\n\n# A tibble: 3 × 2\n  result  mean\n  &lt;chr&gt;  &lt;dbl&gt;\n1 loss   0.562\n2 tie    1.12 \n3 win    2.45"
+  },
+  {
+    "objectID": "labs/lab-02/lab02-thorns-complete.html#task-6",
+    "href": "labs/lab-02/lab02-thorns-complete.html#task-6",
+    "title": "Lab 02 - Portland Thorns",
+    "section": "Task 6",
+    "text": "Task 6\nThe code chunk below extends our investigation by looking at average number of goals scored when we control for both home_thorns and result.\n\nthorns |&gt;\n  group_by(home_thorns, result) |&gt;\n  summarize(mean = mean(thorns_pts))\n\n# A tibble: 6 × 3\n# Groups:   home_thorns [2]\n  home_thorns result  mean\n  &lt;chr&gt;       &lt;chr&gt;  &lt;dbl&gt;\n1 away        loss   0.5  \n2 away        tie    1.23 \n3 away        win    1.89 \n4 home        loss   0.667\n5 home        tie    0.947\n6 home        win    2.78 \n\n\n\n\n\n\n\n\nExercise 7\n\n\n\nExamine this table and make some observations."
+  },
+  {
+    "objectID": "labs/lab-02/lab02-thorns-complete.html#task-7",
+    "href": "labs/lab-02/lab02-thorns-complete.html#task-7",
+    "title": "Lab 02 - Portland Thorns",
+    "section": "Task 7",
+    "text": "Task 7\nFor our last task, we want to visualize our investigation into number of goals scored with some scatterplots. First, we build on the thorns data frame by again creating some new variables to help us keep track of the points scored by the Thorns opponent in each game. The code below creates two new variables:\n\ntotal_pts: Sum of points scored by both teams, i.e. home_pts + away_pts.\nopponent_pts: Points scored by the opposing team, i.e., total_pts - thorn_pts.\n\n\nthorns &lt;- thorns |&gt;\n  mutate(\n    total_pts = home_pts + away_pts,\n    opponent_pts = total_pts - thorns_pts\n    )\n\nFinally, we create some scatterplots to do the following:\n\ngraph opponent_pts (y) vs. thorns_pts (x)\nColor the scatter plot by whether Thorns are home or away.\nRepresent the data with “jittered” points wth geom_jitter().\nOverlay a \\(y = x\\) line with geom_abline().\nFacet by year (i.e. create a separate graph for each season).\n\nFill in the blanks in the blanks with the appropriate variable names. After producing the scatterplots, answer the questions below.\n\nggplot(thorns, aes(x = thorns_pts, y = opponent_pts, color = home_thorns)) + \n  geom_jitter(width = 0.1, height = 0.1) + \n  geom_abline(slope = 1, intercept = 0) +\n  facet_wrap(~ year) +\n  labs(\n    x = \"thorns pts\", \n    y = \"opp pts\", \n    title = \"Home Field Advantage?\", \n    color = \"\"\n  )\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nExercise 8\n\n\n\nWhat observations can you make about the the scatterplots shown above? What does each point represent? What do the diagonal lines represent? What does it mean for a point to fall above the line? Below the line?\nwrite response here\n\n\n\n\n\n\n\n\nWrap Up\n\n\n\nIf we really want to formally test whether the Thorns have a home-field advantage, then we must first define what this means! In your own words, what do you think a home-field advantage means? Then, now that you’ve defined what it means to have a home field advantage, define what it means to not have a home-field advantage.\nwrite response here"
+  },
+  {
+    "objectID": "projects/project01/project-1-sa.html",
+    "href": "projects/project01/project-1-sa.html",
+    "title": "Project 1 - Linear Regression",
+    "section": "",
+    "text": "For this project you will investigate a dataset containing a sample of observations from 2020 of US birth data originally sourced from the Centers for Disease Control (CDC).\nThe goals are to demonstrate your understanding of concepts and techniques covered in the first half of the semester in the context of this dataset. These concepts include\n\nVisualizing and interpreting variables\nVisualizing associations between variables\nFormulating research questions, including the role of explanatory and response variables\nConstructing and interpreting linear models\nDrawing appropriate conclusions from analysis and communicating them clearly and accurately\n\n\n\nYou will use the data set us_births.csv to fit your model. You can load it using the code below.\n\nlibrary(tidyverse)\nlibrary(tidymodels)\n\nbirths &lt;- read_csv(\"us_births.csv\")\n\nThis data set contains 3000 observations of 16 variables. The variables are described in the codebook below.\n\n\n\nnewborn_birth_weight: newborn birth weight in grams\nmonth: birth month (1: January, …, 12: December)\nmother_age: age of the mother in years\nprenatal_care_starting_month: month in which prenatal care began; if 0, there was no prenatal care\ndaily_cigarette_prepregnancy: daily number of cigarettes smoked before the pregnancy\ndaily_cigarette_trimester_1: daily number of cigarettes smoked during the 1st trimester of the pregnancy\ndaily_cigarette_trimester_2: daily number of cigarettes smoked during the 2nd trimester of the pregnancy\ndaily_cigarette_trimester_3: daily number of cigarettes smoked during the 3rd trimester of the pregnancy\nmother_height: height of the mother in inches\nmother_bmi: body mass index of the mother\nmother_weight_prepregnancy: weight of the mother before the pregnancy in pounds\nmother_weight_delivery: weight of the mother at delivery in pounds\nmother_diabetes_gestational: whether the mother had diabetes during the pregnancy\nnewborn_sex: sex of the newborn\ngestation_week: number of gestational weeks\nmother_risk_factors: whether the mother had any risk factor (diabetes, hypertension, previous preterm birth, previous cesarean, infertility treatment used, etc)\n\n\nglimpse(births)\n\nRows: 3,000\nColumns: 16\n$ newborn_birth_weight         &lt;dbl&gt; 3572, 3290, 3459, 3685, 2405, 3946, 3433,…\n$ month                        &lt;dbl&gt; 2, 3, 3, 12, 8, 2, 4, 5, 6, 5, 6, 4, 1, 7…\n$ mother_age                   &lt;dbl&gt; 29, 32, 33, 36, 22, 27, 28, 38, 29, 38, 3…\n$ prenatal_care_starting_month &lt;dbl&gt; 2, 4, 3, 2, 2, 2, 3, 2, 4, 3, 3, 2, 3, 2,…\n$ daily_cigarette_prepregnancy &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 20, 0, 0…\n$ daily_cigarette_trimester_1  &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0,…\n$ daily_cigarette_trimester_2  &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…\n$ daily_cigarette_trimester_3  &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…\n$ mother_height                &lt;dbl&gt; 69, 65, 62, 69, 66, 68, 66, 64, 61, 66, 6…\n$ mother_bmi                   &lt;dbl&gt; 36.2, 30.8, 23.4, 22.7, 22.6, 38.0, 26.6,…\n$ mother_weight_prepregnancy   &lt;dbl&gt; 245, 185, 128, 154, 140, 250, 165, 180, 1…\n$ mother_weight_delivery       &lt;dbl&gt; 290, 190, 153, 195, 168, 289, 197, 205, 1…\n$ mother_diabetes_gestational  &lt;chr&gt; \"Y\", \"N\", \"N\", \"N\", \"N\", \"N\", \"N\", \"N\", \"…\n$ newborn_sex                  &lt;chr&gt; \"M\", \"F\", \"M\", \"M\", \"F\", \"F\", \"M\", \"F\", \"…\n$ gestation_week               &lt;dbl&gt; 37, 38, 39, 38, 37, 39, 39, 34, 43, 39, 3…\n$ mother_risk_factor           &lt;lgl&gt; TRUE, FALSE, FALSE, FALSE, FALSE, FALSE, …"
+  },
+  {
+    "objectID": "projects/project01/project-1-sa.html#data",
+    "href": "projects/project01/project-1-sa.html#data",
+    "title": "Project 1 - Linear Regression",
+    "section": "",
+    "text": "You will use the data set us_births.csv to fit your model. You can load it using the code below.\n\nlibrary(tidyverse)\nlibrary(tidymodels)\n\nbirths &lt;- read_csv(\"us_births.csv\")\n\nThis data set contains 3000 observations of 16 variables. The variables are described in the codebook below.\n\n\n\nnewborn_birth_weight: newborn birth weight in grams\nmonth: birth month (1: January, …, 12: December)\nmother_age: age of the mother in years\nprenatal_care_starting_month: month in which prenatal care began; if 0, there was no prenatal care\ndaily_cigarette_prepregnancy: daily number of cigarettes smoked before the pregnancy\ndaily_cigarette_trimester_1: daily number of cigarettes smoked during the 1st trimester of the pregnancy\ndaily_cigarette_trimester_2: daily number of cigarettes smoked during the 2nd trimester of the pregnancy\ndaily_cigarette_trimester_3: daily number of cigarettes smoked during the 3rd trimester of the pregnancy\nmother_height: height of the mother in inches\nmother_bmi: body mass index of the mother\nmother_weight_prepregnancy: weight of the mother before the pregnancy in pounds\nmother_weight_delivery: weight of the mother at delivery in pounds\nmother_diabetes_gestational: whether the mother had diabetes during the pregnancy\nnewborn_sex: sex of the newborn\ngestation_week: number of gestational weeks\nmother_risk_factors: whether the mother had any risk factor (diabetes, hypertension, previous preterm birth, previous cesarean, infertility treatment used, etc)\n\n\nglimpse(births)\n\nRows: 3,000\nColumns: 16\n$ newborn_birth_weight         &lt;dbl&gt; 3572, 3290, 3459, 3685, 2405, 3946, 3433,…\n$ month                        &lt;dbl&gt; 2, 3, 3, 12, 8, 2, 4, 5, 6, 5, 6, 4, 1, 7…\n$ mother_age                   &lt;dbl&gt; 29, 32, 33, 36, 22, 27, 28, 38, 29, 38, 3…\n$ prenatal_care_starting_month &lt;dbl&gt; 2, 4, 3, 2, 2, 2, 3, 2, 4, 3, 3, 2, 3, 2,…\n$ daily_cigarette_prepregnancy &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 20, 0, 0…\n$ daily_cigarette_trimester_1  &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0,…\n$ daily_cigarette_trimester_2  &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…\n$ daily_cigarette_trimester_3  &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…\n$ mother_height                &lt;dbl&gt; 69, 65, 62, 69, 66, 68, 66, 64, 61, 66, 6…\n$ mother_bmi                   &lt;dbl&gt; 36.2, 30.8, 23.4, 22.7, 22.6, 38.0, 26.6,…\n$ mother_weight_prepregnancy   &lt;dbl&gt; 245, 185, 128, 154, 140, 250, 165, 180, 1…\n$ mother_weight_delivery       &lt;dbl&gt; 290, 190, 153, 195, 168, 289, 197, 205, 1…\n$ mother_diabetes_gestational  &lt;chr&gt; \"Y\", \"N\", \"N\", \"N\", \"N\", \"N\", \"N\", \"N\", \"…\n$ newborn_sex                  &lt;chr&gt; \"M\", \"F\", \"M\", \"M\", \"F\", \"F\", \"M\", \"F\", \"…\n$ gestation_week               &lt;dbl&gt; 37, 38, 39, 38, 37, 39, 39, 34, 43, 39, 3…\n$ mother_risk_factor           &lt;lgl&gt; TRUE, FALSE, FALSE, FALSE, FALSE, FALSE, …"
+  },
+  {
+    "objectID": "projects/project01/project-1-sa.html#research-question",
+    "href": "projects/project01/project-1-sa.html#research-question",
+    "title": "Project 1 - Linear Regression",
+    "section": "Research question",
+    "text": "Research question\nAs a researcher, your investigation should begin with a clearly-formulated, measurable research question. What are you hoping to discern with this analysis and why should the reader be interested in the results? Having an initial hypothesis can help shape your specific research question and guide the study design overall. In this section, you will demonstrate proficiency in asking meaningful questions (that you later answer using data).\n\nExample research question and hypotheses (if we were predicting penguin weights instead of baby weights):\nCan penguin bill depth be used to predict body mass? Having an answer to this question could help inform the design of future studies of wild penguins and provide useful data for those who work with captive penguin populations. Many other variables (e.g., calories needed) and interventions (e.g., amount of antibiotic to administer) relate directly to body mass. We hypothesize that penguins with deeper bills will also have more mass.\n\n\n\n\n\n\n\nTask\n\n\n\nFormulate a clear and concise research question. State your hypotheses and provide rationale for the investigation, including motivation as to why the research question is interesting or useful.\n\n\n\n\n\n\n\n\nResponse\n\n\n\nI hypothesize that newborn birthweight is positively associated with mother’s height."
+  },
+  {
+    "objectID": "projects/project01/project-1-sa.html#methodology",
+    "href": "projects/project01/project-1-sa.html#methodology",
+    "title": "Project 1 - Linear Regression",
+    "section": "Methodology",
+    "text": "Methodology\nIn this section, you will explain the methods used to investigate the association between variables. You will also demonstrate proficiency in using R to perform and visualize linear regression.\n\n\n\n\n\n\nTask\n\n\n\nFind a linear model that predicts birth weight based on the variable you selected. Include a table of the summary statistics needed to find your regression line. Be sure to include the entire model equation.\n\n\n\nbirths |&gt;\n  summarize( mean_x = mean(gestation_week, na.rm = TRUE),\n             sd_x = sd(gestation_week, na.rm = TRUE),\n             mean_y = mean(newborn_birth_weight, na.rm = TRUE),\n             sd_y = sd(newborn_birth_weight, na.rm = TRUE),\n             r = cor(gestation_week, newborn_birth_weight)\n  )\n\n# A tibble: 1 × 5\n  mean_x  sd_x mean_y  sd_y     r\n   &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1   38.9  1.98  3322.  530. 0.417\n\n\n\nlinear_reg() |&gt;\n  fit(newborn_birth_weight ~ gestation_week, data = births)\n\n\n\n\n\n\n\nResponse\n\n\n\nThe linear model is \\[\ny = 112 x - 1013\n\\]\nThis is only valid on the range \\(26 \\leq x \\leq 47\\). In particular, the \\(y\\)-intercept corresponding to 0 gestation week is not meaningful.\n\n\n\n\n\n\n\n\nTask\n\n\n\nCreate a visualization of your linear model that shows its relationship to your variables."
+  },
+  {
+    "objectID": "projects/project01/project-1-sa.html#results",
+    "href": "projects/project01/project-1-sa.html#results",
+    "title": "Project 1 - Linear Regression",
+    "section": "Results",
+    "text": "Results\nIn this section you will analyze and interpret the results of your linear regression, demonstrating that you are proficient at answering research questions using data.\n\n\n\n\n\n\nTask\n\n\n\nAnalyze the linear model you found, discussing the type and strength of the association between variables. What specific data are you using to substantiate your claims about strength (\\(r\\), \\(R^2\\), something else) and why? For what range of values does this model have reasonable predictive power? What does the slope of your line tell you?\n\n\n\n\n\n\n\n\nResponse\n\n\n\nThe linear model is \\[\ny = 112 x - 1013\n\\]\nSince the slope is postive, this indicates a positive association between the variables – as gestation_week increases, so does newborn_birth_weight. This is only valid on the range \\(26 \\leq x \\leq 47\\). In particular, the \\(y\\)-intercept corresponding to 0 gestation week is not meaningful. The value of the correlation coefficient is about \\(r = 0.42\\) which indicates a weak to moderate association. It’s nevertheless the strongest association I could find. The value of \\(R^2\\) is about 0.17 which indicates that about 17% of the variation in birth weights can be explained by gestation_week"
+  },
+  {
+    "objectID": "projects/project01/project-1-sa.html#discussion",
+    "href": "projects/project01/project-1-sa.html#discussion",
+    "title": "Project 1 - Linear Regression",
+    "section": "Discussion",
+    "text": "Discussion\nIn this concluding section, you will summarize your findings and provide a brief discussion of your analysis.\n\n\n\n\n\n\nTask\n\n\n\nSummarize your main finding in a sentence or two. Discuss your finding and why it is useful (connect this to the motivation you provided in framing yur research question).\n\n\n\n\n\n\n\n\nTask\n\n\n\nOffer a critique your own analysis – what are the limitations of your findings?\n\n\n\n\n\n\n\n\nTask\n\n\n\nFinally, offer a few thoughts about ways you might extend this research, or other research questions you might be interested in after completing this project."
+  },
+  {
+    "objectID": "projects/project02/project-2_part1.html",
+    "href": "projects/project02/project-2_part1.html",
+    "title": "Project 2",
+    "section": "",
+    "text": "Your final project will consist of analysis on a research question of your own choosing. The goal is for you to demonstrate proficiency in the techniques we have covered in this class and apply them to a novel dataset in a meaningful way.\nPart 1 - due Nov. 15th\nFind a dataset and choose a research question.\nPart 2 - due Dec. 6\n\nIf you get me your report by Nov. 27th, I will give you feedback and you will be able to make corrections and resubmit by Dec. 6th.\n\nNote that Dec. 6th is a hard deadline – I will not accept any reports after this.\n\nYou do not need to do an exhaustive data analysis, i.e. do not calculate every statistic and procedure you have learned for every variable, but rather show me that you are proficient at asking meaningful questions and answering them with results of data analysis, that you are proficient in using R, and that you are proficient at interpreting and presenting the results. Focus on methods that help you begin to answer your research questions. You should critique your own methods and provide suggestions for improving your analysis. Issues pertaining to the reliability and validity of your data, and appropriateness of the statistical analysis should be discussed where appropriate.\nWhile this project is very open ended, you should, at a minimum\n\ncreate some kind of compelling visualization(s) of this data, and\nperform statistical inference and/or fit a model or descriptive or predictive purposes\n\nYou should stick with R packages and techniques that we have seen in class. Your report should be clearly written and have meaningful visualizations. A single high-quality visualization is generally better than a large number of poor-quality visualizations. All analyses must be done in RStudio (posit.cloud) and all components of the project must be reproducible."
+  },
+  {
+    "objectID": "projects/project02/project-2_part1.html#part-1-choose-a-dataset-and-propose-a-question",
+    "href": "projects/project02/project-2_part1.html#part-1-choose-a-dataset-and-propose-a-question",
+    "title": "Project 2",
+    "section": "Part 1: choose a dataset and propose a question",
+    "text": "Part 1: choose a dataset and propose a question\nThe first step is to think about and choose a potential question or topic that you’re interested in and then find a dataset that will help you investigate your question.\nThe dataset you choose should\n\nHave at least 100 observations\nHave at least 5 columns (variables)\n\n\nResources for datasets\nYou are welcome to use a dataset that we’ve seen in class, as long as your research question is a new one and your dataset meets the above requirements. Many of the datasets featured in our textbook can be found here:\n\nOpenintro (datasets featured in the textbook)\n\nHere is a short list of sources for interesting datasets in easy-to-access formats. This is a good place to start if you don’t have a particular topic in mind, but just want to browse for an interesting dataset.\n\nAwesome public datasets\nCORGIS: The Collection of Really Great, Interesting, Situated Datasets\nTidyTuesday\n\nFinally, here are some other sources. Warning - many of these sites can be challenging to navigate! If you want help finding or downloading a particular dataset, just let me know.\n\nCDC\nData.gov\nData is Plural\nDurham Open Data Portal\nElection Studies\nEuropean Statistics\nGeneral Social Survey\nGoogle Dataset Search\nHarvard Dataverse\nInternational Monetary Fund\nIPUMS survey data from around the world\nLos Angeles Open Data\nNational Crime Victimization Survey\nNHS Scotland Open Data\nNYC OpenData\nOpen access to Scotland’s official statistics\nPew Research\nStatistics Canada\nThe National Bureau of Economic Research\nUCI Machine Learning Repository\nUK Government Data\nUNICEF Data\nUnited Nations Data\nUnited Nations Statistics Division\nUS Census Data\nUS Government Data\nWorld Bank Data\nYouth Risk Behavior Surveillance System (YRBSS)"
   }
 ]
